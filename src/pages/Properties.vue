@@ -48,9 +48,9 @@
               <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
             </div>
             <div class="thumbnail-strip">
-              <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
-              <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
-              <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
             </div>
             <div class="thumbnail-strip">
               <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
@@ -342,7 +342,7 @@
       let matchedServices = this.serviceContent.services.filter((service) => id === service.id);
       if (matchedServices.length > 0) service = matchedServices[0];
 
-      //if (service !== null) this.setActiveService(this.serviceContent.services.indexOf(service));
+      if (service !== null) this.setActiveService(this.serviceContent.services.indexOf(service));
 
       // Loop over scripts and strip any occasion ones, there's no API to relaunch this script
       /*for (let idx = 0; idx < document.scripts.length; idx++) {

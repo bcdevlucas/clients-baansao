@@ -43,43 +43,6 @@
 
 <script>
   export default {
-    mounted() {
-      window.addEventListener('resize', ((event) => {
-        this.hideMenu();
-        document.getElementsByTagName('body')[0].classList.remove('display-menu');
-      }).bind(this));
-
-      let lastScroll = 0;
-      if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-        window.addEventListener('scroll', (() => {
-          if (!document.getElementById('loader')) {
-            //this.hideMenu();
-
-            /*if (Math.abs(lastScroll - window.scrollY) <= 5) return;
-
-            (window.scrollY < lastScroll) ? header.style.top = '0': header.style.top = '-' + header.clientHeight + 'px';
-
-            lastScroll = window.scrollY;*/
-          }
-
-          let header = document.getElementsByTagName('header')[0];
-          let headerHeight = 108;
-          if (document.body.getBoundingClientRect().width < 660) {
-            headerHeight = 54;
-          }
-
-          /*if (Math.abs(window.scrollY) >= headerHeight) {
-            header.classList.add('fixed');
-          } else {
-            if (header.classList.contains('fixed')) {
-              header.classList.remove('fixed');
-            }
-          }*/
-
-          lastScroll = window.scrollY;
-        }).bind(this));
-      }
-    },
     methods: {
       displayMenu() {
         let body = document.getElementsByTagName('body')[0];
