@@ -35,7 +35,7 @@
     </div>
 
     <div class="site-section" v-if="activeService" :key="activeService.id">
-      <div class="container pt-4" ref="classDetails">
+      <div class="container pt-4" ref="itemDetails">
         <!--<div class="row mt-4 mb-4 pt-4">
           <div class="col-lg-12 ml-auto text-center">
             <span class="sub-title" v-html="activeService.summary"></span>
@@ -302,7 +302,7 @@
           // TODO: Maybe use some kind of route method?
           window.history.pushState({}, this.activeService.title, `${this.$route.path}?id=${this.activeService.id}`);
           window.setTimeout(() => {
-            this.$refs.classDetails.scrollIntoView();
+            //this.$refs.itemDetails.scrollIntoView();
           }, 333);
         }
       },

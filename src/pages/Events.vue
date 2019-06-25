@@ -80,7 +80,7 @@
           // TODO: Maybe use some kind of route method?
           window.history.pushState({}, this.activeService.title, `${this.$route.path}?id=${this.activeService.id}`);
           window.setTimeout(() => {
-            this.$refs.classDetails.scrollIntoView();
+            //this.$refs.itemDetails.scrollIntoView();
           }, 333);
         }
       },
