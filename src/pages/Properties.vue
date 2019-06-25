@@ -45,17 +45,17 @@
         <div class="row mt-4 mb-4 pt-4">
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="img">
-              <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+            </div>
+            <div class="thumbnail-strip">
+              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
             </div>
             <div class="thumbnail-strip">
               <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
               <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
               <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
-            </div>
-            <div class="thumbnail-strip">
-              <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
-              <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
-              <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
             </div>
           </div>
           <div class="col-lg-8 ml-auto">
