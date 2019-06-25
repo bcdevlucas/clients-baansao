@@ -236,7 +236,7 @@
 <script>
   import marked from 'marked';
 
-  import VueGallerySlideshow from 'vue-gallery-slideshow';
+  //import VueGallerySlideshow from 'vue-gallery-slideshow';
 
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
@@ -253,7 +253,7 @@
     components: {
       ContentBlockLayout,
       TestimonialBlockLayout,
-      VueGallerySlideshow
+      //VueGallerySlideshow
     },
     metaInfo: {
       title: "Classes"
