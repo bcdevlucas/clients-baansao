@@ -157,7 +157,7 @@
             :key="service.id"
             className="col-lg-4 col-md-4 mb-6 project-entry"
             :title="service.title"
-            :description="marked(service.summary)"
+            :description="(service.summary) ? marked(service.summary) : ''"
             :link="service.link"
             linkText="More Details"
             :onLinkClicked="setActiveService.bind(this, getServices().indexOf(service))"

@@ -102,7 +102,7 @@
             :key="service.id"
             className="col-lg-6 col-md-6 mb-6 project-entry"
             :title="service.title"
-            :description="marked(service.summary)"
+            :description="(service.summary) ? marked(service.summary) : ''"
             :link="service.link"
             linkText="Learn More"
             :image="service.image"
