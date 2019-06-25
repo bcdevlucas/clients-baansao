@@ -243,7 +243,7 @@
       let matchedServices = this.serviceContent.services.filter((service) => id === service.id);
       if (matchedServices.length > 0) service = matchedServices[0];
 
-      if (service !== null) this.setActiveService(this.serviceContent.services.indexOf(service));
+      /*if (service !== null) this.setActiveService(this.serviceContent.services.indexOf(service));
 
       // Loop over scripts and strip any occasion ones, there's no API to relaunch this script
       for (let idx = 0; idx < document.scripts.length; idx++) {
@@ -257,11 +257,11 @@
       this.occasionScript = document.createElement('script');
       this.occasionScript.setAttribute('src', 'https://app.getoccasion.com/p/preboot.js');
       this.occasionScript.setAttribute('id', 'bc-occasion-calendar-script');
-      document.head.appendChild(this.occasionScript);
+      document.head.appendChild(this.occasionScript);*/
     },
     updated() {
       // Loop over scripts and strip any occasion ones, there's no API to relaunch this script
-      for (let idx = 0; idx < document.scripts.length; idx++) {
+      /*for (let idx = 0; idx < document.scripts.length; idx++) {
         if (document.scripts[idx].src === 'https://app.getoccasion.com/p/preboot.js') {
           delete document.scripts[idx];
           console.log('deleted occasion script');
@@ -271,7 +271,7 @@
 
       this.occasionScript = document.createElement('script');
       this.occasionScript.setAttribute('src', 'https://app.getoccasion.com/p/preboot.js');
-      document.head.appendChild(this.occasionScript);
+      document.head.appendChild(this.occasionScript);*/
     }
   }
 </script>

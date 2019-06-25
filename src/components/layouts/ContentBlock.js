@@ -1,7 +1,7 @@
 // vue-markdown is broken, babel deps issues...
 // import VueMarkdown from 'vue-markdown'
 // Use marked instead
-import marked from 'marked';
+//import marked from 'marked';
 
 export default {
   // TODO: Supply models via props??

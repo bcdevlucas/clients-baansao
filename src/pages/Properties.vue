@@ -11,7 +11,7 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-md-10">
             <h1>{{ getHeroById('page-hero').title }}</h1>
-            <div v-if="getHeroById('page-hero').summary" class="sub-text" v-html="marked(getHeroById('page-hero').summary)"></div>
+            <div v-if="getHeroById('page-hero').summary" class="sub-text" v-html="(getHeroById('page-hero').summary) ? getHeroById('page-hero').summary : ''"></div>
           </div>
         </div>
       </div>
@@ -28,7 +28,7 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-md-10">
             <h1 v-if="activeService">{{ activeService.title }}</h1>
-            <div class="sub-text" v-html="marked(activeService.summary)"></div>
+            <div class="sub-text" v-html="(activeService.summary) ? activeService.summary : ''"></div>
           </div>
         </div>
       </div>
@@ -45,17 +45,17 @@
         <div class="row mt-4 mb-4 pt-4">
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="img">
-              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+              <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
             </div>
             <div class="thumbnail-strip">
-              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
-              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
-              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+              <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+              <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+              <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
             </div>
             <div class="thumbnail-strip">
-              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
-              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
-              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+              <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+              <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+              <img :src="activeService.image" :alt="activeService.caption" class="img-fluid">
             </div>
           </div>
           <div class="col-lg-8 ml-auto">
@@ -157,7 +157,7 @@
             :key="service.id"
             className="col-lg-4 col-md-4 mb-6 project-entry"
             :title="service.title"
-            :description="(service.summary) ? marked(service.summary) : ''"
+            :description="(service.summary) ? service.summary : ''"
             :link="service.link"
             linkText="More Details"
             :onLinkClicked="setActiveService.bind(this, getServices().indexOf(service))"
@@ -234,7 +234,7 @@
 </template>
 
 <script>
-  import marked from 'marked';
+  //import marked from 'marked';
 
   //import VueGallerySlideshow from 'vue-gallery-slideshow';
 
@@ -268,7 +268,7 @@
         displayBookingForm: false,
         displayQuestionForm: false,
         galleryIndex: null,
-        marked: marked
+        //marked: marked
       }
     },
     computed: {
@@ -292,7 +292,7 @@
       setActiveService(idx) {
         let service = this.getService(idx);
         this.activeService = Object.assign({}, service, {
-          descriptionHtml: marked(service.description)
+          descriptionHtml: service.description //(document) ? marked(service.description) : ''
         });
         // Hide Booking / Question forms as they are only relevant to the selected class
         this.hideBookingForm();
@@ -314,7 +314,7 @@
 
         if (typeof window !== 'undefined') {
           window.setTimeout(() => {
-            this.$refs.bookingForm.scrollIntoView();
+            //this.$refs.bookingForm.scrollIntoView();
           }, 333);
         }
       },
@@ -326,7 +326,7 @@
 
         if (typeof window !== 'undefined') {
           window.setTimeout(() => {
-            this.$refs.questionForm.scrollIntoView();
+            //this.$refs.questionForm.scrollIntoView();
           }, 333);
         }
       },
@@ -342,10 +342,10 @@
       let matchedServices = this.serviceContent.services.filter((service) => id === service.id);
       if (matchedServices.length > 0) service = matchedServices[0];
 
-      if (service !== null) this.setActiveService(this.serviceContent.services.indexOf(service));
+      //if (service !== null) this.setActiveService(this.serviceContent.services.indexOf(service));
 
       // Loop over scripts and strip any occasion ones, there's no API to relaunch this script
-      for (let idx = 0; idx < document.scripts.length; idx++) {
+      /*for (let idx = 0; idx < document.scripts.length; idx++) {
         if (document.scripts[idx].src === 'https://app.getoccasion.com/p/preboot.js') {
           delete document.scripts[idx];
           console.log('deleted occasion script');
@@ -356,11 +356,11 @@
       this.occasionScript = document.createElement('script');
       this.occasionScript.setAttribute('src', 'https://app.getoccasion.com/p/preboot.js');
       this.occasionScript.setAttribute('id', 'bc-occasion-calendar-script');
-      document.head.appendChild(this.occasionScript);
+      document.head.appendChild(this.occasionScript);*/
     },
     updated() {
       // Loop over scripts and strip any occasion ones, there's no API to relaunch this script
-      for (let idx = 0; idx < document.scripts.length; idx++) {
+      /*for (let idx = 0; idx < document.scripts.length; idx++) {
         if (document.scripts[idx].src === 'https://app.getoccasion.com/p/preboot.js') {
           delete document.scripts[idx];
           console.log('deleted occasion script');
@@ -370,7 +370,7 @@
 
       this.occasionScript = document.createElement('script');
       this.occasionScript.setAttribute('src', 'https://app.getoccasion.com/p/preboot.js');
-      document.head.appendChild(this.occasionScript);
+      document.head.appendChild(this.occasionScript);*/
     }
   }
 </script>

@@ -102,7 +102,7 @@
             :key="service.id"
             className="col-lg-6 col-md-6 mb-6 project-entry"
             :title="service.title"
-            :description="(service.summary) ? marked(service.summary) : ''"
+            :description="(service.summary) ? service.summary : ''"
             :link="service.link"
             linkText="Learn More"
             :image="service.image"
@@ -115,7 +115,7 @@
 </template>
 
 <script>
-  import marked from 'marked';
+  //import marked from 'marked';
 
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
 
@@ -136,7 +136,7 @@
     },
     data() {
       return {
-        marked: marked
+        //marked: marked
       };
     },
     methods: {
