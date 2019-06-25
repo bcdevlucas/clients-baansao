@@ -452,12 +452,14 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    align-items: flex-start;
   }
 
   .thumbnail-strip > * {
     width: 33.33333%;
     flex: 0 1 33.33333%;
     padding-top: 3px;
+    object-fit: contain;
   }
 
   .thumbnail-strip > * {
