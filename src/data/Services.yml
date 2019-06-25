@@ -1,93 +1,281 @@
-title: 'Classes, Courses, and Escapes'
-metaKeywords: 'Classes, Courses, and Escapes'
-metaDescription: 'Classes, Courses, and Escapes'
+title: Additional Services
+metaKeywords: 'Additional Services'
+metaDescription: 'Additional Services'
 heroes:
   - description:
     id: page-hero
-    image: /images/class-samples/IMG_6005.jpg
+    image: /images/orchard-view/keepers/1921024_642689422472455_1215029725_o.00.jpg
     link:
     linkText:
-    title: Classes, Courses, and Escapes
+    title: Additional Services
 services:
-  - caption: ''
+  - caption:
     description: >-
-      In this three hour art escape, we will paint a cross section of the ocean,
-      as you would see it as it washes onto your feet. Your water will have
-      dimension and colour, foam and movement. We will also paint an art tile to
-      have some reference to alcohol inks. Your final piece will measure 9X12
-      and cost is $95 for the three hour workshop. Your piece will have to be
-      picked up at a later date, as it takes overnight to dry. 11X14 and larger
-      paintings are available at an extra cost.
-    id: ocean-in-resin
-    image: /images/class-samples/IMG_6015.jpg
-    link: /classes?id=ocean-in-resin
+      **Property type** walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
+
+
+      + Fully equipped kitchen.
+
+
+      + Hardwood and tile flooring, Thai contemporary furnishings.
+
+
+      + 3 ensuite bedrooms: private terraces, main floor bedrooms have direct access to the pool
+      
+      
+      + King size beds / mosquito screens / air conditioning / flat screen television.
+
+
+      + All services (wifi internet, housekeeping) included except electric (6 baht per unit)
+
+
+      + Quiet location, but only a 5 minute drive to the beach.
+
+
+      **The space**
+
+
+      Baan Saowanee Orchard View Pool Villa is located in a very quiet community enhanced by lush tropical greenery, fruit trees and flower blooms. Privacy is a featured quality: the 800 square meter grounds are landscaped,walled and feature a 4m X 9m saltwater pool.
+
+
+      The house (200 square meters) is both airy and spacious, its charm enhanced by hardwood floors and Thai contemporary furnishings. The two main floor bedrooms slide open to terraces providing pool and garden views. The upper floor bedroom terrace overlooks an adjacent eucalyptus plantation.
+
+
+      **Guest access**
+
+
+      Orchard View Villa is neither a condo, nor a unit in a resort complex. It's a spacious and comfortable, quiet and private villa; yet it's located only a few minutes drive to the beach or the island ring road.
+
+
+      **Interaction with guests**
+
+
+      Your host, Saowanee, resides in the same community and will be pleased to assist in making your Ko Samui holiday a special experience.
+
+
+      **Other things to note**
+
+
+      We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
+    id: orchard-view
+    image: /images/orchard-view/keepers/1606419_642690905805640_1828336230_o.jpg
+    link: /properties?id=orchard-view
     linkText: Learn More
-    title: Ocean in Resin Painting
-    metaKeywords: 'In this three hour art escape, we will paint a cross section of the ocean.'
-    metaDescription: 'In this three hour art escape, we will paint a cross section of the ocean.'
+    title: Orchard View Pool Villa
+    metaKeywords:
+    metaDescription:
     subCaption: ''
-    summary: 'In this three hour art escape, we will paint a cross section of the ocean.'
+    summary: >-
+      Property type walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
+  
+  
+      * Attractive, Thai contemporary furnishings.
+  
+  
+      * Fully equipped kitchen.
+      
+      
+      * 3 ensuite bedrooms: private terraces.
   - description: >-
-      In this art escape, we will be doing an intuitive painting of a birch
-      treeline with a background on yupo paper mounted to a 9X12 birch panel. If
-      we have time, we will also do some more intuitive fluid painting on tiles.
-      You will receive lots of instruction, but will choose your own colours and
-      any changes you desire. $85 per person, including materials. No experience
-      necessary. This is an amazing class to get the most out of the alcohol
-      inks themselves. Your painting skills will be well on their way with ONE
-      three hour class.
-    id: birch-trees
-    image: /images/class-samples/IMG_6442.jpg
-    link: /classes?id=birch-trees
+      **Property type** walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
+  
+  
+      + Fully equipped kitchen.
+
+
+      + Hardwood and tile flooring, Thai contemporary furnishings.
+
+
+      + 3 ensuite bedrooms: private terraces, main floor bedrooms have direct access to the pool.
+      
+      
+      + King size beds / mosquito screens / air conditioning / flat screen television.
+
+
+      + All services (wifi internet, housekeeping) included except electric (6 baht per unit)
+
+
+      + Quiet location, but only a 5 minute drive to the beach.
+
+
+      **The space**
+
+
+      Baan Saowanee Orchard View Pool Villa is located in a very quiet community enhanced by lush tropical greenery, fruit trees and flower blooms. Privacy is a featured quality: the 800 square meter grounds are landscaped,walled and feature a 4m X 9m saltwater pool.
+
+
+      The house (200 square meters) is both airy and spacious, its charm enhanced by hardwood floors and Thai contemporary furnishings. The two main floor bedrooms slide open to terraces providing pool and garden views. The upper floor bedroom terrace overlooks an adjacent eucalyptus plantation.
+
+
+      **Guest access**
+
+
+      Orchard View Villa is neither a condo, nor a unit in a resort complex. It's a spacious and comfortable, quiet and private villa; yet it's located only a few minutes drive to the beach or the island ring road.
+
+
+      **Interaction with guests**
+
+
+      Your host, Saowanee, resides in the same community and will be pleased to assist in making your Ko Samui holiday a special experience.
+
+
+      **Other things to note**
+
+
+      We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
+    id: bamboo-gardens-1
+    image: /images/bamboo-gardens/keepers-1/20130522-DSC_6708.jpg
+    link: /properties?id=bamboo-gardens-1
     linkText: Learn More
-    title: Birch Trees Art Escape
+    title: Bamboo Gardens 1
     metaKeywords: >-
-      In this art escape, we will be doing an intuitive painting of a birch
-      treeline.
     metaDescription: >-
-      In this art escape, we will be doing an intuitive painting of a birch
-      treeline.
     summary: >-
-      In this art escape, we will be doing an intuitive painting of a birch
-      treeline.
+      Property type detached 2 bedroom house; Soi 1, Mae Nam.
+      
+  
+      * Attractive, Thai contemporary furnishings.
+      
+      
+      * Fully equipped kitchen.
+      
+      
+      * 2 bedrooms: 1 full sized/king bed; 1 small/single bed.
   - caption: ''
     description: >-
-      In this three hour art escape, we will learn how to create a vivid
-      abstract alcohol ink painting on a 9X12 cradleboard, with glitter, semi
-      precious stones and crystals adding to the effects. We will learn how to
-      use resin on paintings, however your piece will have to be picked up at a
-      later date (18-24 hour cure time). Experience is not necessary. All
-      materials plus many choices of crystals will be provided, and a handout
-      will be sent home so you can replicate the techniques we practiced. $95
-      per person, includes 10 high end semi precious stones in addition to other
-      pieces.
-    id: ink-resin-crystals
-    image: /images/class-samples/IMG_0971.jpg
-    link: /classes?id=ink-resin-crystals
+      **Property type** walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
+
+
+      + Fully equipped kitchen.
+
+
+      + Hardwood and tile flooring, Thai contemporary furnishings.
+
+
+      + 3 ensuite bedrooms: private terraces, main floor bedrooms have direct access to the pool.
+      
+      
+      + King size beds / mosquito screens / air conditioning / flat screen television.
+
+
+      + All services (wifi internet, housekeeping) included except electric (6 baht per unit)
+
+
+      + Quiet location, but only a 5 minute drive to the beach.
+
+
+      **The space**
+
+
+      Baan Saowanee Orchard View Pool Villa is located in a very quiet community enhanced by lush tropical greenery, fruit trees and flower blooms. Privacy is a featured quality: the 800 square meter grounds are landscaped,walled and feature a 4m X 9m saltwater pool.
+
+
+      The house (200 square meters) is both airy and spacious, its charm enhanced by hardwood floors and Thai contemporary furnishings. The two main floor bedrooms slide open to terraces providing pool and garden views. The upper floor bedroom terrace overlooks an adjacent eucalyptus plantation.
+
+
+      **Guest access**
+
+
+      Orchard View Villa is neither a condo, nor a unit in a resort complex. It's a spacious and comfortable, quiet and private villa; yet it's located only a few minutes drive to the beach or the island ring road.
+
+
+      **Interaction with guests**
+
+
+      Your host, Saowanee, resides in the same community and will be pleased to assist in making your Ko Samui holiday a special experience.
+
+
+      **Other things to note**
+
+
+      We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
+    id: bamboo-gardens-2
+    image: /images/bamboo-gardens/keepers-2/20130919-DSC_9674.jpg
+    link: /properties?id=bamboo-gardens-2
     linkText: Learn More
-    title: 'Ink, Resin and Crystals Art Escape'
-    metaKeywords: 'Escape into the world of glassy resin, crystals and semi precious stones.'
-    metaDescription: 'Escape into the world of glassy resin, crystals and semi precious stones.'
-    subCaption: ''
-    summary: 'Escape into the world of glassy resin, crystals and semi precious stones.'
-  - caption: ''
+    title: Bamboo Gardens 2
+    metaKeywords:
+    metaDescription:
+    subCaption:
+    summary: >-
+      Property type detached 2 bedroom house; Soi 1, Mae Nam.
+      
+  
+      * Attractive, Thai contemporary furnishings.
+      
+      
+      * Fully equipped kitchen.
+      
+      
+      * 2 bedrooms: 1 full sized/king bed; 1 small/single bed.
+      
+      
+  - caption:
     description: >-
-      We will be “living on the edge” as we delve into a world of industrial,
-      graffiti type painting. This is an exciting class where you get to delve
-      into creative places you haven’t explored before. We will use various
-      fluid mediums to create some really cool paintings that will not only be
-      rebellious but will be exciting to look at, and beautiful in a graffiti
-      way. You will paint at least 1 and up to three paintings on 10X12 yupo
-      paper. $85 per person, no experience necessary – One three hour class.
-    id: edgy-abstracts
-    image: /images/class-samples/IMG_6962.jpg
-    link: /classes?id=edgy-abstracts
+      **Property type** walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
+  
+  
+      + Fully equipped kitchen.
+
+
+      + Hardwood and tile flooring, Thai contemporary furnishings.
+
+
+      + 3 ensuite bedrooms: private terraces, main floor bedrooms have direct access to the pool.
+      
+      
+      + King size beds / mosquito screens / air conditioning / flat screen television.
+
+
+      + All services (wifi internet, housekeeping) included except electric (6 baht per unit)
+
+
+      + Quiet location, but only a 5 minute drive to the beach.
+
+
+      **The space**
+
+
+      Baan Saowanee Orchard View Pool Villa is located in a very quiet community enhanced by lush tropical greenery, fruit trees and flower blooms. Privacy is a featured quality: the 800 square meter grounds are landscaped,walled and feature a 4m X 9m saltwater pool.
+
+
+      The house (200 square meters) is both airy and spacious, its charm enhanced by hardwood floors and Thai contemporary furnishings. The two main floor bedrooms slide open to terraces providing pool and garden views. The upper floor bedroom terrace overlooks an adjacent eucalyptus plantation.
+
+
+      **Guest access**
+
+
+      Orchard View Villa is neither a condo, nor a unit in a resort complex. It's a spacious and comfortable, quiet and private villa; yet it's located only a few minutes drive to the beach or the island ring road.
+
+
+      **Interaction with guests**
+
+
+      Your host, Saowanee, resides in the same community and will be pleased to assist in making your Ko Samui holiday a special experience.
+
+
+      **Other things to note**
+
+
+      We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
+    id: bamboo-gardens-3
+    image: /images/bamboo-gardens/keepers-3/20130522-DSC_6730.jpg
+    link: /properties?id=bamboo-gardens-3
     linkText: Learn More
-    title: Edgy Abstracts Art Escape
-    metaKeywords: >-
-      Delve into a world of edgy, industrial, and graffiti style painting.
-    metaDescription: >-
-      Delve into a world of edgy, industrial, and graffiti style painting.
+    title: Bamboo Gardens 3
+    metaKeywords:
+    metaDescription:
     subCaption: ''
     summary: >-
-      Delve into a world of edgy, industrial, and graffiti style painting.
+      Property type detached 2 bedroom house; Soi 1, Mae Nam.
+      
+  
+      * Attractive, Thai contemporary furnishings.
+      
+      
+      * Fully equipped kitchen.
+      
+      
+      * 2 bedrooms: 1 full sized/king bed; 1 small/single bed.
+    
+

@@ -1,18 +1,17 @@
 <template>
   <Layout
-    :displayPosts="true"
+    :displayPosts="false"
   >
     <div class="hero-wrapper">
-      <video autoplay muted loop playsinline id="bg-video" class="hero-mask">
+      <!--<video autoplay muted loop playsinline id="bg-video" class="hero-mask">
         <source src="/video/032715490-dandelion-blowing-slow-motion_H264_420-web-xl.mp4" type="video/mp4">
-      </video>
-      <!--<div class="site-blocks-cover overlay aos-init aos-animate" style="background-image: url(images/hero_white.jpg)" data-aos="fade" data-stellar-background-ratio="0.5">-->
-      <div class="site-blocks-cover aos-init aos-animate" data-aos="fade" data-stellar-background-ratio="0.5">
+      </video>-->
+      <div class="site-blocks-cover overlay aos-init aos-animate" style="background-image: url(images/orchard-view/keepers/1921024_642689422472455_1215029725_o.00.jpg)" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center text-center justify-content-center" style="position: relative; top: -3rem;">
             <div class="col-md-8">
-              <h1>Wilder than the Wind</h1>
-              <span class="sub-text">creation.inspiration.education.elevation.</span>
+              <span class="sub-text">Baan Saowanee's</span>
+              <h1>Orchard View Villa</h1>
             </div>
           </div>
         </div>
@@ -32,11 +31,11 @@
           <div class="col-lg-4">
             <a href="/classes" class="site-block-feature d-flex p-4 rounded mb-4">
               <div class="mr-3">
-                <i class="material-icons block-icon">brush</i>
+                <i class="material-icons block-icon">wb_sunny</i>
               </div>
               <div class="text">
-                <h2 class="font-weight-bold text-black">Art Workshops</h2>
-                <p>Check out our current classes!</p>
+                <h2 class="font-weight-bold text-black">Things to Do</h2>
+                <p>Check out our current offerings!</p>
               </div>
             </a>
           </div>
@@ -46,19 +45,19 @@
                 <i class="material-icons block-icon">calendar_today</i>
               </div>
               <div class="text">
-                <h2 class="font-weight-bold text-black">Class Schedules</h2>
-                <p>View Summer 2019 Classes</p>
+                <h2 class="font-weight-bold text-black">Book Your Stay</h2>
+                <p>View our availability calendar</p>
               </div>
             </a>
           </div>
           <div class="col-lg-4">
             <a href="#" class="site-block-feature d-flex p-4 rounded mb-4">
               <div class="mr-3">
-                <i class="material-icons block-icon">local_grocery_store</i>
+                <i class="material-icons block-icon">motorcycle</i>
               </div>
               <div class="text">
-                <h2 class="font-weight-bold text-black">Art for Sale</h2>
-                <p>Coming soon!</p>
+                <h2 class="font-weight-bold text-black">Vehicle Rentals</h2>
+                <p>View motorbike / vehicle rentals</p>
               </div>
             </a>
           </div>
@@ -69,9 +68,29 @@
     <div class="site-section pt-0">
       <div class="container pt-4">
         <div class="row mt-4 mb-4 pt-4">
-          <div class="col-lg-11 ml-auto text-center">
-            <span class="sub-title">What Types of Classes Do We Offer?</span>
-            <h2 class="font-weight-bold text-black mb-5">Popular Art Workshops</h2>
+          <div class="col-lg-12 ml-auto text-center">
+            <!--<span class="sub-title">Welcome</span>
+            <h2 class="font-weight-bold text-black mb-5">to Baan Saowanee</h2>-->
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Baan Saowanee is a collection of holiday home rentals situated on the north side of Ko Samui island, a short five minute drive to scenic Mae Nam Beach. Sun, sand and the Gulf of Siam combine to make many a perfect day.</p>
+            <p>Our vacation homes are located in a quiet community enhanced with lush tropical greenery, fruit trees and flower blooms; but only a short walk away from convenience: restaurants, coffee bars, bakeries and other small shops. Picturesque Mae Nam village is nearby, as is the community Buddhist spiritual centre: Golden Mountain Temple.</p>
+            <p>Baan Saowanee guests have a range of rental options to choose from, dependent upon the number of persons and quality of accommodation. All of our holiday properties are clean, attractive and well maintained.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section pt-0">
+      <div class="container pt-4">
+        <div class="row mt-4 mb-4 pt-4">
+          <div class="col-lg-12 ml-auto text-center">
+            <span class="sub-title">Browse</span>
+            <h2 class="font-weight-bold text-black mb-5">Our Rentals</h2>
           </div>
         </div>
       </div>
@@ -79,10 +98,11 @@
         <div class="row">
           <content-block-layout
             v-for="service in getServices()"
+            v-if="typeof service.summary === 'string'"
             :key="service.id"
             className="col-lg-6 col-md-6 mb-6 project-entry"
             :title="service.title"
-            :description="service.summary"
+            :description="marked(service.summary)"
             :link="service.link"
             linkText="Learn More"
             :image="service.image"
@@ -95,22 +115,29 @@
 </template>
 
 <script>
+  import marked from 'marked';
+
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
 
   // Import static data
-  import ServiceData from '~/data/Services.yml';
+  import PropertiesData from '~/data/Properties.yml';
 
   export default {
     components: {
       ContentBlockLayout,
     },
     metaInfo: {
-      title: 'Wilder than the Wind - Edmonton'
+      title: 'Baan Saowanee - Ko Samui, Thailand'
     },
     computed: {
       serviceContent() {
-        return ServiceData;
+        return PropertiesData;
       }
+    },
+    data() {
+      return {
+        marked: marked
+      };
     },
     methods: {
       getServices() {
@@ -131,7 +158,7 @@
 
 <style>
   .project-entry {
-    text-align: center;
+    /*text-align: center;*/
   }
 
   .project-entry .img-fluid {
@@ -156,5 +183,20 @@
     .post-entry .img-fluid {
       height: 40vh;
     }
+  }
+
+  .site-blocks-cover li,
+  .site-section li,
+  .project-entry li {
+    list-style-type: square !important;
+    list-style-position: inside !important;
+  }
+
+  /* Fix glitch with markdown rendering */
+  .site-blocks-cover li p,
+  .site-section li p,
+  .project-entry li p {
+    display: inline;
+    font-size: 1.1rem
   }
 </style>

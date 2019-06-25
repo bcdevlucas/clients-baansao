@@ -1,14 +1,14 @@
 <template>
   <Layout>
     <div
-      class="site-blocks-cover overlay inner-page hero-mask"
+      class="site-blocks-cover overlay inner-page"
       style="background-image: url(/images/class-samples/IMG_3114.jpg);"
     >
       <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center justify-content-center">
           <div class="col-md-10">
             <span class="sub-text"></span>
-            <h1>Our Class Schedule</h1>
+            <h1>Our Availability</h1>
           </div>
         </div>
       </div>
@@ -19,50 +19,13 @@
         <div class="row">
           <div class="col-12 text-center">
             <span class="sub-title">Summer 2019</span>
-            <h2 class="font-weight-bold text-black mb-5">Class Schedule</h2>
+            <h2 class="font-weight-bold text-black mb-5">View Available Dates</h2>
           </div>
         </div>
 
         <div class="row">
           <div class="col-12 text-center">
             <div class='occsn_stack' id='occsn_stack_5301_9938'></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12 text-center">
-          <span class="sub-title">Testimonials from our</span>
-          <h2 class="font-weight-bold text-black mb-5">Happy Students</h2>
-        </div>
-      </div>
-      <div class="nonloop-block-13 owl-carousel owl-loaded owl-drag">
-        <div class="owl-stage-outer">
-          <div class="owl-content-wrapper">
-            <div class="owl-item active" style="width: 380px;">
-              <div class="testimony">
-                <img src="/images/reannin_sirianni.jpg" alt="Image" class="img-fluid">
-                <h3>Lisa C.</h3>
-                <span class="sub-title"></span>
-                <p>“<em>Stephanie’s class was super relaxed and super fun. We learned new techniques and new products and were able to make 2 beautiful pieces to take home. I loved the instruction and the freedom with which we could pick our own colours and embellishments. I will definitely be back!</em>”</p>
-              </div>
-            </div>
-            <div class="owl-item active" style="width: 380px;">
-              <div class="testimony">
-                <img src="/images/nellie_thompson.jpg" alt="Image" class="img-fluid">
-                <h3>Linda C.</h3>
-                <span class="sub-title"></span>
-                <p>“<em>Registered in the Inks, Resin, Crystals, Stones and Glitter Art Escape. Stephanie was a fabulous instructor. She was welcoming, patient and inspiring. I was very happy with my painting and the experience. Would absolutely take another Wilder Than the Wind Creations class!</em>”</p>
-              </div>
-            </div>
-            <div class="owl-item active" style="width: 380px;">
-              <div class="testimony">
-                <img src="/images/julie_d_king.jpg" alt="Image" class="img-fluid">
-                <h3>Reannin S.</h3>
-                <span class="sub-title"></span>
-                <p>“<em>I recently took an art class here. It was ridiculously amazing. I had so much fun! I felt like a little kid creating my artwork. Stephanie is such an awesome teacher she teaches you many practical techniques but also gives you plenty of time to play around make a mess and encourages you to have fun. Stephanie’s energy is fabulous!</em>”</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

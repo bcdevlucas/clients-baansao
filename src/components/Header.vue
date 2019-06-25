@@ -10,9 +10,10 @@
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
         <ul class="site-menu mb-0">
           <li><a href="/" aria-label="Home" v-on:click="hideDropMenu()">Home</a></li>
-          <li><a href="/about" aria-label="About Us" v-on:click="hideDropMenu()">About Us</a></li>
-          <li><a href="/classes" aria-label="Classes" v-on:click="hideDropMenu()">Classes</a></li>
-          <li><a href="/contact" aria-label="Contact" v-on:click="hideDropMenu()">Contact Us</a></li>
+          <li><a href="/about" aria-label="About Us" v-on:click="hideDropMenu()">About</a></li>
+          <li><a href="/properties" aria-label="Classes" v-on:click="hideDropMenu()">Properties</a></li>
+          <li><a href="/services" aria-label="Services" v-on:click="hideDropMenu()">Services</a></li>
+          <li><a href="/contact" aria-label="Contact" v-on:click="hideDropMenu()">Contact</a></li>
         </ul>
         <div class="site-navbar-top d-flex">
           <div class="d-flex ml-auto">
@@ -20,17 +21,17 @@
               <span class="icon-instagram mr-2"></span>
               <!--<span class="d-none d-md-inline-block">@creativeescapesyeg</span>-->
             </a>
-            <a href="https://www.facebook.com/wilderthanthewindcreations" class="d-flex align-items-center ml-auto mr-4">
+            <a href="https://www.facebook.com/BaanSaowanee" class="d-flex align-items-center ml-auto mr-4">
               <span class="icon-facebook mr-2"></span>
               <!--<span class="d-none d-md-inline-block">wilderthanthewindcreations</span>-->
             </a>
             <a href="#" class="d-flex align-items-center ml-auto mr-4">
               <span class="icon-phone mr-2"></span>
-              <span class="d-none d-lg-inline-block">+1 (780) 555-5555</span>
+              <span class="d-none d-lg-inline-block">+66 (81) 555-5555</span>
             </a>
             <a href="#" class="d-flex align-items-center">
               <span class="icon-envelope mr-2"></span>
-              <span class="d-none d-lg-inline-block">wilderthanthewindcreations@gmail.com</span>
+              <span class="d-none d-lg-inline-block">info@baansaowanee.com</span>
             </a>
           </div>
         </div>
@@ -67,13 +68,13 @@
             headerHeight = 54;
           }
 
-          if (Math.abs(window.scrollY) >= headerHeight) {
+          /*if (Math.abs(window.scrollY) >= headerHeight) {
             header.classList.add('fixed');
           } else {
             if (header.classList.contains('fixed')) {
               header.classList.remove('fixed');
             }
-          }
+          }*/
 
           lastScroll = window.scrollY;
         }).bind(this));

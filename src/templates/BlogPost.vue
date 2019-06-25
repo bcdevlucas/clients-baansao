@@ -10,7 +10,7 @@
             <img
               :src="$page.post.image"
               alt="Image"
-              class="img-fluid brush-01"
+              class="img-fluid"
             />
           </div>
           <div class="col-lg-7 mt-4 ml-auto text-left">

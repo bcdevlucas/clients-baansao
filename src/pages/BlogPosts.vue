@@ -4,13 +4,13 @@
   >
     <div
       v-if="getHeroById('page-hero') !== null"
-      class="site-blocks-cover overlay inner-page hero-mask"
+      class="site-blocks-cover overlay inner-page"
       :style="`background-image: url(${getHeroById('page-hero').image});`"
       data-aos="fade"
       data-stellar-background-ratio="0.5"
     >
       <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center justify-content-center">
           <div class="col-md-10">
             <span class="sub-text"></span>
             <h1>{{ getHeroById('page-hero').title }}</h1>

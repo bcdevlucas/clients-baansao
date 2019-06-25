@@ -44,8 +44,8 @@
                 <div class="col-md-6 col-lg-6">
                   <ul class="list-unstyled">
                     <li><g-link to="/">Home</g-link></li>
-                    <li><g-link to="/classes">Classes</g-link></li>
-                    <li><g-link to="/events">Schedule</g-link></li>
+                    <li><g-link to="/properties">Properties</g-link></li>
+                    <li><g-link to="/services">Services</g-link></li>
                   </ul>
                 </div>
                 <div class="col-md-6 col-lg-6">
@@ -66,7 +66,7 @@
 
                   <div>
                     <a
-                      href="https://www.facebook.com/wilderthanthewindcreations"
+                      href="https://www.facebook.com/BaanSaowanee"
                       class="pl-0 pr-3"
                       ><span class="icon-facebook"></span
                     ></a>
@@ -97,7 +97,7 @@
       Header
     },
     metaInfo: {
-      title: 'Wilder than the Wind - Edmonton'
+      title: 'Baan Saowanee - Ko Samui, Thailand'
     },
     props: {
       displayPosts: Boolean
@@ -161,7 +161,7 @@
   letter-spacing: 0.2em;
 }
 .site-blocks-cover h1 {
-  font-family: "Shadows into Light", cursive;
+  /*font-family: "Shadows into Light", cursive;*/
   font-weight: 50;
   color: #fff;
   font-size: 3rem;

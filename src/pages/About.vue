@@ -2,15 +2,15 @@
   <Layout>
     <div
       v-if="getHeroById('page-hero') !== null"
-      class="site-blocks-cover overlay inner-page hero-mask"
+      class="site-blocks-cover inner-page"
       :style="`background-image: url(${getHeroById('page-hero').image});`"
       data-aos="fade"
       data-stellar-background-ratio="0.5"
     >
       <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center justify-content-center">
           <div class="col-md-10">
-            <span class="sub-text"></span>
+            <span class="sub-text text-muted"></span>
             <h1>{{ getHeroById('page-hero').title }}</h1>
           </div>
         </div>
@@ -18,15 +18,15 @@
     </div>
     <div v-if="getSection(0) !== null" class="site-section about-section">
       <div class="container">
-        <div class="row align-items-center mb-5 pb-5">
-          <div class="col-lg-7 img-years mb-5 mb-lg-0">
+        <div class="row align-items-center justify-content-center mt-5 mb-5 pb-5">
+          <div class="col-lg-6 img-years mb-5 mb-lg-0">
             <img
               :src="getSection(0).image"
               alt="Image"
-              class="img-fluid brush-01"
+              class="img-fluid circle float-left"
             />
           </div>
-          <div class="col-lg-4 ml-auto text-center">
+          <div class="col-lg-6 ml-auto text-center">
             <span class="sub-title" v-html="getSection(0).summary"></span>
             <h3 class="mb-4" v-html="getSection(0).title"></h3>
             <p class="mb-5" v-html="getSection(0).description"></p>
@@ -45,17 +45,17 @@
 
     <div v-if="getSection(1) !== null" class="site-section about-section">
       <div class="container">
-        <div class="row align-items-center mb-5 pb-5">
-          <div class="col-lg-4 ml-auto text-center">
+        <div class="row align-items-center justify-content-center mb-5 pb-5">
+          <div class="col-lg-6 ml-auto text-center">
             <span class="sub-title" v-html="getSection(1).summary"></span>
             <h3 class="mb-4" v-html="getSection(1).title"></h3>
             <p class="mb-5" v-html="getSection(1).description"></p>
           </div>
-          <div class="col-lg-7 img-years mb-5 mb-lg-0">
+          <div class="col-lg-6 img-years mb-5 mb-lg-0">
             <img
               :src="getSection(1).image"
               alt="Image"
-              class="img-fluid brush-01"
+              class="img-fluid circle float-right"
             />
           </div>
         </div>
@@ -109,5 +109,12 @@
 
   @media screen and (min-width: 1280px) {
     left: 20%;
+  }
+
+  .circle {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 350px;
+    height: 350px;
   }
 </style>

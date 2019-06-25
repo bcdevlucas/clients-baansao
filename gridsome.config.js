@@ -1,5 +1,5 @@
 module.exports = {
-  siteName: 'Wilder than the Wind',
+  siteName: 'Baan Saowanee',
   transformers: {
     remark: {
       externalLinksTarget: '_blank',

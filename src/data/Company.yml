@@ -4,36 +4,53 @@ metaKeywords: >-
 metaDescription: >-
   Coming soon...
 heroes:
-  - description:
+  - description: >-
+      Saowanee’s place is located in Ko Samui, Chang Wat Surat Thani, Thailand.
+      Baan Saowanee Bamboo Gardens cottages are tucked away in a quiet, green space ( you will hear birds singing ), but just a short 5 minute walk to local restaurants and shops. Venture another 5 minute walk down Soi 1 and you'll reach the Island main road ( taxis, shops, bars, restaurants ). From the main road another ten minute walk and you'll arrive at Mae Nam Beach. Of course, if you rent a motorbike or car, driving distance to the beach is only 5 minutes.
     id: page-hero
-    image: /images/class-samples/IMG_7111.jpg
+    image: /images/orchard-view/keepers/IMG_5660.JPG
     link:
     linkText:
     title: About Us
 sections:
   - caption: ''
     description: >-
-      A trip to Florence in 2016 inspired the start of a full time art career for Stephanie Lane – the founder of Wilder Than The Wind Creations.
-      She specializes in alcohol ink paintings and resin art, and teaches what she knows to others. She also does mixed media work with acrylics. Wilder than the Wind is proud to have its studio in Little Italy, in the heart of Edmonton.
+      Sawatdee Kha. My name is Saowanee and I''m very proud to have born on the beautiful island of Ko Samui. In fact, the house you are renting is situated in the exact neighborhood that I grew up in, so many of the Thai people you chance to meet will be members of my extended family. I currently reside with my Canadian husband, Dan, in a residence nearby, so it's easy to personally contact me if you have requests that I can assist with. We want you to have a wonderful holiday experience.
+      
+      Serving as your host is a very unique experience for me; enjoy your Baan Saowanee stay with our best wishes for a wonderful holiday.
+
     id: about-us-section-01
-    image: /images/stephanie_lane3.jpg
-    link: https://www.facebook.com/wilderthanthewindcreations
+    image: /images/about-us/13708221_1827207007502198_2760397226330007559_o.jpg
+    link:
     linkText: Find Us On Facebook
-    title: Located in Central Edmonton
-    metaKeywords: 'In this three hour art escape, we will paint a cross section of the ocean.'
-    metaDescription: 'In this three hour art escape, we will paint a cross section of the ocean.'
+    title: Your Hosts
+    metaKeywords: ''
+    metaDescription: ''
     subCaption: ''
-    summary: 'In this three hour art escape, we will paint a cross section of the ocean.'
+    summary: ''
   - caption: ''
     description: >-
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid eius facilis voluptatem eligendi magnam
-      accusamus vel commodi asperiores sint rem reprehenderit nobis nesciunt veniam qui fugit doloremque numquam quod.
+      Do you like Thai food? When you arrive and have settled in, maybe we can have a chat and I'll recommend local restaurants that serve excellent local Thai dishes. Don't be surprised if the prices are very affordable! If you prefer to cook on your own as I do, maybe you'd like to join me for a visit to the Mae Nam morning market.
+  
+      If you're interested in local Thai culture, why not drop by for tea at my home and I'll be very pleased to provide you with information regarding festivals, Buddhist temple activities and Ko Samui special places and events. Do you take milk and sugar with your tea?
     id: about-us-section-02
-    image: /images/art_display_office.jpg
+    image: /images/about-us/13724040_1827204157502483_805946314322350459_o.jpg
+    link:
+    linkText:
+    title: Local Culture
+    metaKeywords: ''
+    metaDescription: ''
+    subCaption: ''
+    summary: Explore
+  - caption: ''
+    description: >-
+      I also attend yoga classes and I ballroom dance regularly, so if you're in the mood for active relaxation, just let me know and we can make arrangements to attend together. Cha, cha, cha.
+    id: about-us-section-03
+    image: /images/about-us/13708221_1827207007502198_2760397226330007559_o.jpg
     link:
     linkText:
     title: Our Values
-    metaKeywords: 'In this three hour art escape, we will paint a cross section of the ocean.'
-    metaDescription: 'In this three hour art escape, we will paint a cross section of the ocean.'
+    metaKeywords: ''
+    metaDescription: ''
     subCaption: ''
     summary: 'Our Values'

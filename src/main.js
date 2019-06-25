@@ -1,5 +1,6 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
+import VueImg from 'v-img';
 
 import DefaultLayout from '~/layouts/Default.vue';
 
@@ -14,5 +15,17 @@ export default function (Vue, { router, head, isClient }) {
   head.link.push({ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Shadows+Into+Light' });
   head.link.push({ rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' });
   // Set default layout as a global component
-  Vue.component('Layout', DefaultLayout)
+  Vue.component('Layout', DefaultLayout);
+
+  const vueImgConfig = {
+  // Use `alt` attribute as gallery slide title
+  altAsTitle: false,
+  // Display 'download' button near 'close' that opens source image in new tab
+  sourceButton: false,
+  // Event listener to open gallery will be applied to <img> element
+  openOn: 'click',
+  // Show thumbnails for all groups with more than 1 image
+  thumbnails: false,
+}
+  Vue.use(VueImg, vueImgConfig);
 }
