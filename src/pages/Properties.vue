@@ -410,7 +410,8 @@
   }
 
   .project-entry .img-fluid {
-    height: 40vh;
+    height: 30vh;
+    object-fit: contain;
   }
 
   @media screen and (min-width: 1280px) {
