@@ -204,7 +204,7 @@
 @media screen and (min-width: 768px) {
   .site-footer {
     position: absolute;
-    bottom: -40vh;
+    bottom: -50vh;
     width: 100vw;
   }
 }
@@ -212,7 +212,7 @@
 
 .page-wrap {
   position: relative;
-  margin-bottom: -40vh;
+  margin-bottom: -50vh;
 }
 
 .page-wrap::after {
