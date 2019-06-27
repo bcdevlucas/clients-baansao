@@ -321,6 +321,9 @@
         this.hideQuestionForm();
 
         if (typeof window !== 'undefined') {
+          this.stopPrimaryImageRotation();
+          this.startPrimaryImageRotation();
+
           // TODO: Maybe use some kind of route method?
           window.history.pushState({}, this.activeService.title, `${this.$route.path}?id=${this.activeService.id}`);
           window.setTimeout((() => {
@@ -398,21 +401,19 @@
           return array;
         };
 
-        if (typeof window !== 'undefined') {
+        if (this.activeService && this.activeService.gallery instanceof Array) {
+          // Copy the gallery
+          let copy = this.activeService.gallery.map(item => item);
+          this.$data.activeImage = copy.pop();
+        }
+
+        this.primaryImageShuffler = setInterval((() => {
           if (this.activeService && this.activeService.gallery instanceof Array) {
             // Copy the gallery
             let copy = this.activeService.gallery.map(item => item);
-            this.$data.activeImage = copy.pop();
+            this.$data.activeImage = shuffle(copy).pop();
           }
-
-          this.primaryImageShuffler = setInterval((() => {
-            if (this.activeService && this.activeService.gallery instanceof Array) {
-              // Copy the gallery
-              let copy = this.activeService.gallery.map(item => item);
-              this.$data.activeImage = shuffle(copy).pop();
-            }
-          }).bind(this), ms);
-        }
+        }).bind(this), ms);
       },
       stopPrimaryImageRotation() {
         if (typeof window !== 'undefined') {
@@ -455,8 +456,6 @@
       if (service !== null) {
         this.setActiveService(service.id);
       }
-
-      this.startPrimaryImageRotation();
 
       // Loop over scripts and strip any occasion ones, there's no API to relaunch this script
       /*for (let idx = 0; idx < document.scripts.length; idx++) {
