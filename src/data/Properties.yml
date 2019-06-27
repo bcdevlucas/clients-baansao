@@ -97,15 +97,11 @@ services:
         caption: Orchard view 9
         subCaption:
       - id: 10
-        src: /images/orchard-view/keepers/IMG_5626.JPG
-        caption: Orchard view 10
-        subCaption:
-      - id: 11
         src: /images/orchard-view/keepers/20130522-DSC_6670.jpg
-        caption: Orchard view 11
-      - id: 12
+        caption: Orchard view 10
+      - id: 11
         src: /images/orchard-view/keepers/IMG_5647.JPG
-        caption: Orchard view 12
+        caption: Orchard view 11
         subCaption:
       - id: 12
         src: /images/orchard-view/keepers/IMG_5657.JPG

@@ -47,15 +47,17 @@
             <div class="img">
               <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
             </div>
-            <div class="thumbnail-strip">
-              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
-              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
-              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+            <div class="thumbnail-strip" v-if="activeService.gallery instanceof Array">
+              <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(0,2)" :src="gallery.src" :alt="gallery.caption" class="img">
             </div>
-            <div class="thumbnail-strip">
-              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
-              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
-              <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
+            <div class="thumbnail-strip" v-if="activeService.gallery instanceof Array">
+              <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(3,5)" :src="gallery.src" :alt="gallery.caption" class="img">
+            </div>
+            <div class="thumbnail-strip" v-if="activeService.gallery instanceof Array">
+              <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(6,8)" :src="gallery.src" :alt="gallery.caption" class="img">
+            </div>
+            <div class="thumbnail-strip" v-if="activeService.gallery instanceof Array">
+              <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(9,11)" :src="gallery.src" :alt="gallery.caption" class="img">
             </div>
           </div>
           <div class="col-lg-8 ml-auto">
@@ -309,6 +311,15 @@
       unsetActiveService() {
         this.activeService = null;
       },
+      getGalleryImages(start, end) {
+        let galleryImages = this.activeService.gallery instanceof Array ? this.activeService.gallery : [];
+
+        galleryImages = galleryImages.slice(start, Math.min(end + 1, this.activeService.gallery.length));
+
+        console.log(galleryImages);
+
+        return galleryImages;
+      },
       showBookingForm() {
         this.displayBookingForm = true;
 
@@ -460,7 +471,8 @@
     width: 33.33333%;
     flex: 0 1 33.33333%;
     padding-top: 3px;
-    object-fit: contain;
+    object-fit: cover;
+    height: 80px;
   }
 
   .thumbnail-strip > * {
