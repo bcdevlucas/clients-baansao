@@ -151,18 +151,18 @@
       </div>
     </div>
 
-    <div class="site-section" v-if="getServices().length > 0">
+    <div class="site-section" v-if="getServices(false).length > 0">
       <div class="container">
         <div class="row">
           <content-block-layout
-            v-for="service in getServices().slice(0,4).filter((service) => service.id !== this.activeService.id)"
+            v-for="service in getServices(false).slice(0,4)"
             :key="service.id"
             className="col-lg-4 col-md-4 mb-6 project-entry"
             :title="service.title"
             :description="(service.summary) ? service.summary : ''"
             :link="service.link"
             linkText="More Details"
-            :onLinkClicked="setActiveService.bind(this, getServices().indexOf(service))"
+            :onLinkClicked="setActiveService.bind(this, getServices(false).indexOf(service))"
             :image="service.image"
             imageAlt=""
           />
@@ -279,8 +279,15 @@
       }
     },
     methods: {
-      getServices() {
-        return (this.serviceContent.services instanceof Array) ? this.serviceContent.services : [];
+      getServices(includeActive) {
+        includeActive = includeActive || true;
+        let services = (this.serviceContent.services instanceof Array) ? this.serviceContent.services : [];
+
+        if (!includeActive && this.activeService !== null) {
+          return services.filter((service) => service.id !== this.activeService.id);
+        }
+
+        return services;
       },
       getService(idx) {
         let items = this.serviceContent.services;
