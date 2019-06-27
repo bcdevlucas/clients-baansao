@@ -152,6 +152,14 @@
     </div>
 
     <div class="site-section" v-if="getServices(false).length > 0">
+      <div class="container pt-4">
+        <div class="row mt-4 mb-4 pt-4">
+          <div class="col-lg-12 ml-auto text-center">
+            <span class="sub-title">Browse</span>
+            <h2 class="font-weight-bold text-black mb-5">{{ `Our ${activeService ? 'Other ' : ''}Rentals` }}</h2>
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="row">
           <content-block-layout
@@ -386,7 +394,7 @@
       let matchedServices = this.serviceContent.services.filter((service) => id === service.id);
       if (matchedServices.length > 0) service = matchedServices[0];
 
-      if (service !== null) this.setActiveService(this.serviceContent.services.id);
+      if (service !== null) this.setActiveService(service.id);
 
       // Loop over scripts and strip any occasion ones, there's no API to relaunch this script
       /*for (let idx = 0; idx < document.scripts.length; idx++) {
