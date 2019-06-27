@@ -3,7 +3,7 @@ backend:
   # Reference: https://www.netlifycms.org/docs/authentication-backends/
   name: github
   branch: master
-  repo: bluecollardev/clients-wilderwind
+  repo: bluecollardev/clients-baansao
 
 media_folder: "static/images"
 public_folder: "static/images"
