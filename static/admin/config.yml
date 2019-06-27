@@ -48,6 +48,47 @@ collections:
               - { label: "Link Text", name: "linkText", widget: "string", required: false }
               - { label: "Caption", name: "caption", widget: "string", required: false }
               - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
+      - name: "properties"
+        label: "Properties"
+        file: "src/data/Properties.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string", default: "Services" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: false }
+          - { label: "Meta Description", name: "metaDescription", widget: "text", required: false }
+          - name: "heroes"
+            label: "Heroes"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Summary", name: "summary", widget: "string" }
+              - { label: "Description", name: "description", widget: "markdown" }
+              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Link Text", name: "linkText", widget: "string" }
+              - { label: "Image", name: "image", widget: "string" }
+              - { label: "Caption", name: "caption", widget: "string", required: false }
+              - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
+          - name: "properties"
+            label: "List Properties"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: false }
+              - { label: "Meta Description", name: "metaDescription", widget: "text", required: false }
+              - { label: "Summary", name: "summary", widget: "text", required: false }
+              - { label: "Description", name: "description", widget: "markdown", required: false }
+              - { label: "Image", name: "image", widget: "string", required: false }
+              - { label: "Link", name: "link", widget: "string", required: false }
+              - { label: "Link Text", name: "linkText", widget: "string", required: false }
+              - { label: "Caption", name: "caption", widget: "string", required: false }
+              - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
+              - name: "gallery"
+                label: "Gallery"
+                widget: "list"
+                fields:
+                  - { label: "Gallery Image", name: "thumbnail", widget: "image", default: "/images/" }
       - name: "company"
         label: "Company"
         file: "src/data/Company.yml"

@@ -59,6 +59,23 @@ services:
       We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
     id: orchard-view
     image: /images/orchard-view/keepers/1606419_642690905805640_1828336230_o.jpg
+    gallery:
+      - id:
+        src:
+        caption:
+        subCaption:
+      - id:
+        src:
+        caption:
+        subCaption:
+      - id:
+        src:
+        caption:
+        subCaption:
+      - id:
+        src:
+        caption:
+        subCaption:
     link: /properties?id=orchard-view
     linkText: Learn More
     title: Orchard View Pool Villa
