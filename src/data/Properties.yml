@@ -60,21 +60,21 @@ services:
     id: orchard-view
     image: /images/orchard-view/keepers/1606419_642690905805640_1828336230_o.jpg
     gallery:
-      - id:
-        src:
-        caption:
+      - id: 1
+        src: /images/orchard-view/keepers/1606419_642690905805640_1828336230_o.jpg
+        caption: Orchard view 1
         subCaption:
-      - id:
-        src:
-        caption:
+      - id: 2
+        src: /images/orchard-view/keepers/1606419_642690905805640_1828336230_o.jpg
+        caption: Orchard view 2
         subCaption:
-      - id:
-        src:
-        caption:
+      - id: 3
+        src: /images/orchard-view/keepers/1606419_642690905805640_1828336230_o.jpg
+        caption: Orchard view 3
         subCaption:
-      - id:
-        src:
-        caption:
+      - id: 4
+        src: /images/orchard-view/keepers/1606419_642690905805640_1828336230_o.jpg
+        caption: Orchard view 4
         subCaption:
     link: /properties?id=orchard-view
     linkText: Learn More

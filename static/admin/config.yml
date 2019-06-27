@@ -69,7 +69,7 @@ collections:
               - { label: "Image", name: "image", widget: "string" }
               - { label: "Caption", name: "caption", widget: "string", required: false }
               - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
-          - name: "properties"
+          - name: "services"
             label: "List Properties"
             widget: "list"
             fields:
@@ -88,7 +88,10 @@ collections:
                 label: "Gallery"
                 widget: "list"
                 fields:
+                  - { label: "ID", name: "id", widget: "string", required: false }
                   - { label: "Gallery Image", name: "thumbnail", widget: "image", default: "/images/" }
+                  - { label: "Caption", name: "caption", widget: "string", required: false }
+                  - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
       - name: "company"
         label: "Company"
         file: "src/data/Company.yml"
