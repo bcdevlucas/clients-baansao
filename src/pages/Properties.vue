@@ -404,14 +404,14 @@
         if (this.activeService && this.activeService.gallery instanceof Array) {
           // Copy the gallery
           let copy = this.activeService.gallery.map(item => item);
-          this.$data.activeImage = copy.pop();
+          this.$data.activeImage = copy.shift();
         }
 
         this.primaryImageShuffler = setInterval((() => {
           if (this.activeService && this.activeService.gallery instanceof Array) {
             // Copy the gallery
             let copy = this.activeService.gallery.map(item => item);
-            this.$data.activeImage = shuffle(copy).pop();
+            this.$data.activeImage = shuffle(copy).shift();
           }
         }).bind(this), ms);
       },
