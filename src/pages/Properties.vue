@@ -20,7 +20,7 @@
     <div
       v-if="activeService && getHeroById('page-hero') !== null"
       class="site-blocks-cover overlay inner-page"
-      :style="`background-image: url(${activeService.image});`"
+      :style="`background-image: url(${activeImage.src});`"
       data-aos="fade"
       data-stellar-background-ratio="0.5"
     >
@@ -246,6 +246,8 @@
 <script>
   //import marked from 'marked';
 
+  import Vue from 'vue';
+
   //import VueGallerySlideshow from 'vue-gallery-slideshow';
 
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
@@ -274,6 +276,7 @@
         pageTitle: PropertiesData.title,
         pageData: PropertiesData,
         occasionScript: null,
+        activeImage: null,
         activeService: null,
         displayBookingForm: false,
         displayQuestionForm: false,
@@ -357,9 +360,64 @@
       getGalleryImages(start, end) {
         let galleryImages = this.activeService.gallery instanceof Array ? this.activeService.gallery : [];
 
-        galleryImages = galleryImages.slice(start, Math.min(end + 1, this.activeService.gallery.length));
+        start = (!isNaN(start)) ? start : 0;
+        // Add 1 to end as slice doesn't count include the last item
+        end = (!isNaN(end)) ? end + 1 : galleryImages.length;
+
+        galleryImages = galleryImages.slice(start, Math.min(end, galleryImages.length));
 
         return galleryImages;
+      },
+      startPrimaryImageRotation(ms) {
+        ms = (!isNaN(ms)) ? ms : 10000;
+
+        console.log('starting image rotation');
+
+        // Fisher-Yates Shuffle - memoized
+        const shuffle = function shuffle(array) {
+          let counter = array.length;
+
+          // While there are elements in the array
+          while (counter > 0) {
+            // Pick a random index
+            let index = Math.floor(Math.random() * counter);
+
+            // Decrease counter by 1
+            counter--;
+
+            // And swap the last element with it
+            let temp = array[counter];
+            array[counter] = array[index];
+            array[index] = temp;
+          }
+
+          console.log('shuffled gallery');
+          console.log(array[0].src);
+          //console.log(array);
+
+          return array;
+        };
+
+        if (typeof window !== 'undefined') {
+          if (this.activeService && this.activeService.gallery instanceof Array) {
+            // Copy the gallery
+            let copy = this.activeService.gallery.map(item => item);
+            this.$data.activeImage = copy.pop();
+          }
+
+          this.primaryImageShuffler = setInterval((() => {
+            if (this.activeService && this.activeService.gallery instanceof Array) {
+              // Copy the gallery
+              let copy = this.activeService.gallery.map(item => item);
+              this.$data.activeImage = shuffle(copy).pop();
+            }
+          }).bind(this), ms);
+        }
+      },
+      stopPrimaryImageRotation() {
+        if (typeof window !== 'undefined') {
+          clearInterval(this.primaryImageShuffler);
+        }
       },
       showBookingForm() {
         this.displayBookingForm = true;
@@ -394,7 +452,11 @@
       let matchedServices = this.serviceContent.services.filter((service) => id === service.id);
       if (matchedServices.length > 0) service = matchedServices[0];
 
-      if (service !== null) this.setActiveService(service.id);
+      if (service !== null) {
+        this.setActiveService(service.id);
+      }
+
+      this.startPrimaryImageRotation();
 
       // Loop over scripts and strip any occasion ones, there's no API to relaunch this script
       /*for (let idx = 0; idx < document.scripts.length; idx++) {
@@ -409,6 +471,8 @@
       this.occasionScript.setAttribute('src', 'https://app.getoccasion.com/p/preboot.js');
       this.occasionScript.setAttribute('id', 'bc-occasion-calendar-script');
       document.head.appendChild(this.occasionScript);*/
+
+
     },
     updated() {
       // Loop over scripts and strip any occasion ones, there's no API to relaunch this script
@@ -423,6 +487,9 @@
       this.occasionScript = document.createElement('script');
       this.occasionScript.setAttribute('src', 'https://app.getoccasion.com/p/preboot.js');
       document.head.appendChild(this.occasionScript);*/
+    },
+    beforeDestroy() {
+      this.stopPrimaryImageRotation();
     }
   }
 </script>
