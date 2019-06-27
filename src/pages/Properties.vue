@@ -280,7 +280,8 @@
     },
     methods: {
       getServices(includeActive) {
-        includeActive = includeActive || true;
+        includeActive = typeof includeActive === 'boolean' ? includeActive : true;
+
         let services = (this.serviceContent.services instanceof Array) ? this.serviceContent.services : [];
 
         if (!includeActive && this.activeService !== null) {
