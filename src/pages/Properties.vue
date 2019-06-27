@@ -351,8 +351,6 @@
 
         galleryImages = galleryImages.slice(start, Math.min(end + 1, this.activeService.gallery.length));
 
-        console.log(galleryImages);
-
         return galleryImages;
       },
       showBookingForm() {
