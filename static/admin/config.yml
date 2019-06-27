@@ -89,7 +89,7 @@ collections:
                 widget: "list"
                 fields:
                   - { label: "ID", name: "id", widget: "string", required: false }
-                  - { label: "Gallery Image", name: "thumbnail", widget: "image", default: "/images/" }
+                  - { label: "Gallery Image", name: "src", widget: "image", default: "/images/" }
                   - { label: "Caption", name: "caption", widget: "string", required: false }
                   - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
       - name: "company"
