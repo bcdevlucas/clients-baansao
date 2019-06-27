@@ -155,14 +155,14 @@
       <div class="container">
         <div class="row">
           <content-block-layout
-            v-for="service in getServices(false).slice(0,4)"
+            v-for="service in getServices(false).slice(0,3)"
             :key="service.id"
             className="col-lg-4 col-md-4 mb-6 project-entry"
             :title="service.title"
             :description="(service.summary) ? service.summary : ''"
             :link="service.link"
             linkText="More Details"
-            :onLinkClicked="setActiveService.bind(this, getServices(false).indexOf(service))"
+            :onLinkClicked="setActiveService.bind(this, service.id)"
             :image="service.image"
             imageAlt=""
           />
@@ -290,7 +290,34 @@
 
         return services;
       },
-      getService(idx) {
+      getService(id) {
+        let items = this.serviceContent.services;
+
+        if (items instanceof Array && items.length > 0) {
+          items = items.filter(item => item.id === id);
+          if (items.length > 0) return items.pop();
+        }
+
+        return null
+      },
+      setActiveService(id) {
+        let service = this.getService(id);
+        this.activeService = Object.assign({}, service, {
+          descriptionHtml: service.description //(document) ? marked(service.description) : ''
+        });
+        // Hide Booking / Question forms as they are only relevant to the selected class
+        this.hideBookingForm();
+        this.hideQuestionForm();
+
+        if (typeof window !== 'undefined') {
+          // TODO: Maybe use some kind of route method?
+          window.history.pushState({}, this.activeService.title, `${this.$route.path}?id=${this.activeService.id}`);
+          window.setTimeout(() => {
+            //this.$refs.itemDetails.scrollIntoView();
+          }, 333);
+        }
+      },
+      getServiceByIndex(idx) {
         let items = this.serviceContent.services;
 
         if (items instanceof Array && items.length > idx) {
@@ -299,8 +326,8 @@
 
         return null
       },
-      setActiveService(idx) {
-        let service = this.getService(idx);
+      setActiveServiceByIndex(idx) {
+        let service = this.getServiceByIndex(idx);
         this.activeService = Object.assign({}, service, {
           descriptionHtml: service.description //(document) ? marked(service.description) : ''
         });
@@ -361,7 +388,7 @@
       let matchedServices = this.serviceContent.services.filter((service) => id === service.id);
       if (matchedServices.length > 0) service = matchedServices[0];
 
-      if (service !== null) this.setActiveService(this.serviceContent.services.indexOf(service));
+      if (service !== null) this.setActiveService(this.serviceContent.services.id);
 
       // Loop over scripts and strip any occasion ones, there's no API to relaunch this script
       /*for (let idx = 0; idx < document.scripts.length; idx++) {
