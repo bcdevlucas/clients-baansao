@@ -7,7 +7,7 @@
       data-aos="fade"
       data-stellar-background-ratio="0.5"
     >
-      <div class="container">
+      <div class="container" ref="pageHero">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-10">
             <h1>{{ getHeroById('page-hero').title }}</h1>
@@ -24,7 +24,7 @@
       data-aos="fade"
       data-stellar-background-ratio="0.5"
     >
-      <div class="container">
+      <div class="container" ref="pageHero">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-10">
             <h1 v-if="activeService">{{ activeService.title }}</h1>
@@ -35,7 +35,7 @@
     </div>
 
     <div class="site-section" v-if="activeService" :key="activeService.id">
-      <div class="container pt-4" ref="itemDetails">
+      <div class="container pt-4">
         <!--<div class="row mt-4 mb-4 pt-4">
           <div class="col-lg-12 ml-auto text-center">
             <span class="sub-title" v-html="activeService.summary"></span>
@@ -323,9 +323,9 @@
         if (typeof window !== 'undefined') {
           // TODO: Maybe use some kind of route method?
           window.history.pushState({}, this.activeService.title, `${this.$route.path}?id=${this.activeService.id}`);
-          window.setTimeout(() => {
-            //this.$refs.itemDetails.scrollIntoView();
-          }, 333);
+          window.setTimeout((() => {
+            this.$refs.pageHero.scrollIntoView();
+          }).bind(this), 333);
         }
       },
       getServiceByIndex(idx) {

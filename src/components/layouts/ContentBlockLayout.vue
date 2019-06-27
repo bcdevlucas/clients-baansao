@@ -9,7 +9,7 @@
     </a>
     <p v-if="typeof this.datePublished === 'string' && this.datePublished.length > 0" class="text-muted">{{ this.datePublished }}</p>
     <h3 class="mb-0">
-      <a href="#">{{ this.title }}</a>
+      <a @click="linkClicked" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.title }}</a>
     </h3>
     <br />
     <p v-if="typeof this.description === 'string' && this.description.length > 0" class="text-muted" v-html="compiledDescription"></p>
