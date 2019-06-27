@@ -119,7 +119,7 @@
 
           <div class="col-lg-8 ml-auto">
             <div v-html="activeService.descriptionHtml"></div>
-            <p class="class-action-buttons mt-5">
+            <p class="class-action-buttons mt-5 text-center">
               <button @click="showBookingForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i> Book Now</button>&nbsp;
               <button @click="showQuestionForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i> Ask a Question</button>
             </p>
@@ -136,18 +136,14 @@
                 </div>
               </div>
             </div>-->
-          </div>
-        </div>
-      </div>
-
-      <div class="container pt-4" v-if="displayQuestionForm" ref="questionForm">
+            <div class="container pt-4" v-if="displayQuestionForm" ref="questionForm">
         <div class="row">
           <div class="col-12 text-center">
             <span class="sub-title">{{ activeService.title }}</span>
             <h2 class="font-weight-bold text-black mb-5">Have a Question? We're Here to Help!</h2>
           </div>
         </div>
-        <div class="row mt-4 mb-4 pt-4">
+        <div class="row mb-4">
           <div class="col-md-12 col-lg-12">
             <form
               action="https://formspree.io/admin@firebrandwebsolutions.com"
@@ -203,6 +199,9 @@
                 </div>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
           </div>
         </div>
       </div>
