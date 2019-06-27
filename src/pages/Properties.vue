@@ -155,7 +155,7 @@
       <div class="container">
         <div class="row">
           <content-block-layout
-            v-for="service in getServices().slice(0,3)"
+            v-for="service in getServices().slice(0,4).filter((service) => service.id !== this.activeService.id)"
             :key="service.id"
             className="col-lg-4 col-md-4 mb-6 project-entry"
             :title="service.title"
@@ -427,7 +427,7 @@
 
   @media screen and (min-width: 1280px) {
     .project-entry .img-fluid {
-      height: 20vh;
+      /*height: 20vh;*/
     }
   }
 
