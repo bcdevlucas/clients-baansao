@@ -392,7 +392,7 @@
       setActiveService(id) {
         let service = this.getService(id);
         this.activeService = Object.assign({}, service, {
-          descriptionHtml: service.description //(document) ? marked(service.description) : ''
+          descriptionHtml: (service.description) ? marked(service.description) : null
         });
         // Hide Booking / Question forms as they are only relevant to the selected class
         this.hideBookingForm();

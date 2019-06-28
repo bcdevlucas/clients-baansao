@@ -1,5 +1,7 @@
 import HeroData from '~/data/Hero.yml';
 
+import marked from 'marked';
+
 export default {
   computed: {
     heroContent() {
@@ -30,7 +32,13 @@ export default {
       });
 
       if (items instanceof Array && items.length > 0) {
-        return items[0];
+        // TODO: Use an adapter or something
+        let item = items[0] || {};
+        item = Object.assign({}, item, {
+          description: (item.description) ? marked(item.description) : ''
+        });
+
+        return item;
       }
 
       return null
