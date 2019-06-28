@@ -23,7 +23,7 @@ export default {
         item = item || {};
 
         item = Object.assign({}, item, {
-          summary: (item.summary) ? marked(item.summary) : null,
+          //summary: (item.summary) ? marked(item.summary) : null,
           description: (item.description) ? marked(item.description) : null
         });
 
@@ -43,7 +43,7 @@ export default {
         let item = items.pop();
 
         item = Object.assign({}, item, {
-          summary: (item.summary) ? marked(item.summary) : null,
+          //summary: (item.summary) ? marked(item.summary) : null,
           description: (item.description) ? marked(item.description) : null
         });
 
