@@ -119,6 +119,8 @@
 
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
 
+  import ServiceMixin from '~/mixins/ServiceMixin';
+
   // Import static data
   import PropertiesData from '~/data/Properties.yml';
 
@@ -129,6 +131,7 @@
     metaInfo: {
       title: 'Baan Saowanee - Ko Samui, Thailand'
     },
+    mixins: [ServiceMixin],
     computed: {
       serviceContent() {
         return PropertiesData;
@@ -138,20 +141,6 @@
       return {
         //marked: marked
       };
-    },
-    methods: {
-      getServices() {
-        return (this.serviceContent.services instanceof Array) ? this.serviceContent.services : [];
-      },
-      getService(idx) {
-        let items = this.serviceContent.services;
-
-        if (items instanceof Array && items.length > idx) {
-          return items[idx];
-        }
-
-        return null
-      }
     }
   }
 </script>

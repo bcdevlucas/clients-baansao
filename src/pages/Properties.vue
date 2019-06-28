@@ -334,6 +334,7 @@
   // TODO: Implement page page that provides data interface?
   import HeroMixin from '~/mixins/HeroMixin';
   import SectionMixin from '~/mixins/SectionMixin';
+  import ServiceMixin from '~/mixins/ServiceMixin';
   import TestimonialMixin from '~/mixins/TestimonialMixin';
 
   // Import static data
@@ -348,7 +349,7 @@
     metaInfo: {
       title: "Classes"
     },
-    mixins: [HeroMixin, SectionMixin, TestimonialMixin],
+    mixins: [HeroMixin, SectionMixin, ServiceMixin, TestimonialMixin],
     data() {
       return {
         pageTitle: PropertiesData.title,
@@ -368,27 +369,6 @@
       }
     },
     methods: {
-      getServices(includeActive) {
-        includeActive = typeof includeActive === 'boolean' ? includeActive : true;
-
-        let services = (this.serviceContent.services instanceof Array) ? this.serviceContent.services : [];
-
-        if (!includeActive && this.activeService !== null) {
-          return services.filter((service) => service.id !== this.activeService.id);
-        }
-
-        return services;
-      },
-      getService(id) {
-        let items = this.serviceContent.services;
-
-        if (items instanceof Array && items.length > 0) {
-          items = items.filter(item => item.id === id);
-          if (items.length > 0) return items.pop();
-        }
-
-        return null
-      },
       setActiveService(id) {
         let service = this.getService(id);
         this.activeService = Object.assign({}, service, {
@@ -408,15 +388,6 @@
             this.$refs.pageHero.scrollIntoView();
           }).bind(this), 333);
         }
-      },
-      getServiceByIndex(idx) {
-        let items = this.serviceContent.services;
-
-        if (items instanceof Array && items.length > idx) {
-          return items[idx];
-        }
-
-        return null
       },
       setActiveServiceByIndex(idx) {
         let service = this.getServiceByIndex(idx);
