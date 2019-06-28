@@ -11,7 +11,10 @@ heroes:
 services:
   - caption:
     description: >-
-      **Property type** walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
+      ### Property type
+      
+      
+      Walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
 
 
       + Fully equipped kitchen.
@@ -32,33 +35,81 @@ services:
       + Quiet location, but only a 5 minute drive to the beach.
 
 
-      **The space**
+      ### The space
 
 
-      Baan Saowanee Orchard View Pool Villa is located in a very quiet community enhanced by lush tropical greenery, fruit trees and flower blooms. Privacy is a featured quality: the 800 square meter grounds are landscaped,walled and feature a 4m X 9m saltwater pool.
+      Baan Saowanee Orchard View Pool Villa is located in a very quiet community enhanced by lush tropical greenery, fruit trees and flower blooms. Privacy is a featured quality: the 800 square meter grounds are landscaped, walled and feature a 4m X 9m saltwater pool.
 
 
       The house (200 square meters) is both airy and spacious, its charm enhanced by hardwood floors and Thai contemporary furnishings. The two main floor bedrooms slide open to terraces providing pool and garden views. The upper floor bedroom terrace overlooks an adjacent eucalyptus plantation.
 
 
-      **Guest access**
+      ### Guest access
 
 
       Orchard View Villa is neither a condo, nor a unit in a resort complex. It's a spacious and comfortable, quiet and private villa; yet it's located only a few minutes drive to the beach or the island ring road.
 
 
-      **Interaction with guests**
+      ### Interaction with guests
 
 
       Your host, Saowanee, resides in the same community and will be pleased to assist in making your Ko Samui holiday a special experience.
 
 
-      **Other things to note**
+      ### Other things to note
 
 
       We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
     id: orchard-view
     image: /images/orchard-view/keepers/1606419_642690905805640_1828336230_o.jpg
+    gallery:
+      - id: 1
+        src: /images/orchard-view/keepers/1921024_642689422472455_1215029725_o.00.jpg
+        caption: Orchard view 1
+        subCaption:
+      - id: 2
+        src: /images/orchard-view/keepers/IMG_5660.JPG
+        caption: Orchard view 2
+        subCaption:
+      - id: 3
+        src: /images/orchard-view/keepers/20130522-DSC_6679.jpg
+        caption: Orchard view 3
+        subCaption:
+      - id: 4
+        src: /images/orchard-view/keepers/20130522-DSC_6681.jpg
+        caption: Orchard view 4
+        subCaption:
+      - id: 5
+        src: /images/orchard-view/keepers/IMG_5626.JPG
+        caption: Orchard view 5
+        subCaption:
+      - id: 6
+        src: /images/orchard-view/keepers/IMG_5628.JPG
+        caption: Orchard view 6
+        subCaption:
+      - id: 7
+        src: /images/orchard-view/keepers/IMG_5643.JPG
+        caption: Orchard view 7
+        subCaption:
+      - id: 8
+        src: /images/orchard-view/keepers/IMG_5633.JPG
+        caption: Orchard view 8
+        subCaption:
+      - id: 9
+        src: /images/orchard-view/keepers/IMG_5639.JPG
+        caption: Orchard view 9
+        subCaption:
+      - id: 10
+        src: /images/orchard-view/keepers/20130522-DSC_6670.jpg
+        caption: Orchard view 10
+      - id: 11
+        src: /images/orchard-view/keepers/IMG_5647.JPG
+        caption: Orchard view 11
+        subCaption:
+      - id: 12
+        src: /images/orchard-view/keepers/IMG_5657.JPG
+        caption: Orchard view 12
+        subCaption:
     link: /properties?id=orchard-view
     linkText: Learn More
     title: Orchard View Pool Villa
@@ -66,7 +117,10 @@ services:
     metaDescription:
     subCaption: ''
     summary: >-
-      Property type walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
+      ### Property type
+      
+      
+      Walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
   
   
       * Attractive, Thai contemporary furnishings.
@@ -77,7 +131,7 @@ services:
       
       * 3 ensuite bedrooms: private terraces.
   - description: >-
-      **Property type** walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
+      ### Property type walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
   
   
       + Fully equipped kitchen.
@@ -98,33 +152,70 @@ services:
       + Quiet location, but only a 5 minute drive to the beach.
 
 
-      **The space**
+      ### The space
 
 
-      Baan Saowanee Orchard View Pool Villa is located in a very quiet community enhanced by lush tropical greenery, fruit trees and flower blooms. Privacy is a featured quality: the 800 square meter grounds are landscaped,walled and feature a 4m X 9m saltwater pool.
+      Baan Saowanee Orchard View Pool Villa is located in a very quiet community enhanced by lush tropical greenery, fruit trees and flower blooms. Privacy is a featured quality: the 800 square meter grounds are landscaped, walled and feature a 4m X 9m saltwater pool.
 
 
       The house (200 square meters) is both airy and spacious, its charm enhanced by hardwood floors and Thai contemporary furnishings. The two main floor bedrooms slide open to terraces providing pool and garden views. The upper floor bedroom terrace overlooks an adjacent eucalyptus plantation.
 
 
-      **Guest access**
+      ### Guest access
 
 
       Orchard View Villa is neither a condo, nor a unit in a resort complex. It's a spacious and comfortable, quiet and private villa; yet it's located only a few minutes drive to the beach or the island ring road.
 
 
-      **Interaction with guests**
+      ### Interaction with guests
 
 
       Your host, Saowanee, resides in the same community and will be pleased to assist in making your Ko Samui holiday a special experience.
 
 
-      **Other things to note**
+      ### Other things to note
 
 
       We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
     id: bamboo-gardens-1
-    image: /images/bamboo-gardens/keepers-1/20130522-DSC_6708.jpg
+    image: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6712.jpg
+    gallery:
+      - id: 1
+        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6708.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 2
+        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6711.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 3
+        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6712.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 4
+        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6714.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 5
+        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6718.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 6
+        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6719.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 7
+        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6734.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 8
+        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6724.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 9
+        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6709.jpg
+        caption: Bamboo Gardens
+        subCaption:
     link: /properties?id=bamboo-gardens-1
     linkText: Learn More
     title: Bamboo Gardens 1
@@ -143,7 +234,10 @@ services:
       * 2 bedrooms: 1 full sized/king bed; 1 small/single bed.
   - caption: ''
     description: >-
-      **Property type** walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
+      ### Property type
+      
+      
+      Walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
 
 
       + Fully equipped kitchen.
@@ -164,33 +258,70 @@ services:
       + Quiet location, but only a 5 minute drive to the beach.
 
 
-      **The space**
+      ### The space
 
 
-      Baan Saowanee Orchard View Pool Villa is located in a very quiet community enhanced by lush tropical greenery, fruit trees and flower blooms. Privacy is a featured quality: the 800 square meter grounds are landscaped,walled and feature a 4m X 9m saltwater pool.
+      Baan Saowanee Orchard View Pool Villa is located in a very quiet community enhanced by lush tropical greenery, fruit trees and flower blooms. Privacy is a featured quality: the 800 square meter grounds are landscaped, walled and feature a 4m X 9m saltwater pool.
 
 
       The house (200 square meters) is both airy and spacious, its charm enhanced by hardwood floors and Thai contemporary furnishings. The two main floor bedrooms slide open to terraces providing pool and garden views. The upper floor bedroom terrace overlooks an adjacent eucalyptus plantation.
 
 
-      **Guest access**
+      ### Guest access
 
 
       Orchard View Villa is neither a condo, nor a unit in a resort complex. It's a spacious and comfortable, quiet and private villa; yet it's located only a few minutes drive to the beach or the island ring road.
 
 
-      **Interaction with guests**
+      ### Interaction with guests
 
 
       Your host, Saowanee, resides in the same community and will be pleased to assist in making your Ko Samui holiday a special experience.
 
 
-      **Other things to note**
+      ### Other things to note
 
 
       We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
     id: bamboo-gardens-2
-    image: /images/bamboo-gardens/keepers-2/20130919-DSC_9674.jpg
+    image: /images/bamboo-gardens/bamboo-gardens-2/20130522-DSC_6730.jpg
+    gallery:
+      - id: 1
+        src: /images/bamboo-gardens/bamboo-gardens-2/20130522-DSC_6728.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 2
+        src: /images/bamboo-gardens/bamboo-gardens-2/20130919-DSC_9683.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 3
+        src: /images/bamboo-gardens/bamboo-gardens-2/20130522-DSC_6732.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 4
+        src: /images/bamboo-gardens/bamboo-gardens-2/20130522-DSC_6730.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 5
+        src: /images/bamboo-gardens/bamboo-gardens-2/20130522-DSC_6729.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 6
+        src: /images/bamboo-gardens/bamboo-gardens-2/20130522-DSC_6735.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 7
+        src: /images/bamboo-gardens/bamboo-gardens-2/20130919-DSC_9680.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 8
+        src: /images/bamboo-gardens/bamboo-gardens-2/20130919-DSC_9678.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 9
+        src: /images/bamboo-gardens/bamboo-gardens-2/20130919-DSC_9684.jpg
+        caption: Bamboo Gardens
+        subCaption:
     link: /properties?id=bamboo-gardens-2
     linkText: Learn More
     title: Bamboo Gardens 2
@@ -212,7 +343,10 @@ services:
       
   - caption:
     description: >-
-      **Property type** walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
+      ### Property type
+      
+      
+      Walled private villa / 200 sq. meter house / 800 sq. meter landscaped grounds and pool.
   
   
       + Fully equipped kitchen.
@@ -233,33 +367,70 @@ services:
       + Quiet location, but only a 5 minute drive to the beach.
 
 
-      **The space**
+      ### The space
 
 
-      Baan Saowanee Orchard View Pool Villa is located in a very quiet community enhanced by lush tropical greenery, fruit trees and flower blooms. Privacy is a featured quality: the 800 square meter grounds are landscaped,walled and feature a 4m X 9m saltwater pool.
+      Baan Saowanee Orchard View Pool Villa is located in a very quiet community enhanced by lush tropical greenery, fruit trees and flower blooms. Privacy is a featured quality: the 800 square meter grounds are landscaped, walled and feature a 4m X 9m saltwater pool.
 
 
       The house (200 square meters) is both airy and spacious, its charm enhanced by hardwood floors and Thai contemporary furnishings. The two main floor bedrooms slide open to terraces providing pool and garden views. The upper floor bedroom terrace overlooks an adjacent eucalyptus plantation.
 
 
-      **Guest access**
+      ### Guest access
 
 
       Orchard View Villa is neither a condo, nor a unit in a resort complex. It's a spacious and comfortable, quiet and private villa; yet it's located only a few minutes drive to the beach or the island ring road.
 
 
-      **Interaction with guests**
+      ### Interaction with guests
 
 
       Your host, Saowanee, resides in the same community and will be pleased to assist in making your Ko Samui holiday a special experience.
 
 
-      **Other things to note**
+      ### Other things to note
 
 
       We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
     id: bamboo-gardens-3
-    image: /images/bamboo-gardens/keepers-3/20130522-DSC_6730.jpg
+    image: /images/bamboo-gardens/bamboo-gardens-3/20130919-DSC_9674.jpg
+    gallery:
+      - id: 1
+        src: /images/bamboo-gardens/bamboo-gardens-3/bamboo-gardens.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 2
+        src: /images/bamboo-gardens/bamboo-gardens-3/20130919-DSC_9673.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 3
+        src: /images/bamboo-gardens/bamboo-gardens-3/20130919-DSC_9681.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 4
+        src: /images/bamboo-gardens/bamboo-gardens-3/20130919-DSC_9676.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 5
+        src: /images/bamboo-gardens/bamboo-gardens-3/20130522-DSC_6720.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 6
+        src: /images/bamboo-gardens/bamboo-gardens-3/20130522-DSC_6721.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 7
+        src: /images/bamboo-gardens/bamboo-gardens-3/20130522-DSC_6725.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 8
+        src: /images/bamboo-gardens/bamboo-gardens-3/20130522-DSC_6726.jpg
+        caption: Bamboo Gardens
+        subCaption:
+      - id: 9
+        src: /images/bamboo-gardens/bamboo-gardens-3/20130919-DSC_9679.jpg
+        caption: Bamboo Gardens
+        subCaption:
     link: /properties?id=bamboo-gardens-3
     linkText: Learn More
     title: Bamboo Gardens 3
@@ -277,5 +448,3 @@ services:
       
       
       * 2 bedrooms: 1 full sized/king bed; 1 small/single bed.
-    
-
