@@ -11,7 +11,7 @@
         <ul class="site-menu mb-0">
           <li><a href="/" aria-label="Home" v-on:click="hideDropMenu()">Home</a></li>
           <li><a href="/about" aria-label="About Us" v-on:click="hideDropMenu()">About</a></li>
-          <li><a href="/properties" aria-label="Classes" v-on:click="hideDropMenu()">Properties</a></li>
+          <li><a href="/properties" aria-label="Classes" v-on:click="hideDropMenu()">Villas</a></li>
           <li><a href="/services" aria-label="Services" v-on:click="hideDropMenu()">Services</a></li>
           <li><a href="/contact" aria-label="Contact" v-on:click="hideDropMenu()">Contact</a></li>
         </ul>
