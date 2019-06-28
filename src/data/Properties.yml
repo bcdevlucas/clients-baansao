@@ -1,13 +1,18 @@
-title: Our Rentals
-metaKeywords: 'Our Rentals'
-metaDescription: 'Our Rentals'
+title: Our Properties
+metaKeywords: 'Our Properties'
+metaDescription: 'Our Properties'
+description: >-
+  Baan Saowanee is a collection of holiday home rentals situated on the north side of Ko Samui island, a short five minute drive to scenic Mae Nam Beach. Sun, sand and the Gulf of Siam combine to make many a perfect day.
+  Our vacation homes are located in a quiet community enhanced with lush tropical greenery, fruit trees and flower blooms; but only a short walk away from convenience: restaurants, coffee bars, bakeries and other small shops. Picturesque Mae Nam village is nearby, as is the community Buddhist spiritual centre: Golden Mountain Temple.
+  Baan Saowanee guests have a range of rental options to choose from, dependent upon the number of persons and quality of accommodation. All of our holiday properties are clean, attractive and well maintained.
 heroes:
-  - description:
+  - description: >-
     id: page-hero
     image: /images/orchard-view/keepers/1921024_642689422472455_1215029725_o.00.jpg
     link:
     linkText:
-    title: Our Rentals
+    title: Vacation Homes
+    subTitle: Baan Saowanee's
 services:
   - caption:
     description: >-

@@ -9,9 +9,10 @@
     >
       <div class="container" ref="pageHero">
         <div class="row align-items-center justify-content-center">
-          <div class="col-md-10">
+          <div class="col-md-10 text-center">
+            <span class="sub-text">{{ getHeroById('page-hero').subTitle }}</span>
             <h1>{{ getHeroById('page-hero').title }}</h1>
-            <div v-if="getHeroById('page-hero').summary" class="sub-text" v-html="(getHeroById('page-hero').summary) ? getHeroById('page-hero').summary : ''"></div>
+            <div v-if="getHeroById('page-hero').description" class="sub-text" v-html="(getHeroById('page-hero').description) ? getHeroById('page-hero').description : ''"></div>
           </div>
         </div>
       </div>
@@ -26,13 +27,34 @@
     >
       <div class="container" ref="pageHero">
         <div class="row align-items-center justify-content-center">
-          <div class="col-md-10">
+          <div class="col-md-10 text-center">
+            <span class="sub-text">Baan Saowanee's</span>
             <h1 v-if="activeService">{{ activeService.title }}</h1>
             <div class="sub-text" v-html="(activeService.summary) ? activeService.summary : ''"></div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="site-section" v-if="!activeService">
+      <div class="container pt-4">
+        <div class="row mt-4 mb-4 pt-4">
+          <div class="col-lg-12 ml-auto text-center">
+            <span class="sub-title">About Baan Saowanee's</span>
+            <h2 class="font-weight-bold text-black mb-5">{{ `Vacation Home Rentals` }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container pt-4">
+        <div class="row mt-4 mb-4 pt-4">
+          <p>Baan Saowanee is a collection of holiday home rentals situated on the north side of Ko Samui island, a short five minute drive to scenic Mae Nam Beach. Sun, sand and the Gulf of Siam combine to make many a perfect day.</p>
+          <p>Our vacation homes are located in a quiet community enhanced with lush tropical greenery, fruit trees and flower blooms; but only a short walk away from convenience: restaurants, coffee bars, bakeries and other small shops. Picturesque Mae Nam village is nearby, as is the community Buddhist spiritual centre: Golden Mountain Temple.</p>
+          <p>Baan Saowanee guests have a range of rental options to choose from, dependent upon the number of persons and quality of accommodation. All of our holiday properties are clean, attractive and well maintained.</p>
+        </div>
+      </div>
+    </div>
+
+
 
     <div class="site-section" v-if="activeService" :key="activeService.id">
       <div class="container pt-4">
@@ -211,8 +233,8 @@
       <div class="container pt-4">
         <div class="row mt-4 mb-4 pt-4">
           <div class="col-lg-12 ml-auto text-center">
-            <span class="sub-title">Browse</span>
-            <h2 class="font-weight-bold text-black mb-5">{{ `Our ${activeService ? 'Other ' : ''}Rentals` }}</h2>
+            <span class="sub-title">Browse Our</span>
+            <h2 class="font-weight-bold text-black mb-5">{{ `${activeService ? 'Other ' : ''}Villas` }}</h2>
           </div>
         </div>
       </div>
