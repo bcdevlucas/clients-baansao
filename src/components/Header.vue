@@ -524,5 +524,6 @@
 
   @media screen and (max-width: 40em) {
     margin-left: 0;
+    margin-top: 5px;
   }
 </style>
