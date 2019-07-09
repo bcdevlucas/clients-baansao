@@ -357,8 +357,8 @@
   }
 
   .footer-banner {
-    background: url(/images/samui-panorama.png) no-repeat center top;
-    padding: 394px 0 0;
+    background: url(/images/samui-panorama-adj.png) no-repeat center top;
+    padding: 224px 0 0;
     position: relative;
   }
   .footer-main {
