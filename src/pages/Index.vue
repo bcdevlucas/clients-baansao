@@ -96,14 +96,15 @@
         <div class="container pt-4">
           <div class="row mt-4 mb-4 pt-4">
             <div class="col-lg-12 ml-auto text-center">
-              <!--<span class="sub-title">Welcome</span>
-              <h2 class="font-weight-bold text-black mb-5">to Baan Saowanee</h2>-->
+              <span class="sub-title">Welcome to</span>
+              <h2 class="font-weight-bold text-black mb-5">Baan Saowanee</h2>
             </div>
           </div>
         </div>
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
+              <span class="flower-separator-pink"></span>
               <p>Baan Saowanee is a collection of holiday home rentals situated on the north side of Ko Samui island, a short five minute drive to scenic Mae Nam Beach. Sun, sand and the Gulf of Siam combine to make many a perfect day.</p>
               <p>Our vacation homes are located in a quiet community enhanced with lush tropical greenery, fruit trees and flower blooms; but only a short walk away from convenience: restaurants, coffee bars, bakeries and other small shops. Picturesque Mae Nam village is nearby, as is the community Buddhist spiritual centre: Golden Mountain Temple.</p>
               <p>Baan Saowanee guests have a range of rental options to choose from, dependent upon the number of persons and quality of accommodation. All of our holiday properties are clean, attractive and well maintained.</p>
@@ -254,5 +255,23 @@
   .homepage-hero-content {
     position: relative;
     z-index: 50;
+  }
+
+  .flower-separator-pink {
+    margin: 2em auto;
+    display: block;
+    background: url(/images/decorations/leelawadee-pink.png) no-repeat;
+    background-size: contain;
+    width: 300px;
+    height: 150px
+  }
+
+  .flower-separator-white {
+    margin: 2em auto;
+    display: block;
+    background: url(/images/decorations/leelawadee-pink.png) no-repeat;
+    background-size: contain;
+    width: 300px;
+    height: 150px
   }
 </style>
