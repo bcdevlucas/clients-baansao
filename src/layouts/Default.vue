@@ -328,6 +328,11 @@
 
 <style lang="scss">
   /* These are theme & client specific modifications */
+  header {
+    border-bottom: 2px solid #F9E387; /* TODO: Add this color as theme's gold color */
+    box-shadow: 0 1px 3px rgba(16,16,16,0.33333);
+  }
+
   .body {
     overflow-x: hidden !important;
   }

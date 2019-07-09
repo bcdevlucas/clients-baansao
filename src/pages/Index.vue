@@ -250,7 +250,7 @@
       animation: logospin 60s 0s;
       animation-iteration-count: infinite;
 
-      filter: drop-shadow(2px 2px 6px black);
+      filter: drop-shadow(2px 2px 4px rgba(16,16,16,0.33333));
     }
 
     @keyframes logospin {
@@ -279,7 +279,8 @@
     background: url(/images/decorations/leelawadee-pink.png) no-repeat center center;
     background-size: contain;
     width: 100%;
-    height: 150px
+    height: 150px;
+    filter: drop-shadow(2px 2px 4px rgba(16,16,16,0.33333));
   }
 
   .flower-separator-white {
@@ -290,5 +291,6 @@
     width: 100%;
     height: 150px;
     transform: rotate(38deg);
+    filter: drop-shadow(2px 2px 4px rgba(16,16,16,0.33333));
   }
 </style>

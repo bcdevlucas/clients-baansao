@@ -21,15 +21,15 @@
           <div class="d-flex ml-auto">
             <a href="https://www.instagram.com/creativeescapesyeg" class="d-flex align-items-center ml-auto mr-4">
               <span class="icon-instagram mr-2"></span>
-              <!--<span class="d-none d-md-inline-block">@creativeescapesyeg</span>-->
+              <!--<span class="d-none d-md-inline-block">@baansaowanee</span>-->
             </a>
             <a href="https://www.facebook.com/BaanSaowanee" class="d-flex align-items-center ml-auto mr-4">
               <span class="icon-facebook mr-2"></span>
-              <!--<span class="d-none d-md-inline-block">wilderthanthewindcreations</span>-->
+              <!--<span class="d-none d-md-inline-block">baansaowanee</span>-->
             </a>
             <a href="#" class="d-flex align-items-center ml-auto mr-4">
               <span class="icon-phone mr-2"></span>
-              <span class="d-none d-lg-inline-block">+66 (81) 555-5555</span>
+              <!--<span class="d-none d-lg-inline-block">+66 (81) 555-5555</span>-->
             </a>
             <a href="#" class="d-flex align-items-center">
               <span class="icon-envelope mr-2"></span>
@@ -500,6 +500,7 @@
       height: 32px;
       animation: navlogospin 30s 0s;
       animation-iteration-count: infinite;
+      filter: drop-shadow(2px 2px 4px rgba(16,16,16,0.33333));
     }
 
     @keyframes navlogospin {
