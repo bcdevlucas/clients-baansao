@@ -104,7 +104,6 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <span class="flower-separator-pink"></span>
               <p>Baan Saowanee is a collection of holiday home rentals situated on the north side of Ko Samui island, a short five minute drive to scenic Mae Nam Beach. Sun, sand and the Gulf of Siam combine to make many a perfect day.</p>
               <p>Our vacation homes are located in a quiet community enhanced with lush tropical greenery, fruit trees and flower blooms; but only a short walk away from convenience: restaurants, coffee bars, bakeries and other small shops. Picturesque Mae Nam village is nearby, as is the community Buddhist spiritual centre: Golden Mountain Temple.</p>
               <p>Baan Saowanee guests have a range of rental options to choose from, dependent upon the number of persons and quality of accommodation. All of our holiday properties are clean, attractive and well maintained.</p>
@@ -112,6 +111,8 @@
           </div>
         </div>
       </div>
+
+      <span class="flower-separator-pink"></span>
 
       <div class="site-section pt-0">
         <div class="container pt-4">
@@ -125,7 +126,22 @@
         <div class="container">
           <div class="row">
             <content-block-layout
-              v-for="service in getServices()"
+              v-for="service in getServices().slice(0, getServices().length / 2)"
+              v-if="typeof service.summary === 'string'"
+              :key="service.id"
+              className="col-lg-6 col-md-6 mb-6 project-entry"
+              :title="service.title"
+              :description="(service.summary) ? service.summary : ''"
+              :link="service.link"
+              linkText="Learn More"
+              :image="service.image"
+              imageAlt=""
+            />
+
+            <span class="flower-separator-white"></span>
+
+            <content-block-layout
+              v-for="service in getServices().slice(getServices().length / 2, getServices().length)"
               v-if="typeof service.summary === 'string'"
               :key="service.id"
               className="col-lg-6 col-md-6 mb-6 project-entry"
@@ -262,16 +278,17 @@
     display: block;
     background: url(/images/decorations/leelawadee-pink.png) no-repeat center center;
     background-size: contain;
-    width: 300px;
+    width: 100%;
     height: 150px
   }
 
   .flower-separator-white {
     margin: 2em auto;
     display: block;
-    background: url(/images/decorations/leelawadee-pink.png) no-repeat center center;
+    background: url(/images/decorations/leelawadee-white.png) no-repeat center center;
     background-size: contain;
-    width: 300px;
-    height: 150px
+    width: 100%;
+    height: 150px;
+    transform: rotate(38deg);
   }
 </style>
