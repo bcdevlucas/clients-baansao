@@ -230,6 +230,22 @@
       background-size: cover;
       width: 100px;
       height: 100px;
+      animation: navlogospin 30s 0s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes navlogospin {
+     0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(-180deg);
+      }
+
+      100% {
+        transform: rotate(-359deg);
+      }
     }
   }
 

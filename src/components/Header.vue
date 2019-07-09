@@ -498,7 +498,7 @@
       background-size: cover;
       width: 32px;
       height: 32px;
-      animation: logospin 30s 0s;
+      animation: logospin 60s 0s;
       animation-iteration-count: infinite;
     }
 
@@ -508,9 +508,12 @@
       }
 
       100% {
-        transform: rotate(359deg);
+        transform: rotate(180deg);
       }
 
+      100% {
+        transform: rotate(359deg);
+      }
     }
 
     &:hover {
