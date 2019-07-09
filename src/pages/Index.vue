@@ -260,7 +260,7 @@
   .flower-separator-pink {
     margin: 2em auto;
     display: block;
-    background: url(/images/decorations/leelawadee-pink.png) no-repeat;
+    background: url(/images/decorations/leelawadee-pink.png) no-repeat center center;
     background-size: contain;
     width: 300px;
     height: 150px
@@ -269,7 +269,7 @@
   .flower-separator-white {
     margin: 2em auto;
     display: block;
-    background: url(/images/decorations/leelawadee-pink.png) no-repeat;
+    background: url(/images/decorations/leelawadee-pink.png) no-repeat center center;
     background-size: contain;
     width: 300px;
     height: 150px
