@@ -2,11 +2,6 @@
   <div class="layout">
     <Header/>
     <div class="page-wrap">
-      <div class="moving-palm-left"></div>
-      <div class="moving-palm-right"></div>
-      <!--<div class="moving-palm-bottom"></div>-->
-      <div class="palm-fog animate"></div>
-
       <slot />
 
       <div class="site-section" v-if="displayPosts">
@@ -398,7 +393,17 @@
     z-index: 2
   }
 
-  .moving-palm-left, .moving-palm-right, .moving-palm-bottom, .palm-fog {
+  .palm-fog {
+    background-image: url(/images/decorations/fog.png);
+    z-index: 2;
+    width: 9888px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none
+  }
+
+  .moving-palm-left, .moving-palm-right, .moving-palm-solo, .palm-fog {
     position: absolute;
     background-repeat: no-repeat;
     background-position: center center;
@@ -406,62 +411,55 @@
     display: block
   }
 
-  .moving-palm-left, .moving-palm-right, .moving-palm-bottom {
-    background-image: url(/images/decorations/kisspng-arecaceae-leaf-photography-palm-branch-palm-leaf-5a989b2d7c4526.704226721519950637509.png);
+  .moving-palm-left, .moving-palm-right, .moving-palm-solo {
     z-index: 3;
     filter: drop-shadow(15px 15px 30px rgba(16,16,16,0.5));
-  }
-
-  .palm-fog {
-    background-image: url(/images/decorations/fog.png);
-    z-index: 2;
-    width: 9888px;
-    height: 100%;
-    bottom: 0;
-    left: 0;
-    display: none
+    background-size: contain;
   }
 
   .moving-palm-left {
-    width: 550px;
-    height: 775px;
-    top: -350px;
-    left: -280px;
-    transform: rotate(11deg) scaleX(-1);
+    background-image: url(/images/decorations/palm-branches-left.png);
   }
 
   .moving-palm-right {
-    width: 550px;
-    height: 775px;
-    top: -350px;
-    right: -280px;
-    transform: rotate(-11deg)
+    background-image: url(/images/decorations/palm-branches-right.png);
   }
 
-  .moving-palm-bottom {
-    width: 410px;
-    height: 577px;
-    bottom: -200px;
-    left: -240px;
-    transform: rotate(-103deg)
+  .moving-palm-solo {
+    background-image: url(/images/decorations/palm-branch.png);
   }
+
+  /* Photo */
+  .moving-palm-left {
+    width: 593px;
+    height: 924px;
+    top: 0px;
+    left: -210px;
+    transform: rotate(0deg);
+  }
+
+  .moving-palm-solo {
+    width: 566px;
+    height: 807px;
+    top: -200px;
+    left: -130px;
+    transform: rotate(-23deg);
+  }
+
+  .moving-palm-right {
+    width: 549px;
+    height: 825px;
+    bottom: -150px;
+    right: 15px;
+    transform: rotate(90deg);
+  }
+
+
 
   @media only screen and (min-width: 48em) {
     .palm-box-shadow {
       background-image: radial-gradient(circle, rgba(16, 16, 16, 0.1), rgba(16, 16, 16, 0.2), rgba(16, 16, 16, 0.3));
       box-shadow: inset 20px 20px 100px 90px #101010
-    }
-
-    .moving-palm-right {
-      width: 758px;
-      height: 1068px
-    }
-
-    .moving-palm-bottom {
-      width: 566px;
-      height: 807px;
-      bottom: -300px;
-      left: -150px
     }
   }
 
@@ -642,7 +640,7 @@
       }
     }
 
-    .moving-palm-bottom.animate {
+    .moving-palm-solo.animate {
       -webkit-animation: bottompalmsway 16s ease 0s;
       -webkit-animation-iteration-count: infinite;
       animation: bottompalmsway 16s ease 0s;
@@ -710,7 +708,7 @@
   }
 
   @media screen and (min-width: 1280px) {
-    .moving-palm-left, .moving-palm-right, .moving-palm-bottom {
+    .moving-palm-left, .moving-palm-right, .moving-palm-solo {
       opacity: 1;
       /*filter: drop-shadow(2px 4px 6px black);*/
     }
@@ -730,39 +728,14 @@
       right: -500px
     }
 
-    .moving-palm-bottom {
+    .moving-palm-solo {
       width: 1000px;
       height: 1408px;
       bottom: -850px;
       left: -150px
     }*/
-
-    /* Photo */
-    .moving-palm-left {
-      width: 666px;
-      height: 1000px;
-      top: -160px;
-      left: -150px
-    }
-
-    .moving-palm-right {
-      width: 666px;
-      height: 1000px;
-      top: -160px;
-      right: -150px
-    }
-
-    .moving-palm-bottom {
-      width: 666px;
-      height: 1000px;
-      bottom: -850px;
-      left: -150px
-    }
   }
 
   @media only screen and (min-width: 120.0625em) {
-    .moving-palm-right {
-      right: -230px
-    }
   }
 </style>

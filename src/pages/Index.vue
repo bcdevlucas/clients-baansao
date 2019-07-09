@@ -28,8 +28,11 @@
 
       <div class="site-blocks-cover overlay aos-init aos-animate" style="background-image: url(images/orchard-view/keepers/1921024_642689422472455_1215029725_o.00.jpg)" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="palm-box-shadow"></div>
+        <div class="moving-palm-left"></div>
+        <div class="moving-palm-right"></div>
+        <div class="moving-palm-solo"></div>
         <div class="palm-fog animate"></div>
-        <div class="container">
+        <div class="container homepage-hero-content">
           <div class="row align-items-center text-center justify-content-center" style="position: relative; top: -3rem;">
             <div class="col-md-8">
               <div class="hero-logo"><span></span></div>
@@ -228,5 +231,10 @@
       width: 100px;
       height: 100px;
     }
+  }
+
+  .homepage-hero-content {
+    position: relative;
+    z-index: 50;
   }
 </style>
