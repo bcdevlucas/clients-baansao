@@ -2,6 +2,11 @@
   <div class="layout">
     <Header/>
     <div class="page-wrap">
+      <div class="moving-palm-left"></div>
+      <div class="moving-palm-right"></div>
+      <!--<div class="moving-palm-bottom"></div>-->
+      <div class="palm-fog animate"></div>
+
       <slot />
 
       <div class="site-section" v-if="displayPosts">
@@ -34,53 +39,57 @@
       </div>
 
       <footer class="site-footer">
-        <div class="container mt-4 pt-4">
-          <div class="row">
-            <div class="col-lg-4 mb-5 mb-lg-0">
-              <div class="row mb-5">
-                <div class="col-md-12">
-                  <h3 class="footer-heading mb-4">Navigation</h3>
-                </div>
-                <div class="col-md-6 col-lg-6">
-                  <ul class="list-unstyled">
-                    <li><g-link to="/">Home</g-link></li>
-                    <li><g-link to="/properties">Properties</g-link></li>
-                    <li><g-link to="/services">Services</g-link></li>
-                  </ul>
-                </div>
-                <div class="col-md-6 col-lg-6">
-                  <ul class="list-unstyled">
-                    <li><g-link to="/blog-posts">Blog</g-link></li>
-                    <li><g-link to="/about">About Us</g-link></li>
-                    <li><g-link to="/contact">Contact Us</g-link></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4"></div>
-
-            <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="footer-banner">
+          <div class="footer-main">
+            <div class="container mt-4 pt-4">
               <div class="row">
-                <div class="col-md-12">
-                  <h3 class="footer-heading mb-4">Follow Us</h3>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                  <div class="row mb-5">
+                    <div class="col-md-12">
+                      <h3 class="footer-heading mb-4">Navigation</h3>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                      <ul class="list-unstyled">
+                        <li><g-link to="/">Home</g-link></li>
+                        <li><g-link to="/properties">Properties</g-link></li>
+                        <li><g-link to="/services">Services</g-link></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                      <ul class="list-unstyled">
+                        <li><g-link to="/blog-posts">Blog</g-link></li>
+                        <li><g-link to="/about">About Us</g-link></li>
+                        <li><g-link to="/contact">Contact Us</g-link></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4"></div>
 
-                  <div>
-                    <a
-                      href="https://www.facebook.com/BaanSaowanee"
-                      class="pl-0 pr-3"
-                      ><span class="icon-facebook"></span
-                    ></a>
-                    <a
-                      href="https://www.instagram.com/creativeescapesyeg"
-                      class="pl-3 pr-3"
-                      ><span class="icon-instagram"></span
-                    ></a>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h3 class="footer-heading mb-4">Follow Us</h3>
+
+                      <div>
+                        <a
+                          href="https://www.facebook.com/BaanSaowanee"
+                          class="pl-0 pr-3"
+                          ><span class="icon-facebook"></span
+                        ></a>
+                        <a
+                          href="https://www.instagram.com/creativeescapesyeg"
+                          class="pl-3 pr-3"
+                          ><span class="icon-instagram"></span
+                        ></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="row pt-5 mt-5 text-center"></div>
             </div>
           </div>
-          <div class="row pt-5 mt-5 text-center"></div>
         </div>
       </footer>
     </div>
@@ -186,10 +195,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .site-footer {
-    padding: 0;
-  }
-
   /* Quick fixes for typography */
   .site-blocks-cover .sub-text {
     font-size: 0.65rem !important;
@@ -204,7 +209,6 @@
 @media screen and (min-width: 768px) {
   .site-footer {
     position: absolute;
-    bottom: -50vh;
     width: 100vw;
   }
 }
@@ -325,4 +329,426 @@
     mask-position: center -60px;
   }
 }
+</style>
+
+<style lang="scss">
+  /* These are theme & client specific modifications */
+  .body {
+    overflow-x: hidden !important;
+  }
+
+  .content-wrapper {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 30vh;
+  }
+
+  .site-section {
+    position: relative;
+    z-index: 10;
+  }
+
+  .site-footer {
+    z-index: 10;
+    background: transparent;
+    a {
+      color: white;
+    }
+  }
+
+  .footer-banner {
+    background: url(/images/samui-panorama.png) no-repeat center top;
+    padding: 394px 0 0;
+    position: relative;
+  }
+  .footer-main {
+    background: url(/images/decorations/grass-tile-cutout.png) repeat-x center top;
+    overflow: visible;
+    padding: 470px 0 0 0;
+  }
+
+  .quick-links {
+    padding-top: 11em;
+  }
+
+  /* Decorative styles, parallax ,and other goodies */
+  .home-banner-container {
+    background: url(/images/decorations/palm-bg.svg) 50% 0px / cover no-repeat;
+  }
+
+  .palm-box-shadow {
+    background-image: radial-gradient(circle, rgba(16, 16, 16, 0.1), rgba(16, 16, 16, 0.2), rgba(16, 16, 16, 0.3));
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 2
+  }
+
+  .moving-palm-left, .moving-palm-right, .moving-palm-bottom, .palm-fog {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: block
+  }
+
+  .moving-palm-left, .moving-palm-right, .moving-palm-bottom {
+    background-image: url(/images/decorations/kisspng-arecaceae-leaf-photography-palm-branch-palm-leaf-5a989b2d7c4526.704226721519950637509.png);
+    z-index: 3;
+    filter: drop-shadow(15px 15px 30px rgba(16,16,16,0.5));
+  }
+
+  .palm-fog {
+    background-image: url(/images/decorations/fog.png);
+    z-index: 2;
+    width: 9888px;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    display: none
+  }
+
+  .moving-palm-left {
+    width: 550px;
+    height: 775px;
+    top: -350px;
+    left: -280px;
+    transform: rotate(11deg) scaleX(-1);
+  }
+
+  .moving-palm-right {
+    width: 550px;
+    height: 775px;
+    top: -350px;
+    right: -280px;
+    transform: rotate(-11deg)
+  }
+
+  .moving-palm-bottom {
+    width: 410px;
+    height: 577px;
+    bottom: -200px;
+    left: -240px;
+    transform: rotate(-103deg)
+  }
+
+  @media only screen and (min-width: 48em) {
+    .palm-box-shadow {
+      background-image: radial-gradient(circle, rgba(16, 16, 16, 0.1), rgba(16, 16, 16, 0.2), rgba(16, 16, 16, 0.3));
+      box-shadow: inset 20px 20px 100px 90px #101010
+    }
+
+    .moving-palm-right {
+      width: 758px;
+      height: 1068px
+    }
+
+    .moving-palm-bottom {
+      width: 566px;
+      height: 807px;
+      bottom: -300px;
+      left: -150px
+    }
+  }
+
+  @media only screen and (min-width: 64em) {
+    .palm-box-shadow {
+      background-image: radial-gradient(circle, rgba(16, 16, 16, 0.1), rgba(16, 16, 16, 0.2), rgba(16, 16, 16, 0.3))
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    @-webkit-keyframes foganimation {
+      0% {
+        left: 0;
+        opacity: 0
+      }
+
+      5% {
+        opacity: 1
+      }
+
+      70% {
+        opacity: 1
+      }
+
+      100% {
+        left: -6888px;
+        opacity: 0
+      }
+    }
+
+    @keyframes foganimation {
+      0% {
+        left: 0;
+        opacity: 0
+      }
+
+      5% {
+        opacity: 1
+      }
+
+      70% {
+        opacity: 1
+      }
+
+      100% {
+        left: -6888px;
+        opacity: 0
+      }
+    }
+
+    .palm-fog.animate {
+      display: block;
+      -webkit-animation: foganimation 60s 0s;
+      -webkit-animation-iteration-count: infinite;
+      animation: foganimation 60s 0s;
+      animation-iteration-count: infinite;
+    }
+
+    .moving-palm-left.animate {
+      -webkit-animation: leftpalmsway 14s ease 0s;
+      -webkit-animation-iteration-count: infinite;
+      animation: leftpalmsway 14s ease 0s;
+      animation-iteration-count: infinite;
+    }
+
+    @-webkit-keyframes leftpalmsway {
+      0% {
+        transform: rotate(41deg) scaleX(-1);
+        top: -1050px
+      }
+
+      20% {
+        transform: rotate(39deg) scaleX(-1);
+        top: -1030px
+      }
+
+      40% {
+        transform: rotate(41deg) scaleX(-1);
+        top: -1050px
+      }
+
+      75% {
+        transform: rotate(40deg) scaleX(-1);
+        top: -1040px
+      }
+
+      100% {
+        transform: rotate(41deg) scaleX(-1);
+        top: -1050px
+      }
+    }
+
+    @keyframes leftpalmsway {
+      0% {
+        transform: rotate(41deg) scaleX(-1);
+        top: -1050px
+      }
+
+      20% {
+        transform: rotate(39deg) scaleX(-1);
+        top: -1030px
+      }
+
+      40% {
+        transform: rotate(41deg) scaleX(-1);
+        top: -1050px
+      }
+
+      75% {
+        transform: rotate(40deg) scaleX(-1);
+        top: -1040px
+      }
+
+      100% {
+        transform: rotate(41deg) scaleX(-1);
+        top: -1050px
+      }
+    }
+
+    .moving-palm-right.animate {
+      -webkit-animation: rightpalmsway 14s ease 0s;
+      -webkit-animation-iteration-count: infinite;
+      animation: rightpalmsway 14s ease 0s;
+      animation-iteration-count: infinite
+    }
+
+    @-webkit-keyframes rightpalmsway {
+      0% {
+        transform: rotate(-11deg);
+        top: -850px
+      }
+
+      20% {
+        transform: rotate(-9deg);
+        top: -830px
+      }
+
+      40% {
+        transform: rotate(-11deg);
+        top: -850px
+      }
+
+      75% {
+        transform: rotate(-10deg);
+        top: -840px
+      }
+
+      100% {
+        transform: rotate(-11deg);
+        top: -850px
+      }
+    }
+
+    @keyframes rightpalmsway {
+      0% {
+        transform: rotate(-11deg);
+        top: -850px
+      }
+
+      20% {
+        transform: rotate(-9deg);
+        top: -830px
+      }
+
+      40% {
+        transform: rotate(-11deg);
+        top: -850px
+      }
+
+      75% {
+        transform: rotate(-10deg);
+        top: -840px
+      }
+
+      100% {
+        transform: rotate(-11deg);
+        top: -850px
+      }
+    }
+
+    .moving-palm-bottom.animate {
+      -webkit-animation: bottompalmsway 16s ease 0s;
+      -webkit-animation-iteration-count: infinite;
+      animation: bottompalmsway 16s ease 0s;
+      animation-iteration-count: infinite
+    }
+
+    @-webkit-keyframes bottompalmsway {
+      0% {
+        transform: rotate(-103deg);
+        bottom: -850px;
+        left: -150px
+      }
+
+      25% {
+        transform: rotate(-105deg);
+        bottom: -870px;
+        left: -140px
+      }
+
+      50% {
+        transform: rotate(-103deg);
+        bottom: -850px;
+        left: -150px
+      }
+
+      75% {
+        transform: rotate(-104deg);
+        bottom: -860px;
+        left: -145px
+      }
+
+      100% {
+        transform: rotate(-103deg);
+        bottom: -850px;
+        left: -150px
+      }
+    }
+
+    @keyframes bottompalmsway {
+      0% {
+        transform: rotate(-103deg);
+        bottom: -850px
+      }
+
+      25% {
+        transform: rotate(-105deg);
+        bottom: -830px
+      }
+
+      50% {
+        transform: rotate(-103deg);
+        bottom: -850px
+      }
+
+      75% {
+        transform: rotate(-104deg);
+        bottom: -840px
+      }
+
+      100% {
+        transform: rotate(-103deg);
+        bottom: -850px
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .moving-palm-left, .moving-palm-right, .moving-palm-bottom {
+      opacity: 1;
+      /*filter: drop-shadow(2px 4px 6px black);*/
+    }
+
+    /* SVG */
+    /*.moving-palm-left {
+      width: 1188px;
+      height: 1678px;
+      top: -1050px;
+      left: -500px
+    }
+
+    .moving-palm-right {
+      width: 1188px;
+      height: 1678px;
+      top: -850px;
+      right: -500px
+    }
+
+    .moving-palm-bottom {
+      width: 1000px;
+      height: 1408px;
+      bottom: -850px;
+      left: -150px
+    }*/
+
+    /* Photo */
+    .moving-palm-left {
+      width: 666px;
+      height: 1000px;
+      top: -160px;
+      left: -150px
+    }
+
+    .moving-palm-right {
+      width: 666px;
+      height: 1000px;
+      top: -160px;
+      right: -150px
+    }
+
+    .moving-palm-bottom {
+      width: 666px;
+      height: 1000px;
+      bottom: -850px;
+      left: -150px
+    }
+  }
+
+  @media only screen and (min-width: 120.0625em) {
+    .moving-palm-right {
+      right: -230px
+    }
+  }
 </style>

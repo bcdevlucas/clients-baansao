@@ -7,6 +7,8 @@
         <span></span>
       </div>
 
+      <a href="/" class="logo"><span></span>Baan Saowanee</a>
+
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
         <ul class="site-menu mb-0">
           <li><a href="/" aria-label="Home" v-on:click="hideDropMenu()">Home</a></li>
@@ -382,7 +384,7 @@
         border: none;
         height: 100%;
         width: 100%;
-        display: block;
+        display: flex;
 
         &:hover {
           color: var(--cwhite);
@@ -474,5 +476,45 @@
     -webkit-font-smoothing: antialiased;
     font-size: 1.5rem;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  .logo {
+    display: inline-flex;
+
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    justify-content: start;
+    align-items: center;
+
+    color: var(--cgrey);
+
+    span {
+      margin-right: 10px;
+
+      display: block;
+      background: url(/images/logo.png) no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 32px;
+      height: 32px;
+      animation: logospin 30s 0s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes logospin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(359deg);
+      }
+
+    }
+
+    &:hover {
+      color: black;
+    }
   }
 </style>
