@@ -338,7 +338,6 @@
   }
 
   .content-wrapper {
-    overflow: hidden;
     position: relative;
     padding-bottom: 30vh;
   }
@@ -369,6 +368,21 @@
 
   .quick-links {
     padding-top: 11em;
+    position: relative;
+    z-index: 10;
+    top: -180px;
+  }
+
+  .site-block-feature:hover {
+    background: transparent !important;
+    top: -5px;
+  }
+
+  /* We've moved the block on top of the hero on desktop... override the color */
+  .site-block-feature p,
+  .site-block-feature .text-black,
+  .site-block-feature .block-icon {
+    color: white !important; /* Override existing important */
   }
 
   /* Decorative styles, parallax ,and other goodies */
