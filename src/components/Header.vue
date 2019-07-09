@@ -274,7 +274,7 @@
     height: 3px;
     margin-top: 8px;
     margin-bottom: 8px;
-    background-color: var(--cgrey);
+    background-color: goldenrod;
     display: block;
     transition: 0.33s;
     &:nth-child(1) {width: 32px;}
