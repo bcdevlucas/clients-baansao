@@ -383,16 +383,27 @@
     top: -180px;
   }
 
-  .site-block-feature:hover {
-    background: transparent !important;
-    top: -5px;
+  @media screen and (max-width: 64em) {
+    .quick-links {
+      padding-top: auto;
+      position: relative;
+      z-index: 10;
+      top: auto;
+    }
   }
 
-  /* We've moved the block on top of the hero on desktop... override the color */
-  .site-block-feature p,
-  .site-block-feature .text-black,
-  .site-block-feature .block-icon {
-    color: white !important; /* Override existing important */
+  @media screen and (min-width: 64em) {
+    .site-block-feature:hover {
+      background: transparent !important;
+      top: -5px;
+    }
+
+    /* We've moved the block on top of the hero on desktop... override the color */
+    .site-block-feature p,
+    .site-block-feature .text-black,
+    .site-block-feature .block-icon {
+      color: white !important; /* Override existing important */
+    }
   }
 
   /* Decorative styles, parallax ,and other goodies */
