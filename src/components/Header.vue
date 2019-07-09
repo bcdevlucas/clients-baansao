@@ -7,7 +7,7 @@
         <span></span>
       </div>
 
-      <a href="/" class="logo"><span></span>Baan Saowanee</a>
+      <a href="/" class="logo ml-4"><span></span>Baan Saowanee</a>
 
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
         <ul class="site-menu mb-0">
@@ -520,5 +520,9 @@
     &:hover {
       color: black;
     }
+  }
+
+  @media screen and (max-width: 40em) {
+    margin-left: 0;
   }
 </style>
