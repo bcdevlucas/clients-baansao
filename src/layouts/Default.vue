@@ -333,6 +333,16 @@
     box-shadow: 0 1px 3px rgba(16,16,16,0.33333);
   }
 
+  @media screen and (max-width: 40em) {
+    .site-navbar-top {
+      display: none !important;
+    }
+  }
+
+  .display-menu .site-navbar-top {
+    display: inline-flex !important;
+  }
+
   .body {
     overflow-x: hidden !important;
   }

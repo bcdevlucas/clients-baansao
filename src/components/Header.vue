@@ -17,9 +17,9 @@
           <li><a href="/services" aria-label="Services" v-on:click="hideDropMenu()">Services</a></li>
           <li><a href="/contact" aria-label="Contact" v-on:click="hideDropMenu()">Contact</a></li>
         </ul>
-        <div class="site-navbar-top d-flex">
+        <div class="site-navbar-top">
           <div class="d-flex ml-auto">
-            <a href="https://www.instagram.com/creativeescapesyeg" class="d-flex align-items-center ml-auto mr-4">
+            <a href="https://www.instagram.com/creativeescapesyeg" class="d-flex align-items-center ml-4 mr-4">
               <span class="icon-instagram mr-2"></span>
               <!--<span class="d-none d-md-inline-block">@baansaowanee</span>-->
             </a>
