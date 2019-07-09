@@ -498,11 +498,11 @@
       background-size: cover;
       width: 32px;
       height: 32px;
-      animation: logospin 60s 0s;
+      animation: navlogospin 30s 0s;
       animation-iteration-count: infinite;
     }
 
-    @keyframes logospin {
+    @keyframes navlogospin {
       0% {
         transform: rotate(0deg);
       }
