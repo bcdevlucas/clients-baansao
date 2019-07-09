@@ -350,7 +350,7 @@
 
   .site-footer {
     z-index: 10;
-    background: transparent;
+    background: transparent !important;
     a {
       color: white;
     }
