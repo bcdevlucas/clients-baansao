@@ -3,7 +3,7 @@
     <div class="hero-wrapper">
       <div
         v-if="!activeService && getHeroById('page-hero') !== null"
-        class="site-blocks-cover overlay inner-page"
+        class="site-blocks-cover inner-page"
         :style="`background-image: url(${getHeroById('page-hero').image});`"
         data-aos="fade"
         data-stellar-background-ratio="0.5"

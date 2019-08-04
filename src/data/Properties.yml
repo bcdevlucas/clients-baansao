@@ -8,7 +8,7 @@ description: >-
 heroes:
   - description: >-
     id: page-hero
-    image: /images/orchard-view-3br/23.jpg
+    image: /images/orchard-view-3br/23-new-sky.jpg
     link:
     linkText:
     title: Vacation Homes
@@ -66,10 +66,10 @@ services:
 
       We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
     id: orchard-view
-    image: /images/orchard-view-3br/23.jpg
+    image: /images/orchard-view-3br/23-new-sky.jpg
     gallery:
       - id: 1
-        src: /images/orchard-view-3br/23.jpg
+        src: /images/orchard-view-3br/23-new-sky.jpg
         caption: Orchard view 1
         subCaption:
         featured: true

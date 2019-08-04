@@ -161,7 +161,7 @@
 .site-blocks-cover .sub-text {
   font-size: 1.1rem;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 1);
   letter-spacing: 0.2em;
 }
 .site-blocks-cover h1 {
@@ -485,7 +485,7 @@
   @media only screen and (min-width: 48em) {
     .palm-box-shadow {
       background-image: radial-gradient(circle, rgba(16, 16, 16, 0.1), rgba(16, 16, 16, 0.2), rgba(16, 16, 16, 0.3));
-      box-shadow: inset 20px 20px 100px 90px #101010
+      box-shadow: inset 20px 20px 100px 90px rgba(16,16,16,0.666667);
     }
   }
 

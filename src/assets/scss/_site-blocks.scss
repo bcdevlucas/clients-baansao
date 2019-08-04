@@ -4,8 +4,8 @@ $color-tertiary: #ff5733;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+  position: relative;
   &.overlay {
-    position: relative;
     &:before {
       position: absolute;
       content: "";
@@ -31,7 +31,7 @@ $color-tertiary: #ff5733;
   .sub-text {
     font-size: $font-size-base + 0.1rem;
     text-transform: uppercase;
-    color: rgba($white, 0.7);
+    color: rgba($white, 1);
     letter-spacing: 0.2em;
   }
   h1 {

@@ -26,7 +26,7 @@
         </div>
       </div>-->
 
-      <div class="site-blocks-cover overlay aos-init aos-animate" style="background-image: url(/images/orchard-view-3br/23.jpg)" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="site-blocks-cover aos-init aos-animate" style="background-image: url(/images/orchard-view-3br/23-new-sky.jpg)" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="palm-box-shadow"></div>
         <div class="moving-palm-left animate"></div>
         <div class="moving-palm-right animate"></div>
