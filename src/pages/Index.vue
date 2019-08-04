@@ -26,7 +26,7 @@
         </div>
       </div>-->
 
-      <div class="site-blocks-cover aos-init aos-animate" style="background-image: url(/images/orchard-view-3br/23-new-sky.jpg)" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="site-blocks-cover text-shadow" style="background-image: url(/images/orchard-view-3br/23-new-sky.jpg)">
         <div class="palm-box-shadow"></div>
         <div class="moving-palm-left animate"></div>
         <div class="moving-palm-right animate"></div>
@@ -45,7 +45,7 @@
     </div>
 
     <div class="content-wrapper">
-      <div class="site-section quick-links pb-0">
+      <div class="site-section quick-links text-shadow pb-0">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -294,5 +294,16 @@
     height: 150px;
     transform: rotate(38deg);
     filter: drop-shadow(2px 2px 4px rgba(16,16,16,0.33333));
+  }
+
+  .text-shadow * {
+    &:not(input):not(select):not(checkbox):not(label):not(textarea) {
+      text-shadow: 2px 2px 5px rgba(0,0,0,.777);
+    }
+  }
+
+  .text-shadow a.action-link,
+  .text-shadow a.action-button {
+    text-shadow: none;
   }
 </style>

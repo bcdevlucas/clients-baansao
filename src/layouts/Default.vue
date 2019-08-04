@@ -35,6 +35,7 @@
 
       <footer class="site-footer">
         <div class="footer-banner">
+          <img src="/images/orchard-view-3br/20-no-sky.png" style="object-fit: contain; max-width: 100%; position: absolute; z-index: 1; top: 10px;" />
           <div class="footer-main">
             <div class="container mt-4 pt-4">
               <div class="row">
@@ -366,14 +367,17 @@
   }
 
   .footer-banner {
-    background: url(/images/samui-panorama-adj.png) no-repeat center top;
-    padding: 224px 0 0;
+    background: url(/images/samui-panorama-adj.png) no-repeat center 170px;
+    padding: 1024px 0 0;
     position: relative;
+    z-index: 1;
   }
   .footer-main {
     background: url(/images/decorations/grass-tile-cutout.png) repeat-x center top;
     overflow: visible;
     padding: 470px 0 0 0;
+    z-index: 3;
+    position: relative;
   }
 
   .quick-links {
