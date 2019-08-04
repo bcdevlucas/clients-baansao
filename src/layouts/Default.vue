@@ -412,7 +412,7 @@
   }
 
   .palm-box-shadow {
-    background-image: radial-gradient(circle, rgba(16, 16, 16, 0.1), rgba(16, 16, 16, 0.2), rgba(16, 16, 16, 0.3));
+    /*background-image: radial-gradient(circle, rgba(16, 16, 16, 0.1), rgba(16, 16, 16, 0.2), rgba(16, 16, 16, 0.3));*/
     height: 100%;
     position: absolute;
     width: 100%;
@@ -484,14 +484,14 @@
 
   @media only screen and (min-width: 48em) {
     .palm-box-shadow {
-      background-image: radial-gradient(circle, rgba(16, 16, 16, 0.1), rgba(16, 16, 16, 0.2), rgba(16, 16, 16, 0.3));
+      /*background-image: radial-gradient(circle, rgba(16, 16, 16, 0.1), rgba(16, 16, 16, 0.2), rgba(16, 16, 16, 0.3));*/
       box-shadow: inset 20px 20px 100px 90px rgba(16,16,16,0.666667);
     }
   }
 
   @media only screen and (min-width: 64em) {
     .palm-box-shadow {
-      background-image: radial-gradient(circle, rgba(16, 16, 16, 0.1), rgba(16, 16, 16, 0.2), rgba(16, 16, 16, 0.3))
+      /*background-image: radial-gradient(circle, rgba(16, 16, 16, 0.1), rgba(16, 16, 16, 0.2), rgba(16, 16, 16, 0.3));*/
     }
   }
 
