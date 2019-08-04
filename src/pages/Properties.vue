@@ -3,10 +3,8 @@
     <div class="hero-wrapper">
       <div
         v-if="!activeService && getHeroById('page-hero') !== null"
-        class="site-blocks-cover inner-page"
+        class="site-blocks-cover inner-page text-shadow"
         :style="`background-image: url(${getHeroById('page-hero').image});`"
-        data-aos="fade"
-        data-stellar-background-ratio="0.5"
       >
         <div class="palm-box-shadow"></div>
         <div class="container" ref="pageHero">
@@ -22,7 +20,7 @@
 
       <div
         v-if="activeService && getHeroById('page-hero') !== null"
-        class="site-blocks-cover overlay inner-page"
+        class="site-blocks-cover overlay text-shadow inner-page"
         :style="`background-image: url(${activeImage.src});`"
         data-aos="fade"
         data-stellar-background-ratio="0.5"
@@ -550,7 +548,7 @@
 </script>
 
 
-<style>
+<style lang="scss">
   .class-action-buttons {
     display: flex;
     align-items: center;
@@ -644,5 +642,16 @@
 
   .thumbnail-strip > :nth-child(n+3) {
     padding-right: 0;
+  }
+
+  .text-shadow * {
+    &:not(input):not(select):not(checkbox):not(label):not(textarea) {
+      text-shadow: 2px 2px 5px rgba(0,0,0,.777);
+    }
+  }
+
+  .text-shadow a.action-link,
+  .text-shadow a.action-button {
+    text-shadow: none;
   }
 </style>
