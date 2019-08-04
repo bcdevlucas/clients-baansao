@@ -75,16 +75,16 @@
                   <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
                 </div>
                 <div class="thumbnail-strip" v-if="activeService.gallery instanceof Array">
-                  <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(0,2)" :src="gallery.src" :alt="gallery.caption" class="img">
+                  <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(0, 2, true)" :src="gallery.src" :alt="gallery.caption" class="img">
                 </div>
                 <div class="thumbnail-strip" v-if="activeService.gallery instanceof Array">
-                  <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(3,5)" :src="gallery.src" :alt="gallery.caption" class="img">
+                  <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(3, 5, true)" :src="gallery.src" :alt="gallery.caption" class="img">
                 </div>
                 <div class="thumbnail-strip" v-if="activeService.gallery instanceof Array">
-                  <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(6,8)" :src="gallery.src" :alt="gallery.caption" class="img">
+                  <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(6, 8, true)" :src="gallery.src" :alt="gallery.caption" class="img">
                 </div>
                 <div class="thumbnail-strip" v-if="activeService.gallery instanceof Array">
-                  <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(9,11)" :src="gallery.src" :alt="gallery.caption" class="img">
+                  <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(9, 11, true)" :src="gallery.src" :alt="gallery.caption" class="img">
                 </div>
               </div>
               <div class="amenities-table mt-4">
@@ -414,8 +414,9 @@
       unsetActiveService() {
         this.activeService = null;
       },
-      getGalleryImages(start, end) {
+      getGalleryImages(start, end, featuredOnly) {
         let galleryImages = this.activeService.gallery instanceof Array ? this.activeService.gallery : [];
+        galleryImages = (featuredOnly) ? galleryImages.filter((item) => item.featured) : galleryImages;
 
         start = (!isNaN(start)) ? start : 0;
         // Add 1 to end as slice doesn't count include the last item

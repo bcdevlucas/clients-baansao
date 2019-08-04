@@ -8,7 +8,7 @@ description: >-
 heroes:
   - description: >-
     id: page-hero
-    image: /images/orchard-view/keepers/1921024_642689422472455_1215029725_o.00.jpg
+    image: /images/orchard-view-3br/23.jpg
     link:
     linkText:
     title: Vacation Homes
@@ -66,55 +66,167 @@ services:
 
       We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
     id: orchard-view
-    image: /images/orchard-view/keepers/1606419_642690905805640_1828336230_o.jpg
+    image: /images/orchard-view-3br/23.jpg
     gallery:
       - id: 1
-        src: /images/orchard-view/keepers/1921024_642689422472455_1215029725_o.00.jpg
+        src: /images/orchard-view-3br/23.jpg
         caption: Orchard view 1
         subCaption:
+        featured: true
       - id: 2
-        src: /images/orchard-view/keepers/IMG_5660.JPG
+        src: /images/orchard-view-3br/1.jpg
         caption: Orchard view 2
         subCaption:
+        featured: false
       - id: 3
-        src: /images/orchard-view/keepers/20130522-DSC_6679.jpg
+        src: /images/orchard-view-3br/2.jpg
         caption: Orchard view 3
         subCaption:
+        featured: true
       - id: 4
-        src: /images/orchard-view/keepers/20130522-DSC_6681.jpg
+        src: /images/orchard-view-3br/3.jpg
         caption: Orchard view 4
         subCaption:
+        featured: true
       - id: 5
-        src: /images/orchard-view/keepers/IMG_5626.JPG
+        src: /images/orchard-view-3br/4.jpg
         caption: Orchard view 5
         subCaption:
+        featured: false
       - id: 6
-        src: /images/orchard-view/keepers/IMG_5628.JPG
+        src: /images/orchard-view-3br/5.jpg
         caption: Orchard view 6
         subCaption:
+        featured: true
       - id: 7
-        src: /images/orchard-view/keepers/IMG_5643.JPG
+        src: /images/orchard-view-3br/6.jpg
         caption: Orchard view 7
         subCaption:
+        featured: true
       - id: 8
-        src: /images/orchard-view/keepers/IMG_5633.JPG
+        src: /images/orchard-view-3br/8.jpg
         caption: Orchard view 8
         subCaption:
+        featured: true
       - id: 9
-        src: /images/orchard-view/keepers/IMG_5639.JPG
+        src: /images/orchard-view-3br/7.jpg
         caption: Orchard view 9
         subCaption:
+        featured: true
       - id: 10
-        src: /images/orchard-view/keepers/20130522-DSC_6670.jpg
+        src: /images/orchard-view-3br/9.jpg
         caption: Orchard view 10
+        featured: false
       - id: 11
-        src: /images/orchard-view/keepers/IMG_5647.JPG
+        src: /images/orchard-view-3br/10.jpg
         caption: Orchard view 11
         subCaption:
+        featured: false
       - id: 12
-        src: /images/orchard-view/keepers/IMG_5657.JPG
+        src: /images/orchard-view-3br/11.jpg
         caption: Orchard view 12
         subCaption:
+        featured: true
+      - id: 13
+        src: /images/orchard-view-3br/12.jpg
+        caption: Orchard view 13
+        subCaption:
+        featured: true
+      - id: 14
+        src: /images/orchard-view-3br/13.jpg
+        caption: Orchard view 14
+        subCaption:
+        featured: true
+      - id: 15
+        src: /images/orchard-view-3br/14.jpg
+        caption: Orchard view 15
+        subCaption:
+        featured: true
+      - id: 16
+        src: /images/orchard-view-3br/15.jpg
+        caption: Orchard view 16
+        subCaption:
+        featured: false
+      - id: 17
+        src: /images/orchard-view-3br/16.jpg
+        caption: Orchard view 17
+        subCaption:
+        featured: false
+      - id: 18
+        src: /images/orchard-view-3br/17.jpg
+        caption: Orchard view 18
+        subCaption:
+        featured: true
+      - id: 19
+        src: /images/orchard-view-3br/18.jpg
+        caption: Orchard view 19
+        subCaption:
+        featured: true
+      - id: 20
+        src: /images/orchard-view-3br/19.jpg
+        caption: Orchard view 20
+        subCaption:
+        featured: false
+      - id: 21
+        src: /images/orchard-view-3br/20.jpg
+        caption: Orchard view 21
+        subCaption:
+        featured: false
+      - id: 22
+        src: /images/orchard-view-3br/21.jpg
+        caption: Orchard view 22
+        subCaption:
+        featured: false
+      - id: 23
+        src: /images/orchard-view-3br/22.jpg
+        caption: Orchard view 23
+        subCaption:
+        featured: false
+      - id: 24
+        src: /images/orchard-view-3br/24.jpg
+        caption: Orchard view 24
+        subCaption:
+        featured: false
+      - id: 25
+        src: /images/orchard-view-3br/25.jpg
+        caption: Orchard view 25
+        subCaption:
+        featured: false
+      - id: 26
+        src: /images/orchard-view-3br/26.jpg
+        caption: Orchard view 26
+        subCaption:
+        featured: false
+      - id: 27
+        src: /images/orchard-view-3br/27.jpg
+        caption: Orchard view 27
+        subCaption:
+        featured: false
+      - id: 28
+        src: /images/orchard-view-3br/28.jpg
+        caption: Orchard view 28
+        subCaption:
+        featured: false
+      - id: 29
+        src: /images/orchard-view-3br/29.jpg
+        caption: Orchard view 29
+        subCaption:
+        featured: false
+      - id: 30
+        src: /images/orchard-view-3br/30.jpg
+        caption: Orchard view 30
+        subCaption:
+        featured: false
+      - id: 31
+        src: /images/orchard-view-3br/31.jpg
+        caption: Orchard view 31
+        subCaption:
+        featured: false
+      - id: 32
+        src: /images/orchard-view-3br/32.jpg
+        caption: Orchard view 32
+        subCaption:
+        featured: false
     link: /properties?id=orchard-view
     linkText: Learn More
     title: Orchard View Pool Villa
@@ -183,44 +295,93 @@ services:
 
       We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
     id: bamboo-gardens-1
-    image: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6712.jpg
+    image: /images/bamboo-gardens-01-2br/1.jpg
     gallery:
       - id: 1
-        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6708.jpg
+        src: /images/bamboo-gardens-01-2br/1.jpg
         caption: Bamboo Gardens
         subCaption:
+        featured: true
       - id: 2
-        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6711.jpg
+        src: /images/bamboo-gardens-01-2br/2.jpg
         caption: Bamboo Gardens
         subCaption:
+        featured: true
       - id: 3
-        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6712.jpg
+        src: /images/bamboo-gardens-01-2br/3.jpg
         caption: Bamboo Gardens
         subCaption:
+        featured: true
       - id: 4
-        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6714.jpg
+        src: /images/bamboo-gardens-01-2br/4.jpg
         caption: Bamboo Gardens
         subCaption:
+        featured: false
       - id: 5
-        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6718.jpg
+        src: /images/bamboo-gardens-01-2br/5.jpg
         caption: Bamboo Gardens
         subCaption:
+        featured: false
       - id: 6
-        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6719.jpg
+        src: /images/bamboo-gardens-01-2br/6.jpg
         caption: Bamboo Gardens
         subCaption:
+        featured: true
       - id: 7
-        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6734.jpg
+        src: /images/bamboo-gardens-01-2br/7.jpg
         caption: Bamboo Gardens
         subCaption:
+        featured: true
       - id: 8
-        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6724.jpg
+        src: /images/bamboo-gardens-01-2br/8.jpg
         caption: Bamboo Gardens
         subCaption:
+        featured: true
       - id: 9
-        src: /images/bamboo-gardens/bamboo-gardens-1/20130522-DSC_6709.jpg
+        src: /images/bamboo-gardens-01-2br/9.jpg
         caption: Bamboo Gardens
         subCaption:
+        featured: true
+      - id: 10
+        src: /images/bamboo-gardens-01-2br/10.jpg
+        caption: Bamboo Gardens
+        subCaption:
+        featured: false
+      - id: 11
+        src: /images/bamboo-gardens-01-2br/11.jpg
+        caption: Bamboo Gardens
+        subCaption:
+        featured: true
+      - id: 12
+        src: /images/bamboo-gardens-01-2br/12.jpg
+        caption: Bamboo Gardens
+        subCaption:
+        featured: false
+      - id: 13
+        src: /images/bamboo-gardens-01-2br/13.jpg
+        caption: Bamboo Gardens
+        subCaption:
+        featured: true
+      - id: 14
+        src: /images/bamboo-gardens-01-2br/14.jpg
+        caption: Bamboo Gardens
+        subCaption:
+        featured: false
+      - id: 15
+        src: /images/bamboo-gardens-01-2br/15.jpg
+        caption: Bamboo Gardens
+        subCaption:
+        featured: true
+      - id: 16
+        src: /images/bamboo-gardens-01-2br/16.jpg
+        caption: Bamboo Gardens
+        subCaption:
+        featured: true
+      - id: 17
+        src: /images/bamboo-gardens-01-2br/17.jpg
+        caption: Bamboo Gardens
+        subCaption:
+        featured: true
     link: /properties?id=bamboo-gardens-1
     linkText: Learn More
     title: Bamboo Gardens 1
