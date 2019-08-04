@@ -584,7 +584,7 @@
   }
 
   .project-entry .img-fluid {
-    height: 30vh;
+    max-height: 30vh;
     object-fit: contain;
   }
 
