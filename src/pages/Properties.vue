@@ -7,10 +7,11 @@
         :style="`background-image: url(${getHeroById('page-hero').image});`"
       >
         <div class="palm-box-shadow"></div>
-        <div class="container" ref="pageHero">
+        <div class="container hero-content" ref="pageHero">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-10 text-center">
-              <span class="sub-text">{{ getHeroById('page-hero').subTitle }}</span>
+              <div class="hero-logo"><span></span></div>
+              <span class="sub-text"><strong>{{ getHeroById('page-hero').subTitle }}</strong></span>
               <h1>{{ getHeroById('page-hero').title }}</h1>
               <div v-if="getHeroById('page-hero').description" class="sub-text" v-html="(getHeroById('page-hero').description) ? getHeroById('page-hero').description : ''"></div>
             </div>
@@ -20,12 +21,10 @@
 
       <div
         v-if="activeService && getHeroById('page-hero') !== null"
-        class="site-blocks-cover overlay text-shadow inner-page"
+        class="site-blocks-cover inner-page text-shadow"
         :style="`background-image: url(${activeImage.src});`"
-        data-aos="fade"
-        data-stellar-background-ratio="0.5"
       >
-        <div class="container" ref="pageHero">
+        <div class="container hero-content" ref="pageHero">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-10 text-center">
               <span class="sub-text">Baan Saowanee's</span>
@@ -653,5 +652,14 @@
   .text-shadow a.action-link,
   .text-shadow a.action-button {
     text-shadow: none;
+  }
+
+  .hero-content {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.45+0,0+55 */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 55%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 55%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 55%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background-size: contain;
   }
 </style>

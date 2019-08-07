@@ -36,8 +36,8 @@
           <div class="row align-items-center text-center justify-content-center" style="position: relative; top: -3rem;">
             <div class="col-md-8">
               <div class="hero-logo"><span></span></div>
-              <span class="sub-text">Baan Saowanee's</span>
-              <h1>Orchard View Villa</h1>
+              <span class="sub-text"><strong>Welcome to Baan Saowanee's</strong></span>
+              <h1>Vacation Homes</h1>
             </div>
           </div>
         </div>
@@ -305,5 +305,14 @@
   .text-shadow a.action-link,
   .text-shadow a.action-button {
     text-shadow: none;
+  }
+
+  .homepage-hero-content {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.45+0,0+55 */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 55%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 55%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 55%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background-size: contain;
   }
 </style>
