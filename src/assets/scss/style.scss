@@ -16,3 +16,267 @@ $text-muted: $gray-500;
 .site-blocks-cover h1 {
   text-align: center;
 }
+
+
+/* TEMP */
+.project-entry {
+  /*text-align: center;*/
+}
+
+.project-entry .img-fluid {
+  max-height: 40vh;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 1280px) {
+  .project-entry .img-fluid {
+    max-height: 50vh;
+    object-fit: contain;
+  }
+}
+
+.post-entry {
+  text-align: center;
+}
+
+.post-entry .img-fluid {
+  height: 30vh;
+}
+
+@media screen and (min-width: 1280px) {
+  .post-entry .img-fluid {
+    height: 40vh;
+  }
+}
+
+.site-blocks-cover li,
+.site-section li,
+.project-entry li {
+  list-style-type: square !important;
+  list-style-position: inside !important;
+}
+
+/* Fix glitch with markdown rendering */
+.site-blocks-cover li p,
+.site-section li p,
+.project-entry li p {
+  display: inline;
+  font-size: 1.1rem
+}
+
+.hero-logo {
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  span {
+    margin: 0 auto;
+
+    display: block;
+    background: url(/images/logo.png) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    animation: logospin 60s 0s;
+    animation-iteration-count: infinite;
+
+    filter: drop-shadow(2px 2px 4px rgba(16,16,16,0.33333));
+  }
+
+  @keyframes logospin {
+   0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(-180deg);
+    }
+
+    100% {
+      transform: rotate(-359deg);
+    }
+  }
+}
+
+.homepage-hero-content {
+  position: relative;
+  z-index: 50;
+}
+
+.flower-separator-pink {
+  margin: 2em auto;
+  display: block;
+  background: url(/images/decorations/leelawadee-pink.png) no-repeat center center;
+  background-size: contain;
+  width: 100%;
+  height: 150px;
+  filter: drop-shadow(2px 2px 4px rgba(16,16,16,0.33333));
+}
+
+.flower-separator-white {
+  margin: 2em auto;
+  display: block;
+  background: url(/images/decorations/leelawadee-white.png) no-repeat center center;
+  background-size: contain;
+  width: 100%;
+  height: 150px;
+  transform: rotate(38deg);
+  filter: drop-shadow(2px 2px 4px rgba(16,16,16,0.33333));
+}
+
+.text-shadow * {
+  &:not(input):not(select):not(checkbox):not(label):not(textarea) {
+    text-shadow: 2px 2px 5px rgba(0,0,0,.777);
+  }
+}
+
+.text-shadow a.action-link,
+.text-shadow a.action-button {
+  text-shadow: none;
+}
+
+.homepage-hero-content {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.45+0,0+55 */
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 55%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 55%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 55%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-size: contain;
+}
+
+.site-half .img-bg-1 {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+
+}
+
+@media screen and (min-width: 1280px) {
+  left: 20%;
+}
+
+.circle {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 350px;
+  height: 350px;
+}
+
+/* Paste from Properties.vue */
+.class-action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.class-action-buttons > * {
+  flex: 1;
+}
+
+.owl-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .owl-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .class-action-buttons {
+    display: block;
+  }
+}
+
+.project-entry .img-fluid {
+  max-height: 30vh;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 1280px) {
+  .project-entry .img-fluid {
+    /*height: 20vh;*/
+  }
+}
+
+.post-entry {
+  text-align: center;
+}
+
+.post-entry .img-fluid {
+  height: 30vh;
+}
+
+@media screen and (min-width: 1280px) {
+  .post-entry .img-fluid {
+    height: 40vh;
+  }
+}
+
+.site-blocks-cover li,
+.site-section li,
+.project-entry li {
+  list-style-type: square !important;
+  list-style-position: inside !important;
+}
+
+/* Fix glitch with markdown rendering */
+.site-blocks-cover li p,
+.site-section li p,
+.project-entry li p {
+  display: inline;
+  font-size: 1.1rem
+}
+
+.thumbnail-strip {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.thumbnail-strip > * {
+  width: 33.33333%;
+  flex: 0 1 33.33333%;
+  padding-top: 3px;
+  object-fit: cover;
+  height: 80px;
+}
+
+.thumbnail-strip > * {
+  padding-right: 3px;
+}
+
+.thumbnail-strip > :nth-child(n+3) {
+  padding-right: 0;
+}
+
+.text-shadow * {
+  &:not(input):not(select):not(checkbox):not(label):not(textarea) {
+    text-shadow: 2px 2px 5px rgba(0,0,0,.777);
+  }
+}
+
+.text-shadow a.action-link,
+.text-shadow a.action-button {
+  text-shadow: none;
+}
+
+.hero-content {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.45+0,0+55 */
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 55%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 55%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 55%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-size: contain;
+}

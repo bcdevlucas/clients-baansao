@@ -8,7 +8,7 @@ heroes:
       Saowanee’s place is located in Ko Samui, Chang Wat Surat Thani, Thailand.
       Baan Saowanee Bamboo Gardens cottages are tucked away in a quiet, green space ( you will hear birds singing ), but just a short 5 minute walk to local restaurants and shops. Venture another 5 minute walk down Soi 1 and you'll reach the Island main road ( taxis, shops, bars, restaurants ). From the main road another ten minute walk and you'll arrive at Mae Nam Beach. Of course, if you rent a motorbike or car, driving distance to the beach is only 5 minutes.
     id: page-hero
-    image: /images/orchard-view/keepers/IMG_5660.JPG
+    image: /images/general/25.jpg
     link:
     linkText:
     title: About Us
@@ -28,29 +28,3 @@ sections:
     metaDescription: ''
     subCaption: ''
     summary: ''
-  - caption: ''
-    description: >-
-      Do you like Thai food? When you arrive and have settled in, maybe we can have a chat and I'll recommend local restaurants that serve excellent local Thai dishes. Don't be surprised if the prices are very affordable! If you prefer to cook on your own as I do, maybe you'd like to join me for a visit to the Mae Nam morning market.
-  
-      If you're interested in local Thai culture, why not drop by for tea at my home and I'll be very pleased to provide you with information regarding festivals, Buddhist temple activities and Ko Samui special places and events. Do you take milk and sugar with your tea?
-    id: about-us-section-02
-    image: /images/about-us/13724040_1827204157502483_805946314322350459_o.jpg
-    link:
-    linkText:
-    title: Local Culture
-    metaKeywords: ''
-    metaDescription: ''
-    subCaption: ''
-    summary: Explore
-  - caption: ''
-    description: >-
-      I also attend yoga classes and I ballroom dance regularly, so if you're in the mood for active relaxation, just let me know and we can make arrangements to attend together. Cha, cha, cha.
-    id: about-us-section-03
-    image: /images/about-us/13708221_1827207007502198_2760397226330007559_o.jpg
-    link:
-    linkText:
-    title: Our Values
-    metaKeywords: ''
-    metaDescription: ''
-    subCaption: ''
-    summary: 'Our Values'
