@@ -8,52 +8,13 @@
 </template>
 
 <script>
-export default {
-  // TODO: Supply models via props??
-  props: {
-    className: {
-      type: String,
-      default: null
-    },
-    flipLayout: {
-      type: Boolean,
-      default: false,
-    },
-    testimonial: {
-      type: String,
-      default: '',
-    },
-    reviewedBy: {
-      type: String,
-      default: '',
-    },
-    position: {
-      type: String,
-      default: '',
-    },
-    organization: {
-      type: String,
-      default: '',
-    },
-    link: {
-      type: String,
-      default: '',
-    },
-    linkText: {
-      type: String,
-      default: '',
-    },
-    image: {
-      type: String,
-      default: '',
-    },
-  },
-  computed: {
-    classNameString() {
-      return (typeof this.className === 'string' && this.className.length > 0) ? `${this.className}` : '';
-    }
+  import TestimonialMixin from '~/core/mixins/layouts/Testimonial';
+
+  export default {
+    mixins: [
+      TestimonialMixin
+    ]
   }
-};
 </script>
 
 
