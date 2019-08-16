@@ -455,43 +455,54 @@ services:
       We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
     id: bamboo-gardens-2
     image: /images/bamboo-gardens/bamboo-gardens-2/20130522-DSC_6730.jpg
+    imageId: "20130522-DSC_6730_xgypvm"
+    galleryFolder: "old/bamboo-gardens/bamboo-gardens-2"
     gallery:
-      - id: 1
+      - id: "20130522-DSC_6728_pflgff"
         src: /images/bamboo-gardens/bamboo-gardens-2/20130522-DSC_6728.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 2
+        featured: true
+      - id: "20130919-DSC_9683_pnkaxf"
         src: /images/bamboo-gardens/bamboo-gardens-2/20130919-DSC_9683.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 3
+        featured: true
+      - id: "20130522-DSC_6732_lppehw"
         src: /images/bamboo-gardens/bamboo-gardens-2/20130522-DSC_6732.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 4
+        featured: true
+      - id: "20130522-DSC_6730_xgypvm"
         src: /images/bamboo-gardens/bamboo-gardens-2/20130522-DSC_6730.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 5
+        featured: true
+      - id: "20130522-DSC_6729_p6rl3m"
         src: /images/bamboo-gardens/bamboo-gardens-2/20130522-DSC_6729.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 6
+        featured: true
+      - id: "20130522-DSC_6735_qjez0z"
         src: /images/bamboo-gardens/bamboo-gardens-2/20130522-DSC_6735.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 7
+        featured: true
+      - id: "20130919-DSC_9680_rvjnne"
         src: /images/bamboo-gardens/bamboo-gardens-2/20130919-DSC_9680.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 8
+        featured: true
+      - id: "20130919-DSC_9678_gdepqf"
         src: /images/bamboo-gardens/bamboo-gardens-2/20130919-DSC_9678.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 9
+        featured: true
+      - id: "20130919-DSC_9684_e5ym9c"
         src: /images/bamboo-gardens/bamboo-gardens-2/20130919-DSC_9684.jpg
         caption: Bamboo Gardens
         subCaption:
+        featured: true
     link: /properties?id=bamboo-gardens-2
     linkText: Learn More
     title: Bamboo Gardens 2
@@ -564,43 +575,53 @@ services:
       We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
     id: bamboo-gardens-3
     image: /images/bamboo-gardens/bamboo-gardens-3/20130919-DSC_9674.jpg
+    imageId: "bamboo-gardens_kvtbmb"
+    galleryFolder: "old/bamboo-gardens/bamboo-gardens-3"
     gallery:
-      - id: 1
+      - id: "bamboo-gardens_kvtbmb"
         src: /images/bamboo-gardens/bamboo-gardens-3/bamboo-gardens.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 2
+        featured: true
+      - id: "20130919-DSC_9673_zctyas"
         src: /images/bamboo-gardens/bamboo-gardens-3/20130919-DSC_9673.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 3
+      - id: "20130919-DSC_9681_qwgdz6"
         src: /images/bamboo-gardens/bamboo-gardens-3/20130919-DSC_9681.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 4
+        featured: true
+      - id: "20130919-DSC_9676_w9npoz"
         src: /images/bamboo-gardens/bamboo-gardens-3/20130919-DSC_9676.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 5
+        featured: true
+      - id: "20130522-DSC_6720_l3hrnf"
         src: /images/bamboo-gardens/bamboo-gardens-3/20130522-DSC_6720.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 6
+        featured: true
+      - id: "20130522-DSC_6721_qlly87"
         src: /images/bamboo-gardens/bamboo-gardens-3/20130522-DSC_6721.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 7
+        featured: true
+      - id: "20130522-DSC_6725_qjutmj"
         src: /images/bamboo-gardens/bamboo-gardens-3/20130522-DSC_6725.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 8
+        featured: true
+      - id: "20130522-DSC_6726_d4o8os"
         src: /images/bamboo-gardens/bamboo-gardens-3/20130522-DSC_6726.jpg
         caption: Bamboo Gardens
         subCaption:
-      - id: 9
+        featured: true
+      - id: "20130919-DSC_9679_ee7nga"
         src: /images/bamboo-gardens/bamboo-gardens-3/20130919-DSC_9679.jpg
         caption: Bamboo Gardens
         subCaption:
+        featured: true
     link: /properties?id=bamboo-gardens-3
     linkText: Learn More
     title: Bamboo Gardens 3
