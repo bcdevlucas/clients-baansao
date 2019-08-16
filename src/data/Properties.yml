@@ -297,88 +297,89 @@ services:
       We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
     id: bamboo-gardens-1
     image: /images/bamboo-gardens-01-2br/1.jpg
+    imageId: "1_jrppah"
     gallery:
-      - id: 1
+      - id: "1_jrppah"
         src: /images/bamboo-gardens-01-2br/1.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 2
+      - id: "2_vteq7d"
         src: /images/bamboo-gardens-01-2br/2.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 3
+      - id: "3_qtn1ml"
         src: /images/bamboo-gardens-01-2br/3.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 4
+      - id: "4_vxzaoe"
         src: /images/bamboo-gardens-01-2br/4.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 5
+      - id: "5_w1oahw"
         src: /images/bamboo-gardens-01-2br/5.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 6
+      - id: "6_v9sb77"
         src: /images/bamboo-gardens-01-2br/6.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 7
+      - id: "7_xl7mkt"
         src: /images/bamboo-gardens-01-2br/7.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 8
+      - id: "8_jmxxhp"
         src: /images/bamboo-gardens-01-2br/8.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 9
+      - id: "9_phkjgl"
         src: /images/bamboo-gardens-01-2br/9.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 10
+      - id: "10_amfr5r"
         src: /images/bamboo-gardens-01-2br/10.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 11
+      - id: "11_o9y5fv"
         src: /images/bamboo-gardens-01-2br/11.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 12
+      - id: "12_ljasqp"
         src: /images/bamboo-gardens-01-2br/12.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 13
+      - id: "13_wcalzr"
         src: /images/bamboo-gardens-01-2br/13.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 14
+      - id: "14_lfpic0"
         src: /images/bamboo-gardens-01-2br/14.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 15
-        src: /images/bamboo-gardens-01-2br/15.jpg
-        caption: Bamboo Gardens
-        subCaption:
-        featured: true
-      - id: 16
+      #- id: 15
+      #  src: /images/bamboo-gardens-01-2br/15.jpg
+      #  caption: Bamboo Gardens
+      #  subCaption:
+      #  featured: true
+      - id: "16_oy887z"
         src: /images/bamboo-gardens-01-2br/16.jpg
         caption: Bamboo Gardens
         subCaption:
         featured: true
-      - id: 17
+      - id: "17_fgsr7a"
         src: /images/bamboo-gardens-01-2br/17.jpg
         caption: Bamboo Gardens
         subCaption:
