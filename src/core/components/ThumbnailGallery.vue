@@ -1,9 +1,8 @@
 <template>
-  <div class="gallery" :data-ref-id="`${primaryImage}`" @click="triggerGallery">
-    <div class="img primary-image" v-if="primaryImage">
+  <div class="gallery">
+    <div class="img primary-image" v-if="primaryImage" data-ref-id="primaryImage" @click="triggerGallery">
       <cld-image
-        :key="primaryImage"
-        :ref="`thumbs_${primaryImage}`"
+        ref="thumbs_primaryImage"
         cloudName="baansaowanee"
         dpr="auto"
         width="450"
@@ -14,10 +13,10 @@
         class="img-fluid"
       />
       <img
-        :ref="`images_${primaryImage}`"
+        ref="images_primaryImage"
         v-img:gallery
         class="full-size"
-        :src="getLargeImageUrl(primaryImage)"
+        :src="getLargeImageUrl('primaryImage')"
         alt=""
       />
     </div>
@@ -117,14 +116,20 @@
         return galleryImages;
       },
       getLargeImageUrl(id) {
-        return (this.$refs[`thumbs_${id}`]) ? this.stripImageConfigFromUrl(this.$refs[`thumbs_${id}`][0].$el.src) : '';
+        const ref = this.$refs[`thumbs_${id}`];
+        return (ref) ? (ref instanceof Array) ? this.stripImageConfigFromUrl(ref[0].$el.src) : this.stripImageConfigFromUrl(ref.$el.src) : '';
       },
       stripImageConfigFromUrl(url) {
         console.log(url.replace(/upload(\/[^\/]*\/)/, 'upload/'));
         return url.replace(/upload(\/[^\/]*\/)/, 'upload/w_1920/');
       },
       triggerGallery(e) {
-        this.$refs[`images_${e.currentTarget.attributes['data-ref-id'].value}`][0].click();
+        const refId = e.currentTarget.attributes['data-ref-id'].value;
+        const ref = this.$refs[`images_${refId}`];
+
+        // Not sure why the f*** this can sometimes be an array but alllllrighty then...
+        if (ref instanceof Array) ref[0].click();
+        else ref.click();
       }
     },
     mounted() {
