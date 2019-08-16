@@ -67,23 +67,12 @@
           </div>-->
           <div class="row mt-4 mb-4 pt-4">
             <div class="col-lg-4 mb-5 mb-lg-0">
-              <div class="gallery">
-                <div class="img">
-                  <img v-img:gallery :src="activeService.image" :alt="activeService.caption" class="img-fluid">
-                </div>
-                <div class="thumbnail-strip" v-if="activeService.gallery instanceof Array">
-                  <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(0, 2, true)" :src="gallery.src" :alt="gallery.caption" class="img">
-                </div>
-                <div class="thumbnail-strip" v-if="activeService.gallery instanceof Array">
-                  <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(3, 5, true)" :src="gallery.src" :alt="gallery.caption" class="img">
-                </div>
-                <div class="thumbnail-strip" v-if="activeService.gallery instanceof Array">
-                  <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(6, 8, true)" :src="gallery.src" :alt="gallery.caption" class="img">
-                </div>
-                <div class="thumbnail-strip" v-if="activeService.gallery instanceof Array">
-                  <img v-img:gallery v-if="gallery" v-for="gallery in getGalleryImages(9, 11, true)" :src="gallery.src" :alt="gallery.caption" class="img">
-                </div>
-              </div>
+              <thumbnail-gallery
+                :primaryImage="activeService.imageId"
+                :gallery="this.activeService.gallery"
+                :displayMax="24"
+                :imagesPerRow="3"
+              />
               <div class="amenities-table mt-4">
                 <h3>Amenities</h3>
                 <div class="d-flex" style="flex-flow: row wrap;">
@@ -333,6 +322,9 @@
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
 
+  import ThumbnailGallery from '~/core/components/ThumbnailGallery.vue';
+
+
   // TODO: Implement page page that provides data interface?
   import HeroMixin from '~/mixins/HeroMixin';
   import SectionMixin from '~/mixins/SectionMixin';
@@ -346,6 +338,7 @@
     components: {
       ContentBlockLayout,
       TestimonialBlockLayout,
+      ThumbnailGallery
       //VueGallerySlideshow
     },
     metaInfo: {
@@ -411,6 +404,9 @@
       unsetActiveService() {
         this.activeService = null;
       },
+      /**
+       * TODO: Is this used outside of thumbnails? If so make it a mixin.
+       */
       getGalleryImages(start, end, featuredOnly) {
         let galleryImages = this.activeService.gallery instanceof Array ? this.activeService.gallery : [];
         galleryImages = (featuredOnly) ? galleryImages.filter((item) => item.featured) : galleryImages;

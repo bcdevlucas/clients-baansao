@@ -67,166 +67,167 @@ services:
       We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
     id: orchard-view
     image: /images/orchard-view-3br/23-new-sky.jpg
+    imageId: "23-new-sky_fwgesc"
     gallery:
-      - id: 1
-        src: /images/orchard-view-3br/23-new-sky.jpg
-        caption: Orchard view 1
-        subCaption:
-        featured: true
-      - id: 2
+      #- id: "23-new-sky_fwgesc"
+      #  src: /images/orchard-view-3br/23-new-sky.jpg
+      #  caption: Orchard view 1
+      #  subCaption:
+      #  featured: true
+      - id: "1_bhumen"
         src: /images/orchard-view-3br/1.jpg
         caption: Orchard view 2
         subCaption:
-        featured: false
-      - id: 3
+        featured: true
+      - id: "2_vhasyw"
         src: /images/orchard-view-3br/2.jpg
         caption: Orchard view 3
         subCaption:
         featured: true
-      - id: 4
+      - id: "3_c1t7mn"
         src: /images/orchard-view-3br/3.jpg
         caption: Orchard view 4
         subCaption:
         featured: true
-      - id: 5
+      - id: "4_rpcrd3"
         src: /images/orchard-view-3br/4.jpg
         caption: Orchard view 5
         subCaption:
-        featured: false
-      - id: 6
+        featured: true
+      - id: "5_pfcraz"
         src: /images/orchard-view-3br/5.jpg
         caption: Orchard view 6
         subCaption:
         featured: true
-      - id: 7
+      - id: "6_lv2rpv"
         src: /images/orchard-view-3br/6.jpg
         caption: Orchard view 7
         subCaption:
         featured: true
-      - id: 8
+      - id: "7_pxtqdi"
         src: /images/orchard-view-3br/8.jpg
         caption: Orchard view 8
         subCaption:
         featured: true
-      - id: 9
+      - id: "8_agm9nv"
         src: /images/orchard-view-3br/7.jpg
         caption: Orchard view 9
         subCaption:
         featured: true
-      - id: 10
+      - id: "9_rfbho7"
         src: /images/orchard-view-3br/9.jpg
         caption: Orchard view 10
-        featured: false
-      - id: 11
+        featured: true
+      - id: "10_nwadu0"
         src: /images/orchard-view-3br/10.jpg
         caption: Orchard view 11
         subCaption:
-        featured: false
-      - id: 12
+        featured: true
+      - id: "11_fwyoq1"
         src: /images/orchard-view-3br/11.jpg
         caption: Orchard view 12
         subCaption:
         featured: true
-      - id: 13
+      - id: "12_dawlfp"
         src: /images/orchard-view-3br/12.jpg
         caption: Orchard view 13
         subCaption:
         featured: true
-      - id: 14
+      - id: "13_oskpfm"
         src: /images/orchard-view-3br/13.jpg
         caption: Orchard view 14
         subCaption:
         featured: true
-      - id: 15
+      - id: "14_lkrbt2"
         src: /images/orchard-view-3br/14.jpg
         caption: Orchard view 15
         subCaption:
         featured: true
-      - id: 16
+      - id: "15_n4g7we"
         src: /images/orchard-view-3br/15.jpg
         caption: Orchard view 16
         subCaption:
-        featured: false
-      - id: 17
+        featured: true
+      - id: "16_n5wukj"
         src: /images/orchard-view-3br/16.jpg
         caption: Orchard view 17
         subCaption:
-        featured: false
-      - id: 18
+        featured: true
+      - id: "17_ymwbhc"
         src: /images/orchard-view-3br/17.jpg
         caption: Orchard view 18
         subCaption:
         featured: true
-      - id: 19
+      - id: "18_pytcq5"
         src: /images/orchard-view-3br/18.jpg
         caption: Orchard view 19
         subCaption:
         featured: true
-      - id: 20
+      - id: "19_ptorsz"
         src: /images/orchard-view-3br/19.jpg
         caption: Orchard view 20
         subCaption:
-        featured: false
-      - id: 21
+        featured: true
+      - id: "20_pkn7w6"
         src: /images/orchard-view-3br/20.jpg
         caption: Orchard view 21
         subCaption:
-        featured: false
-      - id: 22
-        src: /images/orchard-view-3br/21.jpg
-        caption: Orchard view 22
-        subCaption:
-        featured: false
-      - id: 23
+        featured: true
+      #- id: "21"
+      #  src: /images/orchard-view-3br/21.jpg
+      #  caption: Orchard view 22
+      #  subCaption:
+      #  featured: true
+      - id: "22_jh0okr"
         src: /images/orchard-view-3br/22.jpg
         caption: Orchard view 23
         subCaption:
-        featured: false
-      - id: 24
-        src: /images/orchard-view-3br/24.jpg
-        caption: Orchard view 24
-        subCaption:
-        featured: false
-      - id: 25
+        featured: true
+      #- id: "23-new-sky_fwgesc"
+      #  src: /images/orchard-view-3br/24.jpg
+      #  caption: Orchard view 24
+      #  subCaption:
+      #  featured: true
+      - id: "24_i0fo7q"
         src: /images/orchard-view-3br/25.jpg
         caption: Orchard view 25
         subCaption:
-        featured: false
-      - id: 26
+        featured: true
+      - id: "25_vnouni"
         src: /images/orchard-view-3br/26.jpg
         caption: Orchard view 26
         subCaption:
-        featured: false
-      - id: 27
+        featured: true
+      - id: "26_wakztc"
         src: /images/orchard-view-3br/27.jpg
         caption: Orchard view 27
         subCaption:
-        featured: false
-      - id: 28
+        featured: true
+      - id: "27_gvfl6a"
         src: /images/orchard-view-3br/28.jpg
         caption: Orchard view 28
         subCaption:
-        featured: false
-      - id: 29
+        featured: true
+      - id: "28_lr6cep"
         src: /images/orchard-view-3br/29.jpg
         caption: Orchard view 29
         subCaption:
-        featured: false
-      - id: 30
+        featured: true
+      - id: "29_zqaxcn"
         src: /images/orchard-view-3br/30.jpg
         caption: Orchard view 30
         subCaption:
-        featured: false
-      - id: 31
+        featured: true
+      - id: "30_xsoaxk"
         src: /images/orchard-view-3br/31.jpg
         caption: Orchard view 31
         subCaption:
-        featured: false
-      - id: 32
+        featured: true
+      - id: "31_hjostc"
         src: /images/orchard-view-3br/32.jpg
         caption: Orchard view 32
         subCaption:
-        featured: false
+        featured: true
     link: /properties?id=orchard-view
     linkText: Learn More
     title: Orchard View Pool Villa
@@ -316,12 +317,12 @@ services:
         src: /images/bamboo-gardens-01-2br/4.jpg
         caption: Bamboo Gardens
         subCaption:
-        featured: false
+        featured: true
       - id: 5
         src: /images/bamboo-gardens-01-2br/5.jpg
         caption: Bamboo Gardens
         subCaption:
-        featured: false
+        featured: true
       - id: 6
         src: /images/bamboo-gardens-01-2br/6.jpg
         caption: Bamboo Gardens
@@ -346,7 +347,7 @@ services:
         src: /images/bamboo-gardens-01-2br/10.jpg
         caption: Bamboo Gardens
         subCaption:
-        featured: false
+        featured: true
       - id: 11
         src: /images/bamboo-gardens-01-2br/11.jpg
         caption: Bamboo Gardens
@@ -356,7 +357,7 @@ services:
         src: /images/bamboo-gardens-01-2br/12.jpg
         caption: Bamboo Gardens
         subCaption:
-        featured: false
+        featured: true
       - id: 13
         src: /images/bamboo-gardens-01-2br/13.jpg
         caption: Bamboo Gardens
@@ -366,7 +367,7 @@ services:
         src: /images/bamboo-gardens-01-2br/14.jpg
         caption: Bamboo Gardens
         subCaption:
-        featured: false
+        featured: true
       - id: 15
         src: /images/bamboo-gardens-01-2br/15.jpg
         caption: Bamboo Gardens
