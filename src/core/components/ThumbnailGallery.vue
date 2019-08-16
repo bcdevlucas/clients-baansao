@@ -7,8 +7,8 @@
         dpr="auto"
         width="450"
         crop="scale"
-        folder="orchard-view-3br"
-        version="1"
+        :folder="folder"
+        :version="version"
         :publicId="primaryImage"
         class="img-fluid"
       />
@@ -34,8 +34,8 @@
               width="150"
               crop="scale"
               :publicId="image.id"
-              folder="orchard-view-3br"
-              version="1"
+              :folder="folder"
+              :version="version"
               :alt="image.caption"
               class="img"
             />
@@ -67,14 +67,6 @@
 
   export default {
     props: {
-      primaryImage: {
-        type: String,
-        default: null
-      },
-      gallery: {
-        type: Array,
-        default: []
-      },
       displayMax: {
         type: Number,
         default: 6
@@ -86,6 +78,22 @@
       featuredOnly: {
         type: Boolean,
         default: true
+      },
+      primaryImage: {
+        type: String,
+        default: null
+      },
+      gallery: {
+        type: Array,
+        default: []
+      },
+      version: {
+        type: String,
+        default: "1"
+      },
+      folder: {
+        type: String,
+        default: null
       }
     },
     computed: {

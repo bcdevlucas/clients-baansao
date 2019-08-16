@@ -68,6 +68,7 @@ services:
     id: orchard-view
     image: /images/orchard-view-3br/23-new-sky.jpg
     imageId: "23-new-sky_fwgesc"
+    galleryFolder: "orchard-view-3br"
     gallery:
       #- id: "23-new-sky_fwgesc"
       #  src: /images/orchard-view-3br/23-new-sky.jpg
@@ -298,6 +299,7 @@ services:
     id: bamboo-gardens-1
     image: /images/bamboo-gardens-01-2br/1.jpg
     imageId: "1_jrppah"
+    galleryFolder: "bamboo-gardens-01-2br"
     gallery:
       - id: "1_jrppah"
         src: /images/bamboo-gardens-01-2br/1.jpg

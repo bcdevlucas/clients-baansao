@@ -69,7 +69,8 @@
             <div class="col-lg-4 mb-5 mb-lg-0">
               <thumbnail-gallery
                 :primaryImage="activeService.imageId"
-                :gallery="this.activeService.gallery"
+                :gallery="activeService.gallery"
+                :folder="activeService.galleryFolder"
                 :displayMax="24"
                 :imagesPerRow="3"
               />
