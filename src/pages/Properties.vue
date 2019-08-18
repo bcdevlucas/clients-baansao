@@ -1,13 +1,11 @@
 <template>
   <Layout>
-    <div class="hero-wrapper">
+    <div class="">
       <div
         v-if="!activeService && getHeroById('page-hero') !== null"
-        class="site-blocks-cover inner-page text-shadow"
-        :style="`background-image: url(${getHeroById('page-hero').image});`"
+        class="properties-hero site-blocks-cover"
       >
-        <div class="palm-box-shadow"></div>
-        <div class="container hero-content" ref="pageHero">
+        <div class="container" ref="pageHero">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-10 text-center">
               <div class="hero-logo"><span></span></div>
@@ -37,26 +35,6 @@
     </div>
 
     <div class="content-wrapper">
-      <div class="site-section" v-if="!activeService">
-        <div class="container pt-4">
-          <div class="row mt-4 mb-4 pt-4">
-            <div class="col-lg-12 ml-auto text-center">
-              <span class="sub-title">About Baan Saowanee's</span>
-              <h2 class="font-weight-bold text-black mb-5">{{ `Vacation Home Rentals` }}</h2>
-            </div>
-          </div>
-        </div>
-        <div class="container pt-4">
-          <div class="row mt-4 mb-4 pt-4">
-            <p>Baan Saowanee is a collection of holiday home rentals situated on the north side of Ko Samui island, a short five minute drive to scenic Mae Nam Beach. Sun, sand and the Gulf of Siam combine to make many a perfect day.</p>
-            <p>Our vacation homes are located in a quiet community enhanced with lush tropical greenery, fruit trees and flower blooms; but only a short walk away from convenience: restaurants, coffee bars, bakeries and other small shops. Picturesque Mae Nam village is nearby, as is the community Buddhist spiritual centre: Golden Mountain Temple.</p>
-            <p>Baan Saowanee guests have a range of rental options to choose from, dependent upon the number of persons and quality of accommodation. All of our holiday properties are clean, attractive and well maintained.</p>
-          </div>
-        </div>
-      </div>
-
-
-
       <div class="site-section" v-if="activeService" :key="activeService.id">
         <div class="container pt-4">
           <!--<div class="row mt-4 mb-4 pt-4">
@@ -221,20 +199,20 @@
       </div>
 
       <div class="site-section" v-if="getServices(false).length > 0">
-        <div class="container pt-4">
+        <!--<div class="container pt-4">
           <div class="row mt-4 mb-4 pt-4">
             <div class="col-lg-12 ml-auto text-center">
               <span class="sub-title">Browse Our</span>
               <h2 class="font-weight-bold text-black mb-5">{{ `${activeService ? 'Other ' : ''}Villas` }}</h2>
             </div>
           </div>
-        </div>
-        <div class="container">
+        </div>-->
+        <div class="pt-4 px-4">
           <div class="row">
             <content-block-layout
-              v-for="service in getServices(false).slice(0,3)"
+              v-for="service in getServices(false).slice(0,4)"
               :key="service.id"
-              className="col-lg-4 col-md-4 mb-6 project-entry"
+              className="col-lg-3 col-md-3 mb-6 project-entry"
               :title="service.title"
               :description="(service.summary) ? service.summary : ''"
               :link="service.link"
@@ -545,5 +523,23 @@
 
 
 <style lang="scss">
+  .page-wrap {
+    margin-top: 54px;
+  }
 
+  .properties-hero {
+    height: auto !important;
+    min-height: 400px;
+    color: #222;
+    h1 {
+      color: #222;
+    }
+    .sub-text {
+      color: #999 !important;
+    }
+    .row {
+      height: auto;
+      min-height: 400px;
+    }
+  }
 </style>
