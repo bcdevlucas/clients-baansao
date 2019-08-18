@@ -207,7 +207,7 @@
             </div>
           </div>
         </div>-->
-        <div class="pt-4 px-4">
+        <div class="px-4">
           <div class="row">
             <content-block-layout
               v-for="service in getServices(false).slice(0,4)"
@@ -231,7 +231,6 @@
           <div class="nonloop-block-13 owl-carousel owl-loaded owl-drag">
             <div class="owl-stage-outer">
               <div class="owl-content-wrapper">
-
                 <div
                   v-if="getTestimonial(0)"
                   class="owl-item active"
@@ -276,6 +275,22 @@
                     :reviewedBy="getTestimonial(2).reviewedBy"
                     :image="getTestimonial(2).image"
                     :testimonial="getTestimonial(2).testimonial"
+                  />
+                  <div
+                    class="homepage-hero-action action-link-block text-center space-bottom">
+                    <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
+                  </div>
+                </div>
+                <div
+                  v-if="getTestimonial(3)"
+                  class="owl-item active"
+                  style="width: 380px;"
+                >
+                  <testimonial-block-layout
+                    className="testimony"
+                    :reviewedBy="getTestimonial(3).reviewedBy"
+                    :image="getTestimonial(3).image"
+                    :testimonial="getTestimonial(3).testimonial"
                   />
                   <div
                     class="homepage-hero-action action-link-block text-center space-bottom">

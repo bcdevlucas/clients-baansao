@@ -27,3 +27,30 @@ items:
     link: ""
     linkText: ""
     image: /images/julie_d_king.jpg
+  - id: malene
+    testimonial: >-
+      The house and pool was amazing. Saowanee was the best host! - She helped us booking taxi from the ferry to the house, helped renting scooters, showed us the supermarket, learned us how to make pad Thai and fresh spring rolls and she arranged for us to go to back to the ferry as well she was so nice and very helpful and she also replied really quickly! If going to Koh Samui I would definitely recommend staying with Saowanee!☺️
+    reviewedBy: Malene
+    position:
+    organization:
+    link: ""
+    linkText: ""
+    image: /images/reannin_sirianni.jpg
+  - id: tomas
+    testimonial: >-
+      Saowanee was absolutely amazing and she made our trip even more special with her care and kindness. We loved the house and she made sure we had absolutely amazing time on Samui. It didn’t feel like we staying at someones house but like we staying home and that I think says enough.
+    reviewedBy: Tomas
+    position:
+    organization:
+    link: ""
+    linkText: ""
+    image: /images/nellie_thompson.jpg
+  - id: ness
+    testimonial: >-
+      First off, we would love to say thank you so so much to Saowanee and Dan for being absolutely amazing hosts!!!! Seriously the nicest people you will come across. Their place is beautiful, clean, close to the beach, and close to night life, yet secluded all at the same time. Pool and backyard was clean and beautiful. Their house was wonderful, we felt safe, it was clean, AC worked great, showers were nice and warm, plus they had a huge kitchen which was also a plus
+    reviewedBy: Ness
+    position:
+    organization:
+    link: ""
+    linkText: ""
+    image: /images/julie_d_king.jpg
