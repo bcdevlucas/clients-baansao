@@ -16,6 +16,14 @@ module.exports = {
         typeName: 'BlogPost',
         route: '/blog/:slug'
       }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'properties/*.yml',
+        typeName: 'Property',
+        route: '/property/:id'
+      }
     }
   ]
 }
