@@ -23,8 +23,8 @@ export default {
         item = item || {};
 
         item = Object.assign({}, item, {
-          //summary: (item.summary) ? marked(item.summary) : null,
-          description: (item.description) ? marked(item.description) : null
+          summary: (typeof window !== 'undefined') ? marked(item.summary) : item.summary,
+          description: (typeof window !== 'undefined') ? marked(item.description) : item.description
         });
 
         return item;
@@ -45,8 +45,8 @@ export default {
         let item = items.pop();
 
         item = Object.assign({}, item, {
-          //summary: (item.summary) ? marked(item.summary) : null,
-          description: (item.description) ? marked(item.description) : null
+          summary: (typeof window !== 'undefined') ? marked(item.summary) : item.summary,
+          description: (typeof window !== 'undefined') ? marked(item.description) : item.description
         });
 
         return item;
@@ -60,7 +60,14 @@ export default {
       let items = this.serviceContent.services || [];
 
       if (items instanceof Array && items.length > idx) {
-        return items[idx];
+        let item = items[idx];
+
+        item = Object.assign({}, item, {
+          summary: (typeof window !== 'undefined') ? marked(item.summary) : item.summary,
+          description: (typeof window !== 'undefined') ? marked(item.description) : item.description
+        });
+
+        return item;
       }
 
       return null
