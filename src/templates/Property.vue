@@ -26,13 +26,16 @@
                   :displayMax="pageData.gallery.length"
                   :imagesPerRow="3"
                 />
-              </div>
-            </div>
-
-            <div class="col-lg-3 mb-5 mb-lg-0">
-              <div class="container">
                 <amenities class="mt-4" />
-                <google-map-cutout class="mt-4" />
+
+                <p class="class-action-buttons mt-5 text-center">
+                  <button @click="showBookingForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i>
+                    Book Now
+                  </button>&nbsp;
+                  <button @click="showQuestionForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i>
+                    Ask a Question
+                  </button>
+                </p>
               </div>
             </div>
 
@@ -48,14 +51,6 @@
                   </div>
                 </div>
 
-                <p class="class-action-buttons mt-5 text-center">
-                  <button @click="showBookingForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i>
-                    Book Now
-                  </button>&nbsp;
-                  <button @click="showQuestionForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i>
-                    Ask a Question
-                  </button>
-                </p>
                 <!--<div class="container pt-4" ref="bookingForm">
                   <div class="row">
                     <div class="col-12 text-center">
@@ -136,6 +131,18 @@
                   </div>
                 </div>
 
+              </div>
+            </div>
+
+            <div class="col-lg-3 mb-5 mb-lg-0">
+              <div class="container">
+                <h3>Location</h3>
+                <google-map-cutout class="mt-4" />
+                <h3 class="mt-4">Address</h3>
+                <p class="mt-4">
+                  25/3 Moo 1 Maenam, Ko Samui<br />
+                  Surat Thani, Thailand 84330
+                </p>
               </div>
             </div>
           </div>
