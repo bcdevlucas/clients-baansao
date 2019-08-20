@@ -19,45 +19,60 @@
 
     <div class="content-wrapper">
       <div class="site-section" v-if="getServices(false).length > 0">
-        <div class="px-4">
+        <div class="container px-4">
           <div class="row">
             <content-block-layout
-              v-for="service in getServices(false).slice(0,4)"
+              v-for="service in getServices().slice(0, getServices().length / 2)"
+              v-if="typeof service.summary === 'string'"
               :key="service.id"
-              className="col-lg-3 col-md-3 mb-6 project-entry"
+              className="col-lg-6 col-md-6 mb-6 project-entry"
               :title="service.title"
               :description="(service.summary) ? service.summary : ''"
               :link="service.link"
-              linkText="More Details"
+              linkText="Learn More"
+              :image="service.image"
+              imageAlt=""
+            />
+
+            <span class="flower-separator-white"></span>
+          </div>
+          <div class="row mt-6 mb-6">
+            <content-block-layout
+              v-for="service in getServices().slice(getServices().length / 2, getServices().length)"
+              v-if="typeof service.summary === 'string'"
+              :key="service.id"
+              className="col-lg-6 project-entry"
+              :title="service.title"
+              :description="(service.summary) ? service.summary : ''"
+              :link="service.link"
+              linkText="Learn More"
               :image="service.image"
               imageAlt=""
             />
           </div>
-          <div class="row">
-            <div class="col-12 text-center mt-5">
-              <span class="sub-title">Testimonials from</span>
-              <h2 class="font-weight-bold text-black mb-5">Our Friends</h2>
-            </div>
-          </div>
-          <div class="slider row">
-            <div
-              v-for="testimonial in getTestimonialsByIndex(0, 3)"
-              class="col-sm-4 col-lg-3"
-            >
-              <testimonial-block-layout
-                className="testimony"
-                :reviewedBy="testimonial.reviewedBy"
-                :image="testimonial.image"
-                :testimonial="testimonial.testimonial"
-              />
-              <div
-                class="homepage-hero-action action-link-block text-center space-bottom">
-                <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+      <!--<div class="site-section">
+        <div class="row">
+          <div class="col-12 text-center mt-5">
+            <span class="sub-title">Testimonials from</span>
+            <h2 class="font-weight-bold text-black mb-5">Our Friends</h2>
+          </div>
+        </div>
+        <div class="slider row">
+          <div
+            v-for="testimonial in getTestimonialsByIndex(0, 3)"
+            class="col-sm-4 col-lg-3"
+          >
+            <testimonial-block-layout
+              className="testimony"
+              :reviewedBy="testimonial.reviewedBy"
+              :image="testimonial.image"
+              :testimonial="testimonial.testimonial"
+            />
+          </div>
+        </div>
+      </div>-->
     </div>
   </Layout>
 </template>

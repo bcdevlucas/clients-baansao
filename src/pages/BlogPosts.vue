@@ -52,7 +52,7 @@
   // TODO: Implement page page that provides data interface?
   import HeroMixin from '~/mixins/HeroMixin';
   import SectionMixin from '~/mixins/SectionMixin';
-  import TestimonialMixin from '~/mixins/TestimonialMixin';
+  import TestimonialMixin from '~/core/mixins/TestimonialMixin';
 
   // Import static data
   import BlogPostsData from '~/data/BlogPosts.yml';

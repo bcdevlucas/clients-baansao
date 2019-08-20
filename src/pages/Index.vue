@@ -76,32 +76,16 @@
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="row">
+        <div>
+          <div class="row px-4">
             <content-block-layout
-              v-for="service in getServices().slice(0, getServices().length / 2)"
-              v-if="typeof service.summary === 'string'"
+              v-for="service in getServices(false).slice(0,4)"
               :key="service.id"
-              className="col-lg-6 col-md-6 mb-6 project-entry"
+              className="col-lg-3 col-md-3 mb-6 project-entry"
               :title="service.title"
               :description="(service.summary) ? service.summary : ''"
               :link="service.link"
-              linkText="Learn More"
-              :image="service.image"
-              imageAlt=""
-            />
-
-            <span class="flower-separator-white"></span>
-
-            <content-block-layout
-              v-for="service in getServices().slice(getServices().length / 2, getServices().length)"
-              v-if="typeof service.summary === 'string'"
-              :key="service.id"
-              className="col-lg-6 col-md-6 mb-6 project-entry"
-              :title="service.title"
-              :description="(service.summary) ? service.summary : ''"
-              :link="service.link"
-              linkText="Learn More"
+              linkText="More Details"
               :image="service.image"
               imageAlt=""
             />

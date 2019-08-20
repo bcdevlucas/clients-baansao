@@ -170,7 +170,7 @@
 
   import HeroMixin from '~/mixins/HeroMixin';
   import SectionMixin from '~/mixins/SectionMixin';
-  import TestimonialMixin from '~/mixins/TestimonialMixin';
+  import TestimonialMixin from '~/core/mixins/TestimonialMixin';
 
   // Import static data
   import AboutData from '~/data/Company.yml';
