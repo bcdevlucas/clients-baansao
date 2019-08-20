@@ -26,16 +26,28 @@
                   :displayMax="pageData.gallery.length"
                   :imagesPerRow="3"
                 />
+              </div>
+            </div>
 
+            <div class="col-lg-3 mb-5 mb-lg-0">
+              <div class="container">
                 <amenities class="mt-4" />
-                <rules class="mt-4" />
-                <cancellations class="mt-4" />
+                <google-map-cutout class="mt-4" />
               </div>
             </div>
 
             <div class="col-lg-6 ml-auto">
               <div class="container">
                 <div v-html="pageData.description"></div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <rules class="mt-4" />
+                  </div>
+                  <div class="col-sm-6">
+                    <cancellations class="mt-4" />
+                  </div>
+                </div>
+
                 <p class="class-action-buttons mt-5 text-center">
                   <button @click="showBookingForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i>
                     Book Now
@@ -126,10 +138,6 @@
 
               </div>
             </div>
-            <div class="col-lg-3 mb-5 mb-lg-0">
-              <div class="container">
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -199,6 +207,8 @@
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
 
   import ThumbnailGallery from '~/core/components/ThumbnailGallery.vue';
+  import GoogleMapBackground from '~/core/components/GoogleMapBackground.vue';
+  import GoogleMapCutout from '~/core/components/GoogleMapCutout.vue';
   import Amenities from '~/components/Amenities.vue';
   import Cancellations from '~/components/Cancellations.vue';
   import Rules from '~/components/Rules.vue';
@@ -220,6 +230,8 @@
       ContentBlockLayout,
       TestimonialBlockLayout,
       ThumbnailGallery,
+      GoogleMapBackground,
+      GoogleMapCutout,
       Amenities,
       Cancellations,
       Rules

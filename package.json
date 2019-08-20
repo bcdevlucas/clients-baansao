@@ -10,6 +10,7 @@
     "@gridsome/source-filesystem": "^0.3.0",
     "@gridsome/transformer-remark": "^0.2.1",
     "@gridsome/transformer-yaml": "git+https://github.com/bluecollardev/gridsome-transformer-yaml.git",
+    "animejs": "^3.1.0",
     "babel-jest": "^24.8.0",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.19",
@@ -34,7 +35,8 @@
     "vue-jest": "^3.0.4",
     "vue-markdown": "^2.2.4",
     "vue-owl-carousel": "^2.0.3",
-    "vue-waypoint": "^3.2.2"
+    "vue-waypoint": "^3.2.2",
+    "vue2-google-maps": "^0.10.7"
   },
   "devDependencies": {
     "@babel/runtime": "^7.4.3",

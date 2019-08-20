@@ -44,5 +44,36 @@ export default function (Vue, { router, head, isClient }) {
     Vue.component('CldImage', Cloudinary.CldImage);
   }
 
+  if (typeof window !== 'undefined') {
+    //const VueWaypoint = require('vue-waypoint');
+    const VueGoogleMaps = require('vue2-google-maps');
+
+    //Vue.use(VueWaypoint.default);
+    Vue.use(VueGoogleMaps, {
+      load: {
+        key: 'AIzaSyBSDlMWErr_gwT5d5wze8oK9muKPuHLtKQ',
+        libraries: 'places', // This is required if you use the Autocomplete plugin
+        // OR: libraries: 'places,drawing'
+        // OR: libraries: 'places,drawing,visualization'
+        // (as you require)
+
+        //// If you want to set the version, you can do sTo:
+        // v: '3.26',
+      },
+
+      //// If you intend to programmatically custom event listener code
+      //// (e.g. `this.$refs.gmap.$on('zoom_changed', someFunc)`)
+      //// instead of going through Vue templates (e.g. `<GmapMap @zoom_changed="someFunc">`)
+      //// you might need to turn this on.
+      // autobindAllEvents: false,
+
+      //// If you want to manually install components, e.g.
+      //// import {GmapMarker} from 'vue2-google-maps/src/components/marker'
+      //// Vue.component('GmapMarker', GmapMarker)
+      //// then disable the following:
+      // installComponents: true,
+    });
+  }
+
   Vue.component('Layout', DefaultLayout);
 }

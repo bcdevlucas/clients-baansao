@@ -1497,6 +1497,11 @@ amdefine@>=0.0.4:
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
+animejs@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.1.0.tgz#748a90fc1d4bef3efed64508af9a6a82babf5c47"
+  integrity sha512-BjnCroPPQPEAngT0M89pz9TBcOGgOFLnVoq3+jV2upl4rn60k57/AXvESTnuILsNgOEjGuhMEOMp7IlQzk40kA==
+
 ansi-colors@^3.0.0:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-3.2.4.tgz#e3a3da4bfbae6c86a9c285625de124a234026fbf"
@@ -6575,6 +6580,11 @@ marked@^0.6.2:
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.6.2.tgz#c574be8b545a8b48641456ca1dbe0e37b6dccc1a"
   integrity sha512-LqxwVH3P/rqKX4EKGz7+c2G9r98WeM/SW34ybhgNGhUQNKtf1GmmSkJ6cDGJ/t6tiyae49qRkpyTw2B9HOrgUA==
 
+marker-clusterer-plus@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/marker-clusterer-plus/-/marker-clusterer-plus-2.1.4.tgz#f8eff74d599dab3b7d0e3fed5264ea0e704f5d67"
+  integrity sha1-+O/3TVmdqzt9Dj/tUmTqDnBPXWc=
+
 match-at@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/match-at/-/match-at-0.1.1.tgz#25d040d291777704d5e6556bbb79230ec2de0540"
@@ -10658,6 +10668,14 @@ vue-waypoint@^3.2.2:
   integrity sha512-T11nSEsmR19fc7zdRKc9YG55m4FGbQWeQY15qOdJGi80x9yAeritoTWo1sCJPoJ/S9ekkNC713z/n1r5zflOLA==
   dependencies:
     vue "^2.5.2"
+
+vue2-google-maps@^0.10.7:
+  version "0.10.7"
+  resolved "https://registry.yarnpkg.com/vue2-google-maps/-/vue2-google-maps-0.10.7.tgz#2e4c1239386001bd47777d8c6a0475e5320cc3a8"
+  integrity sha512-y5aBJTAsfGvpsbfgPaeWU7o7QbOeINZKsP6SB9qrBe8U8EYBFO/bTWo3rcMq/NOtgT/XssV3Nwg/2u3no6jWbw==
+  dependencies:
+    babel-runtime "^6.26.0"
+    marker-clusterer-plus "^2.1.4"
 
 vue@^2.5.17, vue@^2.5.2, vue@^2.6.6, vue@^2.6.8:
   version "2.6.10"
