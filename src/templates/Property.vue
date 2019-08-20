@@ -8,7 +8,7 @@
 
     <div class="content-wrapper">
       <div class="site-section" v-if="pageData" :key="pageData.id">
-        <div class="container pt-4">
+        <div>
           <!--<div class="row mt-4 mb-4 pt-4">
             <div class="col-lg-12 ml-auto text-center">
               <span class="sub-title" v-html="pageData.summary"></span>
@@ -16,109 +16,118 @@
             </div>
           </div>-->
           <div class="row mt-4 mb-4 pt-4">
-            <div class="col-lg-4 mb-5 mb-lg-0">
-              <thumbnail-gallery
-                :primaryImage="pageData.imageId"
-                :gallery="pageData.gallery"
-                cloudName="baansaowanee"
-                :folder="pageData.galleryFolder"
-                :displayMax="pageData.gallery.length"
-                :imagesPerRow="3"
-              />
+            <div class="col-lg-3 mb-5 mb-lg-0">
+              <div class="container">
+                <thumbnail-gallery
+                  :primaryImage="pageData.imageId"
+                  :gallery="pageData.gallery"
+                  cloudName="baansaowanee"
+                  :folder="pageData.galleryFolder"
+                  :displayMax="pageData.gallery.length"
+                  :imagesPerRow="3"
+                />
 
-              <amenities class="mt-4" />
-              <rules class="mt-4" />
-              <cancellations class="mt-4" />
+                <amenities class="mt-4" />
+                <rules class="mt-4" />
+                <cancellations class="mt-4" />
+              </div>
             </div>
 
-            <div class="col-lg-8 ml-auto">
-              <div v-html="pageData.description"></div>
-              <p class="class-action-buttons mt-5 text-center">
-                <button @click="showBookingForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i>
-                  Book Now
-                </button>&nbsp;
-                <button @click="showQuestionForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i>
-                  Ask a Question
-                </button>
-              </p>
-              <!--<div class="container pt-4" ref="bookingForm">
-                <div class="row">
-                  <div class="col-12 text-center">
-                    <span class="sub-title">{{ pageData.title }}</span>
-                    <h2 class="font-weight-bold text-black mb-5">View Available Dates</h2>
+            <div class="col-lg-6 ml-auto">
+              <div class="container">
+                <div v-html="pageData.description"></div>
+                <p class="class-action-buttons mt-5 text-center">
+                  <button @click="showBookingForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i>
+                    Book Now
+                  </button>&nbsp;
+                  <button @click="showQuestionForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i>
+                    Ask a Question
+                  </button>
+                </p>
+                <!--<div class="container pt-4" ref="bookingForm">
+                  <div class="row">
+                    <div class="col-12 text-center">
+                      <span class="sub-title">{{ pageData.title }}</span>
+                      <h2 class="font-weight-bold text-black mb-5">View Available Dates</h2>
+                    </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 text-center">
-                    <div class='occsn_stack' id='occsn_stack_5301_9938'></div>
+                  <div class="row">
+                    <div class="col-12 text-center">
+                      <div class='occsn_stack' id='occsn_stack_5301_9938'></div>
+                    </div>
                   </div>
-                </div>
-              </div>-->
-              <div class="container pt-4" v-if="displayQuestionForm" ref="questionForm">
-                <div class="row">
-                  <div class="col-12 text-center">
-                    <span class="sub-title">{{ pageData.title }}</span>
-                    <h2 class="font-weight-bold text-black mb-5">Have a Question? We're Here to Help!</h2>
+                </div>-->
+                <div class="pt-4" v-if="displayQuestionForm" ref="questionForm">
+                  <div class="row">
+                    <div class="col-12 text-center">
+                      <span class="sub-title">{{ pageData.title }}</span>
+                      <h2 class="font-weight-bold text-black mb-5">Have a Question? We're Here to Help!</h2>
+                    </div>
                   </div>
-                </div>
-                <div class="row mb-4">
-                  <div class="col-md-12 col-lg-12">
-                    <form
-                      action="https://formspree.io/admin@firebrandwebsolutions.com"
-                      method="POST"
-                      class="p-5 bg-white"
-                    >
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="fullname"
-                          >Full Name</label
-                          >
-                          <input
-                            type="text"
-                            id="fullname"
-                            class="form-control"
-                            placeholder="Full Name"
-                          />
+                  <div class="row mb-4">
+                    <div class="col-md-12 col-lg-12">
+                      <form
+                        action="https://formspree.io/admin@firebrandwebsolutions.com"
+                        method="POST"
+                        class="p-5 bg-white"
+                      >
+                        <div class="row form-group">
+                          <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname"
+                            >Full Name</label
+                            >
+                            <input
+                              type="text"
+                              id="fullname"
+                              class="form-control"
+                              placeholder="Full Name"
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div class="row form-group">
-                        <div class="col-md-12">
-                          <label class="font-weight-bold" for="email">Email</label>
-                          <input
-                            type="email"
-                            id="email"
-                            class="form-control"
-                            placeholder="Email Address"
-                          />
+                        <div class="row form-group">
+                          <div class="col-md-12">
+                            <label class="font-weight-bold" for="email">Email</label>
+                            <input
+                              type="email"
+                              id="email"
+                              class="form-control"
+                              placeholder="Email Address"
+                            />
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="row form-group">
-                        <div class="col-md-12">
-                          <label class="font-weight-bold" for="message">Message</label>
-                          <textarea
-                            name="message"
-                            id="message"
-                            cols="30"
-                            rows="5"
-                            class="form-control"
-                            placeholder="Write your message here."
-                          ></textarea>
+                        <div class="row form-group">
+                          <div class="col-md-12">
+                            <label class="font-weight-bold" for="message">Message</label>
+                            <textarea
+                              name="message"
+                              id="message"
+                              cols="30"
+                              rows="5"
+                              class="form-control"
+                              placeholder="Write your message here."
+                            ></textarea>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="row form-group">
-                        <div class="col-md-12">
-                          <input
-                            type="submit"
-                            value="Send"
-                            class="btn btn-primary rounded-0 btn-lg"
-                          />
+                        <div class="row form-group">
+                          <div class="col-md-12">
+                            <input
+                              type="submit"
+                              value="Send"
+                              class="btn btn-primary rounded-0 btn-lg"
+                            />
+                          </div>
                         </div>
-                      </div>
-                    </form>
+                      </form>
+                    </div>
                   </div>
                 </div>
+
+              </div>
+            </div>
+            <div class="col-lg-3 mb-5 mb-lg-0">
+              <div class="container">
               </div>
             </div>
           </div>
