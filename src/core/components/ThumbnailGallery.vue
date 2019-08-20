@@ -163,8 +163,8 @@
 
         galleryImages = galleryImages.slice(start, Math.min(end, galleryImages.length));
 
-        console.log(`dumping gallery images ${start} - ${end} | featuredOnly: ${featuredOnly}`);
-        console.log(galleryImages);
+        //console.log(`dumping gallery images ${start} - ${end} | featuredOnly: ${featuredOnly}`);
+        //console.log(galleryImages);
 
         return galleryImages;
       },
@@ -181,8 +181,8 @@
           let imageUrl = await this.getLargeImageUrl(image.id);
           fullSizeImages.push({ id: image.id, src: imageUrl });
         }).then(() => {
-          console.log('setting full size image urls');
-          console.log(fullSizeImages);
+          //console.log('setting full size image urls');
+          //console.log(fullSizeImages);
           this.$set(this, 'fullSizeImages', fullSizeImages);
         });
       },

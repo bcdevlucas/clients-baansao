@@ -241,8 +241,8 @@
           title: this.$page.property.fields.title,
           metaKeywords: this.$page.property.fields.metaKeywords,
           metaDescription: this.$page.property.fields.metaDescription,
-          summary: marked(this.$page.property.fields.summary),
-          description: marked(this.$page.property.fields.description)
+          summary: (typeof window !== 'undefined') ? marked(this.$page.property.fields.summary) : this.$page.property.fields.summary,
+          description:  (typeof window !== 'undefined') ? marked(this.$page.property.fields.description) : this.$page.property.fields.description
         }
       },
       serviceContent() {
