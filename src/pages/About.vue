@@ -78,60 +78,20 @@
               <h2 class="font-weight-bold text-black mb-5">Our Friends</h2>
             </div>
           </div>
-          <div class="nonloop-block-13 owl-carousel owl-loaded owl-drag">
-            <div class="owl-stage-outer">
-              <div class="owl-content-wrapper">
-
-                <div
-                  v-if="getTestimonial(0)"
-                  class="owl-item active"
-                  style="width: 380px;"
-                >
-                  <testimonial-block-layout
-                    className="testimony"
-                    :reviewedBy="getTestimonial(0).reviewedBy"
-                    :image="getTestimonial(0).image"
-                    :testimonial="getTestimonial(0).testimonial"
-                  />
-                  <div
-                    class="homepage-hero-action action-link-block text-center space-bottom">
-                    <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
-                  </div>
-                </div>
-
-                <div
-                  v-if="getTestimonial(1)"
-                  class="owl-item active"
-                  style="width: 380px;"
-                >
-                  <testimonial-block-layout
-                    className="testimony"
-                    :reviewedBy="getTestimonial(1).reviewedBy"
-                    :image="getTestimonial(1).image"
-                    :testimonial="getTestimonial(1).testimonial"
-                  />
-                  <div
-                    class="homepage-hero-action action-link-block text-center space-bottom">
-                    <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
-                  </div>
-                </div>
-
-                <div
-                  v-if="getTestimonial(2)"
-                  class="owl-item active"
-                  style="width: 380px;"
-                >
-                  <testimonial-block-layout
-                    className="testimony"
-                    :reviewedBy="getTestimonial(2).reviewedBy"
-                    :image="getTestimonial(2).image"
-                    :testimonial="getTestimonial(2).testimonial"
-                  />
-                  <div
-                    class="homepage-hero-action action-link-block text-center space-bottom">
-                    <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
-                  </div>
-                </div>
+          <div class="slider row">
+            <div
+              v-for="testimonial in getTestimonialsByIndex(0, 3)"
+              class="col-sm-4 col-lg-3"
+            >
+              <testimonial-block-layout
+                className="testimony"
+                :reviewedBy="testimonial.reviewedBy"
+                :image="testimonial.image"
+                :testimonial="testimonial.testimonial"
+              />
+              <div
+                class="homepage-hero-action action-link-block text-center space-bottom">
+                <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
               </div>
             </div>
           </div>
