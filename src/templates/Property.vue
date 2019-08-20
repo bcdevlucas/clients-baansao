@@ -1,115 +1,38 @@
 <template>
   <Layout>
-    <div class="">
-      <!--<div
-        v-if="$page.property && getHeroById('page-hero') !== null"
-        class="site-blocks-cover inner-page text-shadow"
-        :style="`background-image: url(${activeImage.src});`"
-      >-->
-      <div
-        v-if="$page.property && getHeroById('page-hero') !== null"
-        class="site-blocks-cover inner-page text-shadow"
-      >
-        <div class="container hero-content" ref="pageHero">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-md-10 text-center">
-              <span class="sub-text">Baan Saowanee's</span>
-              <h1 v-if="$page.property">{{ $page.property.fields.title }}</h1>
-              <div class="sub-text" v-html="($page.property.fields.summary) ? $page.property.fields.summary : ''"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <hero-layout01-col
+      :image="activeImage ? activeImage.src : ''"
+      :title="pageData.title"
+      :description="pageData.summary"
+    />
 
     <div class="content-wrapper">
-      <div class="site-section" v-if="$page.property" :key="$page.property.fields.id">
+      <div class="site-section" v-if="pageData" :key="pageData.id">
         <div class="container pt-4">
           <!--<div class="row mt-4 mb-4 pt-4">
             <div class="col-lg-12 ml-auto text-center">
-              <span class="sub-title" v-html="$page.property.fields.summary"></span>
-              <h2 class="font-weight-bold text-black mb-5" v-html="$page.property.fields.title"></h2>
+              <span class="sub-title" v-html="pageData.summary"></span>
+              <h2 class="font-weight-bold text-black mb-5" v-html="pageData.title"></h2>
             </div>
           </div>-->
           <div class="row mt-4 mb-4 pt-4">
             <div class="col-lg-4 mb-5 mb-lg-0">
               <thumbnail-gallery
-                :primaryImage="$page.property.fields.imageId"
-                :gallery="$page.property.fields.gallery"
-                :folder="$page.property.fields.galleryFolder"
-                :displayMax="24"
+                :primaryImage="pageData.imageId"
+                :gallery="pageData.gallery"
+                cloudName="baansaowanee"
+                :folder="pageData.galleryFolder"
+                :displayMax="pageData.gallery.length"
                 :imagesPerRow="3"
               />
-              <div class="amenities-table mt-4">
-                <h3>Amenities</h3>
-                <div class="d-flex" style="flex-flow: row wrap;">
-                  <div class="amenity d-flex" style="flex: 1 2 50%">
-                    <div style="flex: 0 0 40px">
-                      <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false"
-                           style="height: 19px; width: 19px; fill: currentcolor;">
-                        <path
-                          d="m10.5 0a .5.5 0 0 0 -.5.5v7a .5.5 0 0 1 -.49.5h-1.51v-7.5a.5.5 0 1 0 -1 0v7.5h-1.51a.5.5 0 0 1 -.49-.5v-7a .5.5 0 1 0 -1 0v7c0 .83.67 1.5 1.49 1.5h1.51v5c0 .03.01.06.02.09a1.49 1.49 0 0 0 -1.02 1.41v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.66-.43-1.21-1.02-1.41.01-.03.02-.06.02-.09v-5h1.51a1.5 1.5 0 0 0 1.49-1.5v-7a .5.5 0 0 0 -.5-.5zm-2.5 15.5v7a .5.5 0 0 1 -.5.5.5.5 0 0 1 -.5-.5v-7c0-.28.22-.5.5-.5s.5.22.5.5zm11.5-15.5h-2c-1.4 0-2.5 1.07-2.5 2.5v7c0 1.43 1.1 2.5 2.5 2.5h1.5v2.09a1.49 1.49 0 0 0 -.5-.09c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-22.5zm-2 11c-.86 0-1.5-.63-1.5-1.5v-7c0-.87.65-1.5 1.5-1.5h1.5v10zm1.5 11.5a.5.5 0 0 1 -.5.5.5.5 0 0 1 -.5-.5v-7c0-.28.22-.5.5-.5s.5.22.5.5z"
-                          fill-rule="evenodd"></path>
-                      </svg>
-                    </div>
-                    <div style="flex: 1">Kitchen</div>
-                  </div>
-                  <div class="amenity d-flex" style="flex: 1 2 50%">
-                    <div style="flex: 0 0 40px">
-                      <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false"
-                           style="height: 19px; width: 19px; fill: currentcolor;">
-                        <path
-                          d="m12 15a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 5a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm5.92-5.78a.5.5 0 1 1 -.84.55c-1.19-1.81-3.07-2.77-5.08-2.77s-3.89.96-5.08 2.78a.5.5 0 0 1 -.84-.55c1.38-2.1 3.58-3.23 5.92-3.23s4.54 1.13 5.92 3.23zm2.98-3.03a.5.5 0 1 1 -.79.61c-1.66-2.14-5.22-3.8-8.11-3.8-2.83 0-6.26 1.62-8.12 3.82a.5.5 0 0 1 -.76-.65c2.05-2.42 5.75-4.17 8.88-4.17 3.19 0 7.05 1.8 8.9 4.19zm2.95-2.33a.5.5 0 0 1 -.71-.02c-2.94-3.07-6.71-4.84-11.14-4.84s-8.2 1.77-11.14 4.85a.5.5 0 0 1 -.72-.69c3.12-3.27 7.14-5.16 11.86-5.16s8.74 1.89 11.86 5.16a.5.5 0 0 1 -.02.71z"
-                          fill-rule="evenodd"></path>
-                      </svg>
-                    </div>
-                    <div style="flex: 1">Wifi</div>
-                  </div>
-                  <div class="amenity d-flex" style="flex: 1 2 50%">
-                    <div style="flex: 0 0 40px">
-                      <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false"
-                           style="height: 19px; width: 19px; fill: currentcolor;">
-                        <path
-                          d="m23.99 18.38-.5-2a .5.5 0 0 0 -.49-.38h-22a .5.5 0 0 0 -.49.38l-.5 2a .5.5 0 0 0 .49.62h23a .5.5 0 0 0 .49-.62zm-1.13-.38h-21.72l.25-1h21.22zm-21.36-3h21a .5.5 0 0 0 .5-.53c-.21-3.22-1.22-5.47-3-5.47a4911.8 4911.8 0 0 0 -8.8 0h-1.71c-.2 0-.26-.08-.19-.27a9.59 9.59 0 0 1 .17-.48c.13-.34.27-.68.43-1 .41-.79.82-1.25 1.1-1.25h10.5c.87 0 1.43-.7 1.4-1.52s-.64-1.48-1.55-1.48h-11.35c-3.84 0-7.29 4.4-8.99 11.38a.5.5 0 0 0 .49.62zm8.5-11h11.35c.35 0 .55.21.56.52.01.29-.14.48-.4.48h-10.51c-.8 0-1.42.68-1.99 1.8a10.74 10.74 0 0 0 -.65 1.61c-.31.82.23 1.59 1.13 1.59h1.71a33801.74 33801.74 0 0 1 8.8 0c .94 0 1.71 1.58 1.95 4h-19.8c1.65-6.21 4.7-10 7.85-10zm5 8a1 1 0 1 1 2 0 1 1 0 0 1 -2 0zm3 0a1 1 0 1 1 2 0 1 1 0 0 1 -2 0z"
-                          fill-rule="evenodd"></path>
-                      </svg>
-                    </div>
-                    <div style="flex: 1">Iron</div>
-                  </div>
-                  <div class="amenity d-flex" style="flex: 1 2 50%">
-                    <div style="flex: 0 0 40px">
-                      <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false"
-                           style="height: 19px; width: 19px; fill: currentcolor;">
-                        <path
-                          d="m12 0c-6.63 0-12 5.37-12 12s5.37 12 12 12 12-5.37 12-12-5.37-12-12-12zm0 23c-6.07 0-11-4.92-11-11s4.93-11 11-11 11 4.93 11 11-4.93 11-11 11zm .5-17h-4.5v11.5a.5.5 0 0 0 1 0v-4.5h3.5c1.93 0 3.5-1.57 3.5-3.5s-1.57-3.5-3.5-3.5zm0 6h-3.5v-5h3.5c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5z"
-                          fill-rule="evenodd"></path>
-                      </svg>
-                    </div>
-                    <div style="flex: 1">Free parking on premises</div>
-                  </div>
-                </div>
-              </div>
-              <div class="rules-table mt-4">
-                <h3>Rules</h3>
-                <strong>Enjoy the villa, but please respect the property.</strong>
-                <br/>
-                <ul>
-                  <li>Smoking outdoors only.</li>
-                  <li>Remove outdoor shoes.</li>
-                  <li>Quiet time 11 p.m.</li>
-                  <li>Separate trash: assist recycling.</li>
-                </ul>
-              </div>
-              <div class="cancellations-table mt-4">
-                <h3>Cancellations</h3>
-                <strong>Strict Policy: Free cancellation for 48 hours</strong>
-                <br/>
-                After that, cancel up to 7 days before check-in and get a 50% refund, minus the service fee.
-              </div>
+
+              <amenities class="mt-4" />
+              <rules class="mt-4" />
+              <cancellations class="mt-4" />
             </div>
 
             <div class="col-lg-8 ml-auto">
-              <div v-html="$page.property.fields.description"></div>
+              <div v-html="pageData.description"></div>
               <p class="class-action-buttons mt-5 text-center">
                 <button @click="showBookingForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i>
                   Book Now
@@ -121,7 +44,7 @@
               <!--<div class="container pt-4" ref="bookingForm">
                 <div class="row">
                   <div class="col-12 text-center">
-                    <span class="sub-title">{{ $page.property.fields.title }}</span>
+                    <span class="sub-title">{{ pageData.title }}</span>
                     <h2 class="font-weight-bold text-black mb-5">View Available Dates</h2>
                   </div>
                 </div>
@@ -134,7 +57,7 @@
               <div class="container pt-4" v-if="displayQuestionForm" ref="questionForm">
                 <div class="row">
                   <div class="col-12 text-center">
-                    <span class="sub-title">{{ $page.property.fields.title }}</span>
+                    <span class="sub-title">{{ pageData.title }}</span>
                     <h2 class="font-weight-bold text-black mb-5">Have a Question? We're Here to Help!</h2>
                   </div>
                 </div>
@@ -221,7 +144,6 @@
               :description="(service.summary) ? service.summary : ''"
               :link="service.link"
               linkText="More Details"
-              :onLinkClicked="setActiveService.bind(this, service.id)"
               :image="service.image"
               imageAlt=""
             />
@@ -236,65 +158,15 @@
             <div class="owl-stage-outer">
               <div class="owl-content-wrapper">
                 <div
-                  v-if="getTestimonial(0)"
+                  v-for="testimonial in getTestimonialsByIndex(0, 3)"
                   class="owl-item active"
                   style="width: 380px;"
                 >
                   <testimonial-block-layout
                     className="testimony"
-                    :reviewedBy="getTestimonial(0).reviewedBy"
-                    :image="getTestimonial(0).image"
-                    :testimonial="getTestimonial(0).testimonial"
-                  />
-                  <div
-                    class="homepage-hero-action action-link-block text-center space-bottom">
-                    <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
-                  </div>
-                </div>
-
-                <div
-                  v-if="getTestimonial(1)"
-                  class="owl-item active"
-                  style="width: 380px;"
-                >
-                  <testimonial-block-layout
-                    className="testimony"
-                    :reviewedBy="getTestimonial(1).reviewedBy"
-                    :image="getTestimonial(1).image"
-                    :testimonial="getTestimonial(1).testimonial"
-                  />
-                  <div
-                    class="homepage-hero-action action-link-block text-center space-bottom">
-                    <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
-                  </div>
-                </div>
-
-                <div
-                  v-if="getTestimonial(2)"
-                  class="owl-item active"
-                  style="width: 380px;"
-                >
-                  <testimonial-block-layout
-                    className="testimony"
-                    :reviewedBy="getTestimonial(2).reviewedBy"
-                    :image="getTestimonial(2).image"
-                    :testimonial="getTestimonial(2).testimonial"
-                  />
-                  <div
-                    class="homepage-hero-action action-link-block text-center space-bottom">
-                    <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
-                  </div>
-                </div>
-                <div
-                  v-if="getTestimonial(3)"
-                  class="owl-item active"
-                  style="width: 380px;"
-                >
-                  <testimonial-block-layout
-                    className="testimony"
-                    :reviewedBy="getTestimonial(3).reviewedBy"
-                    :image="getTestimonial(3).image"
-                    :testimonial="getTestimonial(3).testimonial"
+                    :reviewedBy="testimonial.reviewedBy"
+                    :image="testimonial.image"
+                    :testimonial="testimonial.testimonial"
                   />
                   <div
                     class="homepage-hero-action action-link-block text-center space-bottom">
@@ -313,31 +185,35 @@
 <script>
   import marked from 'marked';
 
-  import Vue from 'vue';
-
-  //import VueGallerySlideshow from 'vue-gallery-slideshow';
-
+  import HeroLayout01Col from '~/components/layouts/HeroLayout01Col.vue'
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
 
   import ThumbnailGallery from '~/core/components/ThumbnailGallery.vue';
-
+  import Amenities from '~/components/Amenities.vue';
+  import Cancellations from '~/components/Cancellations.vue';
+  import Rules from '~/components/Rules.vue';
 
   // TODO: Implement page page that provides data interface?
   import HeroMixin from '~/mixins/HeroMixin';
   import SectionMixin from '~/mixins/SectionMixin';
-  import ServiceMixin from '~/mixins/ServiceMixin';
-  import TestimonialMixin from '~/mixins/TestimonialMixin';
+  import ServiceMixin from '~/core/mixins/ServiceMixin';
+  import TestimonialMixin from '~/core/mixins/TestimonialMixin';
 
   // Import static data
   import PropertiesData from '~/data/Properties.yml';
 
+  import * as ImageUtils from '~/core/utils/ImageUtils';
+
   export default {
     components: {
+      HeroLayout01Col,
       ContentBlockLayout,
       TestimonialBlockLayout,
-      ThumbnailGallery
-      //VueGallerySlideshow
+      ThumbnailGallery,
+      Amenities,
+      Cancellations,
+      Rules
     },
     metaInfo: {
       title: "Classes"
@@ -346,67 +222,39 @@
     data() {
       return {
         pageTitle: PropertiesData.title,
-        pageData: PropertiesData,
         occasionScript: null,
         activeImage: null,
-        activeService: null,
         displayBookingForm: false,
         displayQuestionForm: false,
-        galleryIndex: null,
-        //marked: marked
+        galleryIndex: null
       }
     },
     computed: {
+      pageData() {
+        return {
+          image: this.$page.property.fields.image,
+          imageId: this.$page.property.fields.imageId,
+          gallery: this.$page.property.fields.gallery,
+          galleryFolder: this.$page.property.fields.galleryFolder,
+          link: this.$page.property.fields.link,
+          linkText: this.$page.property.fields.linkText,
+          title: this.$page.property.fields.title,
+          metaKeywords: this.$page.property.fields.metaKeywords,
+          metaDescription: this.$page.property.fields.metaDescription,
+          summary: marked(this.$page.property.fields.summary),
+          description: marked(this.$page.property.fields.description)
+        }
+      },
       serviceContent() {
         return PropertiesData;
       }
     },
     methods: {
-      setActiveService(id) {
-        let service = this.getService(id);
-        this.activeService = Object.assign({}, service, {
-          descriptionHtml: (service.description) ? marked(service.description) : null
-        });
-        // Hide Booking / Question forms as they are only relevant to the selected class
-        this.hideBookingForm();
-        this.hideQuestionForm();
-
-        if (typeof window !== 'undefined') {
-          this.stopPrimaryImageRotation();
-          this.startPrimaryImageRotation();
-
-          // TODO: Maybe use some kind of route method?
-          window.history.pushState({}, this.activeService.title, `${this.$route.path}?id=${this.activeService.id}`);
-          window.setTimeout((() => {
-            this.$refs.pageHero.scrollIntoView();
-          }).bind(this), 333);
-        }
-      },
-      setActiveServiceByIndex(idx) {
-        let service = this.getServiceByIndex(idx);
-        this.activeService = Object.assign({}, service, {
-          descriptionHtml: service.description //(document) ? marked(service.description) : ''
-        });
-        // Hide Booking / Question forms as they are only relevant to the selected class
-        this.hideBookingForm();
-        this.hideQuestionForm();
-
-        if (typeof window !== 'undefined') {
-          // TODO: Maybe use some kind of route method?
-          window.history.pushState({}, this.activeService.title, `${this.$route.path}?id=${this.activeService.id}`);
-          window.setTimeout(() => {
-            //this.$refs.itemDetails.scrollIntoView();
-          }, 333);
-        }
-      },
-      unsetActiveService() {
-        this.activeService = null;
-      },
       /**
        * TODO: Is this used outside of thumbnails? If so make it a mixin.
        */
       getGalleryImages(start, end, featuredOnly) {
-        let galleryImages = this.activeService.gallery instanceof Array ? this.activeService.gallery : [];
+        let galleryImages = this.pageData.gallery instanceof Array ? this.pageData.gallery : [];
         galleryImages = (featuredOnly) ? galleryImages.filter((item) => item.featured) : galleryImages;
 
         start = (!isNaN(start)) ? start : 0;
@@ -417,50 +265,54 @@
 
         return galleryImages;
       },
-      startPrimaryImageRotation(ms) {
+      // Fisher-Yates Shuffle - memoized
+      shuffle(array) {
+        let counter = array.length;
+
+        // While there are elements in the array
+        while (counter > 0) {
+          // Pick a random index
+          let index = Math.floor(Math.random() * counter);
+
+          // Decrease counter by 1
+          counter--;
+
+          // And swap the last element with it
+          let temp = array[counter];
+          array[counter] = array[index];
+          array[index] = temp;
+        }
+
+        console.log('shuffled gallery');
+        console.log(array[0].src);
+        //console.log(array);
+
+        return array;
+      },
+      getRandomImage(images) {
+        // Copy the gallery
+        let copy = images.map(image => image);
+        return this.shuffle(copy).shift();
+      },
+      async setActiveImage() {
+        if (this.pageData && this.pageData.gallery instanceof Array) {
+          const activeImage = this.getRandomImage(this.pageData.gallery.slice(0, 6));
+          const opts = { cloudName: 'baansaowanee', folder: this.pageData.galleryFolder, transforms: 'w_1920' };
+          activeImage.src = await ImageUtils.getCloudinaryImageUrl(activeImage.id, opts);
+          this.$data.activeImage = activeImage;
+        }
+      },
+      async startPrimaryImageRotation(ms) {
         ms = (!isNaN(ms)) ? ms : 10000;
 
         console.log('starting image rotation');
 
-        // Fisher-Yates Shuffle - memoized
-        const shuffle = function shuffle(array) {
-          let counter = array.length;
+        this.primaryImageShuffler = setInterval(this.setActiveImage, ms);
 
-          // While there are elements in the array
-          while (counter > 0) {
-            // Pick a random index
-            let index = Math.floor(Math.random() * counter);
-
-            // Decrease counter by 1
-            counter--;
-
-            // And swap the last element with it
-            let temp = array[counter];
-            array[counter] = array[index];
-            array[index] = temp;
-          }
-
-          console.log('shuffled gallery');
-          console.log(array[0].src);
-          //console.log(array);
-
-          return array;
-        };
-
-        if (this.activeService && this.activeService.gallery instanceof Array) {
-          // Copy the gallery
-          // Only grab the first 6 items for the rotation
-          let copy = this.activeService.gallery.slice(0, 6).map(item => item);
-          this.$data.activeImage = copy.shift();
-        }
-
-        this.primaryImageShuffler = setInterval((() => {
-          if (this.activeService && this.activeService.gallery instanceof Array) {
-            // Copy the gallery
-            let copy = this.activeService.gallery.slice(0, 6).map(item => item);
-            this.$data.activeImage = shuffle(copy).shift();
-          }
-        }).bind(this), ms);
+        const activeImage = { id: this.pageData.imageId, src: null };
+        const opts = { cloudName: 'baansaowanee', folder: this.pageData.galleryFolder, transforms: 'w_1920' };
+        activeImage.src = await ImageUtils.getCloudinaryImageUrl(activeImage.id, opts);
+        this.$data.activeImage = activeImage;
       },
       stopPrimaryImageRotation() {
         if (typeof window !== 'undefined') {
@@ -493,46 +345,7 @@
       }
     },
     mounted() {
-      // Grab the current path
-      const {id} = this.$route.query;
-
-      let service = null;
-      let matchedServices = this.serviceContent.services.filter((service) => id === service.id);
-      if (matchedServices.length > 0) service = matchedServices[0];
-
-      if (service !== null) {
-        this.setActiveService(service.id);
-      }
-
-      // Loop over scripts and strip any occasion ones, there's no API to relaunch this script
-      /*for (let idx = 0; idx < document.scripts.length; idx++) {
-        if (document.scripts[idx].src === 'https://app.getoccasion.com/p/preboot.js') {
-          delete document.scripts[idx];
-          console.log('deleted occasion script');
-          window.location.reload();
-        }
-      }
-
-      this.occasionScript = document.createElement('script');
-      this.occasionScript.setAttribute('src', 'https://app.getoccasion.com/p/preboot.js');
-      this.occasionScript.setAttribute('id', 'bc-occasion-calendar-script');
-      document.head.appendChild(this.occasionScript);*/
-
-
-    },
-    updated() {
-      // Loop over scripts and strip any occasion ones, there's no API to relaunch this script
-      /*for (let idx = 0; idx < document.scripts.length; idx++) {
-        if (document.scripts[idx].src === 'https://app.getoccasion.com/p/preboot.js') {
-          delete document.scripts[idx];
-          console.log('deleted occasion script');
-          //window.location.reload();
-        }
-      }
-
-      this.occasionScript = document.createElement('script');
-      this.occasionScript.setAttribute('src', 'https://app.getoccasion.com/p/preboot.js');
-      document.head.appendChild(this.occasionScript);*/
+      this.startPrimaryImageRotation();
     },
     beforeDestroy() {
       this.stopPrimaryImageRotation();
@@ -551,6 +364,7 @@
           id
           src
           caption
+          #subCaption
           featured
         }
         galleryFolder

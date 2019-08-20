@@ -217,7 +217,6 @@
               :description="(service.summary) ? service.summary : ''"
               :link="service.link"
               linkText="More Details"
-              :onLinkClicked="setActiveService.bind(this, service.id)"
               :image="service.image"
               imageAlt=""
             />
@@ -232,65 +231,15 @@
             <div class="owl-stage-outer">
               <div class="owl-content-wrapper">
                 <div
-                  v-if="getTestimonial(0)"
+                  v-for="testimonial in getTestimonialsByIndex(0, 3)"
                   class="owl-item active"
                   style="width: 380px;"
                 >
                   <testimonial-block-layout
                     className="testimony"
-                    :reviewedBy="getTestimonial(0).reviewedBy"
-                    :image="getTestimonial(0).image"
-                    :testimonial="getTestimonial(0).testimonial"
-                  />
-                  <div
-                    class="homepage-hero-action action-link-block text-center space-bottom">
-                    <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
-                  </div>
-                </div>
-
-                <div
-                  v-if="getTestimonial(1)"
-                  class="owl-item active"
-                  style="width: 380px;"
-                >
-                  <testimonial-block-layout
-                    className="testimony"
-                    :reviewedBy="getTestimonial(1).reviewedBy"
-                    :image="getTestimonial(1).image"
-                    :testimonial="getTestimonial(1).testimonial"
-                  />
-                  <div
-                    class="homepage-hero-action action-link-block text-center space-bottom">
-                    <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
-                  </div>
-                </div>
-
-                <div
-                  v-if="getTestimonial(2)"
-                  class="owl-item active"
-                  style="width: 380px;"
-                >
-                  <testimonial-block-layout
-                    className="testimony"
-                    :reviewedBy="getTestimonial(2).reviewedBy"
-                    :image="getTestimonial(2).image"
-                    :testimonial="getTestimonial(2).testimonial"
-                  />
-                  <div
-                    class="homepage-hero-action action-link-block text-center space-bottom">
-                    <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
-                  </div>
-                </div>
-                <div
-                  v-if="getTestimonial(3)"
-                  class="owl-item active"
-                  style="width: 380px;"
-                >
-                  <testimonial-block-layout
-                    className="testimony"
-                    :reviewedBy="getTestimonial(3).reviewedBy"
-                    :image="getTestimonial(3).image"
-                    :testimonial="getTestimonial(3).testimonial"
+                    :reviewedBy="testimonial.reviewedBy"
+                    :image="testimonial.image"
+                    :testimonial="testimonial.testimonial"
                   />
                   <div
                     class="homepage-hero-action action-link-block text-center space-bottom">
@@ -322,8 +271,8 @@
   // TODO: Implement page page that provides data interface?
   import HeroMixin from '~/mixins/HeroMixin';
   import SectionMixin from '~/mixins/SectionMixin';
-  import ServiceMixin from '~/mixins/ServiceMixin';
-  import TestimonialMixin from '~/mixins/TestimonialMixin';
+  import ServiceMixin from '~/core/mixins/ServiceMixin';
+  import TestimonialMixin from '~/core/mixins/TestimonialMixin';
 
   // Import static data
   import PropertiesData from '~/data/Properties.yml';

@@ -117,7 +117,7 @@
 
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
 
-  import ServiceMixin from '~/mixins/ServiceMixin';
+  import ServiceMixin from '~/core/mixins/ServiceMixin';
 
   // Import static data
   import PropertiesData from '~/data/Properties.yml';

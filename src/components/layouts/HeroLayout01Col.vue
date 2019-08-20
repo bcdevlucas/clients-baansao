@@ -1,46 +1,26 @@
 <template>
-  <section
-    ref="heroLayout"
-    :class="`homepage-hero hero-section-01-col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex flex-center flex-justify-center ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`"
-    :style="`background-image: url(${this.image});`"
-  >
-    <!-- TODO: Allow changing of bg colors -->
-    <div class="sm-flex flex-center flex-justify-center flex-basis-half">
-      <!--<div class="hero-image-wrapper"><img :class="`banner-image ${this.imageClass}`" v-bind:src="this.image" alt="" /></div>
-      <div v-if="typeof this.caption === 'string' && this.caption.length >0" class="figure-caption bg-bc-blue g-hero">
-        <p class="g-pstyle4" style="text-align: right;">{{ this.caption }}</p>
-        <p class="g-pstyle5" style="text-align: right;">{{ this.subCaption }}</p>
-      </div>-->
-      <div class="hero-block">
-        <div class="flex flex-column">
-          <div class="homepage-hero-title sm-space-bottom-half">
-            <p class="g-pstyle2 text-center">
-              {{ this.title }}
-            </p>
-          </div>
-          <div class="homepage-hero-text g-hero">
-            <div class="text-center" v-html="compiledDescription"></div>
-          </div>
-          <slot></slot>
-          <div
-            v-if="typeof this.link === 'string' && this.link.length >0"
-            class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
-          >
-            <a class="action-link xs-space-top space-bottom g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText"
-              >{{ this.linkText }}</a
-            >
-          </div>
-          <div
-            v-if="typeof this.link === 'string' && this.link.length >0"
-            class="homepage-hero-action action-link-block xs-hide text-center">
-            <a class="action-link space-top g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText"
-              >{{ this.linkText }}</a
-            >
+  <div class="">
+    <!--<div
+      v-if="$page.property && getHeroById('page-hero') !== null"
+      class="site-blocks-cover inner-page text-shadow"
+      :style="`background-image: url(${activeImage.src});`"
+    >-->
+    <div
+      class="site-blocks-cover inner-page text-shadow"
+      :style="`background-image: url(${image});`"
+    >
+      <div class="container hero-content" ref="pageHero">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-10 text-center">
+            <slot></slot>
+            <span class="sub-text" v-if="subtitle">{{ subtitle }}</span>
+            <h1 v-if="title">{{ title }}</h1>
+            <div class="sub-text" v-html="(description) ? description : ''"></div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>

@@ -15,7 +15,7 @@ export default {
 
       let services = (this.serviceContent.services instanceof Array) ? this.serviceContent.services : [];
 
-      if (!includeActive && this.activeService !== null) {
+      if (!includeActive && this.activeService && this.activeService !== null) {
         return services.filter((service) => service.id !== this.activeService.id);
       }
 

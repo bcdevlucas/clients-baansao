@@ -7,7 +7,6 @@ module.exports = {
       anchorClassName: 'icon icon-link',
     }
   },
-
   plugins: [
     {
       use: '@gridsome/source-filesystem',

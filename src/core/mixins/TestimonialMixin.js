@@ -1,6 +1,7 @@
+import marked from 'marked';
+
 // Import static data
 import TestimonialData from '~/data/Testimonial.yml';
-import marked from "marked";
 
 export default {
   computed: {
@@ -34,6 +35,20 @@ export default {
       }
 
       return null
+    },
+    getTestimonialsByIndex(startIndex, endIndex) {
+      if (!this.testimonialContent) return null;
+
+      let items = this.testimonialContent.items || [];
+
+      startIndex = !isNaN(startIndex) ?  startIndex : 0;
+      endIndex = !isNaN(endIndex) ? (endIndex < items.length) ? endIndex : items.length : items.length;
+
+      if (items instanceof Array) {
+        return items.slice(startIndex, endIndex + 1); // Slice is not inclusive
+      }
+
+      return [];
     },
   }
 }

@@ -23,8 +23,7 @@ module.exports = function (api) {
             id: { type: graphql.GraphQLString },
             src: { type: graphql.GraphQLString },
             caption: { type: graphql.GraphQLString },
-            // TODO: Fix me I am broken!
-            //subCaption: { type: graphql.GraphQLString },
+            subCaption: { type: graphql.GraphQLString },
             featured: { type: graphql.GraphQLBoolean },
           }
         });
