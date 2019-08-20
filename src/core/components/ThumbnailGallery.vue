@@ -1,6 +1,6 @@
 <template>
   <div class="gallery">
-    <div class="img primary-image" v-if="primaryImage" data-ref-id="primaryImage" @click="triggerGallery">
+    <div class="img primary-image" v-if="primaryImage" :data-ref-id="primaryImage" @click="triggerGallery">
       <cld-image
         ref="thumbs_primaryImage"
         :cloudName="cloudName"
@@ -11,13 +11,6 @@
         :version="version"
         :publicId="primaryImage"
         class="img-fluid"
-      />
-      <img
-        ref="images_primaryImage"
-        v-img:gallery
-        class="full-size"
-        :src="getLargeImageUrl('primaryImage')"
-        alt=""
       />
     </div>
     <div class="featured-gallery" v-if="!displayAllImages">
@@ -177,7 +170,7 @@
 
         let fullSizeImages = [];
 
-        asyncForEach(this.gallery, async (image) => {
+        asyncForEach([{ id: this.primaryImage }].concat(this.gallery), async (image) => {
           let imageUrl = await this.getLargeImageUrl(image.id);
           fullSizeImages.push({ id: image.id, src: imageUrl });
         }).then(() => {
