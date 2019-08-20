@@ -122,7 +122,6 @@
 
 <script>
   // TODO: Implement page page that provides data interface?
-  import ContentDetailModal from '~/core/components/layouts/ContentDetailModal.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
 
@@ -138,7 +137,6 @@
       title: "About"
     },
     components: {
-      ContentDetailModal,
       ContentBlockLayout,
       TestimonialBlockLayout,
       //VueGallerySlideshow

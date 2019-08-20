@@ -16,7 +16,7 @@
           <li><a href="/explore" aria-label="Explore" v-on:click="hideDropMenu()" v-bind:data-selected="route.path === '/explore'">Explore</a></li>
           <li><a href="/about" aria-label="About Us" v-on:click="hideDropMenu()" v-bind:data-selected="route.path === '/about'">About Us</a></li>
           <!--<li><a href="/services" aria-label="Services" v-on:click="hideDropMenu()" v-bind:data-selected="route.path === '/services'">Services</a></li>-->
-          <li><a href="/about#contact" aria-label="Contact" v-on:click="hideDropMenu()" v-bind:data-selected="route.path === '/about#contact'">Contact</a></li>
+          <li><a aria-label="Contact" v-on:click="onContactClicked(); hideDropMenu()" v-bind:data-selected="route.path === '/about#contact'">Contact</a></li>
         </ul>
         <div class="site-navbar-top">
           <div class="d-flex ml-auto">
@@ -46,6 +46,12 @@
 
 <script>
   export default {
+    props: {
+      onContactClicked: {
+        type: Function,
+        default: () => {}
+      }
+    },
     data() {
       return {
         route: this.$router.currentRoute

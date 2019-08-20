@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <Header />
+    <Header :onContactClicked="viewDetail"/>
     <div class="page-wrap">
       <slot />
 
@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <content-detail-modal ref="contentDetail" title="Contact Us">
+      <content-detail-modal ref="contentDetail">
         <div class="container">
           <div id="contact" class="row">
             <div class="col-md-12 col-lg-12">
@@ -160,11 +160,14 @@
 </template>
 
 <script>
+  import ContentDetailModal from '~/core/components/layouts/ContentDetailModal.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
+
   import Header from '~/components/Header.vue';
 
   export default {
     components: {
+      ContentDetailModal,
       ContentBlockLayout,
       Header
     },
