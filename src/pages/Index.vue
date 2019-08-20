@@ -27,7 +27,7 @@
       </div>-->
 
       <div class="site-blocks-cover text-shadow" style="background-image: url(/images/orchard-view-3br/23-new-sky.jpg)">
-        <div class="palm-box-shadow"></div>
+        <!--<div class="palm-box-shadow"></div>-->
         <div class="moving-palm-left animate"></div>
         <div class="moving-palm-right animate"></div>
         <div class="moving-palm-solo animate"></div>

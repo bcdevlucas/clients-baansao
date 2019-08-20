@@ -67,11 +67,30 @@
           </div>
         </div>
       </div>
+
+      <div v-if="getSection(2) !== null" class="site-section about-section">
+        <div class="container">
+          <div class="row align-items-center justify-content-center mt-5 mb-5 pb-5">
+            <div class="col-lg-6 img-years mb-5 mb-lg-0">
+              <img
+                :src="getSection(2).image"
+                alt="Image"
+                class="img-fluid circle float-left"
+              />
+            </div>
+            <div class="col-lg-6 ml-auto text-center">
+              <span class="sub-title" v-html="getSection(2).summary"></span>
+              <h3 class="mb-4" v-html="getSection(2).title"></h3>
+              <p class="mb-5" v-html="getSection(2).description"></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="content-wrapper">
       <div class="site-section">
-        <div class="container">
+        <div class="">
           <div class="row">
             <div class="col-12 text-center mt-5">
               <span class="sub-title">Testimonials from</span>
@@ -95,68 +114,6 @@
               </div>
             </div>
           </div>
-          <div id="contact" class="row">
-            <div class="col-md-12 col-lg-12">
-              <h2 class="site-heading text-black mb-5">
-                {{ pageSubTitle }}
-              </h2>
-
-              <form
-                action="https://formspree.io/admin@firebrandwebsolutions.com"
-                method="POST"
-                class="p-5 bg-white"
-              >
-                <div class="row form-group">
-                  <div class="col-md-12 mb-3 mb-md-0">
-                    <label class="font-weight-bold" for="fullname"
-                      >Full Name</label
-                    >
-                    <input
-                      type="text"
-                      id="fullname"
-                      class="form-control"
-                      placeholder="Full Name"
-                    />
-                  </div>
-                </div>
-                <div class="row form-group">
-                  <div class="col-md-12">
-                    <label class="font-weight-bold" for="email">Email</label>
-                    <input
-                      type="email"
-                      id="email"
-                      class="form-control"
-                      placeholder="Email Address"
-                    />
-                  </div>
-                </div>
-
-                <div class="row form-group">
-                  <div class="col-md-12">
-                    <label class="font-weight-bold" for="message">Message</label>
-                    <textarea
-                      name="message"
-                      id="message"
-                      cols="30"
-                      rows="5"
-                      class="form-control"
-                      placeholder="Write your message here."
-                    ></textarea>
-                  </div>
-                </div>
-
-                <div class="row form-group">
-                  <div class="col-md-12">
-                    <input
-                      type="submit"
-                      value="Send"
-                      class="btn btn-primary rounded-0 btn-lg"
-                    />
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -165,6 +122,7 @@
 
 <script>
   // TODO: Implement page page that provides data interface?
+  import ContentDetailModal from '~/core/components/layouts/ContentDetailModal.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
 
@@ -180,6 +138,7 @@
       title: "About"
     },
     components: {
+      ContentDetailModal,
       ContentBlockLayout,
       TestimonialBlockLayout,
       //VueGallerySlideshow

@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <Header/>
+    <Header />
     <div class="page-wrap">
       <slot />
 
@@ -32,6 +32,73 @@
           </div>
         </div>
       </div>
+
+      <content-detail-modal ref="contentDetail" title="Contact Us">
+        <div class="container">
+          <div id="contact" class="row">
+            <div class="col-md-12 col-lg-12">
+              <h2 class="site-heading text-black mb-5">
+                {{ pageSubTitle }}
+              </h2>
+
+              <form
+                action="https://formspree.io/admin@firebrandwebsolutions.com"
+                method="POST"
+                class="p-5 bg-white"
+              >
+                <div class="row form-group">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="font-weight-bold" for="fullname"
+                      >Full Name</label
+                    >
+                    <input
+                      type="text"
+                      id="fullname"
+                      class="form-control"
+                      placeholder="Full Name"
+                    />
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <label class="font-weight-bold" for="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      placeholder="Email Address"
+                    />
+                  </div>
+                </div>
+
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <label class="font-weight-bold" for="message">Message</label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      cols="30"
+                      rows="5"
+                      class="form-control"
+                      placeholder="Write your message here."
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <input
+                      type="submit"
+                      value="Send"
+                      class="btn btn-primary rounded-0 btn-lg"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </content-detail-modal>
 
       <footer class="site-footer">
         <div class="footer-banner">
@@ -107,8 +174,13 @@
     props: {
       displayPosts: Boolean
     },
-    mounted() {
-    },
+    methods: {
+      viewDetail(activeDetail) {
+        if (typeof window !== 'undefined') {
+          this.$refs.contentDetail.viewDetail(activeDetail, () => {});
+        }
+      }
+    }
   }
 </script>
 
@@ -212,8 +284,8 @@
 .page-wrap {
   position: relative;
   margin-bottom: -50vh;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  //overflow-x: hidden;
+  //overflow-y: hidden;
 }
 
 .page-wrap::after {

@@ -14,17 +14,4 @@ heroes:
     title: Ko Samui
     subTitle: Explore Amazing
 sections:
-  - caption: ''
-    description: >-
-      Do you like Thai food? When you arrive and have settled in, maybe we can have a chat and I'll recommend local restaurants that serve excellent local Thai dishes. Don't be surprised if the prices are very affordable! If you prefer to cook on your own as I do, maybe you'd like to join me for a visit to the Mae Nam morning market.
-  
-      If you're interested in local Thai culture, why not drop by for tea at my home and I'll be very pleased to provide you with information regarding festivals, Buddhist temple activities and Ko Samui special places and events. Do you take milk and sugar with your tea?
-    id: about-us-section-02
-    image: /images/about-us/13724040_1827204157502483_805946314322350459_o.jpg
-    link:
-    linkText:
-    title: Local Culture
-    metaKeywords: ''
-    metaDescription: ''
-    subCaption: ''
-    summary: Explore
+
