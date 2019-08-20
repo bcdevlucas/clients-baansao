@@ -229,7 +229,7 @@ services:
         caption: Orchard view 32
         subCaption:
         featured: true
-    link: /properties?id=orchard-view
+    link: /property/orchard-view
     linkText: Learn More
     title: Orchard View Pool Villa
     metaKeywords:
@@ -386,7 +386,7 @@ services:
         caption: Bamboo Gardens
         subCaption:
         featured: true
-    link: /properties?id=bamboo-gardens-1
+    link: /property/bamboo-gardens-1
     linkText: Learn More
     title: Bamboo Gardens 1
     metaKeywords: >-
@@ -503,7 +503,7 @@ services:
         caption: Bamboo Gardens
         subCaption:
         featured: true
-    link: /properties?id=bamboo-gardens-2
+    link: /property/bamboo-gardens-2
     linkText: Learn More
     title: Bamboo Gardens 2
     metaKeywords:
@@ -622,7 +622,7 @@ services:
         caption: Bamboo Gardens
         subCaption:
         featured: true
-    link: /properties?id=bamboo-gardens-3
+    link: /property/bamboo-gardens-3
     linkText: Learn More
     title: Bamboo Gardens 3
     metaKeywords:
