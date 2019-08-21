@@ -1,7 +1,7 @@
 module.exports = function (api) {
   api.loadSource(store => {
     const properties = store.getContentType('Property');
-    console.log(properties);
+    //console.log(properties);
 
     if (properties) {
       properties.addSchemaField('id', ({ graphql }) => ({

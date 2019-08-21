@@ -164,14 +164,16 @@
       getLargeImageUrls() {
         let fullSizeImages = [];
 
+        const getImage = async (image) => {
+          let imageUrl = await this.getLargeImageUrl(image.id);
+          fullSizeImages.push({ id: image.id, src: imageUrl });
+          return image;
+        };
+
         const getData = async () => {
           const data = [{ id: this.primaryImage }].concat(this.gallery);
 
-          return await Promise.all(data.map(image => async () => {
-            let imageUrl = await this.getLargeImageUrl(image.id);
-            fullSizeImages.push({ id: image.id, src: imageUrl });
-            return image;
-          }));
+          return await Promise.all(data.map(image => getImage(image)));
         };
 
         getData().then(() => {
