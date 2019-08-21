@@ -2,22 +2,15 @@
   <div class="google-map-cutout">
     <div class="map-container">
       <GmapMap
+        ref="mapRef"
         class="gmap-map"
-        :center="{lat:9.5630, lng:100.0052}"
+        :center="gmapCenter"
         :zoom="16"
         map-type-id="terrain"
         style="width: 100%; height: 100%"
-        :options="this.gmapOptions"
+        :options="gmapOptions"
       >
       </GmapMap>
-      <!--<GmapMarker
-        :key="index"
-        v-for="(m, index) in markers"
-        :position="m.position"
-        :clickable="true"
-        :draggable="true"
-        @click="center=m.position"
-      />-->
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="420px" height="460px" class="gmap-cutout-svg">
       <clipPath id="gmap-cutout-svg-mask">
@@ -31,8 +24,14 @@
 </template>
 
 <script>
+  import { gmapApi } from 'vue2-google-maps';
+
   export default {
     data: () => ({
+      gmapCenter: {
+        lat: 9.5630,
+        lng: 100.0052
+      },
       gmapOptions: {
         zoomControl: false,
         mapTypeControl: false,
@@ -41,8 +40,31 @@
         rotateControl: false,
         fullscreenControl: false,
         //gestureHandling: 'none'
+      },
+      gmapEl: null
+    }),
+    computed: {
+      google: gmapApi
+    },
+    methods: {
+      initializeMap() {
+        this.$refs.mapRef.$mapPromise.then((gmap) => {
+          const marker = new this.google.maps.Marker({
+            map: gmap,
+            position: gmap.getCenter()
+          });
+
+          //this.gmapEl = gmap.getDiv();
+        });
+      },
+    },
+    mounted() {
+      // At this point, the child GmapMap has been mounted, but the map has not been initialized...
+      // Therefore we need to write mapRef.$mapPromise.then(() => ...)
+      if (typeof window !== 'undefined') {
+        this.initializeMap();
       }
-    })
+    }
   }
 </script>
 

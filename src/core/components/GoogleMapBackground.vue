@@ -3,10 +3,10 @@
     <GmapMap
       ref="mapRef"
       class="map-01"
-      :center="this.gmapCenter"
+      :center="gmapCenter"
       :zoom="14"
       style="width: 100%; height: 100%"
-      :options="this.gmapOptions"
+      :options="gmapOptions"
     >
     </GmapMap>
     <!--<GmapMarker
