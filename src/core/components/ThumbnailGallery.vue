@@ -162,25 +162,26 @@
         return galleryImages;
       },
       getLargeImageUrls() {
-        async function asyncForEach(array, callback) {
-          for (let index = 0; index < array.length; index++) {
-            await callback(array[index], index, array);
-          }
-        }
-
         let fullSizeImages = [];
 
-        asyncForEach([{ id: this.primaryImage }].concat(this.gallery), async (image) => {
-          let imageUrl = await this.getLargeImageUrl(image.id);
-          fullSizeImages.push({ id: image.id, src: imageUrl });
-        }).then(() => {
-          //console.log('setting full size image urls');
-          //console.log(fullSizeImages);
+        const getData = async () => {
+          const data = [{ id: this.primaryImage }].concat(this.gallery);
+
+          return await Promise.all(data.map(image => async () => {
+            let imageUrl = await this.getLargeImageUrl(image.id);
+            fullSizeImages.push({ id: image.id, src: imageUrl });
+            return image;
+          }));
+        };
+
+        getData().then(() => {
+          console.log('setting full size image urls');
+          console.log(fullSizeImages);
           this.$set(this, 'fullSizeImages', fullSizeImages);
         });
       },
       async getLargeImageUrl(id) {
-        const opts = { cloudName: this.cloudName, folder: this.folder, transforms: 'w_1920' };
+        const opts = { cloudName: this.cloudName, folder: this.folder, transforms: 'w_1920,q_60' };
         return await ImageUtils.getCloudinaryImageUrl(id, opts);
       },
       triggerGallery(e) {

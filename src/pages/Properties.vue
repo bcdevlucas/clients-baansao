@@ -18,19 +18,19 @@
     </div>
 
     <div class="content-wrapper">
-      <div class="site-section" v-if="getServices(false).length > 0">
+      <div class="site-section" v-if="propertiesContent.length > 0">
         <div class="container px-4">
           <div class="row">
             <content-block-layout
-              v-for="service in getServices().slice(0, getServices().length / 2)"
-              v-if="typeof service.summary === 'string'"
-              :key="service.id"
+              v-for="property in propertiesContent.slice(0, propertiesContent.length / 2)"
+              v-if="typeof property.summary === 'string'"
+              :key="property.id"
               className="col-lg-6 col-md-6 mb-6 project-entry"
-              :title="service.title"
-              :description="(service.summary) ? service.summary : ''"
-              :link="service.link"
+              :title="property.title"
+              :description="(property.summary) ? property.summary : ''"
+              :link="`/property/${property.id}`"
               linkText="Learn More"
-              :image="service.image"
+              :image="property.image"
               imageAlt=""
             />
 
@@ -38,15 +38,15 @@
           </div>
           <div class="row mt-6 mb-6">
             <content-block-layout
-              v-for="service in getServices().slice(getServices().length / 2, getServices().length)"
-              v-if="typeof service.summary === 'string'"
-              :key="service.id"
+              v-for="property in propertiesContent.slice(propertiesContent.length / 2, propertiesContent.length)"
+              v-if="typeof property.summary === 'string'"
+              :key="property.id"
               className="col-lg-6 project-entry"
-              :title="service.title"
-              :description="(service.summary) ? service.summary : ''"
-              :link="service.link"
+              :title="property.title"
+              :description="(property.summary) ? property.summary : ''"
+              :link="`/property/${property.id}`"
               linkText="Learn More"
-              :image="service.image"
+              :image="property.image"
               imageAlt=""
             />
           </div>
@@ -80,15 +80,10 @@
 <script>
   import marked from 'marked';
 
-  import Vue from 'vue';
-
-  //import VueGallerySlideshow from 'vue-gallery-slideshow';
-
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
 
   import ThumbnailGallery from '~/core/components/ThumbnailGallery.vue';
-
 
   // TODO: Implement page page that provides data interface?
   import HeroMixin from '~/mixins/HeroMixin';
@@ -99,12 +94,13 @@
   // Import static data
   import PropertiesData from '~/data/Properties.yml';
 
+  import * as ImageUtils from '~/core/utils/ImageUtils';
+
   export default {
     components: {
       ContentBlockLayout,
       TestimonialBlockLayout,
       ThumbnailGallery
-      //VueGallerySlideshow
     },
     metaInfo: {
       title: "Classes"
@@ -117,12 +113,53 @@
       }
     },
     computed: {
+      propertiesContent() {
+        const content = this.$page.properties.edges.map(edge => {
+          const data = Object.assign({ id: edge.node.id }, edge.node.fields);
+          data.summary = (typeof window !== 'undefined') ? marked(data.summary) : data.summary;
+          data.description = (typeof window !== 'undefined') ? marked(data.description) : data.description;
+          return data;
+        });
+
+        return content;
+      },
       serviceContent() {
         return PropertiesData;
       }
     }
   }
 </script>
+
+<page-query>
+  query Property {
+    properties: allProperty {
+      edges {
+        node {
+          id
+          fields {
+            image
+            imageId
+            gallery {
+              id
+              src
+              caption
+              #subCaption
+              featured
+            }
+            galleryFolder
+            link
+            linkText
+            title
+            metaKeywords
+            metaDescription
+            summary
+            description
+          }
+        }
+      }
+    }
+  }
+</page-query>
 
 
 <style lang="scss">

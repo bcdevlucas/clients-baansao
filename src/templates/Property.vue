@@ -149,7 +149,7 @@
         </div>
       </div>
 
-      <div class="site-section" v-if="getServices(false).length > 0">
+      <div class="site-section" v-if="propertiesContent.length > 0">
         <!--<div class="container pt-4">
           <div class="row mt-4 mb-4 pt-4">
             <div class="col-lg-12 ml-auto text-center">
@@ -158,17 +158,22 @@
             </div>
           </div>
         </div>-->
-        <div class="px-4">
+          <div class="row mt-4 mb-4 pt-4">
+            <div class="col-lg-12 ml-auto text-center">
+              <span class="sub-title">Something Else?</span>
+              <h2 class="font-weight-bold text-black mb-5">Our Other Rentals</h2>
+            </div>
+          </div>
           <div class="row">
             <content-block-layout
-              v-for="service in getServices(false).slice(0,4)"
-              :key="service.id"
+              v-for="property in propertiesContent.slice(0,4)"
+              :key="property.id"
               className="col-lg-3 col-md-3 mb-6 project-entry"
-              :title="service.title"
-              :description="(service.summary) ? service.summary : ''"
-              :link="service.link"
-              linkText="More Details"
-              :image="service.image"
+              :title="property.title"
+              :description="(property.summary) ? property.summary : ''"
+              :link="`/property/${property.id}`"
+              linkText="Learn More"
+              :image="property.image"
               imageAlt=""
             />
           </div>
@@ -266,7 +271,17 @@
           metaDescription: this.$page.property.fields.metaDescription,
           summary: (typeof window !== 'undefined') ? marked(this.$page.property.fields.summary) : this.$page.property.fields.summary,
           description:  (typeof window !== 'undefined') ? marked(this.$page.property.fields.description) : this.$page.property.fields.description
-        }
+        };
+      },
+      propertiesContent() {
+        const content = this.$page.properties.edges.map(edge => {
+          const data = Object.assign({ id: edge.node.id }, edge.node.fields);
+          data.summary = (typeof window !== 'undefined') ? marked(data.summary) : data.summary;
+          data.description = (typeof window !== 'undefined') ? marked(data.description) : data.description;
+          return data;
+        });
+
+        return content;
       },
       serviceContent() {
         return PropertiesData;
@@ -320,7 +335,7 @@
       async setActiveImage() {
         if (this.pageData && this.pageData.gallery instanceof Array) {
           const activeImage = this.getRandomImage(this.pageData.gallery.slice(0, 6));
-          const opts = { cloudName: 'baansaowanee', folder: this.pageData.galleryFolder, transforms: 'w_1920' };
+          const opts = { cloudName: 'baansaowanee', folder: this.pageData.galleryFolder, transforms: 'w_1920,q_60' };
           activeImage.src = await ImageUtils.getCloudinaryImageUrl(activeImage.id, opts);
           this.$data.activeImage = activeImage;
         }
@@ -333,7 +348,7 @@
         this.primaryImageShuffler = setInterval(this.setActiveImage, ms);
 
         const activeImage = { id: this.pageData.imageId, src: null };
-        const opts = { cloudName: 'baansaowanee', folder: this.pageData.galleryFolder, transforms: 'w_1920' };
+        const opts = { cloudName: 'baansaowanee', folder: this.pageData.galleryFolder, transforms: 'w_1920,q_60' };
         activeImage.src = await ImageUtils.getCloudinaryImageUrl(activeImage.id, opts);
         this.$data.activeImage = activeImage;
       },
@@ -398,6 +413,32 @@
         metaDescription
         summary
         description
+      }
+    }
+    properties: allProperty {
+      edges {
+        node {
+          id
+          fields {
+            image
+            imageId
+            gallery {
+              id
+              src
+              caption
+              #subCaption
+              featured
+            }
+            galleryFolder
+            link
+            linkText
+            title
+            metaKeywords
+            metaDescription
+            summary
+            description
+          }
+        }
       }
     }
   }

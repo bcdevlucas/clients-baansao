@@ -55,170 +55,170 @@ description: >-
 
   Your host, Saowanee, resides in the same community and will be pleased to assist in making your Ko Samui holiday a special experience.
   We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
-link: /properties?id=orchard-view
+link: /
 linkText: Learn More
-image: /images/orchard-view-3br/23-new-sky.jpg
+image: 23-new-sky.jpg
 imageId: 23-new-sky_fwgesc
 caption:
-subCaption: ''
+subCaption:
 galleryFolder: orchard-view-3br
 gallery:
   #- id: "23-new-sky_fwgesc"
-  #  src: /images/orchard-view-3br/23-new-sky.jpg
+  #  src: 23-new-sky.jpg
   #  caption: Orchard view 1
   #  subCaption:
   #  featured: true
   - id: "1_bhumen"
-    src: /images/orchard-view-3br/1.jpg
+    src: 1.jpg
     caption: Orchard view 2
     subCaption:
     featured: true
   - id: "2_vhasyw"
-    src: /images/orchard-view-3br/2.jpg
+    src: 2.jpg
     caption: Orchard view 3
     subCaption:
     featured: true
   - id: "3_c1t7mn"
-    src: /images/orchard-view-3br/3.jpg
+    src: 3.jpg
     caption: Orchard view 4
     subCaption:
     featured: true
   - id: "4_rpcrd3"
-    src: /images/orchard-view-3br/4.jpg
+    src: 4.jpg
     caption: Orchard view 5
     subCaption:
     featured: true
   - id: "5_pfcraz"
-    src: /images/orchard-view-3br/5.jpg
+    src: 5.jpg
     caption: Orchard view 6
     subCaption:
     featured: false
   - id: "6_lv2rpv"
-    src: /images/orchard-view-3br/6.jpg
+    src: 6.jpg
     caption: Orchard view 7
     subCaption:
     featured: false
   - id: "7_pxtqdi"
-    src: /images/orchard-view-3br/8.jpg
+    src: 8.jpg
     caption: Orchard view 8
     subCaption:
     featured: true
   - id: "8_agm9nv"
-    src: /images/orchard-view-3br/7.jpg
+    src: 7.jpg
     caption: Orchard view 9
     subCaption:
     featured: false
   - id: "9_rfbho7"
-    src: /images/orchard-view-3br/9.jpg
+    src: 9.jpg
     caption: Orchard view 10
     featured: true
   - id: "10_nwadu0"
-    src: /images/orchard-view-3br/10.jpg
+    src: 10.jpg
     caption: Orchard view 11
     subCaption:
     featured: false
   - id: "11_fwyoq1"
-    src: /images/orchard-view-3br/11.jpg
+    src: 11.jpg
     caption: Orchard view 12
     subCaption:
     featured: true
   - id: "12_dawlfp"
-    src: /images/orchard-view-3br/12.jpg
+    src: 12.jpg
     caption: Orchard view 13
     subCaption:
     featured: false
   - id: "13_oskpfm"
-    src: /images/orchard-view-3br/13.jpg
+    src: 13.jpg
     caption: Orchard view 14
     subCaption:
     featured: true
   - id: "14_lkrbt2"
-    src: /images/orchard-view-3br/14.jpg
+    src: 14.jpg
     caption: Orchard view 15
     subCaption:
     featured: false
   - id: "15_n4g7we"
-    src: /images/orchard-view-3br/15.jpg
+    src: 15.jpg
     caption: Orchard view 16
     subCaption:
     featured: true
   - id: "16_n5wukj"
-    src: /images/orchard-view-3br/16.jpg
+    src: 16.jpg
     caption: Orchard view 17
     subCaption:
     featured: true
   - id: "17_ymwbhc"
-    src: /images/orchard-view-3br/17.jpg
+    src: 17.jpg
     caption: Orchard view 18
     subCaption:
     featured: true
   - id: "18_pytcq5"
-    src: /images/orchard-view-3br/18.jpg
+    src: 18.jpg
     caption: Orchard view 19
     subCaption:
     featured: false
   - id: "19_ptorsz"
-    src: /images/orchard-view-3br/19.jpg
+    src: 19.jpg
     caption: Orchard view 20
     subCaption:
     featured: true
   - id: "20_pkn7w6"
-    src: /images/orchard-view-3br/20.jpg
+    src: 20.jpg
     caption: Orchard view 21
     subCaption:
     featured: true
   #- id: "21"
-  #  src: /images/orchard-view-3br/21.jpg
+  #  src: 21.jpg
   #  caption: Orchard view 22
   #  subCaption:
   #  featured: true
   - id: "22_jh0okr"
-    src: /images/orchard-view-3br/22.jpg
+    src: 22.jpg
     caption: Orchard view 23
     subCaption:
     featured: false
   #- id: "23-new-sky_fwgesc"
-  #  src: /images/orchard-view-3br/24.jpg
+  #  src: 24.jpg
   #  caption: Orchard view 24
   #  subCaption:
   #  featured: true
   - id: "24_i0fo7q"
-    src: /images/orchard-view-3br/25.jpg
+    src: 25.jpg
     caption: Orchard view 25
     subCaption:
     featured: false
   - id: "25_vnouni"
-    src: /images/orchard-view-3br/26.jpg
+    src: 26.jpg
     caption: Orchard view 26
     subCaption:
     featured: false
   - id: "26_wakztc"
-    src: /images/orchard-view-3br/27.jpg
+    src: 27.jpg
     caption: Orchard view 27
     subCaption:
     featured: false
   - id: "27_gvfl6a"
-    src: /images/orchard-view-3br/28.jpg
+    src: 28.jpg
     caption: Orchard view 28
     subCaption:
     featured: false
   - id: "28_lr6cep"
-    src: /images/orchard-view-3br/29.jpg
+    src: 29.jpg
     caption: Orchard view 29
     subCaption:
     featured: false
   - id: "29_zqaxcn"
-    src: /images/orchard-view-3br/30.jpg
+    src: 30.jpg
     caption: Orchard view 30
     subCaption:
     featured: false
   - id: "30_xsoaxk"
-    src: /images/orchard-view-3br/31.jpg
+    src: 31.jpg
     caption: Orchard view 31
     subCaption:
     featured: false
   - id: "31_hjostc"
-    src: /images/orchard-view-3br/32.jpg
+    src: 32.jpg
     caption: Orchard view 32
     subCaption:
     featured: false
