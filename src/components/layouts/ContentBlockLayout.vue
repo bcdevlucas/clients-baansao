@@ -7,6 +7,14 @@
         class="img-fluid"
       />
     </a>
+    <a v-if="typeof this.cloudinaryImage === 'string' && this.cloudinaryImage.length > 0" @click="linkClicked" class="d-block figure">
+      <img
+        v-if="this.cloudImage && this.cloudImage.src"
+        :src="this.cloudImage.src"
+        alt="Image"
+        class="img-fluid"
+      />
+    </a>
     <p v-if="typeof this.datePublished === 'string' && this.datePublished.length > 0" class="text-muted">{{ this.datePublished }}</p>
     <h3 class="mb-0">
       <a @click="linkClicked" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.title }}</a>

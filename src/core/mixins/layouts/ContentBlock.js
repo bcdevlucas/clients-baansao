@@ -1,5 +1,7 @@
 //import marked from 'marked';
 
+import * as ImageUtils from '~/core/utils/ImageUtils';
+
 export default {
   // TODO: Supply models via props??
   props: {
@@ -36,6 +38,18 @@ export default {
     image: {
       type: String,
       default: '',
+    },
+    cloudinaryImage: {
+      type: String,
+      default: null,
+    },
+    cloudName: {
+      type: String,
+      default: null,
+    },
+    cloudFolder: {
+      type: String,
+      default: null,
     },
     link: {
       type: String,
@@ -77,6 +91,7 @@ export default {
   },
   data() {
     return {
+      cloudImage: null,
       intersectionOptions: {
         root: null,
         rootMargin: '0px 0px 0px 0px',
@@ -85,6 +100,17 @@ export default {
     }
   },
   methods: {
+    async loadImage() {
+      const image = { id: this.cloudinaryImage, src: null };
+
+      let width = 400;
+      let height = 300;
+
+      const opts = { cloudName: this.cloudName, folder: this.cloudFolder, transforms: `w_${width},h_${height},q_60` };
+      image.src = await ImageUtils.getCloudinaryImageUrl(image.id, opts);
+
+      this.$set(this, 'cloudImage', image);
+    },
     /**
      * Options:
      * @going: in, out
@@ -129,6 +155,11 @@ export default {
       if (typeof this.onLinkClicked === 'function') {
         this.onLinkClicked();
       }
+    }
+  },
+  mounted() {
+    if (this.cloudinaryImage) {
+      this.loadImage();
     }
   }
 };

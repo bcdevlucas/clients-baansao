@@ -171,8 +171,10 @@
               :description="(property.summary) ? property.summary : ''"
               :link="`/property/${property.id}`"
               linkText="Learn More"
-              :image="property.image"
-              imageAlt=""
+              :cloudinaryImage="property.imageId"
+              cloudName="baansaowanee"
+              :cloudFolder="property.galleryFolder"
+              :imageAlt="property.caption"
             />
           </div>
           <div class="row">
@@ -207,6 +209,8 @@
 <script>
   import marked from 'marked';
 
+  import * as ImageUtils from '~/core/utils/ImageUtils';
+
   import HeroLayout01Col from '~/components/layouts/HeroLayout01Col.vue'
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
@@ -226,8 +230,6 @@
 
   // Import static data
   import PropertiesData from '~/data/Properties.yml';
-
-  import * as ImageUtils from '~/core/utils/ImageUtils';
 
   export default {
     components: {
