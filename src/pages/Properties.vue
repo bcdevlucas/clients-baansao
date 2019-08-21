@@ -30,8 +30,10 @@
               :description="(property.summary) ? property.summary : ''"
               :link="`/property/${property.id}`"
               linkText="Learn More"
-              :image="property.image"
-              imageAlt=""
+              :cloudinaryImage="property.imageId"
+              cloudName="baansaowanee"
+              :cloudFolder="property.galleryFolder"
+              :imageAlt="property.caption"
             />
 
             <span class="flower-separator-white"></span>
@@ -46,8 +48,10 @@
               :description="(property.summary) ? property.summary : ''"
               :link="`/property/${property.id}`"
               linkText="Learn More"
-              :image="property.image"
-              imageAlt=""
+              :cloudinaryImage="property.imageId"
+              cloudName="baansaowanee"
+              :cloudFolder="property.galleryFolder"
+              :imageAlt="property.caption"
             />
           </div>
         </div>

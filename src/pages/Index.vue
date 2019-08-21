@@ -79,15 +79,17 @@
         <div>
           <div class="row px-4">
             <content-block-layout
-              v-for="service in getServices(false).slice(0,4)"
-              :key="service.id"
+              v-for="property in propertiesContent.slice(0,4)"
+              :key="property.id"
               className="col-lg-3 col-md-3 mb-6 project-entry"
-              :title="service.title"
-              :description="(service.summary) ? service.summary : ''"
-              :link="service.link"
-              linkText="More Details"
-              :image="service.image"
-              imageAlt=""
+              :title="property.title"
+              :description="(property.summary) ? property.summary : ''"
+              :link="`/property/${property.id}`"
+              linkText="Learn More"
+              :cloudinaryImage="property.imageId"
+              cloudName="baansaowanee"
+              :cloudFolder="property.galleryFolder"
+              :imageAlt="property.caption"
             />
           </div>
         </div>
@@ -97,7 +99,7 @@
 </template>
 
 <script>
-  //import marked from 'marked';
+  import marked from 'marked';
 
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
 
@@ -115,6 +117,16 @@
     },
     mixins: [ServiceMixin],
     computed: {
+      propertiesContent() {
+        const content = this.$page.properties.edges.map(edge => {
+          const data = Object.assign({ id: edge.node.id }, edge.node.fields);
+          data.summary = (typeof window !== 'undefined') ? marked(data.summary) : data.summary;
+          data.description = (typeof window !== 'undefined') ? marked(data.description) : data.description;
+          return data;
+        });
+
+        return content;
+      },
       serviceContent() {
         return PropertiesData;
       }
@@ -126,3 +138,34 @@
     }
   }
 </script>
+
+<page-query>
+  query Property {
+    properties: allProperty {
+      edges {
+        node {
+          id
+          fields {
+            image
+            imageId
+            gallery {
+              id
+              src
+              caption
+              #subCaption
+              featured
+            }
+            galleryFolder
+            link
+            linkText
+            title
+            metaKeywords
+            metaDescription
+            summary
+            description
+          }
+        }
+      }
+    }
+  }
+</page-query>
