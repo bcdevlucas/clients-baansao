@@ -136,7 +136,7 @@
           <div class="col-lg-3 mb-5 mb-lg-0">
             <div class="container">
               <h3>Location</h3>
-              <google-map-cutout class="mt-4" />
+              <!--<google-map-cutout class="mt-4" />-->
               <h3 class="mt-4">Address</h3>
               <p class="mt-4">
                 25/3 Moo 1 Maenam, Ko Samui<br />
