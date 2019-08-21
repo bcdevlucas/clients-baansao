@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <content-detail-modal ref="contentDetail">
+      <content-detail-modal ref="contentDetail" title="Contact Us">
         <div class="container">
           <div id="contact" class="row">
             <div class="col-md-12 col-lg-12">

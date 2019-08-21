@@ -1,10 +1,10 @@
 <template>
   <div ref="contentDetail" class="detailed-content-panel bg-white semi-clear">
-    <div class="panel-header flex flex-center pad-left-half pad-right-half" style="height: 5rem; position: absolute; right: 0; z-index: 9999; width: 100%">
-      <div class="flex-grow">
-        <h2 v-if="this.title" class="text-center no-space-top no-space-bottom">{{ this.title }}</h2>
+    <div class="panel-header">
+      <div class="panel-title">
+        <h2 v-if="this.title" class="text-center">{{ this.title }}</h2>
       </div>
-      <b @click="hideDetail()" style="font-size: 1.5rem; cursor: pointer">X</b>
+      <span class="panel-close" @click="hideDetail()"><span class="icon-close"></span></span>
     </div>
     <div class="panel-content">
       <slot></slot>
@@ -33,6 +33,36 @@
     left: 0;
     z-index: 5000;
     overflow-y: auto;
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      height: 5rem;
+      right: 0;
+      z-index: 9999;
+      width: 100%;
+
+      .panel-title {
+        flex: 1;
+
+        > h1,h2,h3,h4,h5,h6 {
+          padding: 1rem 0;
+          margin: 0;
+        }
+      }
+
+      .panel-close {
+        display: block;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        cursor: pointer;
+        [class^=icon-] {
+          color: darkred;
+        }
+      }
+    }
   }
 
   @media screen and (min-width: 40em) {
