@@ -139,20 +139,4 @@
       display: block;
     }
   }
-
-  .project-entry {
-    text-align: center;
-  }
-
-  .project-entry .img-fluid {
-    max-height: 40vh;
-    object-fit: contain;
-  }
-
-  @media screen and (min-width: 1280px) {
-    .project-entry .img-fluid {
-      max-height: 50vh;
-      object-fit: contain;
-    }
-  }
 </style>
