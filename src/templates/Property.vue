@@ -216,7 +216,7 @@
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
 
   import ThumbnailGallery from '~/core/components/ThumbnailGallery.vue';
-  import GoogleMapBackground from '~/core/components/GoogleMapBackground.vue';
+  //import GoogleMapBackground from '~/core/components/GoogleMapBackground.vue';
   import GoogleMapCutout from '~/core/components/GoogleMapCutout.vue';
   import Amenities from '~/components/Amenities.vue';
   import Cancellations from '~/components/Cancellations.vue';
@@ -237,7 +237,7 @@
       ContentBlockLayout,
       TestimonialBlockLayout,
       ThumbnailGallery,
-      GoogleMapBackground,
+      //GoogleMapBackground,
       GoogleMapCutout,
       Amenities,
       Cancellations,
