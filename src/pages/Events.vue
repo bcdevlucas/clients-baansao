@@ -163,18 +163,4 @@
       object-fit: contain;
     }
   }
-
-  .post-entry {
-    text-align: center;
-  }
-
-  .post-entry .img-fluid {
-    height: 30vh;
-  }
-
-  @media screen and (min-width: 1280px) {
-    .post-entry .img-fluid {
-      height: 40vh;
-    }
-  }
 </style>
