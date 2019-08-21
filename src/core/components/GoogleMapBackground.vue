@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  //import { gmapApi } from 'vue2-google-maps';
+  import { gmapApi } from 'vue2-google-maps';
 
   export default {
     data: () => ({
