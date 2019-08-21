@@ -7,149 +7,147 @@
     />
 
     <div class="content-wrapper">
-      <div class="site-section" v-if="pageData" :key="pageData.id">
-        <div>
-          <!--<div class="row mt-4 mb-4 pt-4">
-            <div class="col-lg-12 ml-auto text-center">
-              <span class="sub-title" v-html="pageData.summary"></span>
-              <h2 class="font-weight-bold text-black mb-5" v-html="pageData.title"></h2>
-            </div>
-          </div>-->
-          <div class="row mt-4 mb-4 pt-4">
-            <div class="col-lg-3 mb-5 mb-lg-0">
-              <div class="container">
-                <thumbnail-gallery
-                  :primaryImage="pageData.imageId"
-                  :gallery="pageData.gallery"
-                  cloudName="baansaowanee"
-                  :folder="pageData.galleryFolder"
-                  :displayMax="pageData.gallery.length"
-                  :imagesPerRow="3"
-                />
-                <amenities class="mt-4" />
+      <div class="site-section container-fluid" v-if="pageData" :key="pageData.id">
+        <!--<div class="row mt-4 mb-4 pt-4">
+          <div class="col-lg-12 ml-auto text-center">
+            <span class="sub-title" v-html="pageData.summary"></span>
+            <h2 class="font-weight-bold text-black mb-5" v-html="pageData.title"></h2>
+          </div>
+        </div>-->
+        <div class="row mt-4 mb-4 pt-4">
+          <div class="col-lg-3 mb-5 mb-lg-0">
+            <div class="container">
+              <thumbnail-gallery
+                :primaryImage="pageData.imageId"
+                :gallery="pageData.gallery"
+                cloudName="baansaowanee"
+                :folder="pageData.galleryFolder"
+                :displayMax="pageData.gallery.length"
+                :imagesPerRow="3"
+              />
+              <amenities class="mt-4" />
 
-                <p class="class-action-buttons mt-5 text-center">
-                  <button @click="showBookingForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i>
-                    Book Now
-                  </button>&nbsp;
-                  <button @click="showQuestionForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i>
-                    Ask a Question
-                  </button>
-                </p>
+              <p class="class-action-buttons mt-5 text-center">
+                <button @click="showBookingForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i>
+                  Book Now
+                </button>&nbsp;
+                <button @click="showQuestionForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i>
+                  Ask a Question
+                </button>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 ml-auto">
+            <div class="container">
+              <div v-html="pageData.description"></div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <rules class="mt-4" />
+                </div>
+                <div class="col-sm-6">
+                  <cancellations class="mt-4" />
+                </div>
               </div>
-            </div>
 
-            <div class="col-lg-6 ml-auto">
-              <div class="container">
-                <div v-html="pageData.description"></div>
+              <!--<div class="container pt-4" ref="bookingForm">
                 <div class="row">
-                  <div class="col-sm-6">
-                    <rules class="mt-4" />
-                  </div>
-                  <div class="col-sm-6">
-                    <cancellations class="mt-4" />
+                  <div class="col-12 text-center">
+                    <span class="sub-title">{{ pageData.title }}</span>
+                    <h2 class="font-weight-bold text-black mb-5">View Available Dates</h2>
                   </div>
                 </div>
-
-                <!--<div class="container pt-4" ref="bookingForm">
-                  <div class="row">
-                    <div class="col-12 text-center">
-                      <span class="sub-title">{{ pageData.title }}</span>
-                      <h2 class="font-weight-bold text-black mb-5">View Available Dates</h2>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 text-center">
-                      <div class='occsn_stack' id='occsn_stack_5301_9938'></div>
-                    </div>
-                  </div>
-                </div>-->
-                <div class="pt-4" v-if="displayQuestionForm" ref="questionForm">
-                  <div class="row">
-                    <div class="col-12 text-center">
-                      <span class="sub-title">{{ pageData.title }}</span>
-                      <h2 class="font-weight-bold text-black mb-5">Have a Question? We're Here to Help!</h2>
-                    </div>
-                  </div>
-                  <div class="row mb-4">
-                    <div class="col-md-12 col-lg-12">
-                      <form
-                        action="https://formspree.io/admin@firebrandwebsolutions.com"
-                        method="POST"
-                        class="p-5 bg-white"
-                      >
-                        <div class="row form-group">
-                          <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="font-weight-bold" for="fullname"
-                            >Full Name</label
-                            >
-                            <input
-                              type="text"
-                              id="fullname"
-                              class="form-control"
-                              placeholder="Full Name"
-                            />
-                          </div>
-                        </div>
-                        <div class="row form-group">
-                          <div class="col-md-12">
-                            <label class="font-weight-bold" for="email">Email</label>
-                            <input
-                              type="email"
-                              id="email"
-                              class="form-control"
-                              placeholder="Email Address"
-                            />
-                          </div>
-                        </div>
-
-                        <div class="row form-group">
-                          <div class="col-md-12">
-                            <label class="font-weight-bold" for="message">Message</label>
-                            <textarea
-                              name="message"
-                              id="message"
-                              cols="30"
-                              rows="5"
-                              class="form-control"
-                              placeholder="Write your message here."
-                            ></textarea>
-                          </div>
-                        </div>
-
-                        <div class="row form-group">
-                          <div class="col-md-12">
-                            <input
-                              type="submit"
-                              value="Send"
-                              class="btn btn-primary rounded-0 btn-lg"
-                            />
-                          </div>
-                        </div>
-                      </form>
-                    </div>
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <div class='occsn_stack' id='occsn_stack_5301_9938'></div>
                   </div>
                 </div>
+              </div>-->
+              <div class="pt-4" v-if="displayQuestionForm" ref="questionForm">
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <span class="sub-title">{{ pageData.title }}</span>
+                    <h2 class="font-weight-bold text-black mb-5">Have a Question? We're Here to Help!</h2>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-md-12 col-lg-12">
+                    <form
+                      action="https://formspree.io/admin@firebrandwebsolutions.com"
+                      method="POST"
+                      class="p-5 bg-white"
+                    >
+                      <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                          <label class="font-weight-bold" for="fullname"
+                          >Full Name</label
+                          >
+                          <input
+                            type="text"
+                            id="fullname"
+                            class="form-control"
+                            placeholder="Full Name"
+                          />
+                        </div>
+                      </div>
+                      <div class="row form-group">
+                        <div class="col-md-12">
+                          <label class="font-weight-bold" for="email">Email</label>
+                          <input
+                            type="email"
+                            id="email"
+                            class="form-control"
+                            placeholder="Email Address"
+                          />
+                        </div>
+                      </div>
 
+                      <div class="row form-group">
+                        <div class="col-md-12">
+                          <label class="font-weight-bold" for="message">Message</label>
+                          <textarea
+                            name="message"
+                            id="message"
+                            cols="30"
+                            rows="5"
+                            class="form-control"
+                            placeholder="Write your message here."
+                          ></textarea>
+                        </div>
+                      </div>
+
+                      <div class="row form-group">
+                        <div class="col-md-12">
+                          <input
+                            type="submit"
+                            value="Send"
+                            class="btn btn-primary rounded-0 btn-lg"
+                          />
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
+
             </div>
+          </div>
 
-            <div class="col-lg-3 mb-5 mb-lg-0">
-              <div class="container">
-                <h3>Location</h3>
-                <google-map-cutout class="mt-4" />
-                <h3 class="mt-4">Address</h3>
-                <p class="mt-4">
-                  25/3 Moo 1 Maenam, Ko Samui<br />
-                  Surat Thani, Thailand 84330
-                </p>
-              </div>
+          <div class="col-lg-3 mb-5 mb-lg-0">
+            <div class="container">
+              <h3>Location</h3>
+              <google-map-cutout class="mt-4" />
+              <h3 class="mt-4">Address</h3>
+              <p class="mt-4">
+                25/3 Moo 1 Maenam, Ko Samui<br />
+                Surat Thani, Thailand 84330
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="site-section" v-if="propertiesContent.length > 0">
+      <div class="site-section container-fluid" v-if="propertiesContent.length > 0">
         <!--<div class="container pt-4">
           <div class="row mt-4 mb-4 pt-4">
             <div class="col-lg-12 ml-auto text-center">
@@ -164,7 +162,7 @@
               <h2 class="font-weight-bold text-black mb-5">Our Other Rentals</h2>
             </div>
           </div>
-          <div class="row">
+          <div class="row mx-4">
             <content-block-layout
               v-for="property in propertiesContent.slice(0,4)"
               :key="property.id"
