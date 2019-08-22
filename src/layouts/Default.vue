@@ -100,7 +100,7 @@
         </div>
       </content-detail-modal>
 
-      <footer class="site-footer">
+      <!--<footer class="site-footer">
         <div class="footer-banner">
           <div class="footer-main">
             <div class="container mt-4 pt-4">
@@ -153,7 +153,7 @@
             </div>
           </div>
         </div>
-      </footer>
+      </footer>-->
     </div>
 
     <div class="orchard-view-scene">

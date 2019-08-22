@@ -2,12 +2,12 @@
   <Layout>
     <div class="content-wrapper blog-posts">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-8">
+        <div class="row column-wrapper">
+          <div class="col-md-9">
             <div class="hero-wrapper">
               <div
                 v-if="getHeroById('page-hero') !== null"
-                class="site-blocks-cover angle inner-page text-shadow"
+                class="site-blocks-cover angle text-shadow"
                 :style="`background-image: url(${getHeroById('page-hero').image});`"
               >
                 <div class="container hero-content">
@@ -60,41 +60,37 @@
                 </div>
               </div>
             </div>
+            <div class="site-section" v-if="$page.posts.edges.length > 0">
+              <div class="container-fluid">
+                <div class="row" v-if="postsContent.length > 1">
+                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Recent Articles</h3>
+
+                  <content-block-layout
+                    v-for="post in postsContent.slice(1, postsContent.length)"
+                    :key="post.id"
+                    className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
+                    :title="post.title"
+                    :description="post.summary"
+                    :link="post.path"
+                    linkText="Read Article"
+                    :image="post.image"
+                    :imageAlt="post.caption"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4 right-pane mt-5">
-            <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">Last Minute Specials</h3>
+          <div class="col-md-3 right-pane">
+            <h3 class="category-title text-center mt-5 mb-3" style="display: block; width: 100%;">Last Minute Specials</h3>
             <content-block-layout
               v-for="post in postsContent"
               :key="post.id"
               className="col-xs-12 blog-post"
               :title="post.title"
               :description="post.summary"
-              :link="post.path"
-              linkText="Read Article"
               :image="post.image"
               :imageAlt="post.caption"
             />
-          </div>
-        </div>
-        <div class="row">
-          <div class="site-section" v-if="$page.posts.edges.length > 0">
-            <div class="container-fluid">
-              <div class="row" v-if="postsContent.length > 1">
-                <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Recent Articles</h3>
-
-                <content-block-layout
-                  v-for="post in postsContent.slice(1, postsContent.length)"
-                  :key="post.id"
-                  className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
-                  :title="post.title"
-                  :description="post.summary"
-                  :link="post.path"
-                  linkText="Read Article"
-                  :image="post.image"
-                  :imageAlt="post.caption"
-                />
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -181,9 +177,21 @@
   }
 
   .blog-posts {
+    background: #fefefe;
+
     .hero-wrapper {
       margin-left: -15px;
       margin-right: -15px;
+      height: auto;
+      height: 600px;
+    }
+
+    .hero-content {
+      height: 100%;
+    }
+
+    .site-blocks-cover, .site-blocks-cover .row {
+      height: 100%;
     }
 
     h3 {
@@ -197,13 +205,20 @@
     p.text-muted {
       color: #444 !important;
     }
+
+    .column-wrapper {
+      position: relative;
+    }
   }
 
   .right-pane {
-    background-color: rgba(44,44,44,0.05);
-    position: relative;
-    top: -133px;
-    padding-top: 133px;
+    background-color: #efefef;
+    position: fixed;
+    right: 0;
+    padding-top: 78px;
+    z-index: 100;
+    //border-left: 2px solid darkgoldenrod;
+    height: 100%;
 
     .blog-post {
       display: flex;
@@ -211,24 +226,39 @@
       padding-top: 2rem;
       padding-bottom: 2rem;
 
+      h3 {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+
       br {
         display: none; /* Get rid of line breaks, they'll make the layout weird and we're trimming the text anyway */
       }
 
       p {
+        font-size: 1.15rem;
         padding-bottom: 0;
         margin-bottom: 0;
       }
 
       .content-block-image {
-        width: 30%;
-        max-height: 90px;
-        margin-right: 2rem;
+        margin-right: 1rem;
+        height: auto;
+
+        img {
+          object-fit: cover;
+          width: 100px !important;
+          height: 100px !important;
+        }
       }
 
       .content-block-content {
         width: 70%;
       }
     }
+  }
+
+  .page-wrap {
+    margin-top: 78px;
   }
 </style>
