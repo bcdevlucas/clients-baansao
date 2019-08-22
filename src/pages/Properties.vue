@@ -2,7 +2,7 @@
   <Layout>
     <div class="">
       <div
-        class="properties-hero site-blocks-cover"
+        class="properties-hero site-blocks-cover angle"
       >
         <div class="container" ref="pageHero">
           <div class="row align-items-center justify-content-center">

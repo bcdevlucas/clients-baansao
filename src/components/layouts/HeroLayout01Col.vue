@@ -6,7 +6,7 @@
       :style="`background-image: url(${activeImage.src});`"
     >-->
     <div
-      class="site-blocks-cover inner-page text-shadow"
+      class="site-blocks-cover inner-page angle text-shadow"
       :style="`background-image: url(${image});`"
     >
       <div class="container hero-content" ref="pageHero">

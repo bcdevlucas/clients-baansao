@@ -915,7 +915,7 @@
   }
 
   .page-wrap {
-    background: rgba(255,255,255,0.82);
+    background: rgba(255,255,255,0.92);
     z-index: 1;
   }
 
@@ -937,13 +937,13 @@
     position: relative;
     z-index: 1;
   }
-  .scene-inner {
+  /*.scene-inner {
     background: url(/images/decorations/grass-tile-cutout.png) repeat-x center top;
     overflow: visible;
     padding: 470px 0 0 0;
     z-index: 3;
     position: relative;
-  }
+  }*/
 
   .orchard-view-scene {
     position: fixed;
@@ -952,6 +952,24 @@
     z-index: 0;
     top: 0;
     left: 0;
+  }
+
+  /* New angle method using css clip-path - it makes it possible for us to use video or
+  image backgrounds on sections following an .angle section as the angled part isn't part
+  of the next section. */
+  .angle {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 9vh), 50% 100%, 0 calc(100% - 9vh));
+
+    &:first-child {
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 9vh), 50% 100%, 0 calc(100% - 9vh));
+    }
+
+    &:last-child {
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 9vh), 50% 100%, 0 calc(100% - 9vh));
+    }
+
+    &.angle + section.hero-section {
+    }
   }
 </style>
 
