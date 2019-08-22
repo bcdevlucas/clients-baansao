@@ -1,30 +1,27 @@
 <template>
   <Layout>
-    <div class="hero-wrapper">
-      <div
-        v-if="getHeroById('page-hero') !== null"
-        class="site-blocks-cover angle inner-page text-shadow"
-        :style="`background-image: url(${getHeroById('page-hero').image});`"
-        data-aos="fade"
-        data-stellar-background-ratio="0.5"
-      >
-        <div class="container hero-content">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-md-10 text-center">
-              <div class="hero-logo"><span></span></div>
-              <span class="sub-text"><strong>{{ getHeroById('page-hero').subTitle }}</strong></span>
-              <h1>{{ getHeroById('page-hero').title }}</h1>
-              <!--<div v-if="getHeroById('page-hero').description" class="sub-text" v-html="(getHeroById('page-hero').description) ? getHeroById('page-hero').description : ''"></div>-->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="content-wrapper blog-posts">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-8">
+            <div class="hero-wrapper">
+              <div
+                v-if="getHeroById('page-hero') !== null"
+                class="site-blocks-cover angle inner-page text-shadow"
+                :style="`background-image: url(${getHeroById('page-hero').image});`"
+              >
+                <div class="container hero-content">
+                  <div class="row align-items-center justify-content-center">
+                    <div class="col-md-10 text-center">
+                      <div class="hero-logo"><span></span></div>
+                      <span class="sub-text"><strong>{{ getHeroById('page-hero').subTitle }}</strong></span>
+                      <h1>{{ getHeroById('page-hero').title }}</h1>
+                      <!--<div v-if="getHeroById('page-hero').description" class="sub-text" v-html="(getHeroById('page-hero').description) ? getHeroById('page-hero').description : ''"></div>-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="site-section mt-4" v-if="postsContent.length > 0">
               <div class="container">
                 <div class="row" v-if="postsContent.length > 1">
@@ -184,6 +181,11 @@
   }
 
   .blog-posts {
+    .hero-wrapper {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
     h3 {
       font-size: 1.5rem;
     }
@@ -198,11 +200,25 @@
   }
 
   .right-pane {
+    background-color: rgba(44,44,44,0.05);
+    position: relative;
+    top: -133px;
+    padding-top: 133px;
+
     .blog-post {
       display: flex;
-      border-bottom: 1px dotted lightgrey;
-      margin-top: 3rem;
-      margin-bottom: 3rem;
+      border-bottom: 1px dotted #909090;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+
+      br {
+        display: none; /* Get rid of line breaks, they'll make the layout weird and we're trimming the text anyway */
+      }
+
+      p {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
 
       .content-block-image {
         width: 30%;
