@@ -183,7 +183,7 @@
       margin-left: -15px;
       margin-right: -15px;
       height: auto;
-      height: 600px;
+      height: 460px;
     }
 
     .hero-content {
@@ -192,6 +192,7 @@
 
     .site-blocks-cover, .site-blocks-cover .row {
       height: 100%;
+      min-height: 0;
     }
 
     h3 {
@@ -212,7 +213,7 @@
   }
 
   .right-pane {
-    background-color: #efefef;
+    background-color: rgba(245,245,245,1);
     position: fixed;
     right: 0;
     z-index: 100;
