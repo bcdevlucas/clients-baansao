@@ -143,7 +143,7 @@
   .wrap {min-width: 320px; height: 100%;}
 
   header {
-    height: 54px;
+    height: 78px;
     display: flex;
     z-index: 200;
     padding: 0;
@@ -511,15 +511,14 @@
       background: url(/images/logo.png) no-repeat;
       -webkit-background-size: cover;
       background-size: cover;
-      width: 48px;
-      height: 48px;
+      width: 54px;
+      height: 54px;
       animation: navlogospin 30s 0s;
       animation-iteration-count: infinite;
       filter: drop-shadow(2px 2px 4px rgba(16,16,16,0.33333));
 
       position: relative;
       left: -10px;
-      top: -2px;
     }
 
     @keyframes navlogospin {
