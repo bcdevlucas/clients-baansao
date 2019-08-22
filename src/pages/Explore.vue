@@ -28,7 +28,7 @@
             <div class="site-section mt-4" v-if="postsContent.length > 0">
               <div class="container">
                 <div class="row" v-if="postsContent.length > 1">
-                  <h3 class="text-center mb-5" style="display: block; width: 100%;">Featured Articles</h3>
+                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Featured Articles</h3>
 
                   <content-block-layout
                     v-for="post in postsContent.slice(0, 2)"
@@ -47,7 +47,7 @@
             <div class="site-section" v-if="postsContent.length > 0">
               <div class="container">
                 <div class="row" v-if="postsContent.length > 1">
-                  <h3 class="text-center mb-5" style="display: block; width: 100%;">Weekly Specials</h3>
+                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Weekly Specials</h3>
 
                   <content-block-layout
                     v-for="post in postsContent.slice(0, 3)"
@@ -65,7 +65,7 @@
             </div>
           </div>
           <div class="col-md-4 right-pane mt-5">
-            <h3 class="text-center mt-5 mb-5" style="display: block; width: 100%;">Last Minute Specials</h3>
+            <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">Last Minute Specials</h3>
             <content-block-layout
               v-for="post in postsContent"
               :key="post.id"
@@ -83,7 +83,7 @@
           <div class="site-section" v-if="$page.posts.edges.length > 0">
             <div class="container-fluid">
               <div class="row" v-if="postsContent.length > 1">
-                <h3 class="text-center mb-5" style="display: block; width: 100%;">Recent Articles</h3>
+                <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Recent Articles</h3>
 
                 <content-block-layout
                   v-for="post in postsContent.slice(1, postsContent.length)"
@@ -174,32 +174,45 @@
   }
   .full-width .content-block-image {
     float: left;
-    width: 49%;
+    width: 33%;
     margin-right: 2rem;
   }
 
   .blog-posts .content-block-image {
-    height: 230px;
+    height: 220px;
     overflow: hidden;
+  }
+
+  .blog-posts {
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    .category-title {
+      font-size: 2rem;
+    }
+
+    p.text-muted {
+      color: #444 !important;
+    }
   }
 
   .right-pane {
     .blog-post {
       display: flex;
+      border-bottom: 1px dotted lightgrey;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
 
       .content-block-image {
         width: 30%;
-        max-height: 100px;
+        max-height: 90px;
         margin-right: 2rem;
       }
 
       .content-block-content {
         width: 70%;
       }
-    }
-
-    h3 {
-      font-size: 1.5rem;
     }
   }
 </style>
