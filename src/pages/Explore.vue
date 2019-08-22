@@ -25,31 +25,15 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-8">
-            <div class="site-section mt-5" v-if="postsContent.length > 0">
+            <div class="site-section mt-4" v-if="postsContent.length > 0">
               <div class="container">
-                <div class="row">
+                <div class="row" v-if="postsContent.length > 1">
                   <h3 class="text-center mb-5" style="display: block; width: 100%;">Featured Articles</h3>
 
                   <content-block-layout
-                    :key="postsContent[0].id"
-                    className="col-lg-12 col-md-12 mb-6 project-entry full-width"
-                    :title="postsContent[0].title"
-                    :description="postsContent[0].summary"
-                    :link="postsContent[0].path"
-                    linkText="Read Article"
-                    :image="postsContent[0].image"
-                    :imageAlt="postsContent[0].caption"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="site-section" v-if="$page.posts.edges.length > 0">
-              <div class="container">
-                <div class="row" v-if="postsContent.length > 1">
-                  <content-block-layout
-                    v-for="post in postsContent.slice(1, 3)"
+                    v-for="post in postsContent.slice(0, 2)"
                     :key="post.id"
-                    className="col-lg-6 col-md-6 mb-6 project-entry"
+                    className="col-md-12 mb-3 project-entry blog-post full-width"
                     :title="post.title"
                     :description="post.summary"
                     :link="post.path"
@@ -60,20 +44,21 @@
                 </div>
               </div>
             </div>
-            <div class="site-section mt-5" v-if="postsContent.length > 0">
+            <div class="site-section" v-if="postsContent.length > 0">
               <div class="container">
-                <div class="row">
+                <div class="row" v-if="postsContent.length > 1">
                   <h3 class="text-center mb-5" style="display: block; width: 100%;">Weekly Specials</h3>
 
                   <content-block-layout
-                    :key="postsContent[0].id"
-                    className="col-lg-12 col-md-12 mb-6 project-entry full-width"
-                    :title="postsContent[0].title"
-                    :description="postsContent[0].summary"
-                    :link="postsContent[0].path"
+                    v-for="post in postsContent.slice(0, 3)"
+                    :key="post.id"
+                    className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
+                    :title="post.title"
+                    :description="post.summary"
+                    :link="post.path"
                     linkText="Read Article"
-                    :image="postsContent[0].image"
-                    :imageAlt="postsContent[0].caption"
+                    :image="post.image"
+                    :imageAlt="post.caption"
                   />
                 </div>
               </div>
@@ -84,7 +69,7 @@
             <content-block-layout
               v-for="post in postsContent"
               :key="post.id"
-              className="col-xs-12 project-entry"
+              className="col-xs-12 blog-post"
               :title="post.title"
               :description="post.summary"
               :link="post.path"
@@ -103,7 +88,7 @@
                 <content-block-layout
                   v-for="post in postsContent.slice(1, postsContent.length)"
                   :key="post.id"
-                  className="col-lg-4 col-md-4 mb-6 project-entry"
+                  className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
                   :title="post.title"
                   :description="post.summary"
                   :link="post.path"
@@ -184,6 +169,9 @@
 </page-query>
 
 <style lang="scss">
+  a, a:hover {
+    color: #222;
+  }
   .full-width .content-block-image {
     float: left;
     width: 49%;
@@ -192,15 +180,26 @@
 
   .blog-posts .content-block-image {
     height: 230px;
+    overflow: hidden;
   }
 
   .right-pane {
-    .content-block-image {
-      display: none;
-      float: left;
-      width: 30%;
-      max-height: 100px;
-      margin-right: 2rem;
+    .blog-post {
+      display: flex;
+
+      .content-block-image {
+        width: 30%;
+        max-height: 100px;
+        margin-right: 2rem;
+      }
+
+      .content-block-content {
+        width: 70%;
+      }
+    }
+
+    h3 {
+      font-size: 1.5rem;
     }
   }
 </style>
