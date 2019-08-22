@@ -26,7 +26,7 @@
   .detailed-content-panel {
     opacity: 1;
     width: 100vw;
-    height: calc(100vh - 54px);
+    height: calc(100vh - 78px);
     position: fixed;
     /*top: 54px;*/ /* Match header */
     top: 100%;

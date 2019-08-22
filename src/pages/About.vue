@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="hero-wrapper">
+    <div class="hero-wrapper angle">
       <div
         v-if="getHeroById('page-hero') !== null"
         class="site-blocks-cover inner-page text-shadow"

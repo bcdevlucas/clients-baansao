@@ -168,7 +168,7 @@
 
 <style lang="scss">
   .page-wrap {
-    margin-top: 54px;
+    margin-top: 78px;
   }
 
   .properties-hero {

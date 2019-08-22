@@ -20,7 +20,7 @@ export default {
 
         anime({
           targets: detailEl,
-          top: [document.documentElement.clientHeight + 'px', '54px'], // Match header height
+          top: [document.documentElement.clientHeight + 'px', '78px'], // Match header height
           easing: 'easeOutExpo',
           duration: 1000,
           complete: () => {
@@ -38,7 +38,7 @@ export default {
 
         anime({
           targets: detailEl,
-          top: ['54px', '100%'],
+          top: ['78px', '100%'],
           duration: 1000,
           complete: () => {
             detailEl.style.opacity = 0;
