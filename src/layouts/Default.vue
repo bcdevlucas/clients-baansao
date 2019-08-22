@@ -243,7 +243,6 @@
 }
 .site-blocks-cover .sub-text {
   font-size: 1.3rem;
-  text-transform: uppercase;
   color: rgba(255, 255, 255, 1);
   letter-spacing: 0.2em;
 }

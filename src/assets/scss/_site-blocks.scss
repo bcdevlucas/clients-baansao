@@ -30,7 +30,6 @@ $color-tertiary: #ff5733;
   }
   .sub-text {
     font-size: $font-size-base + 0.1rem;
-    text-transform: uppercase;
     color: rgba($white, 1);
     letter-spacing: 0.2em;
   }
@@ -330,7 +329,6 @@ $color-tertiary: #ff5733;
 
 .sub-title {
   display: block;
-  text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 12px;
   font-weight: 700;

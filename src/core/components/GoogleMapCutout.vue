@@ -39,9 +39,10 @@
         streetViewControl: false,
         rotateControl: false,
         fullscreenControl: false,
-        gestureHandling: 'none'
+        //gestureHandling: 'none'
       },
-      gmapEl: null
+      gmapEl: null,
+      gmap: null
     }),
     computed: {
       google: gmapApi
@@ -49,14 +50,44 @@
     methods: {
       initializeMap() {
         this.$refs.mapRef.$mapPromise.then((gmap) => {
-          const marker = new this.google.maps.Marker({
+          this.gmap = gmap; // Just set we don't need this to be reactive
+          /*const marker = new this.google.maps.Marker({
             map: gmap,
             position: gmap.getCenter()
-          });
+          });*/
+
+          const request = {
+            location: gmap.getCenter(),
+            radius: '500',
+            query: '25/1 Moo 1 Maenam, Koh Samui 84330'
+          };
+
+          const service = new this.google.maps.places.PlacesService(gmap);
+          service.textSearch(request, this.placeMarker);
 
           //this.gmapEl = gmap.getDiv();
         });
       },
+      // Checks that the PlacesServiceStatus is OK, and adds a marker
+      // using the place ID and location from the PlacesService.
+      placeMarker(results, status) {
+        if (status === this.google.maps.places.PlacesServiceStatus.OK) {
+          const marker = new this.google.maps.Marker({
+            map: this.gmap,
+            place: {
+              placeId: results[0].place_id,
+              location: results[0].geometry.location
+            }
+          });
+
+          const newCenter = {
+            lat: results[0].geometry.location.lat() - 0.006, // Offset for map pos
+            lng: results[0].geometry.location.lng()
+          };
+
+          this.$set(this, 'gmapCenter', newCenter);
+        }
+      }
     },
     mounted() {
       // At this point, the child GmapMap has been mounted, but the map has not been initialized...

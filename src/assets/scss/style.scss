@@ -13,10 +13,13 @@ $text-muted: $gray-500;
 @import "site-blocks";
 
 /* Tweak styles for site */
+.sub-title, .sub-text {
+  text-transform: uppercase;
+}
+
 .site-blocks-cover h1 {
   text-align: center;
 }
-
 
 /* TEMP */
 .project-entry {

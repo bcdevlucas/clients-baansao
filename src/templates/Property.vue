@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <hero-layout01-col
+      class="property-hero"
       :image="activeImage ? activeImage.src : ''"
       :title="pageData.title"
       :description="pageData.summary"
@@ -494,22 +495,29 @@
     margin-top: 54px;
   }
 
-  .properties-hero {
+  .property-hero {
     height: auto !important;
     min-height: 400px;
-    color: #222;
 
-    h1 {
-      color: #222;
-    }
-
-    .sub-text {
-      color: #999 !important;
+    .sub-text * {
+      font-size: 1.3rem !important;
+      text-transform: none;
     }
 
     .row {
       height: auto;
       min-height: 400px;
+    }
+
+    ul {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      li {
+        text-align: left;
+        //list-style-type: none;
+        //list-style-position: outside;
+      }
     }
   }
 

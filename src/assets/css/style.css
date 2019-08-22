@@ -10230,7 +10230,6 @@ h6 {
 }
 .site-blocks-cover .sub-text {
   font-size: 1.3rem;
-  /*text-transform: uppercase;*/
   color: rgba(255, 255, 255, 1);
   letter-spacing: 0.2em;
 }
@@ -10550,7 +10549,6 @@ h6 {
 
 .sub-title {
   display: block;
-  text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 1.15rem;
   font-weight: 700;

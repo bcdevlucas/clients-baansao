@@ -26,7 +26,7 @@
         </div>
       </div>-->
 
-      <div class="site-blocks-cover angle text-shadow" style="background-image: url(/images/orchard-view-3br/23-new-sky.jpg)">
+      <div class="site-blocks-cover angle text-shadow" style="background-image: url(/images/orchard-view-3br/20.jpg); background-position: bottom center !important">
         <!--<div class="palm-box-shadow"></div>-->
         <div class="moving-palm-left animate"></div>
         <div class="moving-palm-right animate"></div>
