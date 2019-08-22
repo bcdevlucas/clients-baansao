@@ -13,7 +13,7 @@
                 <div class="container hero-content">
                   <div class="row align-items-center justify-content-center">
                     <div class="col-md-10 text-center">
-                      <div class="hero-logo"><span></span></div>
+                      <!--<div class="hero-logo"><span></span></div>-->
                       <span class="sub-text"><strong>{{ getHeroById('page-hero').subTitle }}</strong></span>
                       <h1>{{ getHeroById('page-hero').title }}</h1>
                       <!--<div v-if="getHeroById('page-hero').description" class="sub-text" v-html="(getHeroById('page-hero').description) ? getHeroById('page-hero').description : ''"></div>-->
