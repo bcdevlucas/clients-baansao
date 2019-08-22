@@ -117,7 +117,7 @@
   :root {
     --cblue: #33587a;
     --ccherry: #720500;
-    --cgrey : #3E3A37;
+    --cgrey : #222;
     --cwhite : #ffffff;
     --ccream : #FAFBFC;
     --cgrey_green: #435466;
