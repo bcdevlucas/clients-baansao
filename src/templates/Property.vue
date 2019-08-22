@@ -28,7 +28,7 @@
               <amenities class="mt-4" />
 
               <p class="class-action-buttons mt-5 text-center">
-                <button @click="showBookingForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i>
+                <button @click="openAirbnbPage(pageData.link)" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i>
                   Book Now
                 </button>&nbsp;
                 <button @click="showQuestionForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i>
@@ -288,6 +288,10 @@
       }
     },
     methods: {
+      openAirbnbPage(url) {
+        if (typeof url !== 'string') return;
+        window.location.href = url;
+      },
       /**
        * TODO: Is this used outside of thumbnails? If so make it a mixin.
        */

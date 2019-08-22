@@ -46,97 +46,58 @@ description: >-
   Your host, Saowanee, resides in the same community and will be pleased to assist in making your Ko Samui holiday a special experience.
   We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
 id: bamboo-gardens-1
-image: 1.jpg
-imageId: "1_jrppah"
-galleryFolder: "bamboo-gardens-01-2br"
+image: 20130919-DSC_9674.jpg
+imageId: "bamboo-gardens_kvtbmb"
+galleryFolder: "old/bamboo-gardens/bamboo-gardens-3"
 gallery:
-  - id: "1_jrppah"
-    src: 1.jpg
+  - id: "bamboo-gardens_kvtbmb"
+    src: bamboo-gardens.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
-  - id: "2_vteq7d"
-    src: 2.jpg
+  - id: "20130919-DSC_9673_zctyas"
+    src: 20130919-DSC_9673.jpg
+    caption: Bamboo Gardens
+    subCaption:
+  - id: "20130919-DSC_9681_qwgdz6"
+    src: 20130919-DSC_9681.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
-  - id: "3_qtn1ml"
-    src: 3.jpg
+  - id: "20130919-DSC_9676_w9npoz"
+    src: 20130919-DSC_9676.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
-  - id: "4_vxzaoe"
-    src: 4.jpg
+  - id: "20130522-DSC_6720_l3hrnf"
+    src: 20130522-DSC_6720.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
-  - id: "5_w1oahw"
-    src: 5.jpg
+  - id: "20130522-DSC_6721_qlly87"
+    src: 20130522-DSC_6721.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
-  - id: "6_v9sb77"
-    src: 6.jpg
+  - id: "20130522-DSC_6725_qjutmj"
+    src: 20130522-DSC_6725.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
-  - id: "7_xl7mkt"
-    src: 7.jpg
+  - id: "20130522-DSC_6726_d4o8os"
+    src: 20130522-DSC_6726.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
-  - id: "8_jmxxhp"
-    src: 8.jpg
+  - id: "20130919-DSC_9679_ee7nga"
+    src: 20130919-DSC_9679.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
-  - id: "9_phkjgl"
-    src: 9.jpg
-    caption: Bamboo Gardens
-    subCaption:
-    featured: true
-  - id: "10_amfr5r"
-    src: 10.jpg
-    caption: Bamboo Gardens
-    subCaption:
-    featured: true
-  - id: "11_o9y5fv"
-    src: 11.jpg
-    caption: Bamboo Gardens
-    subCaption:
-    featured: true
-  - id: "12_ljasqp"
-    src: 12.jpg
-    caption: Bamboo Gardens
-    subCaption:
-    featured: true
-  - id: "13_wcalzr"
-    src: 13.jpg
-    caption: Bamboo Gardens
-    subCaption:
-    featured: true
-  - id: "14_lfpic0"
-    src: 14.jpg
-    caption: Bamboo Gardens
-    subCaption:
-    featured: true
-  #- id: 15
-  #  src: 15.jpg
-  #  caption: Bamboo Gardens
-  #  subCaption:
-  #  featured: true
-  - id: "16_oy887z"
-    src: 16.jpg
-    caption: Bamboo Gardens
-    subCaption:
-    featured: true
-  - id: "17_fgsr7a"
-    src: 17.jpg
-    caption: Bamboo Gardens
-    subCaption:
-    featured: true
-link: /
+link: https://www.airbnb.ca/rooms/14204990
 linkText: Learn More
 title: Bamboo Gardens 1
-metaKeywords: >-
-metaDescription: >-
+metaKeywords:
+metaDescription:
+caption:
+subCaption:

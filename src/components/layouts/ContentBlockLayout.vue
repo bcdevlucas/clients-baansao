@@ -1,13 +1,13 @@
 <template>
   <div v-bind:class="classNameString">
-    <a v-if="typeof this.image === 'string' && this.image.length > 0" @click="linkClicked" class="d-block figure">
+    <a v-if="typeof this.image === 'string' && this.image.length > 0" @click="linkClicked" class="d-block content-block-image figure">
       <img
         :src="this.image"
         alt="Image"
         class="img-fluid"
       />
     </a>
-    <a v-if="typeof this.cloudinaryImage === 'string' && this.cloudinaryImage.length > 0" @click="linkClicked" class="d-block figure">
+    <a v-if="typeof this.cloudinaryImage === 'string' && this.cloudinaryImage.length > 0" @click="linkClicked" class="d-block content-block-image figure">
       <img
         v-if="this.cloudImage && this.cloudImage.src"
         :src="this.cloudImage.src"
@@ -36,3 +36,13 @@
     ]
   };
 </script>
+
+<style lang="scss">
+  .content-block-image {
+    cursor: pointer !important;
+
+    img {
+      cursor: pointer !important;
+    }
+  }
+</style>

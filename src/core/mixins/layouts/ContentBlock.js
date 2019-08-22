@@ -154,6 +154,8 @@ export default {
       // TODO: Test to see if link works...
       if (typeof this.onLinkClicked === 'function') {
         this.onLinkClicked();
+      } else if (typeof this.link === 'string' && this.link !== '') {
+        window.location.href = this.link;
       }
     }
   },
