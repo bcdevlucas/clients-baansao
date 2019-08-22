@@ -215,7 +215,6 @@
     background-color: #efefef;
     position: fixed;
     right: 0;
-    padding-top: 78px;
     z-index: 100;
     //border-left: 2px solid darkgoldenrod;
     height: 100%;
