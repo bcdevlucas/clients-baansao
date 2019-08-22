@@ -48,14 +48,14 @@
     },
     methods: {
       initializeMap() {
-        /*this.$refs.mapRef.$mapPromise.then((gmap) => {
+        this.$refs.mapRef.$mapPromise.then((gmap) => {
           const marker = new this.google.maps.Marker({
             map: gmap,
             position: gmap.getCenter()
           });
 
           //this.gmapEl = gmap.getDiv();
-        });*/
+        });
       },
     },
     mounted() {

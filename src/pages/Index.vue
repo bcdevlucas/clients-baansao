@@ -79,9 +79,9 @@
         <div>
           <div class="row px-4">
             <content-block-layout
-              v-for="property in propertiesContent.slice(0,4)"
+              v-for="property in propertiesContent.slice(0,3)"
               :key="property.id"
-              className="col-lg-3 col-md-3 mb-6 project-entry"
+              className="col-lg-4 col-md-4 mb-6 project-entry"
               :title="property.title"
               :description="(property.summary) ? property.summary : ''"
               :link="`/property/${property.id}`"

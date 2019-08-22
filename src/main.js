@@ -7,7 +7,7 @@ import DefaultLayout from '~/layouts/Default.vue';
 
 import '~/assets/scss/style.scss';
 import '~/assets/css/style.css';
-import '~/assets/css/site.css';
+import '~/assets/scss/site.scss';
 import '~/assets/fonts/icomoon/style.css';
 
 //console.log(Cloudinary);

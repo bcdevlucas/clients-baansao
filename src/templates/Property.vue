@@ -171,9 +171,9 @@
           </div>
           <div class="row mx-4">
             <content-block-layout
-              v-for="property in propertiesContent.slice(0,4)"
+              v-for="property in propertiesContent.slice(0,4).filter(item => item.id !== pageData.id)"
               :key="property.id"
-              className="col-lg-3 col-md-3 mb-6 project-entry"
+              className="col-lg-4 col-md-4 mb-6 project-entry"
               :title="property.title"
               :description="(property.summary) ? property.summary : ''"
               :link="`/property/${property.id}`"
@@ -280,6 +280,7 @@
         }
 
         return {
+          id: this.$page.property.fields.id,
           title: this.$page.property.fields.title,
           metaKeywords: this.$page.property.fields.metaKeywords,
           metaDescription: this.$page.property.fields.metaDescription,
@@ -421,6 +422,7 @@
     property: property(path: $path) {
       id
       fields {
+        id
         title
         metaKeywords
         metaDescription
@@ -453,6 +455,7 @@
         node {
           id
           fields {
+            id
             title
             metaKeywords
             metaDescription
