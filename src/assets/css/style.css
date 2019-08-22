@@ -10229,7 +10229,7 @@ h6 {
   height: calc(100vh);
 }
 .site-blocks-cover .sub-text {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   /*text-transform: uppercase;*/
   color: rgba(255, 255, 255, 1);
   letter-spacing: 0.2em;
@@ -10552,7 +10552,7 @@ h6 {
   display: block;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 12px;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #ff5733;
   margin-bottom: 10px;
@@ -10900,7 +10900,7 @@ h6 {
 }
 .post-entry h3,
 .project-entry h3 {
-  font-size: 18px;
+  font-size: 1.7rem;
   line-height: 1.3;
 }
 .post-entry h3 a,

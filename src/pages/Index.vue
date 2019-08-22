@@ -54,7 +54,7 @@
             </div>
           </div>
         </div>
-        <div class="container">
+        <div class="container hero-description">
           <div class="row">
             <div class="col-sm-12">
               <p>Baan Saowanee is a collection of holiday home rentals situated on the north side of Ko Samui island, a short five minute drive to scenic Mae Nam Beach. Sun, sand and the Gulf of Siam combine to make many a perfect day.</p>

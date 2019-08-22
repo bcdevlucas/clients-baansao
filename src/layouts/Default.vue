@@ -235,7 +235,7 @@
   height: calc(100vh);
 }
 .site-blocks-cover .sub-text {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 1);
   letter-spacing: 0.2em;
@@ -861,6 +861,27 @@
   }
 
   @media only screen and (min-width: 120.0625em) {
+  }
+
+  p {
+    color: #222;
+    font-size: 1.15rem;
+  }
+
+  .hero-description p {
+    font-size: 1.6rem;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 3.0rem;
+  }
+
+  .site-section h2 {
+    font-size: 3.0rem;
   }
 </style>
 

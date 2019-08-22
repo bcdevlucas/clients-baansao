@@ -43,7 +43,7 @@
               v-for="property in propertiesContent.slice(propertiesContent.length / 2, propertiesContent.length)"
               v-if="typeof property.summary === 'string'"
               :key="property.id"
-              className="col-lg-6 project-entry"
+              className="col-md-4 col-lg-6 project-entry"
               :title="property.title"
               :description="(property.summary) ? property.summary : ''"
               :link="`/property/${property.id}`"

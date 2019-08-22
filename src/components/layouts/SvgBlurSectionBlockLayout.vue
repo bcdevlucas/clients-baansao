@@ -94,7 +94,6 @@
   .byline {
     font-size: .3em;
     line-height: 1.5em;
-    font-family: Merriweather;
     margin: .75em;
     z-index: 100;
     text-shadow: 0 0 8px rgba(0, 0, 0, .3);
