@@ -102,7 +102,6 @@
 
       <footer class="site-footer">
         <div class="footer-banner">
-          <!--<img src="/images/orchard-view-3br/20-no-sky.png" style="object-fit: contain; max-width: 100%; position: absolute; z-index: 1; top: 10px;" />-->
           <div class="footer-main">
             <div class="container mt-4 pt-4">
               <div class="row">
@@ -155,6 +154,14 @@
           </div>
         </div>
       </footer>
+    </div>
+
+    <div class="orchard-view-scene">
+      <div class="scene-outer">
+        <img src="/images/orchard-view-3br/20-no-sky.png" style="object-fit: contain; max-width: 100%; position: absolute; z-index: 1; top: 10px;" />
+        <div class="scene-inner">
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -896,6 +903,55 @@
 
   .site-blocks-cover {
     background-attachment: fixed;
+  }
+
+  .site-footer {
+    z-index: 10;
+    background: #111 !important;
+    padding-top: 5rem;
+    a {
+      color: white;
+    }
+  }
+
+  .page-wrap {
+    background: rgba(255,255,255,0.82);
+    z-index: 1;
+  }
+
+  .scene-outer {
+    //padding: 1024px 0 0;
+    position: relative;
+    z-index: 1;
+  }
+  .scene-inner {
+    overflow: visible;
+    //padding: 470px 0 0 0;
+    z-index: 3;
+    position: relative;
+  }
+
+  .scene-outer {
+    background: url(/images/samui-panorama-adj.png) no-repeat center 170px;
+    padding: 1024px 0 0;
+    position: relative;
+    z-index: 1;
+  }
+  .scene-inner {
+    background: url(/images/decorations/grass-tile-cutout.png) repeat-x center top;
+    overflow: visible;
+    padding: 470px 0 0 0;
+    z-index: 3;
+    position: relative;
+  }
+
+  .orchard-view-scene {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
   }
 </style>
 
