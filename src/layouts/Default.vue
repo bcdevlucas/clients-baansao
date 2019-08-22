@@ -863,13 +863,18 @@
   @media only screen and (min-width: 120.0625em) {
   }
 
+  // TDO: Override bootstrap fontography
+  body {
+    font-size: 1.5rem;
+  }
+
   p {
     color: #222;
     font-size: 1.15rem;
   }
 
   .hero-description p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   h1 {
@@ -887,6 +892,10 @@
   a.btn,
   button.btn {
     font-size: 1.3rem !important;
+  }
+
+  .site-blocks-cover {
+    background-attachment: fixed;
   }
 </style>
 
