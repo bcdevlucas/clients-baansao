@@ -22,30 +22,38 @@
     </div>
 
     <div class="content-wrapper">
-      <!--<svg-blur-section-block-layout
-        title="Culture and Festivals"
-        byLine="Experience local culture events."
-        image="/images/thai-seafood-basket.jpg"
-        aspectRatio="xMidYMin slice"
-      />-->
       <svg-blur-section-block-layout
+        class="angle"
         title="Popular Attractions"
         byLine="Experience local culture events."
         image="/images/baby-monkey-coconut-monkey-735023.jpg"
         aspectRatio="xMidYMid slice"
       />
+      <div style="height: 60vh"></div>
       <svg-blur-section-block-layout
+        class="angle"
         title="Local Thai Cuisine"
         byLine="Indulge in local specialty cuisine."
         image="/images/thai-seafood-basket.jpg"
         aspectRatio="xMidYMid slice"
       />
+      <div style="height: 60vh"></div>
       <svg-blur-section-block-layout
+        class="angle"
+        title="Culture and Festivals"
+        byLine="Experience local culture events."
+        image="/images/baby-monkey-coconut-monkey-735023.jpg"
+        aspectRatio="xMidYMin slice"
+      />
+      <div style="height: 60vh"></div>
+      <svg-blur-section-block-layout
+        class="angle"
         title="Motorbike & Vehicle Rentals"
         byLine="Explore the island on your own terms."
         image="/images/motorbikes-01.jpg"
         aspectRatio="xMidYMax slice"
       />
+      <div style="height: 60vh"></div>
     </div>
   </Layout>
 </template>
