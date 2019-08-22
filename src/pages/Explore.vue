@@ -8,7 +8,7 @@
               <div
                 v-if="getHeroById('page-hero') !== null"
                 class="site-blocks-cover angle text-shadow"
-                :style="`background-image: url(${getHeroById('page-hero').image});`"
+                :style="`background-image: url(${getHeroById('page-hero').image}); background-position: -180px -380px !important`"
               >
                 <div class="container hero-content">
                   <div class="row align-items-center justify-content-center">
@@ -260,5 +260,17 @@
 
   .page-wrap {
     margin-top: 78px;
+  }
+
+  /* Collapse padding/margins */
+  .container > .row,
+  .container-fluid > .row {
+    > [class*=col-]:first-child {
+      //padding-left: 0;
+    }
+
+    > [class*=col-]:last-child {
+      //padding-right: 0;
+    }
   }
 </style>
