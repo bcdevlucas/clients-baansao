@@ -2,7 +2,7 @@
 // import VueMarkdown from 'vue-markdown'
 // Use marked instead
 //import marked from 'marked';
-
+// TODO: Delete me!
 export default {
   // TODO: Supply models via props??
   props: {

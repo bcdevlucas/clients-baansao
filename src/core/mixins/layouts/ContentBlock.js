@@ -103,8 +103,8 @@ export default {
     async loadImage() {
       const image = { id: this.cloudinaryImage, src: null };
 
-      let width = 400;
-      let height = 300;
+      let width = 600;
+      let height = 450;
 
       const opts = { cloudName: this.cloudName, folder: this.cloudFolder, transforms: `w_${width},h_${height},q_60` };
       image.src = await ImageUtils.getCloudinaryImageUrl(image.id, opts);
