@@ -28,13 +28,17 @@
               <amenities class="mt-4" />
 
               <p class="class-action-buttons mt-5 text-center">
-                <button @click="openAirbnbPage(pageData.link)" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i>
-                  Book Now
+                <button @click="openAirbnbPage(pageData.link)" class="btn btn-primary btn-lg open-airbnb-page"><i class="material-icons">calendar_today</i>
+                  Book on Airbnb.com
                 </button>&nbsp;
-                <button @click="showQuestionForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i>
+              </p>
+
+              <p class="class-action-buttons mt-2 text-center">
+                <button @click="showQuestionForm" class="btn btn-secondary btn-lg ask-question" style="width: 100%"><i class="material-icons">question_answer</i>
                   Ask a Question
                 </button>
               </p>
+
             </div>
           </div>
 
@@ -471,5 +475,26 @@
       height: auto;
       min-height: 400px;
     }
+  }
+
+  .btn.btn-primary.open-airbnb-page {
+    width: 100%;
+    background-color: #7ea602;
+    border-color: #7ea602;
+    font-family: "Calligraffitti", sans-serif !important;
+    font-weight: bold !important;
+
+    &:hover {
+      background-color: #3d7201 !important;
+      border-color: #3d7201 !important;
+      color: white !important;
+    }
+  }
+
+  .ask-question {
+    width: 100%;
+    background-color: #808080;
+    border-color: #808080;
+    font-family: "Calligraffitti";
   }
 </style>
