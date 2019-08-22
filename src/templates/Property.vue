@@ -27,15 +27,15 @@
               />
               <amenities class="mt-4" />
 
-              <p class="class-action-buttons mt-5 text-center">
+              <p class="class-action-buttons mt-5 mb-0 text-center">
                 <button @click="openAirbnbPage(pageData.link)" class="btn btn-primary btn-lg open-airbnb-page"><i class="material-icons">calendar_today</i>
-                  Book on Airbnb.com
+                  <span>Book on Airbnb.com</span>
                 </button>&nbsp;
               </p>
 
               <p class="class-action-buttons mt-2 text-center">
                 <button @click="showQuestionForm" class="btn btn-secondary btn-lg ask-question" style="width: 100%"><i class="material-icons">question_answer</i>
-                  Ask a Question
+                  <span>Ask a Question</span>
                 </button>
               </p>
 
@@ -481,20 +481,33 @@
     width: 100%;
     background-color: #7ea602;
     border-color: #7ea602;
-    font-family: "Calligraffitti", sans-serif !important;
-    font-weight: bold !important;
 
-    &:hover {
+    span {
+      margin-top: 6px;
+      font-family: "Calligraffitti", sans-serif !important;
+      font-weight: bold !important;
+      font-size: 1.1rem;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
       background-color: #3d7201 !important;
       border-color: #3d7201 !important;
       color: white !important;
     }
   }
 
-  .ask-question {
+  .btn.btn-secondary.ask-question {
     width: 100%;
     background-color: #808080;
     border-color: #808080;
-    font-family: "Calligraffitti";
+
+    span {
+      margin-top: 6px;
+      font-family: "Calligraffitti", sans-serif !important;
+      font-weight: bold !important;
+      font-size: 1.1rem;
+    }
   }
 </style>
