@@ -51,6 +51,21 @@ module.exports = function (api) {
       properties.addSchemaField('description', ({ graphql }) => ({
         type: graphql.GraphQLString,
       }));
+      properties.addSchemaField('address', ({ graphql }) => {
+        const addressType = new graphql.GraphQLObjectType({
+          name: 'Address',
+          fields: {
+            line1: { type: graphql.GraphQLString },
+            line2: { type: graphql.GraphQLString },
+            city: { type: graphql.GraphQLString },
+            zone: { type: graphql.GraphQLString },
+            country: { type: graphql.GraphQLString },
+            postCode: { type: graphql.GraphQLString },
+          }
+        });
+
+        return { type: addressType }
+      });
     }
   })
 };

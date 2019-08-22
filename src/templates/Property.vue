@@ -143,8 +143,11 @@
               <google-map-cutout class="mt-4" />
               <h3 class="mt-4">Address</h3>
               <p class="mt-4">
-                25/3 Moo 1 Maenam, Ko Samui<br />
-                Surat Thani, Thailand 84330
+                <span>{{ pageData.address.line1 }}</span><br />
+                <span v-if="typeof pageData.address.line2 === 'string' && pageData.address.line2 !== ''">{{ pageData.address.line2 }}</span>
+                <br v-if="typeof pageData.address.line2 === 'string' && pageData.address.line2 !== ''" />
+                <span>{{ pageData.address.city }}</span>,&nbsp;<span>{{ pageData.address.zone }}</span><br />
+                <span>{{ pageData.address.postCode }}</span>&nbsp;<span>{{ pageData.address.country }}</span>
               </p>
             </div>
           </div>
@@ -263,18 +266,32 @@
     },
     computed: {
       pageData() {
+        let address = {
+          line1: '',
+          line2: '',
+          city: '',
+          zone: '',
+          country: '',
+          postCode: ''
+        };
+
+        if (this.$page.property.fields.address instanceof Array) {
+          address = this.$page.property.fields.address.pop() || address;
+        }
+
         return {
+          title: this.$page.property.fields.title,
+          metaKeywords: this.$page.property.fields.metaKeywords,
+          metaDescription: this.$page.property.fields.metaDescription,
+          address: address,
+          summary: (typeof window !== 'undefined') ? marked(this.$page.property.fields.summary) : this.$page.property.fields.summary,
+          description:  (typeof window !== 'undefined') ? marked(this.$page.property.fields.description) : this.$page.property.fields.description,
           image: this.$page.property.fields.image,
           imageId: this.$page.property.fields.imageId,
           gallery: this.$page.property.fields.gallery,
           galleryFolder: this.$page.property.fields.galleryFolder,
           link: this.$page.property.fields.link,
-          linkText: this.$page.property.fields.linkText,
-          title: this.$page.property.fields.title,
-          metaKeywords: this.$page.property.fields.metaKeywords,
-          metaDescription: this.$page.property.fields.metaDescription,
-          summary: (typeof window !== 'undefined') ? marked(this.$page.property.fields.summary) : this.$page.property.fields.summary,
-          description:  (typeof window !== 'undefined') ? marked(this.$page.property.fields.description) : this.$page.property.fields.description
+          linkText: this.$page.property.fields.linkText
         };
       },
       propertiesContent() {
@@ -404,6 +421,19 @@
     property: property(path: $path) {
       id
       fields {
+        title
+        metaKeywords
+        metaDescription
+        address {
+          line1
+          line2
+          city
+          zone
+          country
+          postCode
+        }
+        summary
+        description
         image
         imageId
         gallery {
@@ -416,11 +446,6 @@
         galleryFolder
         link
         linkText
-        title
-        metaKeywords
-        metaDescription
-        summary
-        description
       }
     }
     properties: allProperty {
@@ -428,6 +453,19 @@
         node {
           id
           fields {
+            title
+            metaKeywords
+            metaDescription
+            address {
+              line1
+              line2
+              city
+              zone
+              country
+              postCode
+            }
+            summary
+            description
             image
             imageId
             gallery {
@@ -440,11 +478,6 @@
             galleryFolder
             link
             linkText
-            title
-            metaKeywords
-            metaDescription
-            summary
-            description
           }
         }
       }

@@ -14,4 +14,47 @@ heroes:
     title: Ko Samui
     subTitle: Explore Amazing
 sections:
+  - caption: ''
+    description: >-
+      Sawatdee Kha. My name is Saowanee and I''m very proud to have born on the beautiful island of Ko Samui. In fact, the house you are renting is situated in the exact neighborhood that I grew up in, so many of the Thai people you chance to meet will be members of my extended family. I currently reside with my Canadian husband, Dan, in a residence nearby, so it's easy to personally contact me if you have requests that I can assist with. We want you to have a wonderful holiday experience.
+      
+      Serving as your host is a very unique experience for me; enjoy your Baan Saowanee stay with our best wishes for a wonderful holiday.
+
+    id: about-us-section-01
+    image: /images/about-us/13708221_1827207007502198_2760397226330007559_o.jpg
+    link:
+    linkText: Find Us On Facebook
+    title: To My Neighbourhood
+    metaKeywords: ''
+    metaDescription: ''
+    subCaption: ''
+    summary: Welcome
+  - caption: ''
+    description: >-
+      Do you like Thai food? When you arrive and have settled in, maybe we can have a chat and I'll recommend local restaurants that serve excellent local Thai dishes. Don't be surprised if the prices are very affordable! If you prefer to cook on your own as I do, maybe you'd like to join me for a visit to the Mae Nam morning market.
+  
+      If you're interested in local Thai culture, why not drop by for tea at my home and I'll be very pleased to provide you with information regarding festivals, Buddhist temple activities and Ko Samui special places and events. Do you take milk and sugar with your tea?
+    id: about-us-section-02
+    image: /images/about-us/13724040_1827204157502483_805946314322350459_o.jpg
+    link:
+    linkText:
+    title: Local Culture
+    metaKeywords: ''
+    metaDescription: ''
+    subCaption: ''
+    summary: Explore
+  - caption: ''
+    description: >-
+      Do you like Thai food? When you arrive and have settled in, maybe we can have a chat and I'll recommend local restaurants that serve excellent local Thai dishes. Don't be surprised if the prices are very affordable! If you prefer to cook on your own as I do, maybe you'd like to join me for a visit to the Mae Nam morning market.
+  
+      If you're interested in local Thai culture, why not drop by for tea at my home and I'll be very pleased to provide you with information regarding festivals, Buddhist temple activities and Ko Samui special places and events. Do you take milk and sugar with your tea?
+    id: about-us-section-02
+    image: /images/about-us/13724040_1827204157502483_805946314322350459_o.jpg
+    link:
+    linkText:
+    title: Local Culture
+    metaKeywords: ''
+    metaDescription: ''
+    subCaption: ''
+    summary: Explore
 
