@@ -883,5 +883,10 @@
   .site-section h2 {
     font-size: 3.0rem;
   }
+
+  a.btn,
+  button.btn {
+    font-size: 1.3rem !important;
+  }
 </style>
 

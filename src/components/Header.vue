@@ -34,7 +34,7 @@
             </a>
             <a href="#" class="d-flex align-items-center">
               <span class="icon-envelope mr-2"></span>
-              <span class="d-none d-lg-inline-block">info@baansaowanee.com</span>
+              <span class="d-none d-lg-inline-block header-email">info@baansaowanee.com</span>
             </a>
           </div>
         </div>
@@ -117,7 +117,7 @@
   :root {
     --cblue: #33587a;
     --ccherry: #720500;
-    --cgrey : #222;
+    --cgrey : #000;
     --cwhite : #ffffff;
     --ccream : #FAFBFC;
     --cgrey_green: #435466;
@@ -184,12 +184,12 @@
 
   @media screen and (min-width: 102em) {
     header .wrap {
-      padding: 0 10% 0 11%;
+      padding: 0 5% 0 6%;
     }
 
     header #menu > ul > li {
-      margin-left: 3rem;
-      margin-right: 3rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
     }
   }
 
@@ -205,7 +205,7 @@
         display: block;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         font-weight: normal;
         &:hover {
           text-decoration: none;
@@ -501,6 +501,9 @@
 
     color: var(--cgrey);
 
+    font-size: 1.1rem;
+    font-weight: bold;
+
     span {
       margin-right: 10px;
 
@@ -508,11 +511,15 @@
       background: url(/images/logo.png) no-repeat;
       -webkit-background-size: cover;
       background-size: cover;
-      width: 32px;
-      height: 32px;
+      width: 48px;
+      height: 48px;
       animation: navlogospin 30s 0s;
       animation-iteration-count: infinite;
       filter: drop-shadow(2px 2px 4px rgba(16,16,16,0.33333));
+
+      position: relative;
+      left: -10px;
+      top: -2px;
     }
 
     @keyframes navlogospin {
@@ -544,5 +551,9 @@
   a[data-selected] {
     font-weight: bold !important;
     text-shadow: 0px 0px 2px darkgoldenrod;
+  }
+
+  .header-email {
+    font-size: 1.0rem;
   }
 </style>
