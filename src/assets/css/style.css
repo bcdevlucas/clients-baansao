@@ -9693,15 +9693,18 @@ h6 {
 }
 
 .site-section {
-  padding: 2.5em 0 0;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
 }
 @media (min-width: 768px) {
   .site-section {
-    padding: 2.5em 0 0;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
   }
 }
 .site-section.site-section-sm {
-  padding: 4em 0;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 
 .site-section-heading {

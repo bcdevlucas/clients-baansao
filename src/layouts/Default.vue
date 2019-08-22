@@ -287,7 +287,7 @@
 .page-wrap {
   position: relative;
   margin-bottom: -50vh;
-  //overflow-x: hidden;
+  overflow-x: hidden;
   //overflow-y: hidden;
 }
 

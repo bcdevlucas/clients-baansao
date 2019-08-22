@@ -33,13 +33,13 @@
         lng: 100.0052
       },
       gmapOptions: {
-        zoomControl: false,
+        zoomControl: true,
         mapTypeControl: false,
-        scaleControl: false,
+        scaleControl: true,
         streetViewControl: false,
         rotateControl: false,
         fullscreenControl: false,
-        //gestureHandling: 'none'
+        gestureHandling: 'none'
       },
       gmapEl: null
     }),
@@ -74,6 +74,10 @@
     -moz-clip-path: url($clip);
     -ms-clip-path: url($clip);
     clip-path: url($clip);
+  }
+
+  .google-map-cutout {
+    overflow: hidden;
   }
 
   .gmap-cutout-svg {
