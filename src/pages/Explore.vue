@@ -28,7 +28,7 @@
                   <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Features of the Month</h3>
 
                   <content-block-layout
-                    v-for="post in postsContent.slice(0, 2)"
+                    v-for="post in featuredContent"
                     :key="post.id"
                     className="col-md-12 mb-3 project-entry blog-post full-width"
                     :title="post.title"
@@ -66,7 +66,7 @@
                   <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Popular Attractions</h3>
 
                   <content-block-layout
-                    v-for="post in postsContent.slice(1, postsContent.length)"
+                    v-for="post in attractionsContent"
                     :key="post.id"
                     className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
                     :title="post.title"
@@ -83,7 +83,7 @@
           <div class="col-md-3 right-pane">
             <h3 class="category-title text-center mt-5 mb-3" style="display: block; width: 100%;">Great Local Deals</h3>
             <content-block-layout
-              v-for="post in postsContent"
+              v-for="post in dealsContent"
               :key="post.id"
               className="col-xs-12 blog-post"
               :title="post.title"
@@ -100,6 +100,8 @@
 </template>
 
 <script>
+  import * as StringUtils from '~/core/utils/StringUtils';
+
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
 
   // TODO: Implement page page that provides data interface?
@@ -134,11 +136,45 @@
       },
       postsContent() {
         const content = this.$page.posts.edges.map(edge => {
-          return edge.node;
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          return content;
         });
 
         return content;
       },
+      featuredContent() {
+        const content = this.$page.featuredPosts.belongsTo.edges.map(edge => {
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          return content;
+        });
+
+        return content;
+      },
+      attractionsContent() {
+        const content = this.$page.attractionsPosts.belongsTo.edges.map(edge => {
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          return content;
+        });
+
+        return content;
+      },
+      dealsContent() {
+        const content = this.$page.dealsPosts.belongsTo.edges.map(edge => {
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          return content;
+        });
+
+        return content;
+      }
+    },
+    methods: {
+      /*featuredContent() {
+        const content = this.$page.posts.edges.map(edge => {
+          return edge.node;
+        });
+
+        return content;
+      }*/
     }
   };
 </script>
@@ -156,6 +192,54 @@
           content
           path
           slug
+        }
+      }
+    }
+    featuredPosts: tag(id: "featured") {
+      belongsTo {
+        edges {
+          node {
+            ...on BlogPost {
+              id
+              path
+              title
+              date
+              image
+              content
+            }
+          }
+        }
+      }
+    }
+    attractionsPosts: tag(id: "attractions") {
+      belongsTo {
+        edges {
+          node {
+            ...on BlogPost {
+              id
+              path
+              title
+              date
+              image
+              content
+            }
+          }
+        }
+      }
+    }
+    dealsPosts: tag(id: "deals") {
+      belongsTo {
+        edges {
+          node {
+            ...on BlogPost {
+              id
+              path
+              title
+              date
+              image
+              content
+            }
+          }
         }
       }
     }
@@ -184,7 +268,7 @@
       margin-left: -15px;
       margin-right: -15px;
       height: auto;
-      height: 460px;
+      height: 580px;
     }
 
     .hero-content {

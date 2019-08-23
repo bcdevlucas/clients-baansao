@@ -1,10 +1,11 @@
 ---
-title: The Samui Monkey Show
+title: Open Water Scuba Course
 date: 2018-11-10 20:08:08 -0700
-slug: sample-blog-post-03
-image: /images/baby-monkey-coconut-monkey-735023.jpg
-caption: Check Out the Samui Monkey Show
+slug: scuba-course-discount
+image: /images/scuba-diving.jpg
+caption: Open Water Scuba Course
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac sapien ultrices, lobortis risus vitae.
+tags: ["deals", "scuba"]
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada vulputate nisl eu tincidunt. Aliquam iaculis, felis et rutrum volutpat, lacus odio placerat orci, non fermentum quam urna eget libero. Curabitur ac diam ut elit commodo placerat sit amet vel ligula. In aliquet ultricies augue. Pellentesque leo ipsum, tincidunt nec vehicula non, luctus sit amet nibh. In diam nisl, tincidunt pulvinar finibus vitae, efficitur vel lorem. Morbi ac blandit risus, vitae tristique elit. Sed condimentum facilisis magna. Nulla molestie eget ipsum non gravida. Donec in ex in orci dapibus volutpat. Morbi ultrices sed mi a rutrum.
 

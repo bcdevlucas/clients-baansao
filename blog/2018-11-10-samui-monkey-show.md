@@ -1,10 +1,11 @@
 ---
-title: What to know before driving
+title: The Samui Monkey Show
 date: 2018-11-10 20:08:08 -0700
-slug: sample-blog-post-02
-image: /images/motorbikes-01.jpg
-caption: What to know before driving
+slug: samui-monkey-show
+image: /images/baby-monkey-coconut-monkey-735023.jpg
+caption: Check Out the Samui Monkey Show
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac sapien ultrices, lobortis risus vitae.
+tags: ["attractions", "animals"]
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada vulputate nisl eu tincidunt. Aliquam iaculis, felis et rutrum volutpat, lacus odio placerat orci, non fermentum quam urna eget libero. Curabitur ac diam ut elit commodo placerat sit amet vel ligula. In aliquet ultricies augue. Pellentesque leo ipsum, tincidunt nec vehicula non, luctus sit amet nibh. In diam nisl, tincidunt pulvinar finibus vitae, efficitur vel lorem. Morbi ac blandit risus, vitae tristique elit. Sed condimentum facilisis magna. Nulla molestie eget ipsum non gravida. Donec in ex in orci dapibus volutpat. Morbi ultrices sed mi a rutrum.
 

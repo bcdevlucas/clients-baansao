@@ -1,10 +1,11 @@
 ---
-title: Top 10 Local Restaurants
+title: Win a romantic seafood dinner
 date: 2018-11-10 20:08:08 -0700
-slug: sample-blog-post-04
-image: /images/thai-seafood-basket.jpg
-caption: Top 10 Local Restaurants
+slug: romantic-dinner-for-two-sweepstakes
+image: /images/romantic-dinner.jpg
+caption: Win a Romantic Seafood Dinner for Two
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac sapien ultrices, lobortis risus vitae.
+tags: ["contests", "deals", "dining"]
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada vulputate nisl eu tincidunt. Aliquam iaculis, felis et rutrum volutpat, lacus odio placerat orci, non fermentum quam urna eget libero. Curabitur ac diam ut elit commodo placerat sit amet vel ligula. In aliquet ultricies augue. Pellentesque leo ipsum, tincidunt nec vehicula non, luctus sit amet nibh. In diam nisl, tincidunt pulvinar finibus vitae, efficitur vel lorem. Morbi ac blandit risus, vitae tristique elit. Sed condimentum facilisis magna. Nulla molestie eget ipsum non gravida. Donec in ex in orci dapibus volutpat. Morbi ultrices sed mi a rutrum.
 
