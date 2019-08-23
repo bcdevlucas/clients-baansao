@@ -305,7 +305,7 @@
     }
 
     h3 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: bold;
     }
 
@@ -315,6 +315,10 @@
 
     p.text-muted {
       color: #444 !important;
+    }
+
+    p {
+      font-size: 1.15rem;
     }
 
     .column-wrapper {
