@@ -47,7 +47,7 @@
                   <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">What's Happening!</h3>
 
                   <content-block-layout
-                    v-for="post in postsContent.slice(0, 3)"
+                    v-for="post in eventsContent"
                     :key="post.id"
                     className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
                     :title="post.title"
@@ -150,6 +150,14 @@
 
         return content;
       },
+      eventsContent() {
+        const content = this.$page.eventsPosts.belongsTo.edges.map(edge => {
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          return content;
+        });
+
+        return content;
+      },
       attractionsContent() {
         const content = this.$page.attractionsPosts.belongsTo.edges.map(edge => {
           const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
@@ -196,6 +204,22 @@
       }
     }
     featuredPosts: tag(id: "featured") {
+      belongsTo {
+        edges {
+          node {
+            ...on BlogPost {
+              id
+              path
+              title
+              date
+              image
+              content
+            }
+          }
+        }
+      }
+    }
+    eventsPosts: tag(id: "events") {
       belongsTo {
         edges {
           node {
@@ -303,7 +327,7 @@
     position: fixed;
     right: 0;
     z-index: 100;
-    //border-left: 2px solid darkgoldenrod;
+    //border-left: 1px solid #909090;
     height: 100%;
 
     .blog-post {
