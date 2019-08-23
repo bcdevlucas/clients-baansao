@@ -25,7 +25,7 @@
             <div class="site-section mt-4" v-if="postsContent.length > 0">
               <div class="container">
                 <div class="row" v-if="postsContent.length > 1">
-                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Featured Articles</h3>
+                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Features of the Month</h3>
 
                   <content-block-layout
                     v-for="post in postsContent.slice(0, 2)"
@@ -44,7 +44,7 @@
             <div class="site-section" v-if="postsContent.length > 0">
               <div class="container">
                 <div class="row" v-if="postsContent.length > 1">
-                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Weekly Specials</h3>
+                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">What's Happening!</h3>
 
                   <content-block-layout
                     v-for="post in postsContent.slice(0, 3)"
@@ -63,7 +63,7 @@
             <div class="site-section" v-if="$page.posts.edges.length > 0">
               <div class="container-fluid">
                 <div class="row" v-if="postsContent.length > 1">
-                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Recent Articles</h3>
+                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Popular Attractions</h3>
 
                   <content-block-layout
                     v-for="post in postsContent.slice(1, postsContent.length)"
@@ -81,7 +81,7 @@
             </div>
           </div>
           <div class="col-md-3 right-pane">
-            <h3 class="category-title text-center mt-5 mb-3" style="display: block; width: 100%;">Last Minute Specials</h3>
+            <h3 class="category-title text-center mt-5 mb-3" style="display: block; width: 100%;">Great Local Deals</h3>
             <content-block-layout
               v-for="post in postsContent"
               :key="post.id"
@@ -197,6 +197,7 @@
 
     h3 {
       font-size: 1.5rem;
+      font-weight: bold;
     }
 
     .category-title {
