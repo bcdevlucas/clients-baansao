@@ -61,7 +61,7 @@
               </div>
             </div>
             <div class="site-section" v-if="$page.posts.edges.length > 0">
-              <div class="container-fluid">
+              <div class="container">
                 <div class="row" v-if="postsContent.length > 1">
                   <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">~ Popular Attractions ~</h3>
 
