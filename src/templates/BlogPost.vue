@@ -35,13 +35,13 @@
               </div>
             </div>
 
-            <div class="site-section" v-if="postsContent.length > 0">
+            <div class="site-section" v-if="eventsContent.length > 0">
               <div class="container">
-                <div class="row" v-if="postsContent.length > 1">
+                <div class="row">
                   <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">What's Happening!</h3>
 
                   <content-block-layout
-                    v-for="post in postsContent.slice(0, 3)"
+                    v-for="post in eventsContent"
                     :key="post.id"
                     className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
                     :title="post.title"
@@ -54,13 +54,13 @@
                 </div>
               </div>
             </div>
-            <div class="site-section" v-if="$page.posts.edges.length > 0">
+            <div class="site-section" v-if="attractionsContent.length > 1">
               <div class="container-fluid">
-                <div class="row" v-if="postsContent.length > 1">
+                <div class="row">
                   <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Popular Attractions</h3>
 
                   <content-block-layout
-                    v-for="post in postsContent.slice(1, postsContent.length)"
+                    v-for="post in attractionsContent"
                     :key="post.id"
                     className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
                     :title="post.title"
@@ -77,7 +77,7 @@
           <div class="col-md-3 right-pane">
             <h3 class="category-title text-center mt-5 mb-3" style="display: block; width: 100%;">Great Local Deals</h3>
             <content-block-layout
-              v-for="post in postsContent"
+              v-for="post in dealsContent"
               :key="post.id"
               className="col-xs-12 blog-post"
               :title="post.title"
@@ -94,6 +94,8 @@
 </template>
 
 <script>
+  import * as StringUtils from '~/core/utils/StringUtils';
+
   import SvgBlurSectionBlockLayout from '~/components/layouts/SvgBlurSectionBlockLayout.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
 
@@ -132,11 +134,44 @@
       },
       postsContent() {
         const content = this.$page.posts.edges.map(edge => {
-          return edge.node;
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          return content;
         });
 
         return content;
       },
+      featuredContent() {
+        const content = this.$page.featuredPosts.belongsTo.edges.map(edge => {
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          return content;
+        });
+
+        return content;
+      },
+      eventsContent() {
+        const content = this.$page.eventsPosts.belongsTo.edges.map(edge => {
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          return content;
+        });
+
+        return content;
+      },
+      attractionsContent() {
+        const content = this.$page.attractionsPosts.belongsTo.edges.map(edge => {
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          return content;
+        });
+
+        return content;
+      },
+      dealsContent() {
+        const content = this.$page.dealsPosts.belongsTo.edges.map(edge => {
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          return content;
+        });
+
+        return content;
+      }
     }
   };
 </script>
@@ -159,6 +194,70 @@
           content
           path
           slug
+        }
+      }
+    }
+    featuredPosts: tag(id: "featured") {
+      belongsTo {
+        edges {
+          node {
+            ...on BlogPost {
+              id
+              path
+              title
+              date
+              image
+              content
+            }
+          }
+        }
+      }
+    }
+    eventsPosts: tag(id: "events") {
+      belongsTo {
+        edges {
+          node {
+            ...on BlogPost {
+              id
+              path
+              title
+              date
+              image
+              content
+            }
+          }
+        }
+      }
+    }
+    attractionsPosts: tag(id: "attractions") {
+      belongsTo {
+        edges {
+          node {
+            ...on BlogPost {
+              id
+              path
+              title
+              date
+              image
+              content
+            }
+          }
+        }
+      }
+    }
+    dealsPosts: tag(id: "deals") {
+      belongsTo {
+        edges {
+          node {
+            ...on BlogPost {
+              id
+              path
+              title
+              date
+              image
+              content
+            }
+          }
         }
       }
     }

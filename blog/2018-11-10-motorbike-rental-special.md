@@ -1,9 +1,9 @@
 ---
-title: 20% off Motorbike Rentals for 2
+title: 20% off Motorbike Rentals for Two
 date: 2018-11-10 20:08:08 -0700
 slug: motorbikes-for-two-discount
 image: /images/motorbikes-02.jpg
-caption: 20% off Motorbike Rentals for 2
+caption: 20% off Motorbike Rentals for Two
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac sapien ultrices, lobortis risus vitae.
 tags: ["deals", "vehicle-rental"]
 ---
