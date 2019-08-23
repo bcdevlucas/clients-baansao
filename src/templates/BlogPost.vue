@@ -82,6 +82,7 @@
               className="col-xs-12 blog-post"
               :title="post.title"
               :description="post.summary"
+              :link="post.path"
               :image="post.image"
               :imageAlt="post.caption"
             />
