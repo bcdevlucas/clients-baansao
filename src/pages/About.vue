@@ -46,6 +46,8 @@
           </div>
         </div>
 
+        <span class="flower-separator-white"></span>
+
         <div v-if="getSection(1) !== null" class="site-section about-section">
           <div class="container">
             <div class="row align-items-center justify-content-center mb-5 pb-5">
@@ -61,46 +63,6 @@
                   class="img-fluid circle float-right"
                 />
               </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="site-section" v-if="propertiesContent.length > 0">
-          <div class="container px-4">
-            <div class="row">
-              <content-block-layout
-                v-for="property in propertiesContent.slice(0, propertiesContent.length / 2)"
-                v-if="typeof property.summary === 'string'"
-                :key="property.id"
-                className="col-lg-6 col-md-6 mb-6 project-entry"
-                :title="property.title"
-                :description="(property.summary) ? property.summary : ''"
-                :link="`/property/${property.id}`"
-                linkText="Learn More"
-                :cloudinaryImage="property.imageId"
-                cloudName="baansaowanee"
-                :cloudFolder="property.galleryFolder"
-                :imageAlt="property.caption"
-              />
-
-              <span class="flower-separator-white"></span>
-            </div>
-            <div class="row mt-6 mb-6">
-              <content-block-layout
-                v-for="property in propertiesContent.slice(propertiesContent.length / 2, propertiesContent.length)"
-                v-if="typeof property.summary === 'string'"
-                :key="property.id"
-                className="col-md-4 col-lg-6 project-entry"
-                :title="property.title"
-                :description="(property.summary) ? property.summary : ''"
-                :link="`/property/${property.id}`"
-                linkText="Learn More"
-                :cloudinaryImage="property.imageId"
-                cloudName="baansaowanee"
-                :cloudFolder="property.galleryFolder"
-                :imageAlt="property.caption"
-              />
             </div>
           </div>
         </div>
