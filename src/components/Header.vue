@@ -122,6 +122,7 @@
     --ccream : #FAFBFC;
     --cgrey_green: #435466;
     --clightgrey : #DAD9D7;
+    --cmidnightblue : #191970;
 
     --body_height_8: calc((100vh - 113px)/8);
     --body_height_4: calc((100vh - 113px)/4);
@@ -198,9 +199,9 @@
     user-select: none;
     margin-left: 20px;
     margin-right: 20px;
-    i {width: 12px; height: 12px; background-color: var(--cgrey);}
+    i {width: 12px; height: 12px; background-color: var(--cmidnightblue);}
     a {
-        color: var(--cgrey);
+        color: var(--cmidnightblue);
         cursor: pointer;
         display: block;
         text-transform: uppercase;
@@ -492,17 +493,14 @@
 
   .logo {
     display: inline-flex;
-
-    text-transform: uppercase;
+    text-transform: none;
     white-space: nowrap;
-
     justify-content: start;
     align-items: center;
-
-    color: var(--cgrey);
-
-    font-size: 1.1rem;
+    color: midnightblue;
+    font-size: 1.8rem;
     font-weight: bold;
+    font-family: "Calligraffitti" !important;
 
     span {
       margin-right: 10px;
@@ -519,6 +517,7 @@
 
       position: relative;
       left: -10px;
+      top: -5px;
     }
 
     @keyframes navlogospin {
@@ -548,8 +547,7 @@
   }
 
   a[data-selected] {
-    font-weight: bold !important;
-    text-shadow: 0px 0px 2px darkgoldenrod;
+    font-weight: 900 !important;
   }
 
   .header-email {

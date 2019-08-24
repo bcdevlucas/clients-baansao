@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Tangerine|Calligraffitti&display=swap');
+
 body {
   font-size: 1.3rem;
   color: black;
 }
 
+* {
+  font-family: "Cormorant Garamond";
+}
+h1, h2, h3 {
+  font-family: "Calligraffitti" !important;
+}
 
 .hero-description p {
   font-size: 1.5rem;
@@ -24,6 +32,30 @@ h3 {
 p {
   font-size: 1.3rem;
   color: black;
+}
+
+a, a:hover {
+  color: midnightblue;
+}
+
+.post-entry h3 a,
+.project-entry h3 a {
+  color: midnightblue;
+}
+
+.blog-posts {
+  a, a:hover {
+    color: #222;
+  }
+
+  h3 a {
+    color: midnightblue;
+  }
+}
+
+.blog-posts .category-title {
+  font-size: 2rem;
+  color: midnightblue;
 }
 
 .site-section h2 {
@@ -49,7 +81,7 @@ button.btn {
 }
 
 .page-wrap {
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.95);
   z-index: 1;
 }
 
@@ -143,6 +175,11 @@ of the next section. */
   padding-left: 0 !important;
 }
 
-.content-block-image img {
-  border: 1px solid darkgoldenrod;
+.content-block-image {
+  overflow: visible;
+  img {
+    box-shadow: 1px 1px 2px rgba(20, 20, 20, 1);
+  }
+
 }
+

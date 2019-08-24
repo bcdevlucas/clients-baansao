@@ -136,7 +136,7 @@
       },
       postsContent() {
         const content = this.$page.posts.edges.map(edge => {
-          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.summary, 90)}...` });
           return content;
         });
 
@@ -144,7 +144,7 @@
       },
       featuredContent() {
         const content = this.$page.featuredPosts.belongsTo.edges.map(edge => {
-          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.summary, 90)}...` });
           return content;
         });
 
@@ -152,7 +152,7 @@
       },
       eventsContent() {
         const content = this.$page.eventsPosts.belongsTo.edges.map(edge => {
-          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.summary, 90)}...` });
           return content;
         });
 
@@ -160,7 +160,7 @@
       },
       attractionsContent() {
         const content = this.$page.attractionsPosts.belongsTo.edges.map(edge => {
-          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.summary, 90)}...` });
           return content;
         });
 
@@ -168,7 +168,7 @@
       },
       dealsContent() {
         const content = this.$page.dealsPosts.belongsTo.edges.map(edge => {
-          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.content, 120)}...` });
+          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.summary, 90)}...` });
           return content;
         });
 
@@ -208,12 +208,14 @@
         edges {
           node {
             ...on BlogPost {
-              id
-              path
               title
               date
               image
+              caption
+              summary
               content
+              path
+              slug
             }
           }
         }
@@ -224,12 +226,14 @@
         edges {
           node {
             ...on BlogPost {
-              id
-              path
               title
               date
               image
+              caption
+              summary
               content
+              path
+              slug
             }
           }
         }
@@ -240,12 +244,14 @@
         edges {
           node {
             ...on BlogPost {
-              id
-              path
               title
               date
               image
+              caption
+              summary
               content
+              path
+              slug
             }
           }
         }
@@ -256,12 +262,14 @@
         edges {
           node {
             ...on BlogPost {
-              id
-              path
               title
               date
               image
+              caption
+              summary
               content
+              path
+              slug
             }
           }
         }
@@ -271,9 +279,6 @@
 </page-query>
 
 <style lang="scss">
-  a, a:hover {
-    color: #222;
-  }
   .full-width .content-block-image {
     float: left;
     width: 33%;
@@ -282,7 +287,6 @@
 
   .blog-posts .content-block-image {
     height: 220px;
-    overflow: hidden;
   }
 
   .blog-posts {
@@ -331,7 +335,7 @@
     position: fixed;
     right: 0;
     z-index: 100;
-    //border-left: 1px solid #909090;
+    border-left: 1px solid lightgrey;
     height: 100%;
 
     .blog-post {
