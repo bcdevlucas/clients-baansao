@@ -3,7 +3,7 @@
     <div class="content-wrapper blog-posts blog-post-page">
       <div class="container-fluid">
         <div class="row column-wrapper">
-          <div class="col-md-8">
+          <div class="col-xl-8">
             <div class="hero-wrapper">
               <div
                 v-if="getHeroById('page-hero') !== null"
@@ -79,7 +79,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 right-pane">
+          <div class="col-xl-4 right-pane">
             <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">Great Local Deals</h3>
             <content-block-layout
               v-for="post in dealsContent"

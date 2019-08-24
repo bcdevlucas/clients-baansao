@@ -3,7 +3,7 @@
     <div class="content-wrapper blog-posts">
       <div class="container-fluid">
         <div class="row column-wrapper">
-          <div class="col-lg-8">
+          <div class="col-xl-8">
             <div class="hero-wrapper">
               <div
                 v-if="getHeroById('page-hero') !== null"
@@ -29,7 +29,7 @@
                     v-for="property in propertiesContent.slice(0, propertiesContent.length / 2)"
                     v-if="typeof property.summary === 'string'"
                     :key="property.id"
-                    className="col-lg-6 col-md-6 mb-6 project-entry"
+                    className="col-lg-6 project-entry"
                     :title="property.title"
                     :description="(property.summary) ? property.summary : ''"
                     :link="`/property/${property.id}`"
@@ -47,7 +47,7 @@
                     v-for="property in propertiesContent.slice(propertiesContent.length / 2, propertiesContent.length)"
                     v-if="typeof property.summary === 'string'"
                     :key="property.id"
-                    className="col-md-4 col-lg-6 project-entry"
+                    className="col-lg-6 project-entry"
                     :title="property.title"
                     :description="(property.summary) ? property.summary : ''"
                     :link="`/property/${property.id}`"
@@ -61,7 +61,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 right-pane">
+          <div class="col-xl-4 right-pane">
             <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">Great Local Deals</h3>
             <content-block-layout
               v-for="post in dealsContent"
