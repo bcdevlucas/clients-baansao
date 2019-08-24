@@ -225,7 +225,7 @@
 
   import ThumbnailGallery from '~/core/components/ThumbnailGallery.vue';
   //import GoogleMapBackground from '~/core/components/GoogleMapBackground.vue';
-  import GoogleMapCutout from '~/core/components/GoogleMapCutout.vue';
+  //import GoogleMapCutout from '~/core/components/GoogleMapCutout.vue'; // TODO: Gotta fix this, SSR blows up
   import Amenities from '~/components/Amenities.vue';
   import Cancellations from '~/components/Cancellations.vue';
   import Rules from '~/components/Rules.vue';
@@ -246,7 +246,7 @@
       TestimonialBlockLayout,
       ThumbnailGallery,
       //GoogleMapBackground,
-      GoogleMapCutout,
+      //GoogleMapCutout,
       Amenities,
       Cancellations,
       Rules

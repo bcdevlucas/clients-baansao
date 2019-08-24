@@ -71,6 +71,13 @@ button.btn {
   font-size: 1.3rem !important;
 }
 
+.blog-posts {
+  a.btn,
+  button.btn {
+    font-size: 1.15rem !important;
+  }
+}
+
 .site-blocks-cover {
   background-attachment: fixed;
 }
@@ -170,9 +177,9 @@ of the next section. */
   justify-content: center;
 }
 
-.btn i {
+/*.btn i {
   margin-right: 1rem;
-}
+}*/
 
 .btn-art-class {
   color: black;
