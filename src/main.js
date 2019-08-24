@@ -46,10 +46,10 @@ export default function (Vue, { router, head, isClient }) {
 
   if (typeof window !== 'undefined') {
     //const VueWaypoint = require('vue-waypoint');
-    //const VueGoogleMaps = require('vue2-google-maps');
+    const VueGoogleMaps = require('vue2-google-maps');
 
     //Vue.use(VueWaypoint.default);
-    /*Vue.use(VueGoogleMaps, {
+    Vue.use(VueGoogleMaps, {
       load: {
         key: 'AIzaSyBSDlMWErr_gwT5d5wze8oK9muKPuHLtKQ',
         libraries: 'places', // This is required if you use the Autocomplete plugin
@@ -71,8 +71,8 @@ export default function (Vue, { router, head, isClient }) {
       //// import {GmapMarker} from 'vue2-google-maps/src/components/marker'
       //// Vue.component('GmapMarker', GmapMarker)
       //// then disable the following:
-      // installComponents: true,
-    });*/
+      installComponents: true
+    });
   }
 
   Vue.component('Layout', DefaultLayout);

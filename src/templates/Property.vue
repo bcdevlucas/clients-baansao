@@ -142,7 +142,7 @@
           <div class="col-lg-3 mb-5 mb-lg-0">
             <div class="container">
               <h3>Location</h3>
-              <!--<google-map-cutout class="mt-4" />-->
+              <google-map-cutout class="mt-4" />
               <h3 class="mt-4">Address</h3>
               <p class="mt-4">
                 <span>{{ pageData.address.line1 }}</span><br />
@@ -225,7 +225,7 @@
 
   import ThumbnailGallery from '~/core/components/ThumbnailGallery.vue';
   //import GoogleMapBackground from '~/core/components/GoogleMapBackground.vue';
-  //import GoogleMapCutout from '~/core/components/GoogleMapCutout.vue'; // TODO: Gotta fix this, SSR blows up
+  import GoogleMapCutout from '~/core/components/GoogleMapCutout.vue'; // TODO: Gotta fix this, SSR blows up
   import Amenities from '~/components/Amenities.vue';
   import Cancellations from '~/components/Cancellations.vue';
   import Rules from '~/components/Rules.vue';
@@ -246,7 +246,7 @@
       TestimonialBlockLayout,
       ThumbnailGallery,
       //GoogleMapBackground,
-      //GoogleMapCutout,
+      GoogleMapCutout,
       Amenities,
       Cancellations,
       Rules
