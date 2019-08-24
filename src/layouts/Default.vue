@@ -156,13 +156,13 @@
       </footer>-->
     </div>
 
-    <div class="orchard-view-scene">
+    <!--<div class="orchard-view-scene">
       <div class="scene-outer">
         <img src="/images/orchard-view-3br/20-no-sky.png" style="object-fit: contain; max-width: 100%; position: absolute; z-index: 1; top: 10px;" />
         <div class="scene-inner">
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
