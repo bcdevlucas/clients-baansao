@@ -2,6 +2,7 @@
   <div class="gallery">
     <div class="img primary-image" v-if="primaryImage" :data-ref-id="primaryImage" @click="triggerGallery">
       <cld-image
+        :key="Math.random()"
         ref="thumbs_primaryImage"
         :cloudName="cloudName"
         dpr="auto"
@@ -22,6 +23,7 @@
           <div class="thumbnail-wrapper" v-for="image in getGalleryImages(...getGalleryRowSlice(row), true)">
             <div class="thumbnail-spacer" :data-ref-id="`${image.id}`" @click="triggerGallery">
               <cld-image
+                :key="Math.random()"
                 :ref="`thumbs_${image.id}`"
                 :cloudName="cloudName"
                 dpr="auto"
@@ -47,6 +49,7 @@
           <div class="thumbnail-wrapper" v-for="image in getGalleryImages(...getGalleryRowSlice(row), false)">
             <div class="thumbnail-spacer" :data-ref-id="`${image.id}`" @click="triggerGallery">
               <cld-image
+                :key="Math.random()"
                 :ref="`thumbs_${image.id}`"
                 :cloudName="cloudName"
                 dpr="auto"
