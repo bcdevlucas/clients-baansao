@@ -84,7 +84,7 @@
             </div>
           </div>
           <div class="col-md-4 right-pane">
-            <h3 class="category-title text-center mt-5 mb-3" style="display: block; width: 100%;">~ Great Local Deals ~</h3>
+            <h3 class="category-title text-center mt-5 mb-5git st" style="display: block; width: 100%;">~ Great Local Deals ~</h3>
             <content-block-layout
               v-for="post in dealsContent"
               :key="post.id"
@@ -145,8 +145,8 @@
           let date = moment(edge.node.date);
 
           const content = Object.assign({}, edge.node, {
-            summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
-            content: `${StringUtils.shortenText(edge.node.content, 280)}...`,
+            summary: `${StringUtils.shortenText(edge.node.summary, 130)}...`,
+            content: `${StringUtils.shortenText(edge.node.content, 320)}...`,
             date: date.format('MMM Do YYYY')
           });
           return content;
@@ -159,8 +159,8 @@
           let date = moment(edge.node.date);
 
           const content = Object.assign({}, edge.node, {
-            summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
-            content: `${StringUtils.shortenText(edge.node.content, 280)}...`,
+            summary: `${StringUtils.shortenText(edge.node.summary, 130)}...`,
+            content: `${StringUtils.shortenText(edge.node.content, 320)}...`,
             date: date.format('MMM Do YYYY')
           });
           return content;
@@ -173,8 +173,8 @@
           let date = moment(edge.node.date);
 
           const content = Object.assign({}, edge.node, {
-            summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
-            content: `${StringUtils.shortenText(edge.node.content, 280)}...`,
+            summary: `${StringUtils.shortenText(edge.node.summary, 130)}...`,
+            content: `${StringUtils.shortenText(edge.node.content, 320)}...`,
             date: date.format('MMM Do YYYY')
           });
           return content;
@@ -187,8 +187,8 @@
           let date = moment(edge.node.date);
 
           const content = Object.assign({}, edge.node, {
-            summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
-            content: `${StringUtils.shortenText(edge.node.content, 280)}...`,
+            summary: `${StringUtils.shortenText(edge.node.summary, 130)}...`,
+            content: `${StringUtils.shortenText(edge.node.content, 320)}...`,
             date: date.format('MMM Do YYYY')
           });
           return content;
@@ -201,7 +201,7 @@
           let date = moment(edge.node.date);
 
           const content = Object.assign({}, edge.node, {
-            summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
+            summary: `${StringUtils.shortenText(edge.node.summary, 130)}...`,
             content: `${StringUtils.shortenText(edge.node.content, 280)}...`,
             date: date.format('MMM Do YYYY')
           });
