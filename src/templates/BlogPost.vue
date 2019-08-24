@@ -31,7 +31,7 @@
                       :description="$page.post.content"
                       :image="$page.post.image"
                       :imageAlt="$page.post.caption"
-                      :datePublished="$page.post.date"
+                      :datePublished="datePublished"
                     />
                   </div>
                 </div>
@@ -131,10 +131,13 @@
         // TODO: Require this data format for pages
         pageData: ExploreData,
         pageTitle: ExploreData.title,
-        pageSubTitle: ExploreData.subtitle
+        pageSubTitle: ExploreData.subtitle,
       }
     },
     computed: {
+      datePublished() {
+        return (this.$page && this.$page.post) ? moment(this.$page.post.date).format('MMM Do YYYY') : '';
+      },
       pageSectionContent() {
         console.log('dumping about data');
         console.log(ExploreData);
