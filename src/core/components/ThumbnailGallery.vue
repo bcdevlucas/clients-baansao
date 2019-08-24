@@ -177,7 +177,8 @@
             .catch((err) => {
               console.log('Error getting large image urls');
               console.log(err);
-            });
+            })
+            .finally(() => Promise.resolve());
         };
 
         getData().then(() => {
@@ -192,7 +193,8 @@
           .catch((err) => {
               console.log('Error getting large image urls');
               console.log(err);
-            });
+            })
+          .finally(() => Promise.resolve());
       },
       triggerGallery(e) {
         const refId = e.currentTarget.attributes['data-ref-id'].value;
@@ -208,10 +210,9 @@
     },
     mounted() {
       this.getLargeImageUrls();
-
       setTimeout(() => {
         this.$forceUpdate();
-      }, 666);
+      }, 1500);
     }
   }
 </script>

@@ -19,7 +19,7 @@
           <div class="col-lg-3 mb-5 mb-lg-0">
             <div class="container">
               <thumbnail-gallery
-                v-if="pageData"
+                v-if="pageData && pageData.gallery"
                 :primaryImage="pageData.imageId"
                 :gallery="pageData.gallery"
                 cloudName="baansaowanee"
