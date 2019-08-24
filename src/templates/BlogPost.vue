@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="content-wrapper blog-posts">
+    <div class="content-wrapper blog-posts blog-post-page">
       <div class="container-fluid">
         <div class="row column-wrapper">
           <div class="col-md-9">
@@ -25,11 +25,14 @@
             <div class="site-section">
               <div class="container">
                 <div class="row align-items-center mb-5 pb-5">
-                  <div class="col-lg-5 img-years mb-5 mb-lg-0">
-                  </div>
-                  <div class="col-lg-12 mt-4 ml-auto text-left">
-                    <span class="sub-title"></span>
-                    <div class="mb-5" v-html="$page.post.content"></div>
+                  <div class="row">
+                    <content-block-layout
+                      className="col-md-12 mb-3 project-entry blog-post blog-post-main full-width"
+                      :description="$page.post.content"
+                      :image="$page.post.image"
+                      :imageAlt="$page.post.caption"
+                      :datePublished="$page.post.date"
+                    />
                   </div>
                 </div>
               </div>
@@ -95,7 +98,7 @@
 
 <script>
   import moment from 'moment';
-  
+
   import * as StringUtils from '~/core/utils/StringUtils';
 
   import SvgBlurSectionBlockLayout from '~/components/layouts/SvgBlurSectionBlockLayout.vue';
@@ -419,6 +422,15 @@
 
     > [class*=col-]:last-child {
       //padding-right: 0;
+    }
+  }
+
+  .blog-post-page {
+    .blog-post-main {
+      .content-block-inner {
+        border: none;
+        box-shadow: none;
+      }
     }
   }
 </style>
