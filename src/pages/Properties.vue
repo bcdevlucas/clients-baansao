@@ -3,7 +3,7 @@
     <div class="content-wrapper blog-posts">
       <div class="container-fluid">
         <div class="row column-wrapper">
-          <div class="col-md-8">
+          <div class="col-lg-8">
             <div class="hero-wrapper">
               <div
                 v-if="getHeroById('page-hero') !== null"
@@ -61,7 +61,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 right-pane">
+          <div class="col-lg-4 right-pane">
             <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">Great Local Deals</h3>
             <content-block-layout
               v-for="post in dealsContent"
@@ -387,6 +387,13 @@
 
     > [class*=col-]:last-child {
       //padding-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 40em) {
+    .right-pane {
+      background-color: rgba(245, 245, 245, 1);
+      position: static;
     }
   }
 </style>
