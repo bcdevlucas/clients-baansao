@@ -53,6 +53,7 @@
                     linkText="Read Article"
                     :image="post.image"
                     :imageAlt="post.caption"
+                    :datePublished="post.date"
                   />
                 </div>
               </div>
@@ -72,6 +73,7 @@
                     linkText="Read Article"
                     :image="post.image"
                     :imageAlt="post.caption"
+                    :datePublished="post.date"
                   />
                 </div>
               </div>
@@ -88,6 +90,7 @@
               :link="post.path"
               :image="post.image"
               :imageAlt="post.caption"
+              :datePublished="post.date"
             />
           </div>
         </div>
@@ -104,7 +107,7 @@
   import SvgBlurSectionBlockLayout from '~/components/layouts/SvgBlurSectionBlockLayout.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
 
-  // TODO: Implement page page that provides data interface?
+  import PostMixin from '~/core/mixins/PostMixin';
   import HeroMixin from '~/mixins/HeroMixin';
   import SectionMixin from '~/mixins/SectionMixin';
   //import TestimonialMixin from '~/core/mixins/TestimonialMixin';
@@ -122,7 +125,7 @@
       SvgBlurSectionBlockLayout,
       ContentBlockLayout
     },
-    mixins: [HeroMixin, SectionMixin],
+    mixins: [PostMixin, HeroMixin, SectionMixin],
     data() {
       return {
         // TODO: Require this data format for pages
@@ -136,76 +139,6 @@
         console.log('dumping about data');
         console.log(ExploreData);
         return (ExploreData.hasOwnProperty('sections')) ? ExploreData.sections : [];
-      },
-      postsContent() {
-        const content = this.$page.posts.edges.map(edge => {
-          let date = moment(edge.node.date);
-
-          const content = Object.assign({}, edge.node, {
-            summary: `${StringUtils.shortenText(edge.node.summary, 130)}...`,
-            content: `${StringUtils.shortenText(edge.node.content, 320)}...`,
-            date: date.format('MMM Do YYYY')
-          });
-          return content;
-        });
-
-        return content;
-      },
-      featuredContent() {
-        const content = this.$page.featuredPosts.belongsTo.edges.map(edge => {
-          let date = moment(edge.node.date);
-
-          const content = Object.assign({}, edge.node, {
-            summary: `${StringUtils.shortenText(edge.node.summary, 130)}...`,
-            content: `${StringUtils.shortenText(edge.node.content, 320)}...`,
-            date: date.format('MMM Do YYYY')
-          });
-          return content;
-        });
-
-        return content;
-      },
-      eventsContent() {
-        const content = this.$page.eventsPosts.belongsTo.edges.map(edge => {
-          let date = moment(edge.node.date);
-
-          const content = Object.assign({}, edge.node, {
-            summary: `${StringUtils.shortenText(edge.node.summary, 130)}...`,
-            content: `${StringUtils.shortenText(edge.node.content, 320)}...`,
-            date: date.format('MMM Do YYYY')
-          });
-          return content;
-        });
-
-        return content;
-      },
-      attractionsContent() {
-        const content = this.$page.attractionsPosts.belongsTo.edges.map(edge => {
-          let date = moment(edge.node.date);
-
-          const content = Object.assign({}, edge.node, {
-            summary: `${StringUtils.shortenText(edge.node.summary, 130)}...`,
-            content: `${StringUtils.shortenText(edge.node.content, 320)}...`,
-            date: date.format('MMM Do YYYY')
-          });
-          return content;
-        });
-
-        return content;
-      },
-      dealsContent() {
-        const content = this.$page.dealsPosts.belongsTo.edges.map(edge => {
-          let date = moment(edge.node.date);
-
-          const content = Object.assign({}, edge.node, {
-            summary: `${StringUtils.shortenText(edge.node.summary, 130)}...`,
-            content: `${StringUtils.shortenText(edge.node.content, 280)}...`,
-            date: date.format('MMM Do YYYY')
-          });
-          return content;
-        });
-
-        return content;
       }
     }
   };
