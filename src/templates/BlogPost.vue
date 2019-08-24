@@ -374,5 +374,12 @@
       }
     }
   }
+
+  @media screen and (max-width: 84em) {
+    .right-pane {
+      background-color: rgba(245, 245, 245, 1);
+      position: static;
+    }
+  }
 </style>
 
