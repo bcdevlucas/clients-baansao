@@ -39,7 +39,21 @@ module.exports = {
       }
     }
   ],
-  chainWebpack: config => {
+  chainWebpack: (config, { isServer }) => {
     config.mode('development');
+
+    config.module
+			.rule('scss')
+				.test(/\.scss$/)
+				.oneOf('normal')
+					.use('sass')
+					.loader('sass-loader')
+					.end()
+				.end();
+
+    // TODO: Document this - https://github.com/gridsome/gridsome/issues/384
+    if (isServer) {
+      config.externals([/^(vue|vue-router|vue-meta)$/]);
+    }
   }
 };

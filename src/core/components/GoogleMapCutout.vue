@@ -12,27 +12,29 @@
       >
       </GmapMap>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="420px" height="460px" class="gmap-cutout-svg">
+    <!--<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="420px" height="460px" class="gmap-cutout-svg">
       <clipPath id="gmap-cutout-svg-mask">
-        <!--<circle cx="210" cy="210" r="210" />-->
         <rect width="420" height="460" />
       </clipPath>
-      <!--<circle cx="210" cy="210" r="210" />-->
       <rect width="420" height="460" />
-    </svg>
+    </svg>-->
   </div>
 </template>
 
 <script>
-  import { gmapApi } from 'vue2-google-maps';
+  import { Map as GmapMap, gmapApi } from 'vue2-google-maps';
 
   export default {
+    components: {
+      GmapMap
+    },
     data: () => ({
       gmapCenter: {
         lat: 9.5630,
         lng: 100.0052
       },
       gmapOptions: {
+        infoWinOpen: false,
         zoomControl: true,
         mapTypeControl: false,
         scaleControl: true,
