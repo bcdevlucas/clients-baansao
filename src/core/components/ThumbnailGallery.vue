@@ -208,6 +208,10 @@
     },
     mounted() {
       this.getLargeImageUrls();
+
+      setTimeout(() => {
+        this.$forceUpdate();
+      }, 666);
     }
   }
 </script>

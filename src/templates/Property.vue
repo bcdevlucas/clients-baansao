@@ -416,11 +416,6 @@
       if (typeof window !== 'undefined') {
         this.startPrimaryImageRotation();
       }
-
-      /*setTimeout(() => {
-        this.startPrimaryImageRotation();
-      }, 1000);*/
-
     },
     beforeDestroy() {
       this.stopPrimaryImageRotation();
