@@ -19,6 +19,7 @@
           <div class="col-lg-3 mb-5 mb-lg-0">
             <div class="container">
               <thumbnail-gallery
+                v-if="pageData"
                 :primaryImage="pageData.imageId"
                 :gallery="pageData.gallery"
                 cloudName="baansaowanee"
@@ -141,7 +142,7 @@
           <div class="col-lg-3 mb-5 mb-lg-0">
             <div class="container">
               <h3>Location</h3>
-              <google-map-cutout class="mt-4" />
+              <!--<google-map-cutout class="mt-4" />-->
               <h3 class="mt-4">Address</h3>
               <p class="mt-4">
                 <span>{{ pageData.address.line1 }}</span><br />
@@ -285,6 +286,8 @@
           metaKeywords: this.$page.property.fields.metaKeywords,
           metaDescription: this.$page.property.fields.metaDescription,
           address: address,
+          //summary: this.$page.property.fields.summary,
+          //description: this.$page.property.fields.description,
           summary: (typeof window !== 'undefined') ? marked(this.$page.property.fields.summary) : this.$page.property.fields.summary,
           description:  (typeof window !== 'undefined') ? marked(this.$page.property.fields.description) : this.$page.property.fields.description,
           image: this.$page.property.fields.image,
@@ -410,9 +413,13 @@
       }
     },
     mounted() {
-      setTimeout(() => {
+      if (typeof window !== 'undefined') {
         this.startPrimaryImageRotation();
-      }, 1000);
+      }
+
+      /*setTimeout(() => {
+        this.startPrimaryImageRotation();
+      }, 1000);*/
 
     },
     beforeDestroy() {

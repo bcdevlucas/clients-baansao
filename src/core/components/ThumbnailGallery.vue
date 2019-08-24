@@ -173,7 +173,11 @@
         const getData = async () => {
           const data = [{ id: this.primaryImage }].concat(this.gallery);
 
-          return await Promise.all(data.map(image => getImage(image)));
+          return await Promise.all(data.map(image => getImage(image)))
+            .catch((err) => {
+              console.log('Error getting large image urls');
+              console.log(err);
+            });
         };
 
         getData().then(() => {
@@ -184,7 +188,11 @@
       },
       async getLargeImageUrl(id) {
         const opts = { cloudName: this.cloudName, folder: this.folder, transforms: 'w_1920,q_60' };
-        return await ImageUtils.getCloudinaryImageUrl(id, opts);
+        return await ImageUtils.getCloudinaryImageUrl(id, opts)
+          .catch((err) => {
+              console.log('Error getting large image urls');
+              console.log(err);
+            });
       },
       triggerGallery(e) {
         const refId = e.currentTarget.attributes['data-ref-id'].value;
