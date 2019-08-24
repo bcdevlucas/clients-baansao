@@ -94,6 +94,8 @@
 </template>
 
 <script>
+  import moment from 'moment';
+  
   import * as StringUtils from '~/core/utils/StringUtils';
 
   import SvgBlurSectionBlockLayout from '~/components/layouts/SvgBlurSectionBlockLayout.vue';

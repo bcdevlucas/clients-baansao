@@ -84,7 +84,7 @@
             </div>
           </div>
           <div class="col-md-4 right-pane">
-            <h3 class="category-title text-center mt-5 mb-5git st" style="display: block; width: 100%;">~ Great Local Deals ~</h3>
+            <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">~ Great Local Deals ~</h3>
             <content-block-layout
               v-for="post in dealsContent"
               :key="post.id"
