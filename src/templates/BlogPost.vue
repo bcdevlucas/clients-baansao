@@ -273,9 +273,6 @@
 </page-query>
 
 <style lang="scss">
-  a, a:hover {
-    color: #222;
-  }
   .full-width .content-block-image {
     float: left;
     width: 33%;
@@ -293,7 +290,7 @@
       margin-left: -15px;
       margin-right: -15px;
       height: auto;
-      height: 460px;
+      height: 580px;
     }
 
     .hero-content {
@@ -306,7 +303,7 @@
     }
 
     h3 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: bold;
     }
 
@@ -316,6 +313,10 @@
 
     p.text-muted {
       color: #444 !important;
+    }
+
+    p {
+      font-size: 1.15rem;
     }
 
     .column-wrapper {
@@ -328,14 +329,18 @@
     position: fixed;
     right: 0;
     z-index: 100;
-    //border-left: 2px solid darkgoldenrod;
+    border-left: 1px solid lightgrey;
     height: 100%;
 
-    .blog-post {
-      display: flex;
-      border-bottom: 1px dotted #909090;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+    .blog-post,
+    .post-entry,
+    .project-entry {
+      margin-bottom: 1.5rem;
+
+      .content-block-inner {
+        display: flex;
+        padding-bottom: 1.5rem;
+      }
 
       h3 {
         font-size: 1.3rem;
@@ -358,8 +363,8 @@
 
         img {
           object-fit: cover;
-          width: 100px !important;
-          height: 100px !important;
+          width: 115px !important;
+          height: 115px !important;
         }
       }
 

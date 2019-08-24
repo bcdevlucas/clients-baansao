@@ -3,7 +3,7 @@
     <div class="content-wrapper blog-posts">
       <div class="container-fluid">
         <div class="row column-wrapper">
-          <div class="col-md-9">
+          <div class="col-md-8">
             <div class="hero-wrapper">
               <div
                 v-if="getHeroById('page-hero') !== null"
@@ -83,7 +83,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 right-pane">
+          <div class="col-md-4 right-pane">
             <h3 class="category-title text-center mt-5 mb-3" style="display: block; width: 100%;">~ Great Local Deals ~</h3>
             <content-block-layout
               v-for="post in dealsContent"
@@ -146,7 +146,7 @@
 
           const content = Object.assign({}, edge.node, {
             summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
-            content: `${StringUtils.shortenText(edge.node.content, 290)}...`,
+            content: `${StringUtils.shortenText(edge.node.content, 280)}...`,
             date: date.format('MMM Do YYYY')
           });
           return content;
@@ -160,7 +160,7 @@
 
           const content = Object.assign({}, edge.node, {
             summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
-            content: `${StringUtils.shortenText(edge.node.content, 290)}...`,
+            content: `${StringUtils.shortenText(edge.node.content, 280)}...`,
             date: date.format('MMM Do YYYY')
           });
           return content;
@@ -174,7 +174,7 @@
 
           const content = Object.assign({}, edge.node, {
             summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
-            content: `${StringUtils.shortenText(edge.node.content, 290)}...`,
+            content: `${StringUtils.shortenText(edge.node.content, 280)}...`,
             date: date.format('MMM Do YYYY')
           });
           return content;
@@ -188,7 +188,7 @@
 
           const content = Object.assign({}, edge.node, {
             summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
-            content: `${StringUtils.shortenText(edge.node.content, 290)}...`,
+            content: `${StringUtils.shortenText(edge.node.content, 280)}...`,
             date: date.format('MMM Do YYYY')
           });
           return content;
@@ -202,7 +202,7 @@
 
           const content = Object.assign({}, edge.node, {
             summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
-            content: `${StringUtils.shortenText(edge.node.content, 340)}...`,
+            content: `${StringUtils.shortenText(edge.node.content, 280)}...`,
             date: date.format('MMM Do YYYY')
           });
           return content;
@@ -374,11 +374,15 @@
     border-left: 1px solid lightgrey;
     height: 100%;
 
-    .blog-post {
-      display: flex;
-      border-bottom: 1px dotted #909090;
-      padding-top: 2rem;
-      padding-bottom: 1.5rem;
+    .blog-post,
+    .post-entry,
+    .project-entry {
+      margin-bottom: 1.5rem;
+
+      .content-block-inner {
+        display: flex;
+        padding-bottom: 1.5rem;
+      }
 
       h3 {
         font-size: 1.3rem;
@@ -401,8 +405,8 @@
 
         img {
           object-fit: cover;
-          width: 100px !important;
-          height: 100px !important;
+          width: 115px !important;
+          height: 115px !important;
         }
       }
 
