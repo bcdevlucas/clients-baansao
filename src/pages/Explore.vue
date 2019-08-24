@@ -23,7 +23,7 @@
               </div>
             </div>
             <div class="site-section mt-4" v-if="postsContent.length > 0">
-              <div class="container">
+              <div class="container-fluid">
                 <div class="row" v-if="postsContent.length > 1">
                   <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">~ Features of the Month ~</h3>
 
@@ -43,7 +43,7 @@
               </div>
             </div>
             <div class="site-section" v-if="postsContent.length > 0">
-              <div class="container">
+              <div class="container-fluid">
                 <div class="row" v-if="postsContent.length > 1">
                   <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">~ What's Happening ~</h3>
 
@@ -63,7 +63,7 @@
               </div>
             </div>
             <div class="site-section" v-if="$page.posts.edges.length > 0">
-              <div class="container">
+              <div class="container-fluid">
                 <div class="row" v-if="postsContent.length > 1">
                   <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">~ Popular Attractions ~</h3>
 
