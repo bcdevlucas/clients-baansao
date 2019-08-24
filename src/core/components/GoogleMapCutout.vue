@@ -12,12 +12,12 @@
       >
       </GmapMap>
     </div>
-    <!--<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="420px" height="460px" class="gmap-cutout-svg">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="420px" height="460px" class="gmap-cutout-svg">
       <clipPath id="gmap-cutout-svg-mask">
         <rect width="420" height="460" />
       </clipPath>
       <rect width="420" height="460" />
-    </svg>-->
+    </svg>
   </div>
 </template>
 
