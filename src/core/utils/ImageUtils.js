@@ -20,6 +20,10 @@ function getCloudinaryFhdImageUrl(url) {
  * an image is in a folder, cloudinary will generate the wrong path (404)!
  */
 async function getCloudinaryImageUrl(id, params) {
+  let url = ''; // TODO: Return a default image!
+
+  if (typeof window === 'undefined') return url;
+
   params = Object.assign({
     cloudName: null,
     folder: null,
@@ -44,10 +48,15 @@ async function getCloudinaryImageUrl(id, params) {
   }
 
   const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: params.cloudName });
-  const url = await cloudinaryCore.url(id);
+  try {
+    url = await cloudinaryCore.url(id);
 
-  if (params.folder) {
-    return url.replace(/(\/)(?!.*\/)/, `${(transforms.length > 0) ? '/' + transforms : ''}/v${params.version}/${params.folder}/`);
+    if (params.folder) {
+      return url.replace(/(\/)(?!.*\/)/, `${(transforms.length > 0) ? '/' + transforms : ''}/v${params.version}/${params.folder}/`);
+    }
+  } catch (err) {
+    console.warn(`Error loading cloudinary image: ${id}`);
+    console.log(err);
   }
 
   return url;

@@ -164,48 +164,47 @@
             </div>
           </div>
         </div>-->
-          <div class="row mt-4 mb-4 pt-4">
-            <div class="col-lg-12 ml-auto text-center">
-              <span class="sub-title">Something Else?</span>
-              <h2 class="font-weight-bold text-black mb-5">Our Other Rentals</h2>
-            </div>
+        <div class="row mt-4 mb-4 pt-4">
+          <div class="col-lg-12 ml-auto text-center">
+            <span class="sub-title">Something Else?</span>
+            <h2 class="font-weight-bold text-black mb-5">Our Other Rentals</h2>
           </div>
-          <div class="row mx-4">
-            <content-block-layout
-              v-for="property in propertiesContent.slice(0,4).filter(item => item.id !== pageData.id)"
-              :key="property.id"
-              className="col-lg-4 col-md-4 mb-6 project-entry"
-              :title="property.title"
-              :description="(property.summary) ? property.summary : ''"
-              :link="`/property/${property.id}`"
-              linkText="Learn More"
-              :cloudinaryImage="property.imageId"
-              cloudName="baansaowanee"
-              :cloudFolder="property.galleryFolder"
-              :imageAlt="property.caption"
+        </div>
+        <div class="row mx-4">
+          <content-block-layout
+            v-for="property in propertiesContent.slice(0,4).filter(item => item.id !== pageData.id)"
+            :key="property.id"
+            className="col-lg-4 col-md-4 mb-6 project-entry"
+            :title="property.title"
+            :description="(property.summary) ? property.summary : ''"
+            :link="`/property/${property.id}`"
+            linkText="Learn More"
+            :cloudinaryImage="property.imageId"
+            cloudName="baansaowanee"
+            :cloudFolder="property.galleryFolder"
+            :imageAlt="property.caption"
+          />
+        </div>
+        <div class="row">
+          <div class="col-12 text-center mt-5">
+            <span class="sub-title">Testimonials from</span>
+            <h2 class="font-weight-bold text-black mb-5">Our Friends</h2>
+          </div>
+        </div>
+        <div class="slider row">
+          <div
+            v-for="testimonial in getTestimonialsByIndex(0, 3)"
+            class="col-sm-4 col-lg-3"
+          >
+            <testimonial-block-layout
+              className="testimony"
+              :reviewedBy="testimonial.reviewedBy"
+              :image="testimonial.image"
+              :testimonial="testimonial.testimonial"
             />
-          </div>
-          <div class="row">
-            <div class="col-12 text-center mt-5">
-              <span class="sub-title">Testimonials from</span>
-              <h2 class="font-weight-bold text-black mb-5">Our Friends</h2>
-            </div>
-          </div>
-          <div class="slider row">
             <div
-              v-for="testimonial in getTestimonialsByIndex(0, 3)"
-              class="col-sm-4 col-lg-3"
-            >
-              <testimonial-block-layout
-                className="testimony"
-                :reviewedBy="testimonial.reviewedBy"
-                :image="testimonial.image"
-                :testimonial="testimonial.testimonial"
-              />
-              <div
-                class="homepage-hero-action action-link-block text-center space-bottom">
-                <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
-              </div>
+              class="homepage-hero-action action-link-block text-center space-bottom">
+              <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
             </div>
           </div>
         </div>
@@ -375,6 +374,7 @@
         this.primaryImageShuffler = setInterval(this.setActiveImage, ms);
 
         const activeImage = { id: this.pageData.imageId, src: null };
+        console.log(`Starting primary image rotation: ${ activeImage.id }`);
         const opts = { cloudName: 'baansaowanee', folder: this.pageData.galleryFolder, transforms: 'w_1920,q_60' };
         activeImage.src = await ImageUtils.getCloudinaryImageUrl(activeImage.id, opts);
         this.$data.activeImage = activeImage;
@@ -410,7 +410,10 @@
       }
     },
     mounted() {
-      this.startPrimaryImageRotation();
+      setTimeout(() => {
+        this.startPrimaryImageRotation();
+      }, 1000);
+
     },
     beforeDestroy() {
       this.stopPrimaryImageRotation();
