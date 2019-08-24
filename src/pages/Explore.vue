@@ -25,7 +25,7 @@
             <div class="site-section mt-4" v-if="postsContent.length > 0">
               <div class="container-fluid">
                 <div class="row" v-if="postsContent.length > 1">
-                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">~ Features of the Month ~</h3>
+                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Features of the Month</h3>
 
                   <content-block-layout
                     v-for="post in featuredContent"
@@ -45,7 +45,7 @@
             <div class="site-section" v-if="postsContent.length > 0">
               <div class="container-fluid">
                 <div class="row" v-if="postsContent.length > 1">
-                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">~ What's Happening ~</h3>
+                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">What's Happening</h3>
 
                   <content-block-layout
                     v-for="post in eventsContent"
@@ -65,7 +65,7 @@
             <div class="site-section" v-if="$page.posts.edges.length > 0">
               <div class="container-fluid">
                 <div class="row" v-if="postsContent.length > 1">
-                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">~ Popular Attractions ~</h3>
+                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Popular Attractions</h3>
 
                   <content-block-layout
                     v-for="post in attractionsContent"
@@ -84,7 +84,7 @@
             </div>
           </div>
           <div class="col-md-4 right-pane">
-            <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">~ Great Local Deals ~</h3>
+            <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">Great Local Deals</h3>
             <content-block-layout
               v-for="post in dealsContent"
               :key="post.id"
