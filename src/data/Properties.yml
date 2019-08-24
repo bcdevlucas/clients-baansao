@@ -8,7 +8,7 @@ description: >-
 heroes:
   - description: >-
     id: page-hero
-    image: 23-new-sky.jpg
+    image: /images/orchard-view-3br/23-new-sky.jpg
     link:
     linkText:
     title: Vacation Homes

@@ -1,82 +1,82 @@
 <template>
   <Layout>
-    <div class="">
-      <div
-        class="properties-hero site-blocks-cover angle"
-      >
-        <div class="container" ref="pageHero">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-md-10 text-center">
-              <div class="hero-logo"><span></span></div>
-              <span class="sub-text"><strong>{{ getHeroById('page-hero').subTitle }}</strong></span>
-              <h1>{{ getHeroById('page-hero').title }}</h1>
-              <div v-if="getHeroById('page-hero').description" class="sub-text" v-html="(getHeroById('page-hero').description) ? getHeroById('page-hero').description : ''"></div>
+    <div class="content-wrapper blog-posts">
+      <div class="container-fluid">
+        <div class="row column-wrapper">
+          <div class="col-md-8">
+            <div class="hero-wrapper">
+              <div
+                v-if="getHeroById('page-hero') !== null"
+                class="site-blocks-cover text-shadow"
+                :style="`background-image: url(${getHeroById('page-hero').image});`"
+              >
+                <div class="container hero-content">
+                  <div class="row align-items-center justify-content-center">
+                    <div class="col-md-10 text-center">
+                      <!--<div class="hero-logo"><span></span></div>-->
+                      <span class="sub-text"><strong>{{ getHeroById('page-hero').subTitle }}</strong></span>
+                      <h1>{{ getHeroById('page-hero').title }}</h1>
+                      <!--<div v-if="getHeroById('page-hero').description" class="sub-text" v-html="(getHeroById('page-hero').description) ? getHeroById('page-hero').description : ''"></div>-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="site-section" v-if="propertiesContent.length > 0">
+              <div class="container px-4">
+                <div class="row">
+                  <content-block-layout
+                    v-for="property in propertiesContent.slice(0, propertiesContent.length / 2)"
+                    v-if="typeof property.summary === 'string'"
+                    :key="property.id"
+                    className="col-lg-6 col-md-6 mb-6 project-entry"
+                    :title="property.title"
+                    :description="(property.summary) ? property.summary : ''"
+                    :link="`/property/${property.id}`"
+                    linkText="Learn More"
+                    :cloudinaryImage="property.imageId"
+                    cloudName="baansaowanee"
+                    :cloudFolder="property.galleryFolder"
+                    :imageAlt="property.caption"
+                  />
+
+                  <span class="flower-separator-white"></span>
+                </div>
+                <div class="row mt-6 mb-6">
+                  <content-block-layout
+                    v-for="property in propertiesContent.slice(propertiesContent.length / 2, propertiesContent.length)"
+                    v-if="typeof property.summary === 'string'"
+                    :key="property.id"
+                    className="col-md-4 col-lg-6 project-entry"
+                    :title="property.title"
+                    :description="(property.summary) ? property.summary : ''"
+                    :link="`/property/${property.id}`"
+                    linkText="Learn More"
+                    :cloudinaryImage="property.imageId"
+                    cloudName="baansaowanee"
+                    :cloudFolder="property.galleryFolder"
+                    :imageAlt="property.caption"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="content-wrapper">
-      <div class="site-section" v-if="propertiesContent.length > 0">
-        <div class="container px-4">
-          <div class="row">
+          <div class="col-md-4 right-pane">
+            <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">Great Local Deals</h3>
             <content-block-layout
-              v-for="property in propertiesContent.slice(0, propertiesContent.length / 2)"
-              v-if="typeof property.summary === 'string'"
-              :key="property.id"
-              className="col-lg-6 col-md-6 mb-6 project-entry"
-              :title="property.title"
-              :description="(property.summary) ? property.summary : ''"
-              :link="`/property/${property.id}`"
-              linkText="Learn More"
-              :cloudinaryImage="property.imageId"
-              cloudName="baansaowanee"
-              :cloudFolder="property.galleryFolder"
-              :imageAlt="property.caption"
-            />
-
-            <span class="flower-separator-white"></span>
-          </div>
-          <div class="row mt-6 mb-6">
-            <content-block-layout
-              v-for="property in propertiesContent.slice(propertiesContent.length / 2, propertiesContent.length)"
-              v-if="typeof property.summary === 'string'"
-              :key="property.id"
-              className="col-md-4 col-lg-6 project-entry"
-              :title="property.title"
-              :description="(property.summary) ? property.summary : ''"
-              :link="`/property/${property.id}`"
-              linkText="Learn More"
-              :cloudinaryImage="property.imageId"
-              cloudName="baansaowanee"
-              :cloudFolder="property.galleryFolder"
-              :imageAlt="property.caption"
+              v-for="post in dealsContent"
+              :key="post.id"
+              className="col-xs-12 blog-post"
+              :title="post.title"
+              :description="post.summary"
+              :link="post.path"
+              :image="post.image"
+              :imageAlt="post.caption"
+              :datePublished="post.date"
             />
           </div>
         </div>
       </div>
-      <!--<div class="site-section">
-        <div class="row">
-          <div class="col-12 text-center mt-5">
-            <span class="sub-title">Testimonials from</span>
-            <h2 class="font-weight-bold text-black mb-5">Our Friends</h2>
-          </div>
-        </div>
-        <div class="slider row">
-          <div
-            v-for="testimonial in getTestimonialsByIndex(0, 3)"
-            class="col-sm-4 col-lg-3"
-          >
-            <testimonial-block-layout
-              className="testimony"
-              :reviewedBy="testimonial.reviewedBy"
-              :image="testimonial.image"
-              :testimonial="testimonial.testimonial"
-            />
-          </div>
-        </div>
-      </div>-->
     </div>
   </Layout>
 </template>
@@ -89,7 +89,7 @@
 
   import ThumbnailGallery from '~/core/components/ThumbnailGallery.vue';
 
-  // TODO: Implement page page that provides data interface?
+  import PostMixin from '~/core/mixins/PostMixin';
   import HeroMixin from '~/mixins/HeroMixin';
   import SectionMixin from '~/mixins/SectionMixin';
   import ServiceMixin from '~/core/mixins/ServiceMixin';
@@ -97,8 +97,6 @@
 
   // Import static data
   import PropertiesData from '~/data/Properties.yml';
-
-  import * as ImageUtils from '~/core/utils/ImageUtils';
 
   export default {
     components: {
@@ -109,7 +107,7 @@
     metaInfo: {
       title: "Classes"
     },
-    mixins: [HeroMixin, SectionMixin, ServiceMixin, TestimonialMixin],
+    mixins: [HeroMixin, SectionMixin, ServiceMixin, PostMixin, TestimonialMixin],
     data() {
       return {
         pageTitle: PropertiesData.title,
@@ -162,6 +160,92 @@
         }
       }
     }
+    posts: allBlogPost {
+      edges {
+        node {
+          title
+          date
+          image
+          caption
+          summary
+          content
+          path
+          slug
+        }
+      }
+    }
+    featuredPosts: tag(id: "featured") {
+      belongsTo {
+        edges {
+          node {
+            ...on BlogPost {
+              title
+              date
+              image
+              caption
+              summary
+              content
+              path
+              slug
+            }
+          }
+        }
+      }
+    }
+    eventsPosts: tag(id: "events") {
+      belongsTo {
+        edges {
+          node {
+            ...on BlogPost {
+              title
+              date
+              image
+              caption
+              summary
+              content
+              path
+              slug
+            }
+          }
+        }
+      }
+    }
+    attractionsPosts: tag(id: "attractions") {
+      belongsTo {
+        edges {
+          node {
+            ...on BlogPost {
+              title
+              date
+              image
+              caption
+              summary
+              content
+              path
+              slug
+            }
+          }
+        }
+      }
+    }
+    dealsPosts: tag(id: "deals") {
+      belongsTo {
+        edges {
+          node {
+            ...on BlogPost {
+              title
+              date
+              image
+              caption
+              summary
+              content
+              path
+              slug
+            }
+          }
+        }
+      }
+    }
   }
 </page-query>
 
@@ -184,6 +268,125 @@
     .row {
       height: auto;
       min-height: 400px;
+    }
+  }
+</style>
+
+<style lang="scss">
+  .full-width .content-block-image {
+    float: left;
+    width: 33%;
+    margin-right: 2rem;
+  }
+
+  .blog-posts .content-block-image {
+    height: 220px;
+  }
+
+  .blog-posts {
+    background: #fefefe;
+
+    .hero-wrapper {
+      margin-left: -15px;
+      margin-right: -15px;
+      height: auto;
+      height: 580px;
+    }
+
+    .hero-content {
+      height: 100%;
+    }
+
+    .site-blocks-cover, .site-blocks-cover .row {
+      height: 100%;
+      min-height: 0;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .category-title {
+      font-size: 2rem;
+    }
+
+    p.text-muted {
+      color: #444 !important;
+    }
+
+    p {
+      font-size: 1.15rem;
+    }
+
+    .column-wrapper {
+      position: relative;
+    }
+  }
+
+  .right-pane {
+    background-color: rgba(245,245,245,1);
+    position: fixed;
+    right: 0;
+    z-index: 100;
+    border-left: 1px solid lightgrey;
+    height: 100%;
+
+    .blog-post,
+    .post-entry,
+    .project-entry {
+      margin-bottom: 1.5rem;
+
+      .content-block-inner {
+        display: flex;
+        padding-bottom: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+
+      br {
+        display: none; /* Get rid of line breaks, they'll make the layout weird and we're trimming the text anyway */
+      }
+
+      p {
+        font-size: 1.15rem;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .content-block-image {
+        margin-right: 1rem;
+        height: auto;
+
+        img {
+          object-fit: cover;
+          width: 115px !important;
+          height: 115px !important;
+        }
+      }
+
+      .content-block-content {
+        width: 70%;
+      }
+    }
+  }
+
+  .page-wrap {
+    margin-top: 78px;
+  }
+
+  /* Collapse padding/margins */
+  .container > .row,
+  .container-fluid > .row {
+    > [class*=col-]:first-child {
+      //padding-left: 0;
+    }
+
+    > [class*=col-]:last-child {
+      //padding-right: 0;
     }
   }
 </style>
