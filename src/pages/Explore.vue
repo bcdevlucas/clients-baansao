@@ -32,11 +32,12 @@
                     :key="post.id"
                     className="col-md-12 mb-3 project-entry blog-post full-width"
                     :title="post.title"
-                    :description="post.summary"
+                    :description="post.content"
                     :link="post.path"
                     linkText="Read Article"
                     :image="post.image"
                     :imageAlt="post.caption"
+                    :datePublished="post.date"
                   />
                 </div>
               </div>
@@ -51,11 +52,12 @@
                     :key="post.id"
                     className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
                     :title="post.title"
-                    :description="post.summary"
+                    :description="post.content"
                     :link="post.path"
                     linkText="Read Article"
                     :image="post.image"
                     :imageAlt="post.caption"
+                    :datePublished="post.date"
                   />
                 </div>
               </div>
@@ -70,11 +72,12 @@
                     :key="post.id"
                     className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
                     :title="post.title"
-                    :description="post.summary"
+                    :description="post.content"
                     :link="post.path"
                     linkText="Read Article"
                     :image="post.image"
                     :imageAlt="post.caption"
+                    :datePublished="post.date"
                   />
                 </div>
               </div>
@@ -91,6 +94,7 @@
               :link="post.path"
               :image="post.image"
               :imageAlt="post.caption"
+              :datePublished="post.date"
             />
           </div>
         </div>
@@ -100,6 +104,8 @@
 </template>
 
 <script>
+  import moment from 'moment';
+
   import * as StringUtils from '~/core/utils/StringUtils';
 
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
@@ -136,7 +142,13 @@
       },
       postsContent() {
         const content = this.$page.posts.edges.map(edge => {
-          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.summary, 90)}...` });
+          let date = moment(edge.node.date);
+
+          const content = Object.assign({}, edge.node, {
+            summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
+            content: `${StringUtils.shortenText(edge.node.content, 290)}...`,
+            date: date.format('MMM Do YYYY')
+          });
           return content;
         });
 
@@ -144,7 +156,13 @@
       },
       featuredContent() {
         const content = this.$page.featuredPosts.belongsTo.edges.map(edge => {
-          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.summary, 90)}...` });
+          let date = moment(edge.node.date);
+
+          const content = Object.assign({}, edge.node, {
+            summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
+            content: `${StringUtils.shortenText(edge.node.content, 290)}...`,
+            date: date.format('MMM Do YYYY')
+          });
           return content;
         });
 
@@ -152,7 +170,13 @@
       },
       eventsContent() {
         const content = this.$page.eventsPosts.belongsTo.edges.map(edge => {
-          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.summary, 90)}...` });
+          let date = moment(edge.node.date);
+
+          const content = Object.assign({}, edge.node, {
+            summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
+            content: `${StringUtils.shortenText(edge.node.content, 290)}...`,
+            date: date.format('MMM Do YYYY')
+          });
           return content;
         });
 
@@ -160,7 +184,13 @@
       },
       attractionsContent() {
         const content = this.$page.attractionsPosts.belongsTo.edges.map(edge => {
-          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.summary, 90)}...` });
+          let date = moment(edge.node.date);
+
+          const content = Object.assign({}, edge.node, {
+            summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
+            content: `${StringUtils.shortenText(edge.node.content, 290)}...`,
+            date: date.format('MMM Do YYYY')
+          });
           return content;
         });
 
@@ -168,7 +198,13 @@
       },
       dealsContent() {
         const content = this.$page.dealsPosts.belongsTo.edges.map(edge => {
-          const content = Object.assign({}, edge.node, { summary: `${StringUtils.shortenText(edge.node.summary, 90)}...` });
+          let date = moment(edge.node.date);
+
+          const content = Object.assign({}, edge.node, {
+            summary: `${StringUtils.shortenText(edge.node.summary, 90)}...`,
+            content: `${StringUtils.shortenText(edge.node.content, 340)}...`,
+            date: date.format('MMM Do YYYY')
+          });
           return content;
         });
 

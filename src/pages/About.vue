@@ -169,9 +169,9 @@
   .properties-hero {
     height: auto !important;
     min-height: 400px;
-    color: #222;
+    color: #111;
     h1 {
-      color: #222;
+      color: midnightblue;
     }
     .sub-text {
       color: #999 !important;
