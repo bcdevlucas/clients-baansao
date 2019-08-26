@@ -1,7 +1,7 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 import VueImg from 'v-img';
-import VueNumberInput from '@chenfengyuan/vue-number-input';
+
 //import Cloudinary from 'cloudinary-vue';
 
 import DefaultLayout from '~/layouts/Default.vue';
@@ -30,9 +30,10 @@ export default function (Vue, { router, head, isClient }) {
 
   Vue.use(VueImg, vueImgConfig);
 
-  Vue.component(VueNumberInput.name, VueNumberInput);
-
   if (typeof window !== 'undefined') {
+    const VueNumberInput = require('@chenfengyuan/vue-number-input');
+    Vue.component(VueNumberInput.name, VueNumberInput);
+
     const Cloudinary = require('cloudinary-vue');
 
     Vue.use(Cloudinary, {
