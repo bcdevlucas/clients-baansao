@@ -27,25 +27,23 @@
                 :displayMax="pageData.gallery.length"
                 :imagesPerRow="3"
               />
-              <amenities class="mt-4" />
-
-              <p class="class-action-buttons mt-5 mb-0 text-center">
-                <button @click="openAirbnbPage(pageData.link)" class="btn btn-primary btn-lg open-airbnb-page"><i class="material-icons">calendar_today</i>
-                  <span>Book on Airbnb.com</span>
-                </button>&nbsp;
+              <br />
+              <h3 class="mt-4">Location</h3>
+              <google-map-cutout class="mt-4" />
+              <!--<h3 class="mt-4">Address</h3>-->
+              <p class="mt-4">
+                <span>{{ pageData.address.line1 }}</span><br />
+                <span v-if="typeof pageData.address.line2 === 'string' && pageData.address.line2 !== ''">{{ pageData.address.line2 }}</span>
+                <br v-if="typeof pageData.address.line2 === 'string' && pageData.address.line2 !== ''" />
+                <span>{{ pageData.address.city }}</span>,&nbsp;<span>{{ pageData.address.zone }}</span><br />
+                <span>{{ pageData.address.postCode }}</span>&nbsp;<span>{{ pageData.address.country }}</span>
               </p>
-
-              <p class="class-action-buttons mt-2 text-center">
-                <button @click="showQuestionForm" class="btn btn-secondary btn-lg ask-question" style="width: 100%"><i class="material-icons">question_answer</i>
-                  <span>Ask a Question</span>
-                </button>
-              </p>
-
             </div>
           </div>
 
           <div class="col-lg-6 ml-auto">
             <div class="container">
+              <amenities class="mt-4 mb-4" />
               <div v-html="pageData.description"></div>
               <div class="row">
                 <div class="col-sm-6">
@@ -141,16 +139,7 @@
 
           <div class="col-lg-3 mb-5 mb-lg-0">
             <div class="container">
-              <h3>Location</h3>
-              <google-map-cutout class="mt-4" />
-              <h3 class="mt-4">Address</h3>
-              <p class="mt-4">
-                <span>{{ pageData.address.line1 }}</span><br />
-                <span v-if="typeof pageData.address.line2 === 'string' && pageData.address.line2 !== ''">{{ pageData.address.line2 }}</span>
-                <br v-if="typeof pageData.address.line2 === 'string' && pageData.address.line2 !== ''" />
-                <span>{{ pageData.address.city }}</span>,&nbsp;<span>{{ pageData.address.zone }}</span><br />
-                <span>{{ pageData.address.postCode }}</span>&nbsp;<span>{{ pageData.address.country }}</span>
-              </p>
+              <availability-calendar class="mt-4 mb-4" :pageData="pageData" />
             </div>
           </div>
         </div>
@@ -226,6 +215,7 @@
   import ThumbnailGallery from '~/core/components/ThumbnailGallery.vue';
   //import GoogleMapBackground from '~/core/components/GoogleMapBackground.vue';
   import GoogleMapCutout from '~/core/components/GoogleMapCutout.vue'; // TODO: Gotta fix this, SSR blows up
+  import AvailabilityCalendar from '~/components/AvailabilityCalendar.vue';
   import Amenities from '~/components/Amenities.vue';
   import Cancellations from '~/components/Cancellations.vue';
   import Rules from '~/components/Rules.vue';
@@ -247,6 +237,7 @@
       ThumbnailGallery,
       //GoogleMapBackground,
       GoogleMapCutout,
+      AvailabilityCalendar,
       Amenities,
       Cancellations,
       Rules
@@ -313,10 +304,6 @@
       }
     },
     methods: {
-      openAirbnbPage(url) {
-        if (typeof url !== 'string') return;
-        window.location.href = url;
-      },
       /**
        * TODO: Is this used outside of thumbnails? If so make it a mixin.
        */
@@ -439,6 +426,13 @@
           zone
           country
           postCode
+        }
+        price {
+          amount
+          currency
+          dateStart
+          dateEnd
+          name
         }
         summary
         description

@@ -66,6 +66,20 @@ module.exports = function (api) {
 
         return { type: addressType }
       });
+      properties.addSchemaField('price', ({ graphql }) => {
+        const priceType = new graphql.GraphQLObjectType({
+          name: 'Price',
+          fields: {
+            amount: { type: graphql.GraphQLFloat },
+            currency: { type: graphql.GraphQLString },
+            //dateStart: { type: graphql.GraphQLDate },
+            //dateEnd: { type: graphql.GraphQLDate },
+            name: { type: graphql.GraphQLString }
+          }
+        });
+
+        return { type: priceType }
+      });
     }
   })
 };

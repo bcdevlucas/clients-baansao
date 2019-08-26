@@ -759,6 +759,11 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@chenfengyuan/vue-number-input@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@chenfengyuan/vue-number-input/-/vue-number-input-1.1.1.tgz#c7a7898d071cd5de9d3775984b509b649d8a621e"
+  integrity sha512-e4h1FOSn81qntfHbtHIeyg9hhSuzVUyEJWzJdliGKaGufHuJSe+aEFgMluD76cptGbzX+ta9ZLg4T8uEZj9VGw==
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.3.tgz#099139eaec7ebf07a27c1786a3ff64f39464d2ef"
@@ -10531,6 +10536,11 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-cal@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/vue-cal/-/vue-cal-2.4.0.tgz#9eee9b60107fc957c08e98e7bcba3e8e9b0c4207"
+  integrity sha512-HQkbSJPZpb1NWYX/ZcCy2xYk6jbSTxDn8wzY7F0mlBj3RrEqRIDQQ/696VePP0Jw0Pel4DSjprSu6bPfdmdh7Q==
+
 vue-carousel@^0.18.0:
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/vue-carousel/-/vue-carousel-0.18.0.tgz#478dfcad3abe2ee44c227020b6e60fb8484dc9f1"
@@ -10610,6 +10620,11 @@ vue-meta@^1.5.8:
     lodash.isplainobject "^4.0.6"
     lodash.uniqueid "^4.0.1"
     object-assign "^4.1.1"
+
+vue-number-input@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/vue-number-input/-/vue-number-input-1.0.8.tgz#9db46daf4c01af30fef621d8c63cc75e8fa10924"
+  integrity sha512-4FfGDAhTUJPmvHpOhO+oq4n8p8y+Z25lUBNSAMLdwghjlllxqNUZBonPN5dq4+cqJGs/sFbCHFMcZOo/zaubaQ==
 
 vue-owl-carousel@^2.0.3:
   version "2.0.3"

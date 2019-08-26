@@ -1,6 +1,7 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 import VueImg from 'v-img';
+import VueNumberInput from '@chenfengyuan/vue-number-input';
 //import Cloudinary from 'cloudinary-vue';
 
 import DefaultLayout from '~/layouts/Default.vue';
@@ -9,8 +10,6 @@ import '~/assets/scss/style.scss';
 import '~/assets/css/style.css';
 import '~/assets/scss/site.scss';
 import '~/assets/fonts/icomoon/style.css';
-
-//console.log(Cloudinary);
 
 export default function (Vue, { router, head, isClient }) {
   // head.link.push({ rel: 'stylesheet', href: 'https://unpkg.com/ace-css/css/ace.min.css' });
@@ -30,6 +29,8 @@ export default function (Vue, { router, head, isClient }) {
   };
 
   Vue.use(VueImg, vueImgConfig);
+
+  Vue.component(VueNumberInput.name, VueNumberInput);
 
   if (typeof window !== 'undefined') {
     const Cloudinary = require('cloudinary-vue');

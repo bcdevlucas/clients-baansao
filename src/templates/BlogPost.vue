@@ -102,7 +102,7 @@
 <script>
   import moment from 'moment';
 
-  import * as StringUtils from '~/core/utils/StringUtils';
+  //import * as StringUtils from '~/core/utils/StringUtils';
 
   import SvgBlurSectionBlockLayout from '~/components/layouts/SvgBlurSectionBlockLayout.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
