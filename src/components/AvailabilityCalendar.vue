@@ -2,7 +2,7 @@
   <div>
     <div class="col-lg-12 ml-auto text-center">
       <span class="sub-title mb-0" style="font-family: 'Calligraffitti', sans-serif; text-transform: none; font-size: 1.5rem">Starting from</span>
-      <span class="font-weight-bold text-black mb-0" style="font-size: 3.5rem;">$160.00</span><span class="font-weight-bold text-black"> / night</span>
+      <span class="font-weight-bold text-black mb-0" style="font-size: 3.5rem;">{{ priceFormatted }}</span><span class="font-weight-bold text-black"> / night</span>
     </div>
     <vue-cal
       default-view="month"
@@ -49,9 +49,11 @@
       VueCal
     },
     props: {
-      pageData: {
+      price: {
         type: Object,
-        default: {} // TODO: Add fields
+        default: () => ({
+          amount: 0.00
+        })
       }
     },
     data() {
@@ -82,6 +84,11 @@
             class: 'sport'
           }
         ]
+      }
+    },
+    computed: {
+      priceFormatted() {
+        return (this.price[0]) ? `$${parseFloat(this.price[0].amount).toFixed(2)}` : '';
       }
     },
     methods: {
