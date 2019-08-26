@@ -6,7 +6,7 @@ address:
     country: Thailand
     postCode: 84330
 price:
-  - amount: 250.00
+  - amount: 38.00
     currency: "USD"
     dateStart: "2018-08-01"
     dateEnd: "2021-08-01"
