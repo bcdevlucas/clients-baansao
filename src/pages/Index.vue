@@ -79,9 +79,9 @@
         <div>
           <div class="row px-4">
             <property-grid-layout
-              colClass="col-lg-4 col-md-4 mb-6 project-entry"
+              colClass="col-lg-3 col-md-4 mb-6 project-entry"
               :min="0"
-              :max="3"
+              :max="4"
             />
           </div>
         </div>

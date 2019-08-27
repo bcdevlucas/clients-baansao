@@ -19,7 +19,7 @@
       <div class="content-block-content">
         <h3 class="mb-4">
           <a @click="linkClicked" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.title }}</a>
-          <span class="content-block-price">{{ priceAtFormatted(0) }} <small>USD / night</small></span>
+          <span class="content-block-price">{{ priceAtFormatted(0) }} <small>USD<br />per night</small></span>
         </h3>
         <p v-if="typeof this.datePublished === 'string' && this.datePublished.length > 0" class="text-muted">
           {{ this.datePublished }} - Bob Johnson
@@ -70,5 +70,11 @@
     float: right;
     font-size: 130%;
     line-height: 1rem;
+
+    small {
+      font-size: 0.8rem;
+      display: inline-block;
+      line-height: 0.6rem;
+    }
   }
 </style>
