@@ -305,7 +305,7 @@
     .hero-wrapper {
       margin-left: -15px;
       margin-right: -15px;
-      height: 80vh;
+      height: 70vh;
     }
 
     .hero-content {
@@ -412,12 +412,16 @@
     }
   }
 
-  .diag-right-up {
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 9vh), 0 100%);
+  @media screen and (min-width: 84em) {
+    .properties-posts {
+      position: relative;
+      top: -18vh;
+    }
   }
 
-  .properties-posts {
-    position: relative;
-    top: -20vh;
-  }
+  .property-posts {
+      .site-blocks-cover {
+        background-attachment: initial;
+      }
+    }
 </style>

@@ -7,7 +7,7 @@
             <div class="hero-wrapper">
               <div
                 v-if="getHeroById('page-hero') !== null"
-                class="site-blocks-cover angle text-shadow"
+                class="site-blocks-cover diag-right-up text-shadow"
                 :style="`background-image: url(${getHeroById('page-hero').image}); background-position: -180px -440px !important`"
               >
                 <div class="container hero-content">
