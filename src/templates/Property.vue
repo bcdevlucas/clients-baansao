@@ -164,7 +164,7 @@
           </div>
         </div>
         <div class="row mx-4">
-          <content-block-layout
+          <property-block-layout
             v-for="property in propertiesContent.slice(0,4).filter(item => item.id !== pageData.id)"
             :key="property.id"
             className="col-lg-4 col-md-4 mb-6 project-entry"
@@ -176,6 +176,7 @@
             cloudName="baansaowanee"
             :cloudFolder="property.galleryFolder"
             :imageAlt="property.caption"
+            :prices="property.price"
           />
         </div>
         <div class="row">
@@ -212,6 +213,7 @@
   import * as ImageUtils from '~/core/utils/ImageUtils';
 
   import HeroLayout01Col from '~/components/layouts/HeroLayout01Col.vue'
+  import PropertyBlockLayout from '~/components/layouts/PropertyBlockLayout.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
 
@@ -235,6 +237,7 @@
   export default {
     components: {
       HeroLayout01Col,
+      PropertyBlockLayout,
       ContentBlockLayout,
       TestimonialBlockLayout,
       ThumbnailGallery,
@@ -470,6 +473,13 @@
               zone
               country
               postCode
+            }
+            price {
+              amount
+              currency
+              dateStart
+              dateEnd
+              name
             }
             summary
             description
