@@ -100,7 +100,7 @@ export default {
         return this.hasStaticImage && !this.hasCloudinaryImage;
       }
 
-      return false;
+      return true;
     }
   },
   data() {
