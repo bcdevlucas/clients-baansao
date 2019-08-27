@@ -579,6 +579,22 @@
     transform: rotate(90deg);
   }
 
+  @media screen and (max-width: 40em) {
+    .moving-palm-left {
+      top: -400px;
+    }
+
+    .moving-palm-solo {
+      top: -500px;
+    }
+
+    .moving-palm-right {
+      bottom: -330px;
+      right: -45px;
+      transform: rotate(140deg);
+    }
+  }
+
 
 
   @media only screen and (min-width: 48em) {
