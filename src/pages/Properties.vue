@@ -250,6 +250,7 @@
               caption
               summary
               content
+              price
               path
               slug
             }

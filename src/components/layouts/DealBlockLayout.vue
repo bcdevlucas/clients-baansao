@@ -19,10 +19,10 @@
       <div class="content-block-content">
         <h3 class="mb-4">
           <a @click="linkClicked" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.title }}</a>
-          <span class="content-block-price">{{ priceAtFormatted(0) }} <small>USD / night</small></span>
+          <span class="content-block-price">{{ this.price }}</span>
         </h3>
         <p v-if="typeof this.datePublished === 'string' && this.datePublished.length > 0" class="text-muted">
-          {{ this.datePublished }} - Bob Johnson
+          Valid Through: {{ this.datePublished }}
         </p>
         <p v-if="typeof this.description === 'string' && this.description.length > 0" class="text-muted" v-html="compiledDescription"></p>
         <p v-if="typeof this.linkText === 'string' && this.linkText.length > 0">
@@ -35,12 +35,12 @@
 
 <script>
   import ContentBlockMixin from '~/core/mixins/layouts/ContentBlock';
-  import PriceMixin from '~/core/mixins/layouts/Price';
+  import ContentBlockPriceMixin from '~/core/mixins/layouts/ContentBlockPrice';
 
   export default {
     mixins: [
       ContentBlockMixin,
-      PriceMixin
+      ContentBlockPriceMixin
     ]
   };
 </script>

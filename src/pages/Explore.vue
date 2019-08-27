@@ -85,16 +85,17 @@
           </div>
           <div class="col-xl-4 right-pane">
             <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">Great Local Deals</h3>
-            <content-block-layout
-              v-for="post in dealsContent"
-              :key="post.id"
+            <deal-block-layout
+              v-for="deal in dealsContent"
+              :key="deal.id"
               className="col-xs-12 blog-post"
-              :title="post.title"
-              :description="post.summary"
-              :link="post.path"
-              :image="post.image"
-              :imageAlt="post.caption"
-              :datePublished="post.date"
+              :title="deal.title"
+              :description="deal.summary"
+              :link="deal.path"
+              :image="deal.image"
+              :imageAlt="deal.caption"
+              :datePublished="deal.date"
+              :price="deal.price"
             />
           </div>
         </div>
@@ -104,6 +105,7 @@
 </template>
 
 <script>
+  import DealBlockLayout from '~/components/layouts/DealBlockLayout.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
 
   import PostMixin from '~/core/mixins/PostMixin';
@@ -119,7 +121,8 @@
       title: "About"
     },
     components: {
-      ContentBlockLayout
+      ContentBlockLayout,
+      DealBlockLayout
     },
     mixins: [PostMixin, HeroMixin, SectionMixin],
     data() {
@@ -230,6 +233,7 @@
               caption
               summary
               content
+              price
               path
               slug
             }
