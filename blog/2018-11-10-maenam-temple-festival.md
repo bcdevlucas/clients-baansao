@@ -1,6 +1,6 @@
 ---
 title: Maenam Temple Festival
-date: 2018-11-10 20:08:08 -0700
+date: 2018-08-10 20:08:08 -0700
 slug: maenam-temple-festival
 image: /images/thai-festival.jpg
 imageId: thai-festival_ytjgif

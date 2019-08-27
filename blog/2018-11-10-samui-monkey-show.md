@@ -1,6 +1,6 @@
 ---
 title: The Samui Monkey Show
-date: 2018-11-10 20:08:08 -0700
+date: 2018-08-10 20:08:08 -0700
 slug: samui-monkey-show
 image: /images/baby-monkey-coconut-monkey-735023.jpg
 imageId: baby-monkey-coconut-monkey-735023_aecvuu

@@ -1,6 +1,6 @@
 ---
 title: 2019 Samui Regatta
-date: 2018-11-10 20:08:08 -0700
+date: 2018-08-10 20:08:08 -0700
 slug: 2019-samui-regatta
 image: /images/samui-regatta.jpg
 imageId: samui-regatta_ey50iu

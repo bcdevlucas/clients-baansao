@@ -1,6 +1,6 @@
 ---
 title: Top 10 Local Restaurants
-date: 2018-11-10 20:08:08 -0700
+date: 2018-08-10 20:08:08 -0700
 slug: top-10-local-restaurants
 image: /images/thai-seafood-basket.jpg
 imageId: thai-seafood-basket_ke3npl
