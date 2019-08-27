@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@chenfengyuan/vue-number-input": "^1.1.1",
-    "@gridsome/source-filesystem": "^0.3.0",
+    "@gridsome/source-filesystem": "^0.5.0",
     "@gridsome/transformer-remark": "^0.2.1",
     "@gridsome/transformer-yaml": "git+https://github.com/bluecollardev/gridsome-transformer-yaml.git",
     "animejs": "^3.1.0",
@@ -17,7 +17,7 @@
     "bootstrap-vue": "^2.0.0-rc.19",
     "cloudinary-core": "^2.7.3",
     "cloudinary-vue": "git+https://github.com/bluecollardev/cloudinary-vue.git#hotfix/1.0.0-beta2-support-folders",
-    "gridsome": "^0.5.8",
+    "gridsome": "^0.6.8",
     "jest": "^24.8.0",
     "lozad": "^1.9.0",
     "marked": "^0.6.2",
