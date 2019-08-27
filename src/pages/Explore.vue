@@ -151,8 +151,6 @@
     },
     computed: {
       pageSectionContent() {
-        console.log('dumping about data');
-        console.log(ExploreData);
         return (ExploreData.hasOwnProperty('sections')) ? ExploreData.sections : [];
       }
     },

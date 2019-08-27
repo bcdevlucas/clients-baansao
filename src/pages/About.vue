@@ -118,8 +118,6 @@
         return content;
       },
       pageSectionContent() {
-        console.log('dumping about data');
-        console.log(CompanyData);
         return (CompanyData.hasOwnProperty('sections')) ? CompanyData.sections : [];
       },
       serviceContent() {

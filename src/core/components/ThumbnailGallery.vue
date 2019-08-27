@@ -159,9 +159,6 @@
 
         galleryImages = galleryImages.slice(start, Math.min(end, galleryImages.length));
 
-        //console.log(`dumping gallery images ${start} - ${end} | featuredOnly: ${featuredOnly}`);
-        //console.log(galleryImages);
-
         return galleryImages;
       },
       getLargeImageUrls() {

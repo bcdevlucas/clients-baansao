@@ -26,7 +26,7 @@
               <div class="container">
                 <div class="row align-items-center mb-5 pb-5">
                   <div class="row">
-                    <content-block-layout
+                    <!--<content-block-layout
                       className="col-md-12 mb-3 project-entry blog-post blog-post-main full-width"
                       :description="$page.post.content"
                       :image="$page.post.image"
@@ -35,7 +35,7 @@
                       :cloudinaryImage="$page.post.imageId"
                       cloudName="baansaowanee"
                       cloudFolder="posts"
-                    />
+                    />-->
                   </div>
                 </div>
               </div>
@@ -46,7 +46,7 @@
                 <div class="row">
                   <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">What's Happening!</h3>
 
-                  <content-block-layout
+                  <!--<content-block-layout
                     v-for="post in eventsContent"
                     :key="post.id"
                     className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
@@ -60,7 +60,7 @@
                     :cloudinaryImage="post.imageId"
                     cloudName="baansaowanee"
                     cloudFolder="posts"
-                  />
+                  />-->
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@
                 <div class="row">
                   <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Popular Attractions</h3>
 
-                  <content-block-layout
+                  <!--<content-block-layout
                     v-for="post in attractionsContent"
                     :key="post.id"
                     className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
@@ -83,14 +83,14 @@
                     :cloudinaryImage="post.imageId"
                     cloudName="baansaowanee"
                     cloudFolder="posts"
-                  />
+                  />-->
                 </div>
               </div>
             </div>
           </div>
           <div class="col-xl-4 right-pane">
             <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">Great Local Deals</h3>
-            <content-block-layout
+            <!--<content-block-layout
               v-for="deal in dealsContent"
               :key="deal.id"
               className="col-xs-12 blog-post"
@@ -103,7 +103,7 @@
               :cloudinaryImage="deal.imageId"
               cloudName="baansaowanee"
               cloudFolder="posts"
-            />
+            />-->
           </div>
         </div>
       </div>
@@ -151,8 +151,6 @@
         return (this.$page && this.$page.post) ? moment(this.$page.post.date, "YYYY-MM-DD").format('MMM Do YYYY') : '';
       },
       pageSectionContent() {
-        console.log('dumping about data');
-        console.log(ExploreData);
         return (ExploreData.hasOwnProperty('sections')) ? ExploreData.sections : [];
       }
     }
@@ -162,6 +160,7 @@
 <page-query>
   query BlogPosts($path: String!) {
     post: blogPost(path: $path) {
+      id
       title
       date
       image
@@ -175,6 +174,7 @@
     posts: allBlogPost {
       edges {
         node {
+          id
           title
           date
           image
