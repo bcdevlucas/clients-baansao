@@ -1,6 +1,6 @@
 ---
 title: Experience Chaweng Stadium
-date: 2018-08-10 20:08:08 -0700
+date: 2019-08-10 20:08:08 -0700
 slug: chaweng-stadium
 image: /images/muay-thai-chaweng.jpg
 imageId: muay-thai-chaweng_vumofa

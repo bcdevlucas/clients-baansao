@@ -1,6 +1,6 @@
 ---
 title: Win a romantic seafood dinner
-date: 2018-08-10 20:08:08 -0700
+date: 2019-08-10 20:08:08 -0700
 slug: romantic-dinner-for-two-sweepstakes
 image: /images/romantic-dinner.jpg
 imageId: romantic-dinner_otinsu

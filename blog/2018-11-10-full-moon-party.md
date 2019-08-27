@@ -1,6 +1,6 @@
 ---
 title: The Full Moon Party
-date: 2018-08-10 20:08:08 -0700
+date: 2019-08-10 20:08:08 -0700
 slug: full-moon-party
 image: /images/full-moon-party.png
 imageId: full-moon-party_n6j6du

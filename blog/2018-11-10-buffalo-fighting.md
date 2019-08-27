@@ -1,6 +1,6 @@
 ---
 title: Buffalo Fighting
-date: 2018-08-10 20:08:08 -0700
+date: 2019-08-10 20:08:08 -0700
 slug: buffalo-fighting
 image: /images/buffalo-fighting.jpg
 imageId: buffalo-fighting_xejv1d

@@ -1,6 +1,6 @@
 ---
 title: Open Water Scuba Course
-date: 2018-08-10 20:08:08 -0700
+date: 2019-08-10 20:08:08 -0700
 slug: scuba-course-discount
 image: /images/scuba-diving.jpg
 imageId: scuba-diving_qz2jyo
