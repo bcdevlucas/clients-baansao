@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row px-4">
+    <div class="row px-4" v-if="propertiesContent.length > 0">
       <property-block-layout
         v-for="property in propertiesContent.slice(min, max)"
         :key="property.id"
@@ -9,17 +9,19 @@
         :description="(property.summary) ? property.summary : ''"
         :link="`/property/${property.id}`"
         linkText="View Property"
-        :cloudinaryImage="property.imageId"
-        cloudName="baansaowanee"
-        :cloudFolder="property.galleryFolder"
-        :imageAlt="property.caption"
-        :prices="property.price"
       />
     </div>
   </div>
 </template>
 
 <script>
+  /**
+   :cloudinaryImage="property.imageId"
+   cloudName="baansaowanee"
+   :cloudFolder="property.galleryFolder"
+   :imageAlt="property.caption"
+   :prices="property.price"
+   */
   import marked from 'marked';
 
   import PropertyBlockLayout from '~/components/layouts/PropertyBlockLayout.vue';

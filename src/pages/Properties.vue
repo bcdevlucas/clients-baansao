@@ -23,24 +23,24 @@
               </div>
             </div>
             <div class="site-section properties-posts" v-if="propertiesContent.length > 0">
-              <!--<property-grid-layout
+              <property-grid-layout
                 class="container"
                 colClass="col-lg-6 project-entry"
                 :min="0"
                 :max="propertiesContent.length / 2"
-              />-->
+              />
               <span class="flower-separator-white"></span>
-              <!--<property-grid-layout
+              <property-grid-layout
                 class="container"
                 colClass="col-lg-6 project-entry"
                 :min="propertiesContent.length / 2"
                 :max="propertiesContent.length"
-              />-->
+              />
             </div>
           </div>
           <div class="col-xl-4 right-pane">
             <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">Great Local Deals</h3>
-            <!--<deal-block-layout
+            <deal-block-layout
               v-for="deal in dealsContent"
               :key="deal.id"
               className="col-xs-12 blog-post"
@@ -51,10 +51,7 @@
               :imageAlt="deal.caption"
               :datePublished="deal.date"
               :price="deal.price"
-              :cloudinaryImage="deal.imageId"
-              cloudName="baansaowanee"
-              cloudFolder="posts"
-            />-->
+            />
           </div>
         </div>
       </div>
@@ -159,6 +156,7 @@
         edges {
           node {
             ...on BlogPost {
+              id
               title
               date
               image
