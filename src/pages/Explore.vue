@@ -272,8 +272,10 @@
     margin-right: 2rem;
   }
 
-  .blog-posts .content-block-image {
-    height: 220px;
+  @media screen and (min-width: 84em) {
+    .blog-posts .content-block-image {
+      height: 220px;
+    }
   }
 
   .blog-posts {

@@ -259,7 +259,7 @@
       border-radius: 50%;
       position: absolute;
       left: 3%;
-      top: 25px;
+      top: 35px;
       display: none;
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
@@ -346,9 +346,7 @@
     opacity: 0.5;
   }
   @media screen and (max-width: 660px) {
-    body {padding-top: 48px;}
     header .wrap {
-      height: 48px;
       justify-content: center;
       align-items: center;
       flex-flow: row wrap;
