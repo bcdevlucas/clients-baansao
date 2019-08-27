@@ -46,32 +46,14 @@
                 </div>
               </div>
             </div>
-            <div class="site-section" v-if="postsContent.length > 0">
+            <div class="site-section">
               <div class="container-fluid">
-                <div class="row" v-if="postsContent.length > 1">
-                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">What's Happening</h3>
-
-                  <content-block-layout
-                    v-for="post in eventsContent"
-                    :key="post.id"
-                    className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
-                    :title="post.title"
-                    :description="post.content"
-                    :link="post.path"
-                    linkText="Read Article"
-                    :image="post.image"
-                    :imageAlt="post.caption"
-                    :datePublished="post.date"
-                    :cloudinaryImage="post.imageId"
-                    cloudName="baansaowanee"
-                    cloudFolder="posts"
-                  />
-                </div>
+                <!--<event-list class="row" />-->
               </div>
             </div>
-            <div class="site-section" v-if="$page.posts.edges.length > 0">
+            <div class="site-section">
               <div class="container-fluid">
-                <attraction-list class="row" />
+                <!--<attraction-list class="row" />-->
               </div>
             </div>
           </div>
@@ -89,6 +71,7 @@
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import DealList from '~/components/page/deals/DealList.vue';
   import AttractionList from '~/components/page/attractions/AttractionList.vue';
+  import EventList from '~/components/page/events/EventList.vue';
 
   import PostMixin from '~/core/mixins/PostMixin';
   import HeroMixin from '~/mixins/HeroMixin';
@@ -107,7 +90,8 @@
       ContentBlockLayout,
       DealBlockLayout,
       DealList,
-      AttractionList
+      AttractionList,
+      EventList
     },
     mixins: [PostMixin, HeroMixin, SectionMixin],
     data() {
@@ -169,64 +153,6 @@
               caption
               summary
               content
-              path
-              slug
-            }
-          }
-        }
-      }
-    }
-    eventsPosts: tag(id: "events") {
-      belongsTo {
-        edges {
-          node {
-            ...on BlogPost {
-              title
-              date
-              image
-              imageId
-              caption
-              summary
-              content
-              path
-              slug
-            }
-          }
-        }
-      }
-    }
-    attractionsPosts: tag(id: "attractions") {
-      belongsTo {
-        edges {
-          node {
-            ...on BlogPost {
-              title
-              date
-              image
-              imageId
-              caption
-              summary
-              content
-              path
-              slug
-            }
-          }
-        }
-      }
-    }
-    dealsPosts: tag(id: "deals") {
-      belongsTo {
-        edges {
-          node {
-            ...on BlogPost {
-              title
-              date
-              image
-              imageId
-              caption
-              summary
-              content
-              price
               path
               slug
             }

@@ -38,21 +38,7 @@
               />
             </div>
           </div>
-          <div class="col-xl-4 right-pane">
-            <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">Great Local Deals</h3>
-            <deal-block-layout
-              v-for="deal in dealsContent"
-              :key="deal.id"
-              className="col-xs-12 blog-post"
-              :title="deal.title"
-              :description="deal.summary"
-              :link="deal.path"
-              :image="deal.image"
-              :imageAlt="deal.caption"
-              :datePublished="deal.date"
-              :price="deal.price"
-            />
-          </div>
+          <deal-list class="col-xl-4 right-pane" />
         </div>
       </div>
     </div>
@@ -67,6 +53,7 @@
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import DealBlockLayout from '~/components/layouts/DealBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
+  import DealList from '~/components/page/deals/DealList.vue';
 
   import ThumbnailGallery from '~/core/components/ThumbnailGallery.vue';
 
@@ -86,7 +73,8 @@
       PropertyBlockLayout,
       PropertyGridLayout,
       TestimonialBlockLayout,
-      ThumbnailGallery
+      ThumbnailGallery,
+      DealList
     },
     metaInfo: {
       title: "Properties"

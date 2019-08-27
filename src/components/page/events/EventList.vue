@@ -1,8 +1,8 @@
 <template>
-  <div v-if="staticAttractionsContent instanceof Array && staticAttractionsContent.length > 1">
-    <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Popular Attractions</h3>
+  <div v-if="staticEventsContent instanceof Array && staticEventsContent.length > 1">
+    <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">What's Happening</h3>
     <content-block-layout
-      v-for="post in staticAttractionsContent"
+      v-for="post in staticEventsContent"
       :key="post.id"
       className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
       :title="post.title"
@@ -34,7 +34,7 @@
 
 <static-query>
   query BlogPosts {
-    attractionsPosts: tag(id: "attractions") {
+    eventsPosts: tag(id: "events") {
       belongsTo {
         edges {
           node {
