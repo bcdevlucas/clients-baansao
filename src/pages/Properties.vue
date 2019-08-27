@@ -65,16 +65,17 @@
           </div>
           <div class="col-xl-4 right-pane">
             <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">Great Local Deals</h3>
-            <content-block-layout
-              v-for="post in dealsContent"
-              :key="post.id"
+            <deal-block-layout
+              v-for="deal in dealsContent"
+              :key="deal.id"
               className="col-xs-12 blog-post"
-              :title="post.title"
-              :description="post.summary"
-              :link="post.path"
-              :image="post.image"
-              :imageAlt="post.caption"
-              :datePublished="post.date"
+              :title="deal.title"
+              :description="deal.summary"
+              :link="deal.path"
+              :image="deal.image"
+              :imageAlt="deal.caption"
+              :datePublished="deal.date"
+              :price="deal.price"
             />
           </div>
         </div>
@@ -88,6 +89,7 @@
 
   import PropertyBlockLayout from '~/components/layouts/PropertyBlockLayout.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
+  import DealBlockLayout from '~/components/layouts/DealBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
 
   import ThumbnailGallery from '~/core/components/ThumbnailGallery.vue';
@@ -104,6 +106,7 @@
   export default {
     components: {
       ContentBlockLayout,
+      DealBlockLayout,
       PropertyBlockLayout,
       TestimonialBlockLayout,
       ThumbnailGallery
