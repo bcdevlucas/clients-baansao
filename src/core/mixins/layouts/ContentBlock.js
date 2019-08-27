@@ -174,7 +174,10 @@ export default {
   },
   mounted() {
     if (this.cloudinaryImage) {
-      this.loadImage();
+      this.loadImage().catch(err => () => {
+        console.log('Error loading image');
+        console.log(err);
+      });
     }
   }
 };

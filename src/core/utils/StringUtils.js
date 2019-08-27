@@ -34,7 +34,7 @@ function camelize(str) {
 function swapSubstrings (str, sub1, sub2) {
   str = str.replace(new RegExp('(' + sub1 + '|' + sub2 + ')', 'g'), (match) => {
     return match === sub1 ? sub2 : sub1
-  })
+  });
 
   return str
 }
@@ -45,12 +45,12 @@ function escapeRegExp(str) {
 
 function shortenText(str, maxLength, greedy) {
   greedy = greedy || true;
-  maxLength = maxLength || str.length
+  maxLength = maxLength || str.length;
 
   if (maxLength < str.length) {
-    let trimmed = str.substr(0, maxLength)
+    let trimmed = str.substr(0, maxLength);
     // Check to see if we chopped off the last word, we don't want to trim if that's the case...
-    const rem = str.substr(maxLength, str.length)
+    const rem = str.substr(maxLength, str.length);
     if (greedy === false || /\s/.test(rem)) {
       return trimmed.substr(0, Math.min(trimmed.length, trimmed.lastIndexOf(' '))) + '...'
     }
@@ -80,20 +80,20 @@ function unquoteIfNecessary(text) {
 }
 
 function decodeHtmlEntities(str) {
-  let element = document.createElement('div')
+  let element = document.createElement('div');
 
   let decode = (str) => {
     if (str && typeof str === 'string') {
       // Strip script/html tags
-      str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gmi, '')
-      str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '')
-      element.innerHTML = str
-      str = element.textContent
+      str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gmi, '');
+      str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '');
+      element.innerHTML = str;
+      str = element.textContent;
       element.textContent = ''
     }
 
     return str
-  }
+  };
 
   return decode(str)
 }
@@ -103,7 +103,7 @@ function stringIsInteger(str) {
     return false
   }
 
-  let n = Math.floor(Number(str))
+  let n = Math.floor(Number(str));
   return String(n) === str && n >= 0
 }
 
