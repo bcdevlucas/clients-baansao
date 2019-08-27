@@ -426,6 +426,7 @@
     property: property(path: $path) {
       id
       fields {
+        id
         title
         metaKeywords
         metaDescription
@@ -465,6 +466,7 @@
         node {
           id
           fields {
+            id
             title
             metaKeywords
             metaDescription
