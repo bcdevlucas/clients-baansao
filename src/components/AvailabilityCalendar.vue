@@ -2,7 +2,7 @@
   <div>
     <div class="col-lg-12 ml-auto text-center">
       <span class="sub-title mb-0" style="font-family: 'Calligraffitti', sans-serif; text-transform: none; font-size: 1.5rem">Starting from</span>
-      <span class="font-weight-bold text-black mb-0" style="font-size: 3.5rem;">{{ priceFormatted }}</span><span class="font-weight-bold text-black"> {{ price.currency }} / night</span>
+      <span class="display-price">{{ priceFormatted }} <small>{{ price.currency }}<br />per night</small></span>
     </div>
     <!--<vue-cal
       default-view="month"
@@ -97,8 +97,18 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   .vuecal__cell-date {
     height: 3rem;
+  }
+
+  .display-price {
+    font-size: 3.5rem;
+
+    small {
+      font-size: 1.3rem;
+      display: inline-block;
+      line-height: 1rem;
+    }
   }
 </style>
