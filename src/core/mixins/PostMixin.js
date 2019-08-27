@@ -6,7 +6,7 @@ export default {
   computed: {
     postsContent() {
       const content = this.$page.posts.edges.map(edge => {
-        let date = moment(edge.node.date, "YYYY-MM-DD");
+        let date = moment(edge.node.date);
 
         const content = Object.assign({}, edge.node, {
           summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
@@ -21,7 +21,7 @@ export default {
     },
     featuredContent() {
       const content = this.$page.featuredPosts.belongsTo.edges.map(edge => {
-        let date = moment(edge.node.date, "YYYY-MM-DD");
+        let date = moment(edge.node.date);
 
         const content = Object.assign({}, edge.node, {
           summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
@@ -36,7 +36,7 @@ export default {
     },
     eventsContent() {
       const content = this.$page.eventsPosts.belongsTo.edges.map(edge => {
-        let date = moment(edge.node.date, "YYYY-MM-DD");
+        let date = moment(edge.node.date);
 
         const content = Object.assign({}, edge.node, {
           summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
@@ -51,7 +51,7 @@ export default {
     },
     attractionsContent() {
       const content = this.$page.attractionsPosts.belongsTo.edges.map(edge => {
-        let date = moment(edge.node.date, "YYYY-MM-DD");
+        let date = moment(edge.node.date);
 
         const content = Object.assign({}, edge.node, {
           summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
@@ -66,7 +66,7 @@ export default {
     },
     dealsContent() {
       const content = this.$page.dealsPosts.belongsTo.edges.map(edge => {
-        let date = moment(edge.node.date, "YYYY-MM-DD");
+        let date = moment(edge.node.date);
 
         const content = Object.assign({}, edge.node, {
           summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,

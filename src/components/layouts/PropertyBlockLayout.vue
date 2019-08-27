@@ -8,7 +8,7 @@
           class="img-fluid"
         />
       </a>
-      <a v-if="showCloudinaryImage" @click="linkClicked" class="d-block content-block-image figure">
+      <a v-if="!showStaticImage" @click="linkClicked" class="d-block content-block-image figure">
         <img
           v-if="this.cloudImage && this.cloudImage.src"
           :src="this.cloudImage.src"
@@ -24,10 +24,10 @@
         <p v-if="typeof this.datePublished === 'string' && this.datePublished.length > 0" class="text-muted">
           {{ this.datePublished }} - Bob Johnson
         </p>
-        <div v-if="typeof this.description === 'string' && this.description.length > 0" class="text-muted" v-html="compiledDescription"></div>
-        <div v-if="typeof this.linkText === 'string' && this.linkText.length > 0">
+        <p v-if="typeof this.description === 'string' && this.description.length > 0" class="text-muted" v-html="compiledDescription"></p>
+        <p v-if="typeof this.linkText === 'string' && this.linkText.length > 0">
           <a @click="linkClicked" v-bind:href="this.link" v-bind:aria-label="this.linkText" class="btn btn-art-class btn-lg rounded-0"><i class="material-icons block-icon">arrow_right</i> {{ this.linkText }}</a>
-        </div>
+        </p>
       </div>
     </div>
   </div>
@@ -37,16 +37,11 @@
   import ContentBlockMixin from '~/core/mixins/layouts/ContentBlock';
   import PriceMixin from '~/core/mixins/layouts/Price';
 
-  import ErrorBoundary from '~/core/components/ErrorBoundary.vue';
-
   export default {
     mixins: [
       ContentBlockMixin,
       PriceMixin
-    ],
-    components: {
-      ErrorBoundary
-    }
+    ]
   };
 </script>
 
@@ -91,8 +86,8 @@
       //top: 10px;
       background: rgba(255,255,255,0.7);
       padding: 10px 5px;
-      float: none;
-      display: block;
+      float: none !important;
+      display: block !important;
     }
   }
 </style>

@@ -148,7 +148,7 @@
     },
     computed: {
       datePublished() {
-        return (this.$page && this.$page.post) ? moment(this.$page.post.date, "YYYY-MM-DD").format('MMM Do YYYY') : '';
+        return (this.$page && this.$page.post) ? moment(this.$page.post.date).format('MMM Do YYYY') : '';
       },
       pageSectionContent() {
         console.log('dumping about data');
