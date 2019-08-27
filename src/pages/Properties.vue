@@ -7,7 +7,7 @@
             <div class="hero-wrapper">
               <div
                 v-if="getHeroById('page-hero') !== null"
-                class="site-blocks-cover text-shadow"
+                class="site-blocks-cover diag-right-up text-shadow"
                 :style="`background-image: url(${getHeroById('page-hero').image});`"
               >
                 <div class="container hero-content">
@@ -22,7 +22,7 @@
                 </div>
               </div>
             </div>
-            <div class="site-section" v-if="propertiesContent.length > 0">
+            <div class="site-section properties-posts" v-if="propertiesContent.length > 0">
               <div class="container px-4">
                 <div class="row">
                   <property-block-layout
@@ -305,8 +305,7 @@
     .hero-wrapper {
       margin-left: -15px;
       margin-right: -15px;
-      height: auto;
-      height: 580px;
+      height: 80vh;
     }
 
     .hero-content {
@@ -411,5 +410,14 @@
       background-color: rgba(245, 245, 245, 1);
       position: static;
     }
+  }
+
+  .diag-right-up {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 9vh), 0 100%);
+  }
+
+  .properties-posts {
+    position: relative;
+    top: -20vh;
   }
 </style>
