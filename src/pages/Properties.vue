@@ -115,7 +115,7 @@
       ThumbnailGallery
     },
     metaInfo: {
-      title: "Classes"
+      title: "Properties"
     },
     mixins: [HeroMixin, SectionMixin, ServiceMixin, PostMixin, TestimonialMixin],
     data() {
