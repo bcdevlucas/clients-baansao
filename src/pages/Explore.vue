@@ -38,6 +38,9 @@
                     :image="post.image"
                     :imageAlt="post.caption"
                     :datePublished="post.date"
+                    :cloudinaryImage="post.imageId"
+                    cloudName="baansaowanee"
+                    cloudFolder="posts"
                   />
                 </div>
               </div>
@@ -58,6 +61,9 @@
                     :image="post.image"
                     :imageAlt="post.caption"
                     :datePublished="post.date"
+                    :cloudinaryImage="post.imageId"
+                    cloudName="baansaowanee"
+                    cloudFolder="posts"
                   />
                 </div>
               </div>
@@ -78,6 +84,9 @@
                     :image="post.image"
                     :imageAlt="post.caption"
                     :datePublished="post.date"
+                    :cloudinaryImage="post.imageId"
+                    cloudName="baansaowanee"
+                    cloudFolder="posts"
                   />
                 </div>
               </div>
@@ -96,6 +105,9 @@
               :imageAlt="deal.caption"
               :datePublished="deal.date"
               :price="deal.price"
+              :cloudinaryImage="deal.imageId"
+              cloudName="baansaowanee"
+              cloudFolder="posts"
             />
           </div>
         </div>
@@ -160,6 +172,7 @@
           title
           date
           image
+          imageId
           caption
           summary
           content
@@ -176,6 +189,7 @@
               title
               date
               image
+              imageId
               caption
               summary
               content
@@ -194,6 +208,7 @@
               title
               date
               image
+              imageId
               caption
               summary
               content
@@ -212,6 +227,7 @@
               title
               date
               image
+              imageId
               caption
               summary
               content
@@ -230,6 +246,7 @@
               title
               date
               image
+              imageId
               caption
               summary
               content

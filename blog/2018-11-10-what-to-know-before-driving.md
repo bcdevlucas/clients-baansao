@@ -3,6 +3,7 @@ title: What to Know Before Driving
 date: 2018-11-10 20:08:08 -0700
 slug: know-before-driving
 image: /images/motorbikes-01.jpg
+imageId: motorbikes-01_enck9d
 caption: What to know before driving
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac sapien ultrices, lobortis risus vitae.
 tags: ["featured", "articles", "driving"]

@@ -87,6 +87,16 @@ export default {
     compiledDescription() {
       return this.description;
       //return marked(this.description);
+    },
+    // TODO: Maybe move this to utils? And just invoke here?
+    hasCloudinaryImage() {
+      return typeof this.cloudinaryImage === 'string' && this.cloudinaryImage.length > 0;
+    },
+    hasStaticImage() {
+      return typeof this.image === 'string' && this.image.length > 0;
+    },
+    showStaticImage() {
+      return this.hasStaticImage && !this.hasCloudinaryImage;
     }
   },
   data() {

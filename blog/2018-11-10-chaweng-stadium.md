@@ -3,6 +3,7 @@ title: Experience Chaweng Stadium
 date: 2018-11-10 20:08:08 -0700
 slug: chaweng-stadium
 image: /images/muay-thai-chaweng.jpg
+imageId: muay-thai-chaweng_vumofa
 caption: Experience Chaweng Stadium
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac sapien ultrices, lobortis risus vitae.
 tags: ["attractions"]

@@ -1,8 +1,11 @@
 module.exports = function (api) {
   api.loadSource(store => {
-    /*const posts = store.getContentType('BlogPost');
+    const posts = store.getContentType('BlogPost');
     // Not sure how to make this a full-fledged object using markdown files, or if that's even a good idea... may be better to use yaml for everything?
-    posts.addSchemaField('price', ({ graphql }) => ({
+    /*posts.addSchemaField('price', ({ graphql }) => ({
+      type: graphql.GraphQLString,
+    }));*/
+    /*posts.addSchemaField('imageId', ({ graphql }) => ({
       type: graphql.GraphQLString,
     }));*/
 

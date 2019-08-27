@@ -3,6 +3,7 @@ title: Buffalo Fighting
 date: 2018-11-10 20:08:08 -0700
 slug: buffalo-fighting
 image: /images/buffalo-fighting.jpg
+imageId: buffalo-fighting_xejv1d
 caption: Buffalo Fighting
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac sapien ultrices, lobortis risus vitae.
 tags: ["attractions"]

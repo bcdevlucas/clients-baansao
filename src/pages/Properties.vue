@@ -76,6 +76,9 @@
               :imageAlt="deal.caption"
               :datePublished="deal.date"
               :price="deal.price"
+              :cloudinaryImage="deal.imageId"
+              cloudName="baansaowanee"
+              cloudFolder="posts"
             />
           </div>
         </div>
@@ -174,74 +177,6 @@
         }
       }
     }
-    posts: allBlogPost {
-      edges {
-        node {
-          title
-          date
-          image
-          caption
-          summary
-          content
-          path
-          slug
-        }
-      }
-    }
-    featuredPosts: tag(id: "featured") {
-      belongsTo {
-        edges {
-          node {
-            ...on BlogPost {
-              title
-              date
-              image
-              caption
-              summary
-              content
-              path
-              slug
-            }
-          }
-        }
-      }
-    }
-    eventsPosts: tag(id: "events") {
-      belongsTo {
-        edges {
-          node {
-            ...on BlogPost {
-              title
-              date
-              image
-              caption
-              summary
-              content
-              path
-              slug
-            }
-          }
-        }
-      }
-    }
-    attractionsPosts: tag(id: "attractions") {
-      belongsTo {
-        edges {
-          node {
-            ...on BlogPost {
-              title
-              date
-              image
-              caption
-              summary
-              content
-              path
-              slug
-            }
-          }
-        }
-      }
-    }
     dealsPosts: tag(id: "deals") {
       belongsTo {
         edges {
@@ -250,6 +185,7 @@
               title
               date
               image
+              imageId
               caption
               summary
               content
