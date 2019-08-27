@@ -12,7 +12,6 @@
         :cloudinaryImage="property.imageId"
         cloudName="baansaowanee"
         :cloudFolder="property.galleryFolder"
-        :imageAlt="property.caption"
         :prices="property.price"
       />
     </div>
