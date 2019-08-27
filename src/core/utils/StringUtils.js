@@ -43,10 +43,20 @@ function escapeRegExp(str) {
   return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '\\$1')
 }
 
-function shortenText(str, maxLength) {
+function shortenText(str, maxLength, greedy) {
+  greedy = greedy || true;
   maxLength = maxLength || str.length
-  let trimmed = str.substr(0, maxLength)
-  return trimmed.substr(0, Math.min(trimmed.length, trimmed.lastIndexOf(' ')))
+
+  if (maxLength < str.length) {
+    let trimmed = str.substr(0, maxLength)
+    // Check to see if we chopped off the last word, we don't want to trim if that's the case...
+    const rem = str.substr(maxLength, str.length)
+    if (greedy === false || /\s/.test(rem)) {
+      return trimmed.substr(0, Math.min(trimmed.length, trimmed.lastIndexOf(' '))) + '...'
+    }
+  }
+
+  return str
 }
 function toSentenceCase(text) {
   return text.replace(/\w\S*/g, function (txt) {
