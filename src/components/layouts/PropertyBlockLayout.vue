@@ -86,8 +86,8 @@
       //top: 10px;
       background: rgba(255,255,255,0.7);
       padding: 10px 5px;
-      float: none;
-      display: block;
+      float: none !important;
+      display: block !important;
     }
   }
 </style>
