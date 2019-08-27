@@ -32,15 +32,15 @@
               <div class="col-lg-6 ml-auto text-center">
                 <span class="sub-title" v-html="getSection(0).summary"></span>
                 <h3 class="mb-4" v-html="getSection(0).title"></h3>
-                <p class="mb-5" v-html="getSection(0).description"></p>
-                <p>
+                <div class="mb-5" v-html="getSection(0).description"></div>
+                <div>
                   <a
                     :href="getSection(0).link"
                     target="_blank"
                     class="btn btn-art-class btn-lg rounded-0">
                     <i class="material-icons block-icon">brush</i> {{ getSection(0).linkText }}
                   </a>
-                </p>
+                </div>
               </div>
             </div>
           </div>

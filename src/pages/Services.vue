@@ -32,7 +32,7 @@
             </div>
           </div>
           <div class="col-lg-5 ml-auto">
-            <p v-html="activeService.description"></p>
+            <div v-html="activeService.description"></div>
             <p class="class-action-buttons mt-5">
               <button @click="showBookingForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i> Book Now</button>&nbsp;
               <button @click="showQuestionForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i> Ask a Question</button>
