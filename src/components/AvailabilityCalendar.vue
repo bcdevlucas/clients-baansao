@@ -27,12 +27,6 @@
         <span>Book on Airbnb.com</span>
       </button>&nbsp;
     </p>
-
-    <p class="class-action-buttons mt-2 text-center">
-      <button @click="" class="btn btn-secondary btn-lg ask-question" style="width: 100%"><i class="material-icons">question_answer</i>
-        <span>Ask a Question</span>
-      </button>
-    </p>
   </div>
 </template>
 

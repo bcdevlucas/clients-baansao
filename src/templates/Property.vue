@@ -67,13 +67,27 @@
                   </div>
                 </div>
               </div>-->
+            </div>
+          </div>
+
+          <div class="col-lg-3 mb-5 mb-lg-0">
+            <div class="container">
+              <availability-calendar
+                class="mt-4 mb-4"
+                :price="pageData.price"
+              />
+              <p class="class-action-buttons mt-2 text-center">
+                <button @click="showQuestionForm" class="btn btn-secondary btn-lg ask-question" style="width: 100%"><i class="material-icons">question_answer</i>
+                  <span>Ask a Question</span>
+                </button>
+              </p>
               <div class="pt-4" v-if="displayQuestionForm" ref="questionForm">
-                <div class="row">
+                <!--<div class="row">
                   <div class="col-12 text-center">
                     <span class="sub-title">{{ pageData.title }}</span>
                     <h2 class="font-weight-bold text-black mb-5">Have a Question? We're Here to Help!</h2>
                   </div>
-                </div>
+                </div>-->
                 <div class="row mb-4">
                   <div class="col-md-12 col-lg-12">
                     <form
@@ -133,16 +147,6 @@
                   </div>
                 </div>
               </div>
-
-            </div>
-          </div>
-
-          <div class="col-lg-3 mb-5 mb-lg-0">
-            <div class="container">
-              <availability-calendar
-                class="mt-4 mb-4"
-                :price="pageData.price"
-              />
             </div>
           </div>
         </div>
