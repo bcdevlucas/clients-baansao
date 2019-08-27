@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <content-detail-modal ref="contentDetail" title="Contact Us">
+      <!--<content-detail-modal ref="contentDetailModal" title="Contact Us">
         <div class="container">
           <div id="contact" class="row">
             <div class="col-md-12 col-lg-12">
@@ -98,7 +98,7 @@
             </div>
           </div>
         </div>
-      </content-detail-modal>
+      </content-detail-modal>-->
 
       <!--<footer class="site-footer">
         <div class="footer-banner">
@@ -187,7 +187,7 @@
     methods: {
       viewDetail(activeDetail) {
         if (typeof window !== 'undefined') {
-          this.$refs.contentDetail.viewDetail(activeDetail, () => {});
+          this.$refs.contentDetailModal.viewDetail(activeDetail, () => {});
         }
       }
     }

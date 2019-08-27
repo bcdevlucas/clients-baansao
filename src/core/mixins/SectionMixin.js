@@ -16,8 +16,8 @@ export default {
       let items = this.pageSectionContent;
 
       if (items instanceof Array && items.length > idx) {
-        console.log('section found');
-        console.log(items[idx]);
+        //console.log('section found');
+        //console.log(items[idx]);
         return items[idx];
       }
 

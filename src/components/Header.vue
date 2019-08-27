@@ -12,11 +12,11 @@
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
         <ul class="site-menu mb-0">
           <!--<li><a href="/" aria-label="Home" v-on:click="hideDropMenu()">Sawatdee Kha</a></li>-->
-          <li><a href="/properties" aria-label="Properties" v-on:click="hideDropMenu()" v-bind:data-selected="route.path === '/properties'"><span class="d-sm-none d-md-none">Our </span>Homes</a></li>
-          <li><a href="/explore" aria-label="Explore" v-on:click="hideDropMenu()" v-bind:data-selected="route.path === '/explore'">Explore</a></li>
-          <li><a href="/about" aria-label="About Us" v-on:click="hideDropMenu()" v-bind:data-selected="route.path === '/about'">About<span class="d-sm-none d-md-none"> Us</span></a></li>
-          <!--<li><a href="/services" aria-label="Services" v-on:click="hideDropMenu()" v-bind:data-selected="route.path === '/services'">Services</a></li>-->
-          <li><a aria-label="Contact" v-on:click="onContactClicked(); hideDropMenu()" v-bind:data-selected="route.path === '/about#contact'">Contact</a></li>
+          <li><g-link to="/properties" aria-label="Properties" v-on:click="hideDropMenu()" v-bind:data-selected="route.path === '/properties'"><span class="d-sm-none d-md-none">Our </span>Homes</g-link></li>
+          <li><g-link to="/explore" aria-label="Explore" v-on:click="hideDropMenu()" v-bind:data-selected="route.path === '/explore'">Explore</g-link></li>
+          <li><g-link to="/about" aria-label="About Us" v-on:click="hideDropMenu()" v-bind:data-selected="route.path === '/about'">About<span class="d-sm-none d-md-none"> Us</span></g-link></li>
+          <!--<li><g-link to="/services" aria-label="Services" v-on:click="hideDropMenu()" v-bind:data-selected="route.path === '/services'">Services</a></li>-->
+          <li><g-link aria-label="Contact" v-on:click="onContactClicked(); hideDropMenu()" v-bind:data-selected="route.path === '/about#contact'">Contact</g-link></li>
         </ul>
         <div class="site-navbar-top">
           <div class="d-flex ml-auto">
