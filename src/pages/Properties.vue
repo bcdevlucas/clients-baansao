@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="content-wrapper blog-posts">
+    <div class="content-wrapper property-posts">
       <div class="container-fluid">
         <div class="row column-wrapper">
           <div class="col-xl-8">
@@ -279,11 +279,12 @@
     margin-right: 2rem;
   }
 
-  .blog-posts .content-block-image {
+  /* Don't restrict height on property images! */
+  /*.property-posts .content-block-image {
     height: 220px;
-  }
+  }*/
 
-  .blog-posts {
+  .property-posts {
     background: #fefefe;
 
     .hero-wrapper {
