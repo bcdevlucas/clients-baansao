@@ -72,10 +72,10 @@
 
           <div class="col-lg-3 mb-5 mb-lg-0">
             <div class="container">
-              <!--<availability-calendar
+              <availability-calendar
                 class="mt-4 mb-4"
                 :price="pageData.price"
-              />-->
+              />
               <p class="class-action-buttons mt-2 text-center">
                 <button class="btn btn-secondary btn-lg ask-question" style="width: 100%"><i class="material-icons">question_answer</i>
                   <span>Ask a Question</span>
