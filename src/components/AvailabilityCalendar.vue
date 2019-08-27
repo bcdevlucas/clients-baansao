@@ -2,7 +2,7 @@
   <div>
     <div class="col-lg-12 ml-auto text-center">
       <span class="sub-title mb-0" style="font-family: 'Calligraffitti', sans-serif; text-transform: none; font-size: 1.5rem">Starting from</span>
-      <span class="font-weight-bold text-black mb-0" style="font-size: 3.5rem;">{{ priceFormatted }}</span><span class="font-weight-bold text-black"> / night</span>
+      <span class="font-weight-bold text-black mb-0" style="font-size: 3.5rem;">{{ priceFormatted }}</span><span class="font-weight-bold text-black"> {{ price.currency }} / night</span>
     </div>
     <vue-cal
       default-view="month"
@@ -52,7 +52,8 @@
       price: {
         type: Object,
         default: () => ({
-          amount: 0.00
+          amount: 0.00,
+          currency: ''
         })
       }
     },
@@ -88,7 +89,7 @@
     },
     computed: {
       priceFormatted() {
-        return (this.price[0]) ? `$${parseFloat(this.price[0].amount).toFixed(2)}` : '';
+        return (this.price) ? `$${parseFloat(this.price.amount).toFixed(2)}` : '';
       }
     },
     methods: {

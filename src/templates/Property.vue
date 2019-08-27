@@ -139,7 +139,10 @@
 
           <div class="col-lg-3 mb-5 mb-lg-0">
             <div class="container">
-              <availability-calendar class="mt-4 mb-4" :price="pageData.price" />
+              <availability-calendar
+                class="mt-4 mb-4"
+                :price="pageData.price"
+              />
             </div>
           </div>
         </div>
@@ -277,7 +280,7 @@
           metaKeywords: this.$page.property.fields.metaKeywords,
           metaDescription: this.$page.property.fields.metaDescription,
           address: address,
-          price: this.$page.property.fields.price,
+          price: (this.$page.property.fields.price instanceof Array) ? this.$page.property.fields.price.pop() : this.$page.property.fields.price,
           //summary: this.$page.property.fields.summary,
           //description: this.$page.property.fields.description,
           summary: (typeof window !== 'undefined') ? marked(this.$page.property.fields.summary) : this.$page.property.fields.summary,
