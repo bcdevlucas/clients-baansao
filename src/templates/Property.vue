@@ -72,10 +72,10 @@
 
           <div class="col-lg-3 mb-5 mb-lg-0">
             <div class="container">
-              <availability-calendar
+              <!--<availability-calendar
                 class="mt-4 mb-4"
                 :price="pageData.price"
-              />
+              />-->
               <p class="class-action-buttons mt-2 text-center">
                 <button class="btn btn-secondary btn-lg ask-question" style="width: 100%"><i class="material-icons">question_answer</i>
                   <span>Ask a Question</span>
@@ -102,7 +102,7 @@
           </div>
         </div>
         <div class="row mx-4">
-          <property-block-layout
+          <!--<property-block-layout
             v-for="property in propertiesContent.slice(0,4).filter(item => item.id !== pageData.id)"
             :key="property.id"
             className="col-lg-4 col-md-4 mb-6 project-entry"
@@ -110,14 +110,12 @@
             :description="(property.summary) ? property.summary : ''"
             :link="`/property/${property.id}`"
             linkText="View Property"
-          />
-          <!--
-          :cloudinaryImage="property.imageId"
-          cloudName="baansaowanee"
-          :cloudFolder="property.galleryFolder"
-          :imageAlt="property.caption"
-          :prices="property.price"
-          -->
+            :cloudinaryImage="property.imageId"
+            cloudName="baansaowanee"
+            :cloudFolder="property.galleryFolder"
+            :imageAlt="property.caption"
+            :prices="property.price"
+          />-->
         </div>
         <div class="row">
           <div class="col-12 text-center mt-5">
