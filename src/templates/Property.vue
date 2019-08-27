@@ -85,7 +85,7 @@
                 <div class="row">
                   <div class="col-12 text-center">
                     <!--<span class="sub-title">{{ pageData.title }}</span>-->
-                    <h3 class="mb-2">We're Here to Help!</h3>
+                    <h3 class="mb-2">We're here to help!</h3>
                   </div>
                 </div>
                 <div class="row mb-4">
