@@ -168,7 +168,7 @@
           </div>
         </div>
         <div class="row mx-4">
-          <property-block-layout
+          <!--<property-block-layout
             v-for="property in propertiesContent.slice(0,4).filter(item => item.id !== pageData.id)"
             :key="property.id"
             className="col-lg-4 col-md-4 mb-6 project-entry"
@@ -181,7 +181,7 @@
             :cloudFolder="property.galleryFolder"
             :imageAlt="property.caption"
             :prices="property.price"
-          />
+          />-->
         </div>
         <div class="row">
           <div class="col-12 text-center mt-5">
