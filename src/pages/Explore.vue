@@ -165,12 +165,11 @@
         return content;
       }*/
     },
-    mounted() {
+    /*mounted() {
       setTimeout(() => {
         this.$forceUpdate();
       }, 333);
-
-    }
+    }*/
   };
 </script>
 
