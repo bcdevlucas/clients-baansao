@@ -171,7 +171,7 @@
             :title="property.title"
             :description="(property.summary) ? property.summary : ''"
             :link="`/property/${property.id}`"
-            linkText="Learn More"
+            linkText="View Property"
             :cloudinaryImage="property.imageId"
             cloudName="baansaowanee"
             :cloudFolder="property.galleryFolder"
