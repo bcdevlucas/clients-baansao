@@ -164,6 +164,9 @@
 
         return content;
       }*/
+    },
+    mounted() {
+      this.$forceUpdate();
     }
   };
 </script>
