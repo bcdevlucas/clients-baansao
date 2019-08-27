@@ -83,7 +83,7 @@
           });
 
           const newCenter = {
-            lat: results[0].geometry.location.lat() - 0.006, // Offset for map pos
+            lat: results[0].geometry.location.lat() + 0.006, // Offset for map pos
             lng: results[0].geometry.location.lng()
           };
 
