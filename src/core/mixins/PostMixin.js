@@ -69,7 +69,7 @@ export default {
         let date = moment(edge.node.date);
 
         const content = Object.assign({}, edge.node, {
-          summary: `${StringUtils.shortenText(edge.node.summary)}`,
+          summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
           content: `${StringUtils.shortenText(edge.node.content, 320)}`,
           date: date.format('MMM Do YYYY')
         });
