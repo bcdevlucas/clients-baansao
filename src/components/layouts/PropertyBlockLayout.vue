@@ -1,14 +1,14 @@
 <template>
   <div v-bind:class="classNameString">
     <div class="content-block-inner">
-      <a v-if="showStaticImage" @click="linkClicked" class="d-block content-block-image figure">
+      <!--<a v-if="showStaticImage" @click="linkClicked" class="d-block content-block-image figure">
         <img
           :src="this.image"
           alt="Image"
           class="img-fluid"
         />
-      </a>
-      <a v-if="showCloudinaryImage" @click="linkClicked" class="d-block content-block-image figure">
+      </a>-->
+      <a @click="linkClicked" class="d-block content-block-image figure">
         <img
           v-if="this.cloudImage && this.cloudImage.src"
           :src="this.cloudImage.src"
