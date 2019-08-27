@@ -8,14 +8,14 @@
           class="img-fluid"
         />
       </a>
-      <!--<a v-if="showCloudinaryImage" @click="linkClicked" class="d-block content-block-image figure">
+      <a v-if="showCloudinaryImage" @click="linkClicked" class="d-block content-block-image figure">
         <img
           v-if="this.cloudImage && this.cloudImage.src"
           :src="this.cloudImage.src"
           alt="Image"
           class="img-fluid"
         />
-      </a>-->
+      </a>
       <div class="content-block-content">
         <h3 class="mb-4">
           <a @click="linkClicked" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.title }}</a>
