@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <error-boundary>
     <div class="content-wrapper blog-posts">
       <div class="container-fluid">
         <div class="row column-wrapper">
@@ -113,10 +114,12 @@
         </div>
       </div>
     </div>
+    </error-boundary>
   </Layout>
 </template>
 
 <script>
+  import ErrorBoundary from '~/core/components/ErrorBoundary.vue';
   import DealBlockLayout from '~/components/layouts/DealBlockLayout.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
 
@@ -133,6 +136,7 @@
       title: "About"
     },
     components: {
+      ErrorBoundary,
       ContentBlockLayout,
       DealBlockLayout
     },

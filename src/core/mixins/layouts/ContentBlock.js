@@ -96,7 +96,11 @@ export default {
       return typeof this.image === 'string' && this.image.length > 0;
     },
     showStaticImage() {
-      return this.hasStaticImage && !this.hasCloudinaryImage;
+      if (typeof window !== 'undefined') {
+        return this.hasStaticImage && !this.hasCloudinaryImage;
+      }
+
+      return false;
     }
   },
   data() {
