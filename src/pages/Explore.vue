@@ -71,46 +71,11 @@
             </div>
             <div class="site-section" v-if="$page.posts.edges.length > 0">
               <div class="container-fluid">
-                <div class="row" v-if="postsContent.length > 1">
-                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Popular Attractions</h3>
-
-                  <content-block-layout
-                    v-for="post in attractionsContent"
-                    :key="post.id"
-                    className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
-                    :title="post.title"
-                    :description="post.content"
-                    :link="post.path"
-                    linkText="Read Article"
-                    :image="post.image"
-                    :imageAlt="post.caption"
-                    :datePublished="post.date"
-                    :cloudinaryImage="post.imageId"
-                    cloudName="baansaowanee"
-                    cloudFolder="posts"
-                  />
-                </div>
+                <attraction-list class="row" />
               </div>
             </div>
           </div>
-          <div class="col-xl-4 right-pane">
-            <h3 class="category-title text-center mt-5 mb-5" style="display: block; width: 100%;">Great Local Deals</h3>
-            <deal-block-layout
-              v-for="deal in dealsContent"
-              :key="deal.id"
-              className="col-xs-12 blog-post"
-              :title="deal.title"
-              :description="deal.summary"
-              :link="deal.path"
-              :image="deal.image"
-              :imageAlt="deal.caption"
-              :datePublished="deal.date"
-              :price="deal.price"
-              :cloudinaryImage="deal.imageId"
-              cloudName="baansaowanee"
-              cloudFolder="posts"
-            />
-          </div>
+          <deal-list class="col-xl-4 right-pane" />
         </div>
       </div>
     </div>
@@ -122,6 +87,8 @@
   import ErrorBoundary from '~/core/components/ErrorBoundary.vue';
   import DealBlockLayout from '~/components/layouts/DealBlockLayout.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
+  import DealList from '~/components/page/deals/DealList.vue';
+  import AttractionList from '~/components/page/attractions/AttractionList.vue';
 
   import PostMixin from '~/core/mixins/PostMixin';
   import HeroMixin from '~/mixins/HeroMixin';
@@ -138,7 +105,9 @@
     components: {
       ErrorBoundary,
       ContentBlockLayout,
-      DealBlockLayout
+      DealBlockLayout,
+      DealList,
+      AttractionList
     },
     mixins: [PostMixin, HeroMixin, SectionMixin],
     data() {
