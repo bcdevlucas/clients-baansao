@@ -9,7 +9,7 @@
             class="img-fluid"
           />
         </a>
-        <a v-if="!showStaticImage" @click="linkClicked" class="d-block content-block-image figure">
+        <a v-if="showCloudinaryImage" @click="linkClicked" class="d-block content-block-image figure">
           <img
             v-if="this.cloudImage && this.cloudImage.src"
             :src="this.cloudImage.src"

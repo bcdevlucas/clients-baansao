@@ -96,11 +96,10 @@ export default {
       return typeof this.image === 'string' && this.image.length > 0;
     },
     showStaticImage() {
-      if (typeof window !== 'undefined') {
-        return this.hasStaticImage && !this.hasCloudinaryImage;
-      }
-
-      return true;
+      return this.hasStaticImage && !this.hasCloudinaryImage;
+    },
+    showCloudinaryImage() {
+      return (typeof window !== 'undefined' && !this.showStaticImage);
     }
   },
   data() {
