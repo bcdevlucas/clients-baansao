@@ -4,7 +4,7 @@
       <span class="sub-title mb-0" style="font-family: 'Calligraffitti', sans-serif; text-transform: none; font-size: 1.5rem">Starting from</span>
       <span class="font-weight-bold text-black mb-0" style="font-size: 3.5rem;">{{ priceFormatted }}</span><span class="font-weight-bold text-black"> {{ price.currency }} / night</span>
     </div>
-    <vue-cal
+    <!--<vue-cal
       default-view="month"
       hide-view-selector
       :time="false"
@@ -20,11 +20,7 @@
         <label class="font-weight-bold"><small>Children</small></label>
         <number-input class="number-input" placeholder="0" v-model="children" :min="1" :max="10" controls center />
       </div>
-      <!--<div class="input-group px-4" style="display: flex; flex-flow: column; text-align: center">
-        <label class="font-weight-bold"><small>Rooms</small></label>
-        <number-input class="number-input" placeholder="0" v-model="rooms" :min="1" :max="10" controls center />
-      </div>-->
-    </div>
+    </div>-->
 
     <p class="class-action-buttons mt-5 mb-0 text-center">
       <button @click="openAirbnbPage(pageData.link)" class="btn btn-primary btn-lg open-airbnb-page"><i class="material-icons">calendar_today</i>
