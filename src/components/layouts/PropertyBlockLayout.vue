@@ -80,12 +80,14 @@
 
   @media screen and (max-width: 40em) {
     .content-block-price {
-      position: absolute;
-      top: 0;
-      right: 15px;
-      top: 10px;
+      //position: absolute;
+      //top: 0;
+      //right: 15px;
+      //top: 10px;
       background: rgba(255,255,255,0.7);
       padding: 10px 5px;
+      float: none;
+      display: block;
     }
   }
 </style>
