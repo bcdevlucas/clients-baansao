@@ -81,13 +81,13 @@
                   <span>Ask a Question</span>
                 </button>
               </p>
-              <div class="pt-4" v-if="displayQuestionForm" ref="questionForm">
-                <!--<div class="row">
+              <div class="pt-5" v-if="displayQuestionForm" ref="questionForm">
+                <div class="row">
                   <div class="col-12 text-center">
-                    <span class="sub-title">{{ pageData.title }}</span>
-                    <h2 class="font-weight-bold text-black mb-5">Have a Question? We're Here to Help!</h2>
+                    <!--<span class="sub-title">{{ pageData.title }}</span>-->
+                    <h3 class="font-weight-bold text-black mb-5">We're Here to Help!</h3>
                   </div>
-                </div>-->
+                </div>
                 <div class="row mb-4">
                   <div class="col-md-12 col-lg-12">
                     <form
