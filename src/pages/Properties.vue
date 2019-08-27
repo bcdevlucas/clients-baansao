@@ -23,44 +23,19 @@
               </div>
             </div>
             <div class="site-section properties-posts" v-if="propertiesContent.length > 0">
-              <div class="container px-4">
-                <div class="row">
-                  <property-block-layout
-                    v-for="property in propertiesContent.slice(0, propertiesContent.length / 2)"
-                    v-if="typeof property.summary === 'string'"
-                    :key="property.id"
-                    className="col-lg-6 project-entry"
-                    :title="property.title"
-                    :description="(property.summary) ? property.summary : ''"
-                    :link="`/property/${property.id}`"
-                    linkText="View Property"
-                    :cloudinaryImage="property.imageId"
-                    cloudName="baansaowanee"
-                    :cloudFolder="property.galleryFolder"
-                    :imageAlt="property.caption"
-                    :prices="property.price"
-                  />
-
-                  <span class="flower-separator-white"></span>
-                </div>
-                <div class="row mt-6 mb-6">
-                  <property-block-layout
-                    v-for="property in propertiesContent.slice(propertiesContent.length / 2, propertiesContent.length)"
-                    v-if="typeof property.summary === 'string'"
-                    :key="property.id"
-                    className="col-lg-6 project-entry"
-                    :title="property.title"
-                    :description="(property.summary) ? property.summary : ''"
-                    :link="`/property/${property.id}`"
-                    linkText="View Property"
-                    :cloudinaryImage="property.imageId"
-                    cloudName="baansaowanee"
-                    :cloudFolder="property.galleryFolder"
-                    :imageAlt="property.caption"
-                    :prices="property.price"
-                  />
-                </div>
-              </div>
+              <property-grid-layout
+                class="container"
+                colClass="col-lg-6 project-entry"
+                :min="0"
+                :max="propertiesContent.length / 2"
+              />
+              <span class="flower-separator-white"></span>
+              <property-grid-layout
+                class="container"
+                colClass="col-lg-6 project-entry"
+                :min="propertiesContent.length / 2"
+                :max="propertiesContent.length"
+              />
             </div>
           </div>
           <div class="col-xl-4 right-pane">
@@ -91,6 +66,7 @@
   import marked from 'marked';
 
   import PropertyBlockLayout from '~/components/layouts/PropertyBlockLayout.vue';
+  import PropertyGridLayout from '~/components/layouts/PropertyGridLayout.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import DealBlockLayout from '~/components/layouts/DealBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
@@ -111,6 +87,7 @@
       ContentBlockLayout,
       DealBlockLayout,
       PropertyBlockLayout,
+      PropertyGridLayout,
       TestimonialBlockLayout,
       ThumbnailGallery
     },

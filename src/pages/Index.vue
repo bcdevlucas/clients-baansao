@@ -78,19 +78,10 @@
         </div>
         <div>
           <div class="row px-4">
-            <property-block-layout
-              v-for="property in propertiesContent.slice(0,3)"
-              :key="property.id"
-              className="col-lg-4 col-md-4 mb-6 project-entry"
-              :title="property.title"
-              :description="(property.summary) ? property.summary : ''"
-              :link="`/property/${property.id}`"
-              linkText="View Property"
-              :cloudinaryImage="property.imageId"
-              cloudName="baansaowanee"
-              :cloudFolder="property.galleryFolder"
-              :imageAlt="property.caption"
-              :prices="property.price"
+            <property-grid-layout
+              colClass="col-lg-4 col-md-4 mb-6 project-entry"
+              :min="0"
+              :max="3"
             />
           </div>
         </div>
@@ -103,6 +94,7 @@
   import marked from 'marked';
 
   import PropertyBlockLayout from '~/components/layouts/PropertyBlockLayout.vue';
+  import PropertyGridLayout from '~/components/layouts/PropertyGridLayout.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
 
   import ServiceMixin from '~/core/mixins/ServiceMixin';
@@ -114,6 +106,7 @@
     components: {
       PropertyBlockLayout,
       ContentBlockLayout,
+      PropertyGridLayout
     },
     metaInfo: {
       title: 'Baan Saowanee - Ko Samui, Thailand'
