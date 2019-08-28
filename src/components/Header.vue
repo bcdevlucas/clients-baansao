@@ -13,13 +13,13 @@
         <ul class="site-menu mb-0">
           <!--<li><a href="/" aria-label="Home" v-on:click="hideDropMenu()">Sawatdee Kha</a></li>-->
           <li>
-            <g-link to="/properties" aria-label="Properties" v-on:click="onClickMenuItem" v-bind:data-selected="route.path === '/properties'"><span class="d-sm-none d-md-none">Our </span>Homes</g-link>
+            <g-link to="/properties" aria-label="Properties" v-on:click="onClickMenuItem" v-bind:data-selected="route.path === '/properties'">Homes</g-link>
           </li>
           <li>
             <g-link to="/explore" aria-label="Explore" v-on:click="onClickMenuItem" v-bind:data-selected="route.path === '/explore'">Explore</g-link>
           </li>
           <li>
-            <g-link to="/about" aria-label="About Us" v-on:click="onClickMenuItem" v-bind:data-selected="route.path === '/about'">About<span class="d-sm-none d-md-none"> Us</span></g-link>
+            <g-link to="/about" aria-label="About Us" v-on:click="onClickMenuItem" v-bind:data-selected="route.path === '/about'">About</g-link>
           </li>
           <!--<li><a href="/services" aria-label="Services" v-on:click="hideDropMenu()" v-bind:data-selected="route.path === '/services'">Services</a></li>-->
           <li>
