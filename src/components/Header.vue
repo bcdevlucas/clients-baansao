@@ -9,7 +9,7 @@
 
       <a href="/" class="logo ml-4"><span></span>Baan Saowanee</a>
 
-      <nav id="menu" class="site-navbar align-items-center justify-content-center">
+      <nav id="menu" class="site-navbar align-items-center justify-content-end">
         <ul class="site-menu mb-0">
           <!--<li><a href="/" aria-label="Home" v-on:click="hideDropMenu()">Sawatdee Kha</a></li>-->
           <li>
