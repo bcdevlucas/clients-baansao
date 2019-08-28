@@ -1,6 +1,6 @@
 <template>
   <div v-bind:class="classNameString">
-    <div class="content-block-inner">
+    <div class="deal-block-inner content-block-inner">
       <a v-if="showStaticImage" @click="linkClicked" class="d-block content-block-image figure">
         <img
           :src="this.image"
@@ -89,6 +89,14 @@
   .deal-expiry {
     display: block;
     color: #333 !important;
+  }
+
+  @media screen and (min-width: 84em) {
+    .deal-block-inner {
+      .content-block-image {
+        margin-bottom: 0;
+      }
+    }
   }
 
   @media screen and (min-width: 102em) {

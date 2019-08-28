@@ -73,12 +73,6 @@
     }
   }
 
-  @media screen and (min-width: 40em) {
-    .content-block-image {
-      border: 1px solid lightgrey;
-    }
-  }
-
   .content-block-price {
     float: right;
     font-size: 130%;
