@@ -56,6 +56,15 @@
                 <attraction-list class="row" />
               </div>
             </div>
+            <div class="site-section properties-posts" v-if="propertiesContent.length > 0">
+              <h3 class="category-title text-center mb-3" style="display: block; width: 100%;">Local Accommodation</h3>
+              <property-grid-layout
+                class="container-fluid"
+                colClass="col-lg-4 mb-3 project-entry"
+                :min="0"
+                :max="3"
+              />
+            </div>
           </div>
           <deal-list class="col-xl-4 right-pane" />
         </div>
@@ -66,9 +75,12 @@
 </template>
 
 <script>
+  import marked from 'marked';
+
   import ErrorBoundary from '~/core/components/ErrorBoundary.vue';
   import DealBlockLayout from '~/components/layouts/DealBlockLayout.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
+  import PropertyGridLayout from '~/components/layouts/PropertyGridLayout.vue';
   import DealList from '~/components/page/deals/DealList.vue';
   import AttractionList from '~/components/page/attractions/AttractionList.vue';
   import EventList from '~/components/page/events/EventList.vue';
@@ -88,6 +100,7 @@
     components: {
       ErrorBoundary,
       ContentBlockLayout,
+      PropertyGridLayout,
       DealBlockLayout,
       DealList,
       AttractionList,
@@ -105,6 +118,16 @@
     computed: {
       pageSectionContent() {
         return (ExploreData.hasOwnProperty('sections')) ? ExploreData.sections : [];
+      },
+      propertiesContent() {
+        const content = this.$page.properties.edges.map(edge => {
+          const data = Object.assign({ id: edge.node.id }, edge.node.fields);
+          data.summary = (typeof window !== 'undefined') ? marked(data.summary) : data.summary;
+          data.description = (typeof window !== 'undefined') ? marked(data.description) : data.description;
+          return data;
+        });
+
+        return content;
       }
     },
     methods: {
@@ -156,6 +179,39 @@
               path
               slug
             }
+          }
+        }
+      }
+    }
+    properties: allProperty {
+      edges {
+        node {
+          id
+          fields {
+            image
+            imageId
+            gallery {
+              id
+              src
+              caption
+              #subCaption
+              featured
+            }
+            galleryFolder
+            link
+            linkText
+            title
+            metaKeywords
+            metaDescription
+            price {
+              amount
+              currency
+              dateStart
+              dateEnd
+              name
+            }
+            summary
+            description
           }
         }
       }
