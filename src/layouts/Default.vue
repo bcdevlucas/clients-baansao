@@ -412,7 +412,7 @@
 <style lang="scss">
   /* These are theme & client specific modifications */
   header {
-    border-bottom: 1px solid midnightblue; /* TODO: Add this color as theme's gold color */
+    border-bottom: 1px solid darkgoldenrod; /* TODO: Add this color as theme's gold color */
     box-shadow: 0 1px 3px rgba(16,16,16,0.33333);
   }
 
