@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="col-lg-12 ml-auto text-center">
+  <div :key="price">
+    <div class="col-lg-12 ml-auto text-center" v-if="price">
       <span class="sub-title mb-0" style="font-family: 'Calligraffitti', sans-serif; text-transform: none; font-size: 1.5rem">Starting from</span>
       <span class="display-price">{{ priceFormatted }} <small>{{ price.currency }}<br />per night</small></span>
     </div>
