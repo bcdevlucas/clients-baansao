@@ -199,8 +199,6 @@
   }*/
 
   .property-posts {
-    background: #fefefe;
-
     .hero-wrapper {
       margin-left: -15px;
       margin-right: -15px;
