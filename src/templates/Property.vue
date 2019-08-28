@@ -88,21 +88,29 @@
             <h2 class="font-weight-bold text-black mb-5">Our Other Rentals</h2>
           </div>
         </div>
-        <div class="row mx-4" v-if="propertiesContent instanceof Array && propertiesContent.length > 0">
-          <property-block-layout
-            v-for="property in unselectedProperties"
-            :key="property.id"
-            className="col-lg-4 col-md-4 mb-6 project-entry"
-            :title="property.title"
-            :description="(property.summary) ? property.summary : ''"
-            :link="`/property/${property.id}`"
-            linkText="View Property"
-            :cloudinaryImage="property.imageId"
-            cloudName="baansaowanee"
-            :cloudFolder="property.galleryFolder"
-            :imageAlt="property.caption"
-            :prices="property.price"
-          />
+        <div class="row" v-if="propertiesContent instanceof Array && propertiesContent.length > 0">
+          <div class="col-xs-12">
+            <div class="container-fluid">
+              <div class="row">
+                <property-block-layout
+                  v-for="property in unselectedProperties"
+                  :key="property.id"
+                  className="col-lg-4 col-md-4 mb-3 project-entry"
+                  :title="property.title"
+                  :description="(property.summary) ? property.summary : ''"
+                  :link="`/property/${property.id}`"
+                  linkText="View Property"
+                  :cloudinaryImage="property.imageId"
+                  cloudName="baansaowanee"
+                  :cloudFolder="property.galleryFolder"
+                  :imageAlt="property.caption"
+                  :prices="property.price"
+                />
+              </div>
+            </div>
+
+          </div>
+
         </div>
         <div class="row">
           <div class="col-12 text-center mt-5">
