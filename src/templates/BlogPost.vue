@@ -8,7 +8,7 @@
               <div
                 v-if="getHeroById('page-hero') !== null"
                 class="site-blocks-cover diag-right-up text-shadow"
-                :style="`background-image: url(${$page.post.image}); background-position: -180px -380px !important`"
+                :style="`background-image: url(${$page.post.image}); background-position: -180px -380px`"
               >
                 <div class="container hero-content">
                   <div class="row align-items-center justify-content-center">

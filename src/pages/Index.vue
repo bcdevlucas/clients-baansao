@@ -194,5 +194,15 @@
       margin-right: -15px;
       height: 90vh;
     }
+
+    .blog-posts .hero-wrapper {
+      margin-left: -15px;
+      margin-right: -15px;
+      height: 90vh !important;
+    }
+
+    .site-blocks-cover {
+      background-position: center center !important;
+    }
   }
 </style>
