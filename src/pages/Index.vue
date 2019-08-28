@@ -2,7 +2,7 @@
   <Layout
     :displayPosts="false"
   >
-    <div class="hero-wrapper">
+    <div class="hero-wrapper homepage-hero">
       <!--<video autoplay muted loop playsinline id="bg-video" class="hero-mask">
         <source src="/video/032715490-dandelion-blowing-slow-motion_H264_420-web-xl.mp4" type="video/mp4">
       </video>-->
@@ -27,15 +27,15 @@
       </div>-->
 
       <div class="site-blocks-cover angle text-shadow" style="background-image: url(/images/orchard-view-3br/20.jpg); background-position: bottom center !important">
-        <!--<div class="palm-box-shadow"></div>-->
+        <!--<div class="palm-fog animate"></div>-->
         <div class="moving-palm-left animate"></div>
-        <div class="moving-palm-right animate"></div>
         <div class="moving-palm-solo animate"></div>
-        <div class="palm-fog animate"></div>
+        <div class="moving-palm-right animate"></div>
         <div class="container homepage-hero-content">
-          <div class="row align-items-center text-center justify-content-center" style="position: relative; top: -3rem;">
-            <div class="col-md-8 hero-text">
+          <div class="row align-items-center text-center justify-content-center">
+            <div class="col-md-8 hero-text" style="margin-top: 15vh">
               <div class="hero-logo d-none d-md-block"><span></span></div>
+              <!--<span class="flower-separator-white"></span>-->
               <span class="sub-text"><strong>Welcome to Baan Saowanee's</strong></span>
               <h1>Vacation Homes</h1>
             </div>
@@ -48,37 +48,26 @@
       <div class="site-section pt-0">
         <div class="container pt-4">
           <div class="row mt-4 mb-4 pt-4">
-            <div class="col-lg-12 ml-auto text-center d-none d-md-block">
-              <span class="sub-title">Welcome to</span>
-              <h2 class="font-weight-bold text-black mb-5">Baan Saowanee</h2>
-            </div>
-          </div>
-        </div>
-        <div class="container hero-description">
-          <div class="row">
-            <div class="col-sm-12">
-              <p>Baan Saowanee is a collection of holiday home rentals situated on the north side of Ko Samui island, a short five minute drive to scenic Mae Nam Beach. Sun, sand and the Gulf of Siam combine to make many a perfect day.</p>
-              <p>Our vacation homes are located in a quiet community enhanced with lush tropical greenery, fruit trees and flower blooms; but only a short walk away from convenience: restaurants, coffee bars, bakeries and other small shops. Picturesque Mae Nam village is nearby, as is the community Buddhist spiritual centre: Golden Mountain Temple.</p>
-              <p>Baan Saowanee guests have a range of rental options to choose from, dependent upon the number of persons and quality of accommodation. All of our holiday properties are clean, attractive and well maintained.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <span class="flower-separator-pink"></span>
-
-      <div class="site-section pt-0">
-        <div class="container pt-4">
-          <div class="row mt-4 mb-4 pt-4">
-            <div class="col-lg-12 ml-auto text-center">
-              <span class="sub-title">Browse</span>
-              <h2 class="font-weight-bold text-black mb-5">Our Rentals</h2>
+            <div class="col-lg-12 ml-auto text-center" style="margin-top: 7vh">
+              <span class="sub-title">We're</span>
+              <h2 class="font-weight-bold text-black mb-3">Baan Saowanee</h2>
+              <div style="margin-top: 5vh">
+                <p>Baan Saowanee is a collection of holiday home rentals situated on the north side of Ko Samui island, a short five minute drive to scenic Mae Nam Beach. Sun, sand and the Gulf of Siam combine to make many a perfect day.</p>
+                <span class="flower-separator-pink"></span>
+                <span class="sub-title">Conveniently Located</span>
+                <h2 class="font-weight-bold text-black mb-3">Private Homes</h2>
+                <p>Our vacation homes are located in a quiet community enhanced with lush tropical greenery, fruit trees and flower blooms; but only a short walk away from convenience: restaurants, coffee bars, bakeries and other small shops. Picturesque Mae Nam village is nearby, as is the community Buddhist spiritual centre: Golden Mountain Temple.</p>
+                <span class="flower-separator-white"></span>
+                <span class="sub-title">Browse</span>
+                <h2 class="font-weight-bold text-black mb-3">Our Rentals</h2>
+                <p>Baan Saowanee guests have a range of rental options to choose from, dependent upon the number of persons and quality of accommodation. All of our holiday properties are clean, attractive and well maintained.</p>
+              </div>
             </div>
           </div>
         </div>
         <div class="container-fluid">
           <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-12" style="margin-top: 5vh;">
               <property-grid-layout
                 class="container-fluid"
                 colClass="col-xl-3 col-lg-4 col-md-4 mb-3 project-entry"
@@ -204,5 +193,19 @@
     .site-blocks-cover {
       background-position: center center !important;
     }
+  }
+
+  .homepage-hero {
+    .site-blocks-cover {
+      height: 110vh;
+
+      .hero-content > .row {
+        height: 110vh;
+      }
+    }
+  }
+
+  .page-wrap {
+    margin-top: 78px;
   }
 </style>

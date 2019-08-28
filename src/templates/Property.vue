@@ -68,6 +68,28 @@
                   <span>Ask a Question</span>
                 </button>
               </p>
+              <div class="row">
+                <div class="col-12 text-center mt-5">
+                  <h3>Recommendations</h3>
+                </div>
+              </div>
+              <div class="slider row">
+                <div
+                  v-for="testimonial in getTestimonialsByIndex(0, 1)"
+                  class="col-xs-12"
+                >
+                  <testimonial-block-layout
+                    className="testimony"
+                    :reviewedBy="testimonial.reviewedBy"
+                    :image="testimonial.image"
+                    :testimonial="testimonial.testimonial"
+                  />
+                  <div
+                    class="homepage-hero-action action-link-block text-center space-bottom">
+                    <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -82,7 +104,7 @@
             </div>
           </div>
         </div>-->
-        <div class="row mt-4 mb-4 pt-4">
+        <div class="row mb-4">
           <div class="col-lg-12 ml-auto text-center">
             <span class="sub-title">Something Else?</span>
             <h2 class="font-weight-bold text-black mb-5">Our Other Rentals</h2>
@@ -107,31 +129,6 @@
                   :prices="property.price"
                 />
               </div>
-            </div>
-
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="col-12 text-center mt-5">
-            <span class="sub-title">Testimonials from</span>
-            <h2 class="font-weight-bold text-black mb-5">Our Friends</h2>
-          </div>
-        </div>
-        <div class="slider row">
-          <div
-            v-for="testimonial in getTestimonialsByIndex(0, 3)"
-            class="col-sm-4 col-lg-3"
-          >
-            <testimonial-block-layout
-              className="testimony"
-              :reviewedBy="testimonial.reviewedBy"
-              :image="testimonial.image"
-              :testimonial="testimonial.testimonial"
-            />
-            <div
-              class="homepage-hero-action action-link-block text-center space-bottom">
-              <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
             </div>
           </div>
         </div>
@@ -445,8 +442,13 @@
   }
 
   .property-hero {
-    height: auto !important;
-    min-height: 400px;
+    .site-blocks-cover {
+      height: 100vh;
+
+      .hero-content > .row {
+        height: 100vh;
+      }
+    }
 
     .sub-text * {
       font-size: 1.3rem !important;

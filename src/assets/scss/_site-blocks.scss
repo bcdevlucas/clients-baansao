@@ -18,14 +18,14 @@ $color-tertiary: #ff5733;
   }
   &,
   .row {
-    min-height: 600px;
-    height: calc(100vh);
+    //min-height: 600px;
+    //height: calc(100vh);
   }
   &.inner-page {
     &,
     .row {
-      min-height: 800px;
-      height: calc(100vh);
+      //min-height: 800px;
+      //height: calc(100vh);
     }
   }
   .sub-text {

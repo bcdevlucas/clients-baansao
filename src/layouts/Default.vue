@@ -231,16 +231,6 @@
   top: 0;
   background: rgba(0, 0, 0, 0.4);
 }
-.site-blocks-cover,
-.site-blocks-cover .row {
-  min-height: 600px;
-  height: calc(100vh);
-}
-.site-blocks-cover.inner-page,
-.site-blocks-cover.inner-page .row {
-  min-height: 800px;
-  height: calc(100vh);
-}
 .site-blocks-cover .sub-text {
   font-size: 1.3rem;
   color: rgba(255, 255, 255, 1);
@@ -305,7 +295,6 @@
 
   /* Good stuff here, pros on it */
 .hero-wrapper {
-  height: 100vh;
   overflow: hidden;
 }
 
