@@ -32,10 +32,19 @@
                       :image="$page.post.image"
                       :imageAlt="$page.post.caption"
                       :datePublished="datePublished"
+                    />
+                    <!--
+                    <content-block-layout
+                      className="col-md-12 mb-3 project-entry blog-post blog-post-main full-width"
+                      :description="$page.post.content"
+                      :image="$page.post.image"
+                      :imageAlt="$page.post.caption"
+                      :datePublished="datePublished"
                       :cloudinaryImage="$page.post.imageId"
                       cloudName="baansaowanee"
                       cloudFolder="posts"
                     />
+                    -->
                   </div>
                 </div>
               </div>
