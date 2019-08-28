@@ -10,7 +10,7 @@ export default {
 
         const content = Object.assign({}, edge.node, {
           summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
-          content: `${StringUtils.shortenText(edge.node.content, 320)}`,
+          content: `${StringUtils.shortenText(edge.node.content, 310)}`,
           date: date.format('MMM Do YYYY')
         });
 
@@ -25,7 +25,7 @@ export default {
 
         const content = Object.assign({}, edge.node, {
           summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
-          content: `${StringUtils.shortenText(edge.node.content, 320)}`,
+          content: `${StringUtils.shortenText(edge.node.content, 310)}`,
           date: date.format('MMM Do YYYY')
         });
 
@@ -40,7 +40,7 @@ export default {
 
         const content = Object.assign({}, edge.node, {
           summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
-          content: `${StringUtils.shortenText(edge.node.content, 320)}`,
+          content: `${StringUtils.shortenText(edge.node.content, 310)}`,
           date: date.format('MMM Do YYYY')
         });
 
@@ -55,7 +55,7 @@ export default {
 
         const content = Object.assign({}, edge.node, {
           summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
-          content: `${StringUtils.shortenText(edge.node.content, 320)}`,
+          content: `${StringUtils.shortenText(edge.node.content, 310)}`,
           date: date.format('MMM Do YYYY')
         });
 
@@ -70,7 +70,7 @@ export default {
 
         const content = Object.assign({}, edge.node, {
           summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
-          content: `${StringUtils.shortenText(edge.node.content, 320)}`,
+          content: `${StringUtils.shortenText(edge.node.content, 310)}`,
           date: date.format('MMM Do YYYY')
         });
 
