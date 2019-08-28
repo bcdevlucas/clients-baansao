@@ -17,14 +17,14 @@
         />
       </a>
       <div class="content-block-content">
-        <h3 class="mb-4">
+        <h3 class="mb-2">
           <a @click="linkClicked" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.title }}</a>
           <span class="content-block-price">{{ priceAtFormatted(0) }} <small>USD<br />per night</small></span>
         </h3>
         <p v-if="typeof this.datePublished === 'string' && this.datePublished.length > 0" class="text-muted">
           {{ this.datePublished }} - Bob Johnson
         </p>
-        <p v-if="typeof this.description === 'string' && this.description.length > 0" class="text-muted" v-html="compiledDescription"></p>
+        <p v-if="typeof this.description === 'string' && this.description.length > 0" v-html="compiledDescription"></p>
         <p v-if="typeof this.linkText === 'string' && this.linkText.length > 0">
           <a @click="linkClicked" v-bind:href="this.link" v-bind:aria-label="this.linkText" class="btn btn-art-class btn-lg rounded-0"><i class="material-icons block-icon">arrow_right</i> {{ this.linkText }}</a>
         </p>
