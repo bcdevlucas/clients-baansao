@@ -37,6 +37,9 @@
                 :max="4"
               />
             </div>
+            <div class="row">
+              <page-footer />
+            </div>
           </div>
           <deal-list class="col-xl-4 right-pane" />
         </div>
@@ -47,6 +50,8 @@
 
 <script>
   import marked from 'marked';
+
+  import PageFooter from '~/components/Footer.vue';
 
   import PropertyBlockLayout from '~/components/layouts/PropertyBlockLayout.vue';
   import PropertyGridLayout from '~/components/layouts/PropertyGridLayout.vue';
@@ -74,7 +79,8 @@
       PropertyGridLayout,
       TestimonialBlockLayout,
       ThumbnailGallery,
-      DealList
+      DealList,
+      PageFooter
     },
     metaInfo: {
       title: "Properties"
