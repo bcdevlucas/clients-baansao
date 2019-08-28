@@ -85,7 +85,9 @@
     }
   }
 
-  @media screen and (max-width: 102em) {
+  // IMPORTANT! This 108em breakpoint (instead of the usual 102) seems to resolve
+  // MacBook Pro with / without external display attached scaling...
+  @media screen and (max-width: 108em) {
     .content-block-price {
       //position: absolute;
       //top: 0;
