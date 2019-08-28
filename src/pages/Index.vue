@@ -79,15 +79,12 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-xs-12">
-              <div class="container-fluid">
-                <div class="row">
-                  <property-grid-layout
-                    colClass="col-xl-3 col-lg-4 col-md-4 mb-3 project-entry"
-                    :min="0"
-                    :max="4"
-                  />
-                </div>
-              </div>
+              <property-grid-layout
+                class="container-fluid"
+                colClass="col-xl-3 col-lg-4 col-md-4 mb-3 project-entry"
+                :min="0"
+                :max="4"
+              />
             </div>
           </div>
         </div>
