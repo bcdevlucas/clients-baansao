@@ -57,9 +57,6 @@
                 <span class="sub-title">Conveniently Located</span>
                 <h2 class="font-weight-bold text-black mb-3">Private Homes</h2>
                 <p>Our vacation homes are located in a quiet community enhanced with lush tropical greenery, fruit trees and flower blooms; but only a short walk away from convenience: restaurants, coffee bars, bakeries and other small shops. Picturesque Mae Nam village is nearby, as is the community Buddhist spiritual centre: Golden Mountain Temple.</p>
-                <span class="flower-separator-white"></span>
-                <span class="sub-title">Browse</span>
-                <h2 class="font-weight-bold text-black mb-3">Our Rentals</h2>
                 <p>Baan Saowanee guests have a range of rental options to choose from, dependent upon the number of persons and quality of accommodation. All of our holiday properties are clean, attractive and well maintained.</p>
               </div>
             </div>

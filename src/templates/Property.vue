@@ -63,11 +63,11 @@
                 :price="pageData.price"
                 :link="pageData.link">
               </pricing>
-              <p class="class-action-buttons mt-2 text-center">
+              <div class="class-action-buttons mt-2 text-center">
                 <button class="btn btn-secondary btn-lg ask-question" style="width: 100%"><i class="material-icons">question_answer</i>
                   <span>Ask a Question</span>
                 </button>
-              </p>
+              </div>
               <div class="row">
                 <div class="col-12 text-center mt-5">
                   <h3>Recommendations</h3>
@@ -75,7 +75,7 @@
               </div>
               <div class="slider row">
                 <div
-                  v-for="testimonial in getTestimonialsByIndex(0, 1)"
+                  v-for="testimonial in getTestimonialsByIndex(0, 0)"
                   class="col-xs-12"
                 >
                   <testimonial-block-layout
@@ -299,7 +299,7 @@
         }
       },
       async startPrimaryImageRotation(ms) {
-        ms = (!isNaN(ms)) ? ms : 10000;
+        ms = (!isNaN(ms)) ? ms : 13000;
 
         console.log('starting image rotation');
 
