@@ -40,7 +40,7 @@ export default {
 
         const content = Object.assign({}, edge.node, {
           summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
-          content: `${StringUtils.shortenText(edge.node.content, 310)}`,
+          content: `${StringUtils.shortenText(edge.node.content, 230)}`,
           date: date.format('MMM Do YYYY')
         });
 
@@ -55,7 +55,7 @@ export default {
 
         const content = Object.assign({}, edge.node, {
           summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
-          content: `${StringUtils.shortenText(edge.node.content, 310)}`,
+          content: `${StringUtils.shortenText(edge.node.content, 280)}`,
           date: date.format('MMM Do YYYY')
         });
 
