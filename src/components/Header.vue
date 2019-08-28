@@ -570,4 +570,8 @@
   .header-email {
     font-size: 1.0rem;
   }
+
+  .site-navbar a {
+    text-align: center;
+  }
 </style>
