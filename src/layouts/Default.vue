@@ -884,5 +884,17 @@
 
   @media only screen and (min-width: 120.0625em) {
   }
+
+  @media screen and (max-width: 40em) {
+    .moving-palm-left,
+    .moving-palm-right,
+    .moving-palm-solo {
+      display: none;
+    }
+
+    .angle, .diag-right-up {
+      clip-path: none !important;
+    }
+  }
 </style>
 

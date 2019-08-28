@@ -35,7 +35,7 @@
         <div class="container homepage-hero-content">
           <div class="row align-items-center text-center justify-content-center" style="position: relative; top: -3rem;">
             <div class="col-md-8 hero-text">
-              <div class="hero-logo"><span></span></div>
+              <div class="hero-logo d-none d-md-block"><span></span></div>
               <span class="sub-text"><strong>Welcome to Baan Saowanee's</strong></span>
               <h1>Vacation Homes</h1>
             </div>
@@ -48,7 +48,7 @@
       <div class="site-section pt-0">
         <div class="container pt-4">
           <div class="row mt-4 mb-4 pt-4">
-            <div class="col-lg-12 ml-auto text-center">
+            <div class="col-lg-12 ml-auto text-center d-none d-md-block">
               <span class="sub-title">Welcome to</span>
               <h2 class="font-weight-bold text-black mb-5">Baan Saowanee</h2>
             </div>
@@ -175,3 +175,19 @@
     }
   }
 </page-query>
+
+<style lang="scss">
+  @media screen and (max-width: 40em) {
+    .homepage-hero-content {
+      .hero-text {
+        align-self: initial !important;
+        margin-top: 0;
+      }
+    }
+
+    .site-section h2 {
+      font-size: 2.3rem;
+    }
+  }
+
+</style>
