@@ -885,4 +885,8 @@
       clip-path: none !important;
     }
   }
+
+  .post-entry, .project-entry {
+    overflow: visible !important;
+  }
 </style>

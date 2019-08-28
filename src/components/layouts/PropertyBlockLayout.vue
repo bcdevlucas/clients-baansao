@@ -1,6 +1,6 @@
 <template>
   <div v-bind:class="classNameString">
-    <div class="property-block-inner content-block-inner">
+    <div class="property-block-inner content-block-inner pb-3">
       <!--<a v-if="showStaticImage" @click="linkClicked" class="d-block content-block-image figure">
         <img
           :src="this.image"
