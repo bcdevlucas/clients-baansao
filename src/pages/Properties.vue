@@ -314,7 +314,7 @@
   @media screen and (min-width: 84em) {
     .properties-posts {
       position: relative;
-      top: -18vh;
+      top: -16vh;
     }
   }
 
