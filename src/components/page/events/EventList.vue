@@ -1,6 +1,6 @@
 <template>
   <div v-if="staticEventsContent instanceof Array && staticEventsContent.length > 1">
-    <h3 class="category-title text-center mb-3" style="display: block; width: 100%;">What's Happening</h3>
+    <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">What's Happening</h3>
     <content-block-layout
       v-for="post in staticEventsContent"
       :key="post.id"
