@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row px-4" v-if="propertiesContent.length > 0">
+    <div class="row" v-if="propertiesContent.length > 0">
       <property-block-layout
         v-for="property in propertiesContent.slice(min, max)"
         :key="property.id"

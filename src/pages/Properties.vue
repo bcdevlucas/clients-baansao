@@ -24,15 +24,15 @@
             </div>
             <div class="site-section properties-posts" v-if="propertiesContent.length > 0">
               <property-grid-layout
-                class="container"
-                colClass="col-lg-6 project-entry"
+                class="container-fluid"
+                colClass="col-lg-6 mb-3 project-entry"
                 :min="0"
                 :max="propertiesContent.length / 2"
               />
               <span class="flower-separator-white"></span>
               <property-grid-layout
-                class="container"
-                colClass="col-lg-6 project-entry"
+                class="container-fluid"
+                colClass="col-lg-6 mb-3 project-entry"
                 :min="propertiesContent.length / 2"
                 :max="propertiesContent.length"
               />
