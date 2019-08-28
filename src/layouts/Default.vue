@@ -887,3 +887,10 @@
   }
 </style>
 
+
+<style lang="scss">
+  .blog-post .content-block-inner, .post-entry .content-block-inner, .project-entry .content-block-inner {
+    border: none !important;
+    box-shadow: none;
+  }
+</style>
