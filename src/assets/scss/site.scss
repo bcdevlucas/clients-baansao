@@ -206,3 +206,14 @@ of the next section. */
 .diag-right-up {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 9vh), 0 100%);
 }
+
+
+.blog-posts .content-block-image {
+  height: auto;
+}
+
+@media screen and (min-width: 84em) {
+  .blog-posts .content-block-image {
+    height: 220px;
+  }
+}

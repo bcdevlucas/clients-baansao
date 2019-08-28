@@ -53,20 +53,6 @@
                   <cancellations class="mt-4" />
                 </div>
               </div>
-
-              <!--<div class="container pt-4" ref="bookingForm">
-                <div class="row">
-                  <div class="col-12 text-center">
-                    <span class="sub-title">{{ pageData.title }}</span>
-                    <h2 class="font-weight-bold text-black mb-5">View Available Dates</h2>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 text-center">
-                    <div class='occsn_stack' id='occsn_stack_5301_9938'></div>
-                  </div>
-                </div>
-              </div>-->
             </div>
           </div>
 
@@ -75,7 +61,8 @@
               <pricing v-if="pageData"
                 class="mt-4 mb-4"
                 :price="pageData.price"
-              />
+                :link="pageData.link">
+              </pricing>
               <p class="class-action-buttons mt-2 text-center">
                 <button class="btn btn-secondary btn-lg ask-question" style="width: 100%"><i class="material-icons">question_answer</i>
                   <span>Ask a Question</span>

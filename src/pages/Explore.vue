@@ -170,12 +170,6 @@
     margin-right: 2rem;
   }
 
-  @media screen and (min-width: 84em) {
-    .blog-posts .content-block-image {
-      height: 220px;
-    }
-  }
-
   .blog-posts {
     background: #fefefe;
 

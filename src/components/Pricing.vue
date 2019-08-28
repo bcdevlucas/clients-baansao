@@ -1,13 +1,12 @@
 <template>
-  <div :key="price">
+  <div>
     <div class="col-lg-12 ml-auto text-center" v-if="price">
       <span class="sub-title mb-0" style="font-family: 'Calligraffitti', sans-serif; text-transform: none; font-size: 1.5rem">Starting from</span>
-      <!--<span class="display-price">{{ priceFormatted }} <small>{{ price.currency }}<br />per night</small></span>-->
-      <span class="display-price">Unlisted <small>price <br />per night</small></span>
+      <span class="display-price">{{ formattedPrice }} <small>{{ currency }}<br />per night</small></span>
     </div>
 
     <p class="class-action-buttons mt-5 mb-0 text-center">
-      <button @click="openAirbnbPage.bind(this, pageData.link)" class="btn btn-primary btn-lg open-airbnb-page"><i class="material-icons">calendar_today</i>
+      <button @click="openAirbnbPage.bind(this, link)" class="btn btn-primary btn-lg open-airbnb-page"><i class="material-icons">calendar_today</i>
         <span>Book on Airbnb.com</span>
       </button>&nbsp;
     </p>
@@ -21,12 +20,14 @@
         type: Object,
         default: () => ({
           amount: 0.00,
-          currency: ''
+          currency: 'USD'
         })
       }
     },
     data() {
       return {
+        formattedPrice: (this.price.amount) ? `$${parseFloat(this.price.amount).toFixed(2)}` : '',
+        currency: 'USD',
         adults: 1,
         children: 0,
         rooms: 0,
@@ -55,17 +56,9 @@
         ]
       }
     },
-    computed: {
-      priceFormatted() {
-        try {
-          return (this.price && this.price.hasOwnProperty('amount')) ? `$${parseFloat(this.price.amount).toFixed(2)}` : '';
-        } catch (err) {
-          console.log('error getting price');
-          console.log(err);
-          debugger;
-        }
-
-        return 'No Price';
+    watch: {
+      price(newVal) {
+        this.formattedPrice = (newVal.amount) ? `$${parseFloat(newVal.amount).toFixed(2)}` : '';
       }
     },
     methods: {
