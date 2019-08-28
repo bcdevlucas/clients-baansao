@@ -72,7 +72,7 @@
 
           <div class="col-lg-3 mb-5 mb-lg-0">
             <div class="container">
-              <availability-calendar v-if="pageData"
+              <pricing v-if="pageData"
                 class="mt-4 mb-4"
                 :price="pageData.price"
               />
@@ -158,7 +158,7 @@
   import ThumbnailGallery from '~/core/components/ThumbnailGallery.vue';
   //import GoogleMapBackground from '~/core/components/GoogleMapBackground.vue';
   import GoogleMapCutout from '~/core/components/GoogleMapCutout.vue'; // TODO: Gotta fix this, SSR blows up
-  import AvailabilityCalendar from '~/components/AvailabilityCalendar.vue';
+  import Pricing from '~/components/Pricing.vue';
   import Amenities from '~/components/Amenities.vue';
   import Cancellations from '~/components/Cancellations.vue';
   import Rules from '~/components/Rules.vue';
@@ -181,7 +181,7 @@
       ThumbnailGallery,
       //GoogleMapBackground,
       GoogleMapCutout,
-      AvailabilityCalendar,
+      Pricing,
       Amenities,
       Cancellations,
       Rules
