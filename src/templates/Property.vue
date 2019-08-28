@@ -292,7 +292,7 @@
       },
       async setActiveImage() {
         if (this.pageData && this.pageData.gallery instanceof Array) {
-          const activeImage = this.getRandomImage(this.pageData.gallery.slice(0, 6));
+          const activeImage = this.getRandomImage(this.getGalleryImages(0, 6, true));
           const opts = { cloudName: 'baansaowanee', folder: this.pageData.galleryFolder, transforms: 'w_1920,q_60' };
           activeImage.src = await ImageUtils.getCloudinaryImageUrl(activeImage.id, opts);
           this.$data.activeImage = activeImage;
