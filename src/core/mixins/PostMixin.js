@@ -50,7 +50,7 @@ export default {
       return content;
     },
     staticEventsContent() {
-      const content = this.$page.eventsPosts.belongsTo.edges.map(edge => {
+      const content = this.$static.eventsPosts.belongsTo.edges.map(edge => {
         let date = moment(edge.node.date, "YYYY-MM-DD");
 
         const content = Object.assign({}, edge.node, {
@@ -80,7 +80,7 @@ export default {
       return content;
     },
     staticAttractionsContent() {
-      const content = this.$page.attractionsPosts.belongsTo.edges.map(edge => {
+      const content = this.$static.attractionsPosts.belongsTo.edges.map(edge => {
         let date = moment(edge.node.date, "YYYY-MM-DD");
 
         const content = Object.assign({}, edge.node, {
