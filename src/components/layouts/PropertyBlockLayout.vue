@@ -66,11 +66,16 @@
   .content-block-image {
     overflow: hidden;
     cursor: pointer !important;
-    border: 1px solid lightgrey;
     margin-bottom: 1rem;
 
     img {
       cursor: pointer !important;
+    }
+  }
+
+  @media screen and (min-width: 40em) {
+    .content-block-image {
+      border: 1px solid lightgrey;
     }
   }
 
