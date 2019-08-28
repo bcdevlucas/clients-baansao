@@ -1,10 +1,10 @@
 <template>
   <div v-if="staticEventsContent instanceof Array && staticEventsContent.length > 1">
-    <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">What's Happening</h3>
+    <h3 class="category-title text-center mb-3" style="display: block; width: 100%;">What's Happening</h3>
     <content-block-layout
       v-for="post in staticEventsContent"
       :key="post.id"
-      className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
+      className="col-lg-4 col-md-4 mb-5 project-entry blog-post"
       :title="post.title"
       :description="post.content"
       :link="post.path"

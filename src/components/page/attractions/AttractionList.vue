@@ -4,7 +4,7 @@
     <content-block-layout
       v-for="post in staticAttractionsContent"
       :key="post.id"
-      className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
+      className="col-lg-4 col-md-4 mb-3 project-entry blog-post"
       :title="post.title"
       :description="post.content"
       :link="post.path"
