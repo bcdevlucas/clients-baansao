@@ -122,4 +122,10 @@
       clear: left;
     }
   }
+
+  .deal-block-inner {
+    .content-block-content {
+      font-size: 1.15rem;
+    }
+  }
 </style>
