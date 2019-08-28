@@ -16,7 +16,7 @@
           </div>
         </div>-->
         <div class="row mt-4 mb-4 pt-4">
-          <div class="col-lg-3 mb-5 mb-lg-0">
+          <div class="col-lg-4 col-xl-3 mb-5 mb-lg-0">
             <div class="container">
               <thumbnail-gallery
                 v-if="pageData && pageData.gallery"
@@ -41,7 +41,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 ml-auto">
+          <div class="col-lg-8 col-xl-6 ml-auto">
             <div class="container">
               <amenities class="mt-4 mb-4" />
               <div v-html="pageData.description"></div>
@@ -56,7 +56,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 mb-5 mb-lg-0">
+          <div class="col-lg-12 col-xl-3 mb-5 mb-lg-0">
             <div class="container">
               <pricing v-if="pageData"
                 class="mt-4 mb-4"
