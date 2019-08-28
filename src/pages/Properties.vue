@@ -7,7 +7,7 @@
             <div class="hero-wrapper">
               <div
                 v-if="getHeroById('page-hero') !== null"
-                class="site-blocks-cover diag-right-up text-shadow"
+                class="site-blocks-cover angle text-shadow"
                 :style="`background-image: url(${getHeroById('page-hero').image});`"
               >
                 <div class="container hero-content">
@@ -28,6 +28,7 @@
                 colClass="col-lg-4 mb-3 project-entry"
                 :min="0"
                 :max="3"
+                :itemClass="['angle-parallel-down-right', 'angle-peak-inverted-top', 'angle-parallel-down-left']"
               />
               <span class="flower-separator-white"></span>
               <property-grid-layout
@@ -35,6 +36,7 @@
                 colClass="col-lg-4 mb-3 project-entry"
                 :min="1"
                 :max="4"
+                :itemClass="['angle-parallel-down-right', 'angle-capped-top', 'angle-parallel-down-left']"
               />
             </div>
             <div class="row">
@@ -318,13 +320,11 @@
   @media screen and (min-width: 84em) {
     .properties-posts {
       position: relative;
-      top: -16vh;
-    }
-  }
+      top: -50px;
 
-  .property-posts {
       .site-blocks-cover {
-        background-attachment: initial;
+        background-attachment: fixed;
       }
     }
+  }
 </style>

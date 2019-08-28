@@ -138,14 +138,14 @@ button.btn {
 image backgrounds on sections following an .angle section as the angled part isn't part
 of the next section. */
 .angle {
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vh), 50% 100%, 0 calc(100% - 5vh));
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.5vh), 50% 100%, 0 calc(100% - 2.5vh));
 
   &:first-child {
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vh), 50% 100%, 0 calc(100% - 5vh));
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.5vh), 50% 100%, 0 calc(100% - 2.5vh));
   }
 
   &:last-child {
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vh), 50% 100%, 0 calc(100% - 5vh));
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.5vh), 50% 100%, 0 calc(100% - 2.5vh));
   }
 
   &.angle + section.hero-section {
@@ -153,7 +153,7 @@ of the next section. */
 }
 
 .angle-join-top {
-  clip-path: polygon(0 0%, 50% calc(0% + 5vh), 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0%, 50% calc(0% + 2.5vh), 100% 0, 100% 100%, 0 100%);
 }
 
 .owl-carousel.owl-loaded {

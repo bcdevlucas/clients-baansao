@@ -71,6 +71,7 @@
                 colClass="col-xl-3 col-lg-4 col-md-4 mb-3 project-entry"
                 :min="0"
                 :max="4"
+                :itemClass="['angle-parallel-down-right', 'angle-parallel-down-right', 'angle-parallel-down-left', 'angle-parallel-down-left']"
               />
             </div>
           </div>

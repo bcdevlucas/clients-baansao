@@ -1,21 +1,21 @@
 <template>
-  <div v-bind:class="classNameString">
+  <div v-bind:class="`${classNameString} property-block`">
+    <!--<a v-if="showStaticImage" @click="linkClicked" class="d-block content-block-image figure">
+      <img
+        :src="this.image"
+        alt="Image"
+        class="img-fluid"
+      />
+    </a>-->
+    <a @click="linkClicked" class="d-block content-block-image mb-0">
+      <img
+        v-if="this.cloudImage && this.cloudImage.src"
+        :src="this.cloudImage.src"
+        alt="Image"
+        class="img-fluid"
+      />
+    </a>
     <div class="property-block-inner content-block-inner pb-3">
-      <!--<a v-if="showStaticImage" @click="linkClicked" class="d-block content-block-image figure">
-        <img
-          :src="this.image"
-          alt="Image"
-          class="img-fluid"
-        />
-      </a>-->
-      <a @click="linkClicked" class="d-block content-block-image">
-        <img
-          v-if="this.cloudImage && this.cloudImage.src"
-          :src="this.cloudImage.src"
-          alt="Image"
-          class="img-fluid"
-        />
-      </a>
       <div class="content-block-content">
         <h3 class="mb-2">
           <a @click="linkClicked" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.title }}</a>
@@ -97,6 +97,88 @@
       padding: 10px 5px;
       float: none !important;
       display: block !important;
+    }
+  }
+
+  @media screen and (min-width: 40em) {
+    /* Angles for cards - can be specified via props */
+    .angle-chevron-down {
+      //clip-path: polygon(0 calc(0% + 10px), 50% calc(0% + 20px), 100% calc(0% + 10px), 100% calc(100% - 10px), 50% 100%, 0 calc(100% - 10px));
+      .content-block-image {
+        clip-path: polygon(0 calc(0% + 10px), 50% calc(0% + 20px), 100% calc(0% + 10px), 100% calc(100% - 10px), 50% 100%, 0 calc(100% - 10px));
+      }
+    }
+
+    .angle-hex {
+      //clip-path: polygon(0 calc(0% + 10px), 50% 0, 100% calc(0% + 10px), 100% calc(100% - 10px), 50% 100%, 0 calc(100% - 10px));
+      .content-block-image {
+        clip-path: polygon(0 calc(0% + 10px), 50% 0, 100% calc(0% + 10px), 100% calc(100% - 10px), 50% 100%, 0 calc(100% - 10px));
+      }
+    }
+
+    .angle-peak-top {
+      .content-block-image {
+        clip-path: polygon(0 calc(0% + 10px), 50% 0, 100% calc(0% + 10px), 100% 100%, 0 100%);
+      }
+    }
+
+    .angle-capped-top {
+      .content-block-image {
+        clip-path: polygon(0 calc(0% + 10px), 100% calc(0% + 10px), 100% 100%, 0 100%);
+      }
+    }
+
+    .angle-peak-inverted-top {
+      .content-block-image {
+        clip-path: polygon(0 calc(0% + 10px), 50% calc(0% + 20px), 100% calc(0% + 10px), 100% 100%, 0 100%);
+      }
+    }
+
+    .angle-slant-down-right {
+      //clip-path: polygon(0 0, 100% calc(0% + 10px), 100% 100%, 0 100%);
+      .content-block-image {
+        clip-path: polygon(0 0, 100% calc(0% + 10px), 100% 100%, 0 100%);
+      }
+    }
+
+    .angle-slant-down-left {
+      //clip-path: polygon(0 calc(0% + 10px), 100% 0, 100% 100%, 0 100%);
+      .content-block-image {
+        clip-path: polygon(0 calc(0% + 10px), 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    .angle-parallel-down-right {
+      //clip-path: polygon(0 0, 100% calc(0% + 10px), 100% 100%, 0 calc(100% - 10px));
+      .content-block-image {
+        clip-path: polygon(0 0, 100% calc(0% + 10px), 100% 100%, 0 calc(100% - 10px));
+      }
+    }
+
+    .angle-parallel-down-left {
+      //clip-path: polygon(0 calc(0% + 10px), 100% 0, 100% calc(100% - 10px), 0 100%);
+      .content-block-image {
+        clip-path: polygon(0 calc(0% + 10px), 100% 0, 100% calc(100% - 10px), 0 100%);
+      }
+    }
+
+    .property-block {
+      .content-block-content,
+      .content-block-image {
+        position: relative;
+        //top: -50px;
+      }
+
+      .content-block-image {
+        position: relative;
+        top: 20px;
+        z-index: 10;
+      }
+
+      .content-block-content {
+        position: relative;
+        top: 20px;
+      }
     }
   }
 </style>

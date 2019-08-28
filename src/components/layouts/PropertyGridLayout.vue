@@ -4,7 +4,7 @@
       <property-block-layout
         v-for="property in propertiesContent.slice(min, max)"
         :key="property.id"
-        :className="colClass"
+        :className="getPropertyColClass(propertiesContent.slice(min, max).indexOf(property))"
         :title="property.title"
         :description="(property.summary) ? property.summary : ''"
         :link="`/property/${property.id}`"
@@ -46,9 +46,20 @@
         type: Number,
         default: 3
       },
+      /**
+       * Bootstrap column classes for each item in a row.
+       */
       colClass: {
         type: String,
         default: 'col-lg-4 col-md-4 mb-6 project-entry'
+      },
+      /**
+       * Optionally provide an array of classes to be applied,
+       * by index, to their corresponding row items.
+       */
+      itemClass: {
+        type: Array,
+        default: []
       }
     },
     components: {
@@ -78,6 +89,17 @@
       return {
         //marked: marked
       };
+    },
+    methods: {
+      getPropertyColClass(itemIdx) {
+        let classString = (typeof this.colClass === 'string') ? this.colClass : '';
+        let classes = (this.itemClass instanceof Array) ? this.itemClass : [];
+        if (classes.length > 0 && typeof classes[itemIdx] === 'string') {
+          classString += ' ' + classes[itemIdx];
+        }
+
+        return classString;
+      }
     }
   }
 </script>
