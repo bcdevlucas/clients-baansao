@@ -103,7 +103,7 @@
         </div>
         <div class="row mx-4" v-if="propertiesContent instanceof Array && propertiesContent.length > 0">
           <property-block-layout
-            v-for="property in propertiesContent.slice(0,4).filter(item => item.id !== pageData.id)"
+            v-for="property in unselectedProperties"
             :key="property.id"
             className="col-lg-4 col-md-4 mb-6 project-entry"
             :title="property.title"
@@ -216,7 +216,7 @@
         }
 
         return {
-          id: this.$page.property.fields.id,
+          id: this.$page.property.id,
           title: this.$page.property.fields.title,
           metaKeywords: this.$page.property.fields.metaKeywords,
           metaDescription: this.$page.property.fields.metaDescription,
@@ -236,13 +236,18 @@
       },
       propertiesContent() {
         const content = this.$page.properties.edges.map(edge => {
-          const data = Object.assign({ id: edge.node.id }, edge.node.fields);
+          const data = Object.assign({}, edge.node.fields, { id: edge.node.id });
           data.summary = (typeof window !== 'undefined') ? marked(data.summary) : data.summary;
           data.description = (typeof window !== 'undefined') ? marked(data.description) : data.description;
           return data;
         });
 
         return content;
+      },
+      unselectedProperties() {
+        return this.propertiesContent.slice(0,4).filter((item => {
+          return item.id !== this.pageData.id;
+        }).bind(this));
       },
       serviceContent() {
         return PropertiesData;
