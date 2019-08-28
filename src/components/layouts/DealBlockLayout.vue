@@ -91,10 +91,27 @@
     color: #333 !important;
   }
 
+  .deal-block-inner {
+    .content-block-image {
+      img {
+        object-fit: cover;
+        width: 75px !important;
+        height: 75px !important;
+      }
+    }
+  }
+
   @media screen and (min-width: 84em) {
     .deal-block-inner {
       .content-block-image {
         margin-bottom: 0;
+        height: auto;
+
+        img {
+          object-fit: cover;
+          width: 115px !important;
+          height: 115px !important;
+        }
       }
     }
   }
