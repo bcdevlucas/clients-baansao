@@ -188,6 +188,11 @@
     .site-section h2 {
       font-size: 2.3rem;
     }
-  }
 
+    .property-posts .hero-wrapper {
+      margin-left: -15px;
+      margin-right: -15px;
+      height: 90vh;
+    }
+  }
 </style>
