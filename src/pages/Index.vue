@@ -26,14 +26,15 @@
         </div>
       </div>-->
 
-      <div class="site-blocks-cover angle text-shadow" style="background-image: url(/images/orchard-view-3br/20.jpg); background-position: bottom center !important">
+      <div class="site-blocks-cover angle text-shadow" style="background-image: url(/images/orchard-view-3br/20.jpg); background-position: top center !important">
+        <!--<div class="palm-box-shadow"></div>-->
         <!--<div class="palm-fog animate"></div>-->
         <div class="moving-palm-left animate"></div>
         <div class="moving-palm-solo animate"></div>
         <div class="moving-palm-right animate"></div>
         <div class="container homepage-hero-content">
           <div class="row align-items-center text-center justify-content-center">
-            <div class="col-md-8 hero-text" style="margin-top: 15vh">
+            <div class="col-md-8 hero-text" style="margin-top: 25vh">
               <div class="hero-logo d-none d-md-block"><span></span></div>
               <!--<span class="flower-separator-white"></span>-->
               <span class="sub-text"><strong>Welcome to Baan Saowanee's</strong></span>

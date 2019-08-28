@@ -1,16 +1,18 @@
 <template>
   <Layout>
-    <div class="">
-      <div
-        class="properties-hero site-blocks-cover angle"
-      >
-        <div class="container" ref="pageHero">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-md-10 text-center hero-text">
-              <div class="hero-logo"><span></span></div>
-              <span class="sub-text"><strong>{{ getHeroById('page-hero').subTitle }}</strong></span>
-              <h1>{{ getHeroById('page-hero').title }}</h1>
-              <!--<div v-if="getHeroById('page-hero').description" class="sub-text" v-html="(getHeroById('page-hero').description) ? getHeroById('page-hero').description : ''"></div>-->
+    <div class="hero-wrapper about-hero">
+      <div class="site-blocks-cover angle text-shadow" style="background-image: url(/images/orchard-view-3br/26.jpg); background-position: top center !important">
+        <!--<div class="palm-fog animate"></div>-->
+        <div class="moving-palm-left animate"></div>
+        <div class="moving-palm-solo animate"></div>
+        <div class="moving-palm-right animate"></div>
+        <div class="container homepage-hero-content">
+          <div class="row align-items-center text-center justify-content-center">
+            <div class="col-md-8 hero-text" style="margin-top: 30vh">
+              <div class="hero-logo d-none d-md-block"><span></span></div>
+              <!--<span class="flower-separator-white"></span>-->
+              <span class="sub-text"><strong>Welcome to</strong></span>
+              <h1>Saowanee's Backyard</h1>
             </div>
           </div>
         </div>
@@ -164,19 +166,13 @@
     margin-top: 78px;
   }
 
-  .properties-hero {
-    height: auto !important;
-    min-height: 400px;
-    color: #111;
-    h1 {
-      color: midnightblue;
-    }
-    .sub-text {
-      color: #999 !important;
-    }
-    .row {
-      height: auto;
-      min-height: 400px;
+  .about-hero {
+    .site-blocks-cover {
+      height: 110vh;
+
+      .hero-content > .row {
+        height: 110vh;
+      }
     }
   }
 </style>

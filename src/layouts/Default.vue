@@ -547,7 +547,7 @@
   .moving-palm-left {
     width: 593px;
     height: 924px;
-    top: 0px;
+    top: -200px;
     left: -210px;
     transform: rotate(0deg);
   }
