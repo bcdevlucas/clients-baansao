@@ -26,13 +26,14 @@
               <div class="container">
                 <div class="row align-items-center mb-5 pb-5">
                   <div class="row">
-                    <content-block-layout
+                    <pre>Coming soon, this section isn't pre-rendering correctly...</pre>
+                    <!--<content-block-layout
                       className="col-md-12 mb-3 project-entry blog-post blog-post-main full-width"
                       :description="$page.post.content"
                       :image="$page.post.image"
                       :imageAlt="$page.post.caption"
                       :datePublished="datePublished"
-                    />
+                    />-->
                     <!--
                     <content-block-layout
                       className="col-md-12 mb-3 project-entry blog-post blog-post-main full-width"

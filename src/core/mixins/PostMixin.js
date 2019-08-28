@@ -34,21 +34,6 @@ export default {
 
       return content;
     },
-    eventsContent() {
-      const content = this.$page.eventsPosts.belongsTo.edges.map(edge => {
-        let date = moment(edge.node.date, "YYYY-MM-DD");
-
-        const content = Object.assign({}, edge.node, {
-          summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
-          content: `${StringUtils.shortenText(edge.node.content, 320)}`,
-          date: date.format('MMM Do YYYY')
-        });
-
-        return content;
-      });
-
-      return content;
-    },
     staticEventsContent() {
       const content = this.$static.eventsPosts.belongsTo.edges.map(edge => {
         let date = moment(edge.node.date, "YYYY-MM-DD");
@@ -64,38 +49,8 @@ export default {
 
       return content;
     },
-    attractionsContent() {
-      const content = this.$page.attractionsPosts.belongsTo.edges.map(edge => {
-        let date = moment(edge.node.date, "YYYY-MM-DD");
-
-        const content = Object.assign({}, edge.node, {
-          summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
-          content: `${StringUtils.shortenText(edge.node.content, 320)}`,
-          date: date.format('MMM Do YYYY')
-        });
-
-        return content;
-      });
-
-      return content;
-    },
     staticAttractionsContent() {
       const content = this.$static.attractionsPosts.belongsTo.edges.map(edge => {
-        let date = moment(edge.node.date, "YYYY-MM-DD");
-
-        const content = Object.assign({}, edge.node, {
-          summary: `${StringUtils.shortenText(edge.node.summary, 130)}`,
-          content: `${StringUtils.shortenText(edge.node.content, 320)}`,
-          date: date.format('MMM Do YYYY')
-        });
-
-        return content;
-      });
-
-      return content;
-    },
-    dealsContent() {
-      const content = this.$page.dealsPosts.belongsTo.edges.map(edge => {
         let date = moment(edge.node.date, "YYYY-MM-DD");
 
         const content = Object.assign({}, edge.node, {
