@@ -2,7 +2,8 @@
   <div :key="price">
     <div class="col-lg-12 ml-auto text-center" v-if="price">
       <span class="sub-title mb-0" style="font-family: 'Calligraffitti', sans-serif; text-transform: none; font-size: 1.5rem">Starting from</span>
-      <span class="display-price">{{ priceFormatted }} <small>{{ price.currency }}<br />per night</small></span>
+      <!--<span class="display-price">{{ priceFormatted }} <small>{{ price.currency }}<br />per night</small></span>-->
+      <span class="display-price">Unlisted <small>price <br />per night</small></span>
     </div>
 
     <p class="class-action-buttons mt-5 mb-0 text-center">
@@ -56,7 +57,15 @@
     },
     computed: {
       priceFormatted() {
-        return (this.price) ? `$${parseFloat(this.price.amount).toFixed(2)}` : '';
+        try {
+          return (this.price && this.price.hasOwnProperty('amount')) ? `$${parseFloat(this.price.amount).toFixed(2)}` : '';
+        } catch (err) {
+          console.log('error getting price');
+          console.log(err);
+          debugger;
+        }
+
+        return 'No Price';
       }
     },
     methods: {
