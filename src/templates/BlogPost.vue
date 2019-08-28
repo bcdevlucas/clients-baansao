@@ -26,7 +26,7 @@
               <div class="container">
                 <div class="row align-items-center mb-5 pb-5">
                   <div class="row">
-                    <!--<content-block-layout
+                    <content-block-layout
                       className="col-md-12 mb-3 project-entry blog-post blog-post-main full-width"
                       :description="$page.post.content"
                       :image="$page.post.image"
@@ -35,36 +35,18 @@
                       :cloudinaryImage="$page.post.imageId"
                       cloudName="baansaowanee"
                       cloudFolder="posts"
-                    />-->
+                    />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="site-section" v-if="eventsContent.length > 0">
-              <div class="container">
-                <div class="row">
-                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">What's Happening!</h3>
-
-                  <!--<content-block-layout
-                    v-for="post in eventsContent"
-                    :key="post.id"
-                    className="col-lg-4 col-md-4 mb-6 project-entry blog-post"
-                    :title="post.title"
-                    :description="post.summary"
-                    :link="post.path"
-                    linkText="Read Article"
-                    :image="post.image"
-                    :imageAlt="post.caption"
-                    :datePublished="post.date"
-                    :cloudinaryImage="post.imageId"
-                    cloudName="baansaowanee"
-                    cloudFolder="posts"
-                  />-->
-                </div>
+            <div class="site-section">
+              <div class="container-fluid">
+                <event-list class="row" />
               </div>
             </div>
-            <div class="site-section" v-if="$page.posts.edges.length > 0">
+            <div class="site-section">
               <div class="container-fluid">
                 <attraction-list class="row" />
               </div>
@@ -86,6 +68,7 @@
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import DealList from '~/components/page/deals/DealList.vue';
   import AttractionList from '~/components/page/attractions/AttractionList.vue';
+  import EventList from '~/components/page/events/EventList.vue';
 
   import PostMixin from '~/core/mixins/PostMixin';
   import HeroMixin from '~/mixins/HeroMixin';
@@ -105,7 +88,8 @@
       SvgBlurSectionBlockLayout,
       ContentBlockLayout,
       DealList,
-      AttractionList
+      AttractionList,
+      EventList
     },
     mixins: [PostMixin, HeroMixin, SectionMixin],
     data() {
