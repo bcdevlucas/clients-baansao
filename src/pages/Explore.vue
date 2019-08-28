@@ -56,7 +56,7 @@
                 <attraction-list class="row" />
               </div>
             </div>
-            <div class="site-section properties-posts" v-if="propertiesContent.length > 0">
+            <!--<div class="site-section properties-posts" v-if="propertiesContent.length > 0">
               <h3 class="category-title text-center mb-3" style="display: block; width: 100%;">Local Accommodation</h3>
               <property-grid-layout
                 class="container-fluid"
@@ -64,7 +64,7 @@
                 :min="0"
                 :max="3"
               />
-            </div>
+            </div>-->
           </div>
           <deal-list class="col-xl-4 right-pane" />
         </div>
