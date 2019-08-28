@@ -53,12 +53,12 @@
 
             <div class="site-section">
               <div class="container-fluid">
-                <event-list class="row" />
+                <!--<event-list class="row" />-->
               </div>
             </div>
             <div class="site-section">
               <div class="container-fluid">
-                <attraction-list class="row" />
+                <!--<attraction-list class="row" />-->
               </div>
             </div>
           </div>
