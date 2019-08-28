@@ -5,7 +5,7 @@
       <deal-block-layout
         v-for="deal in staticDealsContent"
         :key="deal.id"
-        className="col-xs-12 blog-post"
+        className="col-xs-12 mx-2 blog-post"
         :title="deal.title"
         :description="deal.summary"
         :link="deal.path"
