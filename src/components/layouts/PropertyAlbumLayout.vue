@@ -1,6 +1,6 @@
 <template>
   <div v-bind:class="classNameString">
-    <div class="property-block-inner content-block-inner">
+    <div class="property-album-inner content-block-inner">
       <!--<a v-if="showStaticImage" @click="linkClicked" class="d-block content-block-image figure">
         <img
           :src="this.image"
@@ -9,12 +9,18 @@
         />
       </a>-->
       <a @click="linkClicked" class="d-block content-block-image">
-        <img
-          v-if="this.cloudImage && this.cloudImage.src"
-          :src="this.cloudImage.src"
-          alt="Image"
-          class="img-fluid"
-        />
+        <div class="photo-stack">
+          <img
+            v-if="this.cloudImage && this.cloudImage.src"
+            :src="this.cloudImage.src"
+            alt="Image"
+            class="img-fluid"
+          />
+          <span class="img-fluid"></span>
+          <span class="img-fluid"></span>
+          <span class="img-fluid"></span>
+          <span class="img-fluid"></span>
+        </div>
       </a>
       <div class="content-block-content">
         <h3 class="mb-4">
@@ -51,6 +57,22 @@
 </script>
 
 <style lang="scss">
+  .property-album-inner {
+    &.content-block-inner {
+      border: none !important;
+      box-shadow: none !important;
+      background: transparent;
+    }
+  }
+
+  .content-block-image {
+    cursor: pointer !important;
+
+    img {
+      cursor: pointer !important;
+    }
+  }
+
   .blog-post,
   .post-entry,
   .project-entry {
@@ -60,17 +82,6 @@
       padding: 1rem 1rem 0;
       border: 1px solid lightgrey;
       box-shadow: 0px 1px 2px rgba(10,10,10,0.15);
-    }
-  }
-
-  .content-block-image {
-    overflow: hidden;
-    cursor: pointer !important;
-    border: 1px solid lightgrey;
-    margin-bottom: 1rem;
-
-    img {
-      cursor: pointer !important;
     }
   }
 
@@ -97,5 +108,54 @@
       float: none !important;
       display: block !important;
     }
+  }
+
+  .photo-stack .img-fluid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid white;
+    box-shadow: 0 1px 3px -2px rgba(0,0,0,.5);
+    transition: all 0.3s ease-out;
+    width: 100%;
+    height: 100%;
+    background: rgba(22,22,22,0.25);
+    border: 1px solid grey;
+  }
+  .photo-stack .img-fluid:nth-child(1) {
+    z-index: 999;
+  }
+  .photo-stack .img-fluid:nth-child(2) {
+    transform: rotate3d(0,0,1,3deg);
+  }
+  .photo-stack .img-fluid:nth-child(3) {
+    transform: rotate3d(0,0,1,-3deg);
+  }
+  .photo-stack .img-fluid:nth-child(4) {
+    transform: rotate3d(0,0,1,2deg);
+  }
+
+  /*.photo-stack:hover .img-fluid:nth-child(1) {
+    transform: scale(1.02);
+  }
+  .photo-stack:hover .img-fluid:nth-child(2) {
+    transform: translate3d(10%, 0, 0) rotate3d(0,0,1,3deg);
+  }
+  .photo-stack:hover .img-fluid:nth-child(3) {
+    transform: translate3d(-10%, 0, 0) rotate3d(0,0,1,-3deg);
+  }
+  .photo-stack:hover .img-fluid:nth-child(4) {
+    transform: translate3d(2%, -5%, 0) rotate3d(0,0,1,2deg);
+  }
+  .photo-stack:hover .img-fluid:nth-child(5) {
+    transform: translate3d(-5%, -2%, 0) rotate3d(0,0,1,2deg);
+  }*/
+
+  /* Mods */
+  .photo-stack {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 2rem;
   }
 </style>

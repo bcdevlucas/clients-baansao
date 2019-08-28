@@ -63,7 +63,7 @@
   .post-entry,
   .project-entry {
     .content-block-inner {
-      overflow: hidden;
+      overflow: visible;
       position: relative;
       padding: 1rem 1rem 0;
       border: 1px solid lightgrey;
