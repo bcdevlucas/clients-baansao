@@ -84,10 +84,13 @@ button.btn {
 
 .site-footer {
   z-index: 10;
-  background: #111 !important;
+  background: rgba(25,25,25,0.075) !important;
+  //background: url(/images/samui-panorama-adj.png) transparent !important; // #2a5103 !important;
   padding-top: 5rem;
-  a {
-    color: white;
+  color: black;
+
+  a, .footer-heading {
+    color: black;
   }
 }
 
@@ -147,6 +150,10 @@ of the next section. */
 
   &.angle + section.hero-section {
   }
+}
+
+.angle-join-top {
+  clip-path: polygon(0 0%, 50% calc(0% + 5vh), 100% 0, 100% 100%, 0 100%);
 }
 
 .owl-carousel.owl-loaded {

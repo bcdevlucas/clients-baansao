@@ -1,82 +1,87 @@
 <template>
   <Layout>
     <error-boundary>
-    <div class="content-wrapper blog-posts">
-      <div class="container-fluid">
-        <div class="row column-wrapper">
-          <div class="col-xl-8">
-            <div class="hero-wrapper">
-              <div
-                v-if="getHeroById('page-hero') !== null"
-                class="site-blocks-cover angle text-shadow"
-                :style="`background-image: url(${getHeroById('page-hero').image});`"
-              >
-                <div class="container hero-content">
-                  <div class="row align-items-center justify-content-center">
-                    <div class="col-md-10 text-center hero-text">
-                      <!--<div class="hero-logo"><span></span></div>-->
-                      <span class="sub-text"><strong>{{ getHeroById('page-hero').subTitle }}</strong></span>
-                      <h1>{{ getHeroById('page-hero').title }}</h1>
-                      <!--<div v-if="getHeroById('page-hero').description" class="sub-text" v-html="(getHeroById('page-hero').description) ? getHeroById('page-hero').description : ''"></div>-->
+      <div class="content-wrapper blog-posts">
+        <div class="container-fluid">
+          <div class="row column-wrapper">
+            <div class="col-xl-8">
+              <div class="hero-wrapper">
+                <div
+                  v-if="getHeroById('page-hero') !== null"
+                  class="site-blocks-cover angle text-shadow"
+                  :style="`background-image: url(${getHeroById('page-hero').image});`"
+                >
+                  <div class="container hero-content">
+                    <div class="row align-items-center justify-content-center">
+                      <div class="col-md-10 text-center hero-text">
+                        <!--<div class="hero-logo"><span></span></div>-->
+                        <span class="sub-text"><strong>{{ getHeroById('page-hero').subTitle }}</strong></span>
+                        <h1>{{ getHeroById('page-hero').title }}</h1>
+                        <!--<div v-if="getHeroById('page-hero').description" class="sub-text" v-html="(getHeroById('page-hero').description) ? getHeroById('page-hero').description : ''"></div>-->
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="site-section  angle mt-4" v-if="postsContent.length > 0">
-              <div class="container-fluid">
-                <div class="row" v-if="postsContent.length > 1">
-                  <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Features of the Month</h3>
+              <div class="site-section angle mt-4" v-if="postsContent.length > 0">
+                <div class="container-fluid">
+                  <div class="row" v-if="postsContent.length > 1">
+                    <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Features of the Month</h3>
 
-                  <content-block-layout
-                    v-for="post in featuredContent"
-                    :key="post.id"
-                    className="col-md-12 mb-3 project-entry blog-post full-width"
-                    :title="post.title"
-                    :description="post.content"
-                    :link="post.path"
-                    linkText="Read Article"
-                    :image="post.image"
-                    :imageAlt="post.caption"
-                    :datePublished="post.date"
-                    :cloudinaryImage="post.imageId"
-                    cloudName="baansaowanee"
-                    cloudFolder="posts"
-                  />
+                    <content-block-layout
+                      v-for="post in featuredContent"
+                      :key="post.id"
+                      className="col-md-12 mb-3 project-entry blog-post full-width"
+                      :title="post.title"
+                      :description="post.content"
+                      :link="post.path"
+                      linkText="Read Article"
+                      :image="post.image"
+                      :imageAlt="post.caption"
+                      :datePublished="post.date"
+                      :cloudinaryImage="post.imageId"
+                      cloudName="baansaowanee"
+                      cloudFolder="posts"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="site-section">
-              <div class="container-fluid">
-                <event-list class="row" />
+              <div class="site-section">
+                <div class="container-fluid">
+                  <event-list class="row" />
+                </div>
+              </div>
+              <div class="site-section">
+                <div class="container-fluid">
+                  <attraction-list class="row" />
+                </div>
+              </div>
+              <!--<div class="site-section properties-posts" v-if="propertiesContent.length > 0">
+                <h3 class="category-title text-center mb-3" style="display: block; width: 100%;">Local Accommodation</h3>
+                <property-grid-layout
+                  class="container-fluid"
+                  colClass="col-lg-4 mb-3 project-entry"
+                  :min="0"
+                  :max="3"
+                />
+              </div>-->
+              <div class="row">
+                <page-footer />
               </div>
             </div>
-            <div class="site-section">
-              <div class="container-fluid">
-                <attraction-list class="row" />
-              </div>
-            </div>
-            <!--<div class="site-section properties-posts" v-if="propertiesContent.length > 0">
-              <h3 class="category-title text-center mb-3" style="display: block; width: 100%;">Local Accommodation</h3>
-              <property-grid-layout
-                class="container-fluid"
-                colClass="col-lg-4 mb-3 project-entry"
-                :min="0"
-                :max="3"
-              />
-            </div>-->
+            <deal-list class="col-xl-4 right-pane" />
           </div>
-          <deal-list class="col-xl-4 right-pane" />
         </div>
       </div>
-    </div>
     </error-boundary>
   </Layout>
 </template>
 
 <script>
   import marked from 'marked';
+
+  import PageFooter from '~/components/Footer.vue';
 
   import ErrorBoundary from '~/core/components/ErrorBoundary.vue';
   import DealBlockLayout from '~/components/layouts/DealBlockLayout.vue';
@@ -105,7 +110,8 @@
       DealBlockLayout,
       DealList,
       AttractionList,
-      EventList
+      EventList,
+      PageFooter
     },
     mixins: [PostMixin, HeroMixin, SectionMixin],
     data() {
