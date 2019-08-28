@@ -86,7 +86,7 @@
     }
   }
 
-  @media screen and (max-width: 40em) {
+  @media screen and (max-width: 102em) {
     .content-block-price {
       //position: absolute;
       //top: 0;
