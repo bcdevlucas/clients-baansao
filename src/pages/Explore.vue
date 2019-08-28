@@ -8,7 +8,7 @@
             <div class="hero-wrapper">
               <div
                 v-if="getHeroById('page-hero') !== null"
-                class="site-blocks-cover diag-right-up text-shadow"
+                class="site-blocks-cover angle text-shadow"
                 :style="`background-image: url(${getHeroById('page-hero').image});`"
               >
                 <div class="container hero-content">
@@ -23,7 +23,7 @@
                 </div>
               </div>
             </div>
-            <div class="site-section mt-4" v-if="postsContent.length > 0">
+            <div class="site-section  angle mt-4" v-if="postsContent.length > 0">
               <div class="container-fluid">
                 <div class="row" v-if="postsContent.length > 1">
                   <h3 class="category-title text-center mb-5" style="display: block; width: 100%;">Features of the Month</h3>
@@ -46,6 +46,7 @@
                 </div>
               </div>
             </div>
+
             <div class="site-section">
               <div class="container-fluid">
                 <event-list class="row" />
