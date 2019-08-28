@@ -1,13 +1,13 @@
 <template>
   <header class="fixed">
     <div class="wrap">
+      <a href="/" class="logo ml-4"><span></span>Baan Saowanee</a>
+
       <div id="hamburger" v-on:click="displayMenu()">
         <span></span>
         <span></span>
         <span></span>
       </div>
-
-      <a href="/" class="logo ml-4"><span></span>Baan Saowanee</a>
 
       <nav id="menu" class="site-navbar align-items-center justify-content-end">
         <ul class="site-menu mb-0">
@@ -262,11 +262,12 @@
     border-radius: 50%;
     position: absolute;
     left: 3%;
+    right: auto;
     top: 30px;
     display: none;
     transform: translateY(-50%);
   }
-  @media screen and (max-width: 40em) {
+  @media screen and (max-width: 660px) {
     /*header {
       position: absolute !important;
     }*/
@@ -275,7 +276,8 @@
       cursor: pointer;
       border-radius: 50%;
       position: absolute;
-      left: 3%;
+      right: 3%;
+      left: auto;
       top: 35px;
       display: none;
       -webkit-transform: translateY(-50%);
@@ -364,7 +366,7 @@
   }
   @media screen and (max-width: 660px) {
     header .wrap {
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       flex-flow: row wrap;
       padding: 0;
@@ -557,7 +559,7 @@
   @media screen and (max-width: 40em) {
     .logo {
       margin-left: 0;
-      margin-top: 7px;
+      margin-top: 10px;
     }
   }
 
