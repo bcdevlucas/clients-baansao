@@ -380,7 +380,7 @@
 
 @media screen and (min-width: 1440px) {
   .site-blocks-cover {
-    background-position: center center !important;
+    background-position: center center;
   }
 
   .hero-mask {
@@ -390,7 +390,7 @@
 
 @media screen and (min-width: 1920px) {
   .site-blocks-cover {
-    background-position: center center !important;
+    background-position: center center;
   }
 
   .hero-mask {
@@ -400,7 +400,7 @@
 
 @media screen and (min-width: 2560px) {
   .site-blocks-cover {
-    background-position: center center !important;
+    background-position: center center;
   }
 
   .hero-mask {

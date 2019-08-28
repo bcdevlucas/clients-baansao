@@ -12,7 +12,7 @@
               >
                 <div class="container hero-content">
                   <div class="row align-items-center justify-content-center">
-                    <div class="col-md-10 text-center">
+                    <div class="col-md-10 text-center hero-text">
                       <div class="hero-logo"><span></span></div>
                       <span class="sub-text"><strong>{{ getHeroById('page-hero').subTitle }}</strong></span>
                       <h1>{{ getHeroById('page-hero').title }}</h1>

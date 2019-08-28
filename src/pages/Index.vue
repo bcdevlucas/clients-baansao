@@ -34,7 +34,7 @@
         <div class="palm-fog animate"></div>
         <div class="container homepage-hero-content">
           <div class="row align-items-center text-center justify-content-center" style="position: relative; top: -3rem;">
-            <div class="col-md-8">
+            <div class="col-md-8 hero-text">
               <div class="hero-logo"><span></span></div>
               <span class="sub-text"><strong>Welcome to Baan Saowanee's</strong></span>
               <h1>Vacation Homes</h1>

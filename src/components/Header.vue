@@ -105,6 +105,7 @@
         }
 
         this.hideDropMenu();
+        this.hideMenu();
       },
       hideDropMenu() {
         let lis = document.getElementById('menu').getElementsByTagName('li');

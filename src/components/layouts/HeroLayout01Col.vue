@@ -11,7 +11,7 @@
     >
       <div class="container hero-content" ref="pageHero">
         <div class="row align-items-center justify-content-center">
-          <div class="col-md-10 text-center">
+          <div class="col-md-10 text-center hero-text">
             <slot></slot>
             <span class="sub-text" v-if="subtitle">{{ subtitle }}</span>
             <h1 v-if="title">{{ title }}</h1>

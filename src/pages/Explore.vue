@@ -9,11 +9,11 @@
               <div
                 v-if="getHeroById('page-hero') !== null"
                 class="site-blocks-cover diag-right-up text-shadow"
-                :style="`background-image: url(${getHeroById('page-hero').image}); background-position: -180px -440px !important`"
+                :style="`background-image: url(${getHeroById('page-hero').image});`"
               >
                 <div class="container hero-content">
                   <div class="row align-items-center justify-content-center">
-                    <div class="col-md-10 text-center">
+                    <div class="col-md-10 text-center hero-text">
                       <!--<div class="hero-logo"><span></span></div>-->
                       <span class="sub-text"><strong>{{ getHeroById('page-hero').subTitle }}</strong></span>
                       <h1>{{ getHeroById('page-hero').title }}</h1>
@@ -182,6 +182,10 @@
 
     .hero-content {
       height: 100%;
+    }
+
+    .site-blocks-cover {
+       background-position: -180px -440px
     }
 
     .site-blocks-cover, .site-blocks-cover .row {

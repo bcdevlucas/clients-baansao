@@ -224,6 +224,11 @@ of the next section. */
 
 @media screen and (max-width: 40em) {
   .site-blocks-cover {
-    background-attachment: initial;
+    background-attachment: initial !important;
+    background-position: center center !important;
+  }
+  .hero-text {
+    align-self: flex-start;
+    margin-top: 30%;
   }
 }
