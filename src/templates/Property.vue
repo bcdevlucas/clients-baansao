@@ -261,6 +261,18 @@
 
         return galleryImages;
       },
+      getShowcaseImages(start, end) {
+        let galleryImages = this.pageData.gallery instanceof Array ? this.pageData.gallery : [];
+        galleryImages = galleryImages.filter((item) => item.showcase);
+
+        start = (!isNaN(start)) ? start : 0;
+        // Add 1 to end as slice doesn't count include the last item
+        end = (!isNaN(end)) ? end + 1 : galleryImages.length;
+
+        galleryImages = galleryImages.slice(start, Math.min(end, galleryImages.length));
+
+        return galleryImages;
+      },
       // Fisher-Yates Shuffle - memoized
       shuffle(array) {
         let counter = array.length;
@@ -292,14 +304,14 @@
       },
       async setActiveImage() {
         if (this.pageData && this.pageData.gallery instanceof Array) {
-          const activeImage = this.getRandomImage(this.getGalleryImages(0, 6, true));
+          const activeImage = this.getRandomImage(this.getShowcaseImages(0));
           const opts = { cloudName: 'baansaowanee', folder: this.pageData.galleryFolder, transforms: 'w_1920,q_60' };
           activeImage.src = await ImageUtils.getCloudinaryImageUrl(activeImage.id, opts);
           this.$data.activeImage = activeImage;
         }
       },
       async startPrimaryImageRotation(ms) {
-        ms = (!isNaN(ms)) ? ms : 13000;
+        ms = (!isNaN(ms)) ? ms : 7000;
 
         console.log('starting image rotation');
 
@@ -385,6 +397,7 @@
           caption
           #subCaption
           featured
+          showcase
         }
         galleryFolder
         link
@@ -424,6 +437,7 @@
               caption
               #subCaption
               featured
+              showcase
             }
             galleryFolder
             link

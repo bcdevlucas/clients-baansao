@@ -34,6 +34,7 @@ module.exports = function (api) {
             caption: { type: graphql.GraphQLString },
             subCaption: { type: graphql.GraphQLString },
             featured: { type: graphql.GraphQLBoolean },
+            showcase: { type: graphql.GraphQLBoolean }
           }
         });
 

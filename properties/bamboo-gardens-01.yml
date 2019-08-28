@@ -74,45 +74,55 @@ gallery:
     caption: Bamboo Gardens
     subCaption:
     featured: true
+    showcase: true
   - id: "20130919-DSC_9673_zctyas"
     src: 20130919-DSC_9673.jpg
     caption: Bamboo Gardens
     subCaption:
+    featured: false
+    showcase: true
   - id: "20130919-DSC_9681_qwgdz6"
     src: 20130919-DSC_9681.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
+    showcase: false
   - id: "20130919-DSC_9676_w9npoz"
     src: 20130919-DSC_9676.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
+    showcase: true
   - id: "20130522-DSC_6720_l3hrnf"
     src: 20130522-DSC_6720.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
+    showcase: true
   - id: "20130522-DSC_6721_qlly87"
     src: 20130522-DSC_6721.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
+    showcase: true
   - id: "20130522-DSC_6725_qjutmj"
     src: 20130522-DSC_6725.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
+    showcase: true
   - id: "20130522-DSC_6726_d4o8os"
     src: 20130522-DSC_6726.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
+    showcase: true
   - id: "20130919-DSC_9679_ee7nga"
     src: 20130919-DSC_9679.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
+    showcase: true
 link: https://www.airbnb.ca/rooms/14204990
 linkText: Learn More
 title: Bamboo Gardens 1
