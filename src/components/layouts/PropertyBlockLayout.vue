@@ -51,6 +51,12 @@
 </script>
 
 <style lang="scss">
+  .property-block {
+    p {
+      font-size: 1.15rem;
+    }
+  }
+
   .blog-post,
   .post-entry,
   .project-entry {
