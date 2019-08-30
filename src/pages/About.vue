@@ -70,11 +70,14 @@
         </div>
       </div>
     </div>
+    <page-footer />
   </Layout>
 </template>
 
 <script>
   import marked from 'marked';
+
+  import PageFooter from '~/components/Footer.vue';
 
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
@@ -96,7 +99,8 @@
     components: {
       ContentBlockLayout,
       TestimonialBlockLayout,
-      ThumbnailGallery
+      ThumbnailGallery,
+      PageFooter
     },
     metaInfo: {
       title: "Classes"

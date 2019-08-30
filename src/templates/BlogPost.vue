@@ -66,6 +66,7 @@
         </div>
       </div>
     </div>
+    <page-footer />
   </Layout>
 </template>
 
@@ -73,6 +74,8 @@
   import moment from 'moment';
 
   //import * as StringUtils from '~/core/utils/StringUtils';
+
+  import PageFooter from '~/components/Footer.vue';
 
   import SvgBlurSectionBlockLayout from '~/components/layouts/SvgBlurSectionBlockLayout.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
@@ -99,7 +102,8 @@
       ContentBlockLayout,
       DealList,
       AttractionList,
-      EventList
+      EventList,
+      PageFooter
     },
     mixins: [PostMixin, HeroMixin, SectionMixin],
     data() {

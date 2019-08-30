@@ -78,11 +78,14 @@
         </div>
       </div>
     </div>
+    <page-footer />
   </Layout>
 </template>
 
 <script>
   import marked from 'marked';
+
+  import PageFooter from '~/components/Footer.vue';
 
   import PropertyBlockLayout from '~/components/layouts/PropertyBlockLayout.vue';
   import PropertyGridLayout from '~/components/layouts/PropertyGridLayout.vue';
@@ -97,7 +100,8 @@
     components: {
       PropertyBlockLayout,
       ContentBlockLayout,
-      PropertyGridLayout
+      PropertyGridLayout,
+      PageFooter
     },
     metaInfo: {
       title: 'Baan Saowanee - Ko Samui, Thailand'

@@ -134,6 +134,7 @@
         </div>
       </div>
     </div>
+    <page-footer />
   </Layout>
 </template>
 
@@ -141,6 +142,8 @@
   import marked from 'marked';
 
   import * as ImageUtils from '~/core/utils/ImageUtils';
+
+  import PageFooter from '~/components/Footer.vue';
 
   import HeroLayout01Col from '~/components/layouts/HeroLayout01Col.vue'
   import PropertyBlockLayout from '~/components/layouts/PropertyBlockLayout.vue';
@@ -176,7 +179,8 @@
       Pricing,
       Amenities,
       Cancellations,
-      Rules
+      Rules,
+      PageFooter
     },
     metaInfo: {
       title: "Classes"
