@@ -226,7 +226,7 @@
   }
 
   .darken-bg {
-    background: rgba(25, 25, 25, 0.075) !important;
+    background: rgba(25, 25, 25, 0.05) !important;
   }
 
   .homepage-section-01 {
