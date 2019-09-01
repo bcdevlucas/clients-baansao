@@ -538,4 +538,10 @@
       font-size: 1.1rem;
     }
   }
+
+  .property-hero {
+    h1 {
+      font-size: 4.3rem;
+    }
+  }
 </style>
