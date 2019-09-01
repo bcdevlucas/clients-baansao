@@ -63,71 +63,59 @@ description: >-
   We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
 id: bamboo-gardens-1
 image: 20130919-DSC_9674.jpg
-imageId: "2016-08-28_10.29.33_szqnvq"
-galleryFolder: "bamboo-gardens-01"
+imageId: "bamboo-gardens_kvtbmb"
+galleryFolder: "old/bamboo-gardens/bamboo-gardens-3"
 gallery:
-  - id: "2016-08-28_10.29.33_szqnvq"
-    src:
+  - id: "bamboo-gardens_kvtbmb"
+    src: bamboo-gardens.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-  - id: "2016-08-28_10.29.51-deskew_evuztc"
-    src:
+  - id: "20130919-DSC_9673_zctyas"
+    src: 20130919-DSC_9673.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: false
     showcase: true
-  - id: "2016-08-17_13.56.26-deskew_r8dj2f"
-    src:
+  - id: "20130919-DSC_9681_qwgdz6"
+    src: 20130919-DSC_9681.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: false
-  - id: "2016-08-28_10.36.02_ntjs5g"
-    src:
+  - id: "20130919-DSC_9676_w9npoz"
+    src: 20130919-DSC_9676.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-  - id: "2016-08-28_10.32.57-crop-deskew_yybuae"
-    src:
+  - id: "20130522-DSC_6720_l3hrnf"
+    src: 20130522-DSC_6720.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-  - id: "2016-08-28_10.34.54_r6h0gc"
-    src:
+  - id: "20130522-DSC_6721_qlly87"
+    src: 20130522-DSC_6721.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-  - id: "2016-08-28_10.31.10_s6kpff"
-    src:
+  - id: "20130522-DSC_6725_qjutmj"
+    src: 20130522-DSC_6725.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-  - id: "2016-08-28_10.31.35_uhhl83"
-    src:
+  - id: "20130522-DSC_6726_d4o8os"
+    src: 20130522-DSC_6726.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-  - id: "2016-08-17_13.58.12_nnr8cw"
-    src:
-    caption: Bamboo Gardens
-    subCaption:
-    featured: true
-    showcase: true
-  - id: "2016-08-18_16.51.55_fmzmbo"
-    src:
-    caption: Bamboo Gardens
-    subCaption:
-    featured: true
-    showcase: true
-  - id: "2016-08-17_12.25.28-deskew_st4ops"
-    src:
+  - id: "20130919-DSC_9679_ee7nga"
+    src: 20130919-DSC_9679.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true

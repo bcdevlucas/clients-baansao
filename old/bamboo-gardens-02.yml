@@ -1,5 +1,5 @@
 address:
-  - line1: 36/1 Moo 1, Maenam
+  - line1: 36/2 Moo 1, Maenam
     line2: ""
     city: Koh Samui
     zone: Surat Thani
@@ -61,81 +61,71 @@ description: >-
 
   Your host, Saowanee, resides in the same community and will be pleased to assist in making your Ko Samui holiday a special experience.
   We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
-id: bamboo-gardens-1
-image: 20130919-DSC_9674.jpg
-imageId: "2016-08-28_10.29.33_szqnvq"
-galleryFolder: "bamboo-gardens-01"
+id: bamboo-gardens-2
+image: 20130522-DSC_6730.jpg
+imageId: "20130522-DSC_6730_xgypvm"
+galleryFolder: "old/bamboo-gardens/bamboo-gardens-2"
 gallery:
-  - id: "2016-08-28_10.29.33_szqnvq"
-    src:
+  - id: "20130522-DSC_6728_pflgff"
+    src: 20130522-DSC_6728.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-  - id: "2016-08-28_10.29.51-deskew_evuztc"
-    src:
-    caption: Bamboo Gardens
-    subCaption:
-    featured: false
-    showcase: true
-  - id: "2016-08-17_13.56.26-deskew_r8dj2f"
-    src:
-    caption: Bamboo Gardens
-    subCaption:
-    featured: true
-    showcase: false
-  - id: "2016-08-28_10.36.02_ntjs5g"
-    src:
+  - id: "20130919-DSC_9683_pnkaxf"
+    src: 20130919-DSC_9683.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-  - id: "2016-08-28_10.32.57-crop-deskew_yybuae"
-    src:
+  - id: "20130522-DSC_6732_lppehw"
+    src: 20130522-DSC_6732.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-  - id: "2016-08-28_10.34.54_r6h0gc"
-    src:
+  - id: "20130522-DSC_6730_xgypvm"
+    src: 20130522-DSC_6730.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-  - id: "2016-08-28_10.31.10_s6kpff"
-    src:
+  - id: "20130522-DSC_6729_p6rl3m"
+    src: 20130522-DSC_6729.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-  - id: "2016-08-28_10.31.35_uhhl83"
-    src:
+  - id: "20130522-DSC_6735_qjez0z"
+    src: 20130522-DSC_6735.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-  - id: "2016-08-17_13.58.12_nnr8cw"
-    src:
+  - id: "20130919-DSC_9680_rvjnne"
+    src: 20130919-DSC_9680.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-  - id: "2016-08-18_16.51.55_fmzmbo"
-    src:
+  - id: "20130919-DSC_9678_gdepqf"
+    src: 20130919-DSC_9678.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-  - id: "2016-08-17_12.25.28-deskew_st4ops"
-    src:
+  - id: "20130919-DSC_9684_e5ym9c"
+    src: 20130919-DSC_9684.jpg
     caption: Bamboo Gardens
     subCaption:
     featured: true
     showcase: true
-link: https://www.airbnb.ca/rooms/14204990
+link: https://www.airbnb.ca/rooms/14205182
 linkText: Learn More
-title: Bamboo Gardens 1
+title: Bamboo Gardens 2
 metaKeywords:
 metaDescription:
 caption:
 subCaption:
+
+
