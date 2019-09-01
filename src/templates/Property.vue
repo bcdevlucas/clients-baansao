@@ -1,14 +1,7 @@
 <template>
   <Layout>
-    <hero-layout01-col
-      class="property-hero"
-      :image="activeImage ? activeImage.src : ''"
-      :title="pageData.title"
-      :description="pageData.summary"
-    />
-
     <div class="content-wrapper">
-      <div class="site-section container-fluid" v-if="pageData" :key="pageData.id">
+      <div class="container-fluid" v-if="pageData" :key="pageData.id">
         <!--<div class="row mt-4 mb-4 pt-4">
           <div class="col-lg-12 ml-auto text-center">
             <span class="sub-title" v-html="pageData.summary"></span>
@@ -27,23 +20,42 @@
                 :displayMax="pageData.gallery.length"
                 :imagesPerRow="3"
               />
-              <br />
-              <h3 class="mt-4">Location</h3>
-              <google-map-cutout class="mt-4" />
-              <!--<h3 class="mt-4">Address</h3>-->
-              <p class="mt-4">
-                <span>{{ pageData.address.line1 }}</span><br />
-                <span v-if="typeof pageData.address.line2 === 'string' && pageData.address.line2 !== ''">{{ pageData.address.line2 }}</span>
-                <br v-if="typeof pageData.address.line2 === 'string' && pageData.address.line2 !== ''" />
-                <span>{{ pageData.address.city }}</span>,&nbsp;<span>{{ pageData.address.zone }}</span><br />
-                <span>{{ pageData.address.postCode }}</span>&nbsp;<span>{{ pageData.address.country }}</span>
-              </p>
+            </div>
+            <div class="container mt-5">
+              <amenities class="mt-5 mb-4" />
+              <div class="row">
+                <div class="col-12 text-center mt-5">
+                  <h3>Reviews</h3>
+                </div>
+              </div>
+              <div class="slider row">
+                <div
+                  v-for="testimonial in getTestimonialsByIndex(0, 2)"
+                  class="col-xs-12"
+                >
+                  <testimonial-block-layout
+                    className="testimony"
+                    :reviewedBy="testimonial.reviewedBy"
+                    :image="testimonial.image"
+                    :testimonial="testimonial.testimonial"
+                  />
+                  <div
+                    class="homepage-hero-action action-link-block text-center space-bottom">
+                    <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="col-lg-8 col-xl-6 ml-auto">
-            <div class="container">
-              <amenities class="mt-4 mb-4" />
+            <hero-layout01-col
+              class="property-hero"
+              :image="activeImage ? activeImage.src : ''"
+              :title="pageData.title"
+              :description="pageData.summary"
+            />
+            <div class="container mt-5">
               <div v-html="pageData.description"></div>
               <div class="row">
                 <div class="col-sm-6">
@@ -69,55 +81,58 @@
                 </button>
               </div>
               <div class="row">
-                <div class="col-12 text-center mt-5">
-                  <h3>Recommendations</h3>
+                <div class="col-xs-12 mt-4">
+                  <br />
+                  <h3 class="text-center">Location</h3>
+                  <google-map-cutout class="mt-4" />
+                  <!--<h3 class="mt-4">Address</h3>-->
+                  <p class="mt-4">
+                    <span>{{ pageData.address.line1 }}</span><br />
+                    <span v-if="typeof pageData.address.line2 === 'string' && pageData.address.line2 !== ''">{{ pageData.address.line2 }}</span>
+                    <br v-if="typeof pageData.address.line2 === 'string' && pageData.address.line2 !== ''" />
+                    <span>{{ pageData.address.city }}</span>,&nbsp;<span>{{ pageData.address.zone }}</span><br />
+                    <span>{{ pageData.address.postCode }}</span>&nbsp;<span>{{ pageData.address.country }}</span>
+                  </p>
                 </div>
               </div>
-              <div class="slider row">
-                <div
-                  v-for="testimonial in getTestimonialsByIndex(0, 0)"
-                  class="col-xs-12"
-                >
-                  <testimonial-block-layout
-                    className="testimony"
-                    :reviewedBy="testimonial.reviewedBy"
-                    :image="testimonial.image"
-                    :testimonial="testimonial.testimonial"
-                  />
-                  <div
-                    class="homepage-hero-action action-link-block text-center space-bottom">
-                    <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
+              <!--<div class="row" v-if="propertiesContent instanceof Array && propertiesContent.length > 0">
+                <div class="col-xs-12">
+                  <div class="container-fluid">
+                    <div class="row" v-for="property in unselectedProperties.slice(0, 2)">
+                      <property-block-layout
+                        :key="property.id"
+                        className="col-xs-12 project-entry pr-3"
+                        :title="property.title"
+                        :description="(property.summary) ? property.summary : ''"
+                        :link="`/property/${property.id}`"
+                        linkText="View Property"
+                        :cloudinaryImage="property.imageId"
+                        cloudName="baansaowanee"
+                        :cloudFolder="property.galleryFolder"
+                        :imageAlt="property.caption"
+                        :prices="property.price"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="site-section container-fluid" v-if="propertiesContent.length > 0">
-        <!--<div class="container pt-4">
-          <div class="row mt-4 mb-4 pt-4">
-            <div class="col-lg-12 ml-auto text-center">
-              <span class="sub-title">Browse Our</span>
-              <h2 class="font-weight-bold text-black mb-5">{{ `${$page.property ? 'Other ' : ''}Villas` }}</h2>
-            </div>
-          </div>
-        </div>-->
-        <div class="row mb-4">
-          <div class="col-lg-12 ml-auto text-center">
-            <span class="sub-title">Something Else?</span>
-            <h2 class="font-weight-bold text-black mb-5">Our Other Rentals</h2>
-          </div>
-        </div>
-        <div class="row" v-if="propertiesContent instanceof Array && propertiesContent.length > 0">
-          <div class="col-xs-12">
+        <div class="row mt-4 mb-4 pt-4" v-if="propertiesContent instanceof Array && propertiesContent.length > 0">
+          <div class="col-lg-12 col-xl-9 mb-5">
             <div class="container-fluid">
-              <div class="row">
+              <div class="row mb-4">
+                <div class="col-lg-12 ml-auto text-center">
+                  <span class="sub-title">Something Else?</span>
+                  <h2 class="font-weight-bold text-black mb-5">Our Other Rentals</h2>
+                </div>
+              </div>
+              <div class="row" >
                 <property-block-layout
                   v-for="property in unselectedProperties"
                   :key="property.id"
-                  className="col-lg-4 col-md-4 mb-3 project-entry"
+                  className="col-xs-12 col-lg-4 col-xl-4 project-entry"
                   :title="property.title"
                   :description="(property.summary) ? property.summary : ''"
                   :link="`/property/${property.id}`"

@@ -18,7 +18,7 @@
     ],
     computed: {
       trimmedTestimonial() {
-        return `${StringUtils.shortenText(this.testimonial, 600)}...`;
+        return `${StringUtils.shortenText(this.testimonial, 270)}...`;
       }
     }
   }

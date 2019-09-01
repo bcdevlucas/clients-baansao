@@ -1,6 +1,6 @@
 <template>
   <div class="amenities-table">
-    <h3>Amenities</h3>
+    <h3 class="text-center">Amenities</h3>
     <div class="d-flex" style="flex-flow: row wrap;">
       <div class="amenity d-flex" style="flex: 1 2 50%">
         <div style="flex: 0 0 40px">

@@ -119,7 +119,7 @@ export default {
       let width = 600;
       let height = 450;
 
-      const opts = { cloudName: this.cloudName, folder: this.cloudFolder, transforms: `w_${width},h_${height},q_60,c_fill,g_auto` };
+      const opts = { cloudName: this.cloudName, folder: this.cloudFolder, transforms: `w_${width},h_${height},q_60,c_fill,g_center` };
       image.src = await ImageUtils.getCloudinaryImageUrl(image.id, opts);
 
       this.$set(this, 'cloudImage', image);
