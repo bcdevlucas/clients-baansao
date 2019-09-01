@@ -309,7 +309,7 @@
       async setActiveImage() {
         if (this.pageData && this.pageData.gallery instanceof Array) {
           const activeImage = this.getRandomImage(this.getShowcaseImages(0));
-          const opts = { cloudName: 'baansaowanee', folder: this.pageData.galleryFolder, transforms: 'w_1920,q_60' };
+          const opts = { cloudName: 'baansaowanee', folder: this.pageData.galleryFolder, transforms: 'w_1920,q_60,c_fill,g_auto' };
           activeImage.src = await ImageUtils.getCloudinaryImageUrl(activeImage.id, opts);
           this.$data.activeImage = activeImage;
         }
@@ -323,7 +323,7 @@
 
         const activeImage = { id: this.pageData.imageId, src: null };
         console.log(`Starting primary image rotation: ${ activeImage.id }`);
-        const opts = { cloudName: 'baansaowanee', folder: this.pageData.galleryFolder, transforms: 'w_1920,q_60' };
+        const opts = { cloudName: 'baansaowanee', folder: this.pageData.galleryFolder, transforms: 'w_1920,q_60,c_fill,g_auto' };
         activeImage.src = await ImageUtils.getCloudinaryImageUrl(activeImage.id, opts);
         this.$data.activeImage = activeImage;
       },
