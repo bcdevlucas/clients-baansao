@@ -23,7 +23,7 @@
     },
     data() {
       return {
-        formattedPrice: (this.price.amount) ? `$${parseFloat(this.price.amount).toFixed(2)}` : '',
+        formattedPrice: (this.price && this.price.amount) ? `$${parseFloat(this.price.amount).toFixed(2)}` : '',
         currency: 'USD',
         adults: 1,
         children: 0,
