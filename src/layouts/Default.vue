@@ -73,6 +73,19 @@
 
                 <div class="row form-group">
                   <div class="col-md-12">
+                    <label class="font-weight-bold" for="email">Subject</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      class="form-control"
+                      placeholder="Subject"
+                      :value="subjectLine"
+                    />
+                  </div>
+                </div>
+
+                <div class="row form-group">
+                  <div class="col-md-12">
                     <label class="font-weight-bold" for="message">Message</label>
                     <textarea
                       name="message"
@@ -129,7 +142,16 @@
     props: {
       displayPosts: Boolean
     },
+    data() {
+      return {
+        subjectLine: ''
+      }
+    },
     methods: {
+      setSubjectLine(subjectLine) {
+        subjectLine = (typeof subjectLine === 'string') ? subjectLine : '';
+        this.$set(this, 'subjectLine', subjectLine);
+      },
       viewDetail(activeDetail) {
         if (typeof window !== 'undefined') {
           this.$refs.contentDetail.viewDetail(activeDetail, () => {});
@@ -139,7 +161,10 @@
     provide() {
       return {
         defaultLayoutContext: {
-          openContactForm: this.viewDetail
+          openContactForm: (subjectLine) => {
+            this.setSubjectLine(subjectLine);
+            this.viewDetail();
+          }
         }
       }
     }

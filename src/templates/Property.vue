@@ -40,7 +40,7 @@
                   :link="pageData.link">
                 </pricing>
                 <div class="class-action-buttons mt-2 text-center">
-                  <contact-form-button />
+                  <contact-form-button :subject="`Enquiry re: ${pageData.title}`" />
                 </div>
                 <likes class="mt-3" showFaces="true" />
               </div>
@@ -113,7 +113,7 @@
                 :link="pageData.link">
               </pricing>
               <div class="class-action-buttons mt-2 text-center">
-                <contact-form-button />
+                <contact-form-button :subject="`Enquiry re: ${pageData.title}`" />
               </div>
               <likes class="mt-3" dataShowFaces="true" />
               <div class="row">

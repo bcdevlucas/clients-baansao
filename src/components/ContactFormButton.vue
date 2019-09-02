@@ -7,10 +7,16 @@
 <script>
   export default {
     inject: ['defaultLayoutContext'],
+    props: {
+      subject: {
+        type: String,
+        default: 'Request for information'
+      }
+    },
     methods: {
       triggerOpenContactForm() {
         if (typeof this.defaultLayoutContext.openContactForm === 'function') {
-          this.defaultLayoutContext.openContactForm();
+          this.defaultLayoutContext.openContactForm(this.subject);
         }
       }
     }
