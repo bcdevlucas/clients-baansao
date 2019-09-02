@@ -41,6 +41,8 @@
       }
     },
     mounted() {
+      this.$forceUpdate();
+
       /*(function(d, s, id) {
         let js, fjs = d.getElementsByTagName(s)[0];
 
