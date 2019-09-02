@@ -41,7 +41,9 @@
       }
     },
     mounted() {
-      this.$forceUpdate();
+      if (typeof window !== 'undefined') {
+        setTimeout(this.$forceUpdate, 1000);
+      }
 
       /*(function(d, s, id) {
         let js, fjs = d.getElementsByTagName(s)[0];
