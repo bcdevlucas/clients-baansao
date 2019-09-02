@@ -58,6 +58,8 @@
     },
     watch: {
       price(newVal) {
+        console.log('price updated');
+        console.log(newVal);
         this.formattedPrice = (newVal.amount) ? `$${parseFloat(newVal.amount).toFixed(2)}` : '';
       }
     },
@@ -68,7 +70,10 @@
       }
     },
     mounted() {
-      this.$forceUpdate(); // Update props
+      setTimeout(() => {
+        this.$forceUpdate(); // Update props
+      }, 666);
+
     }
   }
 </script>
