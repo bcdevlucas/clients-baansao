@@ -9,7 +9,7 @@
           <div class="row">
             <div class="col-12 text-center">
               <span class="sub-title">Follow Us On Our Blog</span>
-              <h2 class="font-weight-bold text-black mb-5">Recent Posts</h2>
+              <h2 class="font-weight-bold mb-5">Recent Posts</h2>
             </div>
           </div>
           <div class="row mb-5">
@@ -37,7 +37,7 @@
         <div class="container">
           <div id="contact" class="row">
             <div class="col-md-12 col-lg-12">
-              <h2 class="site-heading text-black mb-5">
+              <h2 class="site-heading mb-5">
                 {{ /*pageSubTitle*/ }}
               </h2>
 

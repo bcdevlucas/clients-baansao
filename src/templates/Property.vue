@@ -5,7 +5,7 @@
         <!--<div class="row mt-4 mb-4 pt-4">
           <div class="col-lg-12 ml-auto text-center">
             <span class="sub-title" v-html="pageData.summary"></span>
-            <h2 class="font-weight-bold text-black mb-5" v-html="pageData.title"></h2>
+            <h2 class="font-weight-bold mb-5" v-html="pageData.title"></h2>
           </div>
         </div>-->
         <div class="row mt-4 mb-4">
@@ -141,7 +141,7 @@
               <div class="row mb-4">
                 <div class="col-lg-12 ml-auto text-center">
                   <span class="sub-title">Something Else?</span>
-                  <h2 class="font-weight-bold text-black mb-5">Our Other Rentals</h2>
+                  <h2 class="font-weight-bold mb-5">Our Other Rentals</h2>
                 </div>
               </div>
               <div class="row" >

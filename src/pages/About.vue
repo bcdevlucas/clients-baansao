@@ -27,7 +27,7 @@
             <div class="row mt-4 mb-4 pt-4">
               <div class="col-lg-12 ml-auto text-center" style="margin-top: 7vh">
                 <span class="sub-title">{{ getSection(0).summary }}</span>
-                <h2 class="font-weight-bold text-black mb-3">{{ getSection(0).title }}</h2>
+                <h2 class="font-weight-bold mb-3">{{ getSection(0).title }}</h2>
                 <div style="margin-top: 5vh" v-html="getSection(0).description">
                 </div>
               </div>
