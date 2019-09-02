@@ -68,12 +68,6 @@
         if (typeof window !== 'undefined' && typeof url !== 'string') return;
         window.location.href = url;
       }
-    },
-    mounted() {
-      setTimeout(() => {
-        this.$forceUpdate(); // Update props
-      }, 666);
-
     }
   }
 </script>

@@ -34,6 +34,7 @@
             <div class="container mt-5 d-xl-none">
               <div class="container">
                 <pricing v-if="pageData"
+                  :key="pageData.price"
                   class="mt-4 mb-4"
                   :price="pageData.price"
                   :link="pageData.link">
@@ -107,6 +108,7 @@
           <div class="col-lg-12 col-xl-3 mb-5 mb-lg-0 d-none d-xl-block property-page-right-sidebar">
             <div class="container">
               <pricing v-if="pageData"
+                :key="pageData.price"
                 class="mt-4 mb-4"
                 :price="pageData.price"
                 :link="pageData.link">
@@ -121,7 +123,7 @@
                   <!--<h3 class="text-center">Location</h3>-->
                   <google-map-cutout class="mt-4" />
                   <!--<h3 class="mt-4">Address</h3>-->
-                  <p class="mt-4">
+                  <p class="mt-4" :key="pageData.address">
                     <span>{{ pageData.address.line1 }}</span><br />
                     <span v-if="typeof pageData.address.line2 === 'string' && pageData.address.line2 !== ''">{{ pageData.address.line2 }}</span>
                     <br v-if="typeof pageData.address.line2 === 'string' && pageData.address.line2 !== ''" />
