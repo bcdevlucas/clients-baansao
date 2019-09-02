@@ -11,8 +11,8 @@
             <div class="col-md-8 hero-text">
               <div class="hero-logo d-none d-md-block"><span></span></div>
               <!--<span class="flower-separator-white"></span>-->
-              <span class="sub-text"><strong>Welcome to</strong></span>
-              <h1>Our Neighborhood</h1>
+              <span class="sub-text"><strong>Sawatdee Kha</strong></span>
+              <h1>I'm Saowanee</h1>
               <img class="mom-cutout" src="/images/mom-cutout.png" />
             </div>
           </div>
