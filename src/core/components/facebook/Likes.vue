@@ -11,16 +11,16 @@
     -->
 
     <!-- Standard 'like' button -->
-    <div class="fb-like" :data-href="`https://www.baansaowanee.com/${this.$route.path}`" v-if="dataLayout === 'standard'" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+    <div class="fb-like" :data-href="`https://www.baansaowanee.com/${this.$route.path}`" v-if="dataLayout === 'standard'" data-layout="standard" data-action="like" :data-show-faces="dataShowFaces" :data-share="dataShare"></div>
 
     <!-- Box count 'like' button -->
-    <div class="fb-like" :data-href="`https://www.baansaowanee.com/${this.$route.path}`" v-if="dataLayout === 'box_count'" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
+    <div class="fb-like" :data-href="`https://www.baansaowanee.com/${this.$route.path}`" v-if="dataLayout === 'box_count'" data-layout="box_count" data-action="like" :data-show-faces="dataShowFaces" :data-share="dataShare"></div>
 
     <!-- Button count 'like' button -->
-    <div class="fb-like" :data-href="`https://www.baansaowanee.com/${this.$route.path}`" v-if="dataLayout === 'button_count'" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+    <div class="fb-like" :data-href="`https://www.baansaowanee.com/${this.$route.path}`" v-if="dataLayout === 'button_count'" data-layout="button_count" data-action="like" :data-show-faces="dataShowFaces" :data-share="dataShare"></div>
 
     <!-- Simple 'like' button -->
-    <div class="fb-like" :data-href="`https://www.baansaowanee.com/${this.$route.path}`" v-if="dataLayout === 'button'" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+    <div class="fb-like" :data-href="`https://www.baansaowanee.com/${this.$route.path}`" v-if="dataLayout === 'button'" data-layout="button" data-action="like" :data-show-faces="dataShowFaces" :data-share="dataShare"></div>
   </div>
 </template>
 
@@ -30,6 +30,14 @@
       dataLayout: {
         type: String,
         default: 'standard'
+      },
+      dataShare: {
+        type: String,
+        default: 'true'
+      },
+      dataShowFaces: {
+        type: String,
+        default: 'false'
       }
     },
     mounted() {

@@ -44,7 +44,7 @@
                     <span>Ask a Question</span>
                   </button>
                 </div>
-                <likes class="mt-3" />
+                <likes class="mt-3" showFaces="true" />
               </div>
             </div>
 
@@ -119,7 +119,7 @@
                   <span>Ask a Question</span>
                 </button>
               </div>
-              <likes class="mt-3" />
+              <likes class="mt-3" dataShowFaces="true" />
               <div class="row">
                 <div class="col-xs-12 mt-4">
                   <!--<h3 class="text-center">Location</h3>-->

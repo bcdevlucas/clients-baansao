@@ -21,6 +21,7 @@
           <a @click="linkClicked" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.title }}</a>
           <span class="content-block-price">{{ priceAtFormatted(0) }} <small>USD<br />per night</small></span>
         </h3>
+        <likes dataLayout="button_count" dataShare="false" class="mb-2" />
         <p v-if="typeof this.datePublished === 'string' && this.datePublished.length > 0" class="text-muted">
           {{ this.datePublished }} - Bob Johnson
         </p>
@@ -34,6 +35,7 @@
 </template>
 
 <script>
+  import Likes from '~/core/components/facebook/Likes.vue';
   import ContentBlockMixin from '~/core/mixins/layouts/ContentBlock';
   import PriceMixin from '~/core/mixins/layouts/Price';
 
@@ -46,6 +48,7 @@
     ],
     components: {
       //ErrorBoundary
+      Likes
     }
   };
 </script>
