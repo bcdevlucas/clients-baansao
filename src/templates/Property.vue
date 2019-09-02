@@ -44,6 +44,7 @@
                     <span>Ask a Question</span>
                   </button>
                 </div>
+                <likes class="mt-3" />
               </div>
             </div>
 
@@ -109,7 +110,7 @@
             <div class="container">
               <pricing v-if="pageData"
                 :key="pageData.price"
-                class="mt-4 mb-4"
+                class="mt-4 mb-3"
                 :price="pageData.price"
                 :link="pageData.link">
               </pricing>
@@ -118,6 +119,7 @@
                   <span>Ask a Question</span>
                 </button>
               </div>
+              <likes class="mt-3" />
               <div class="row">
                 <div class="col-xs-12 mt-4">
                   <!--<h3 class="text-center">Location</h3>-->
@@ -188,6 +190,7 @@
   import Amenities from '~/components/Amenities.vue';
   import Cancellations from '~/components/Cancellations.vue';
   import Rules from '~/components/Rules.vue';
+  import Likes from '~/core/components/facebook/Likes.vue';
 
   // TODO: Implement page page that provides data interface?
   import HeroMixin from '~/mixins/HeroMixin';
@@ -211,6 +214,7 @@
       Amenities,
       Cancellations,
       Rules,
+      Likes,
       PageFooter
     },
     metaInfo: {

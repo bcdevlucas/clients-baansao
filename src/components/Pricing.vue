@@ -5,7 +5,7 @@
       <span class="display-price">{{ formattedPrice }} <small>{{ currency }}<br />per night</small></span>
     </div>
 
-    <div class="class-action-buttons mt-5 mb-0 text-center">
+    <div class="class-action-buttons mt-3 mb-0 text-center">
       <button @click="openAirbnbPage.bind(this, link)" class="btn btn-primary btn-lg open-airbnb-page">
         <i class="material-icons">calendar_today</i><span>Book on Airbnb.com</span>
       </button>
