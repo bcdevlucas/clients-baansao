@@ -135,6 +135,13 @@
           this.$refs.contentDetail.viewDetail(activeDetail, () => {});
         }
       }
+    },
+    provide() {
+      return {
+        defaultLayoutContext: {
+          openContactForm: this.viewDetail
+        }
+      }
     }
   }
 </script>
