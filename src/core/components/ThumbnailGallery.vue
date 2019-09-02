@@ -6,7 +6,7 @@
         ref="thumbs_primaryImage"
         :cloudName="cloudName"
         dpr="auto"
-        width="450"
+        width="720"
         crop="scale"
         :folder="folder"
         :version="version"
@@ -27,7 +27,7 @@
                 :ref="`thumbs_${image.id}`"
                 :cloudName="cloudName"
                 dpr="auto"
-                width="150"
+                width="250"
                 crop="scale"
                 :publicId="image.id"
                 :folder="folder"
@@ -46,14 +46,14 @@
           class="thumbnail-strip"
           v-for="row in numberOfRows">
           <!--<img v-img:gallery v-if="gallery" v-for="image in getGalleryImages(0, 2, true)" :src="image.src" v-bind:srcset="getImageSrcSet(image.src)" :alt="image.caption" class="img" />-->
-          <div class="thumbnail-wrapper" v-for="image in getGalleryImages(...getGalleryRowSlice(row), false)">
+          <div class="thumbnail-wrapper" v-for="image in getGalleryImages(...getGalleryRowSlice(row), false)" :style="`flex: 0 1 ${1 / imagesPerRow * 100}%;`">
             <div class="thumbnail-spacer" :data-ref-id="`${image.id}`" @click="triggerGallery">
               <cld-image
                 :key="Math.random()"
                 :ref="`thumbs_${image.id}`"
                 :cloudName="cloudName"
                 dpr="auto"
-                width="150"
+                width="250"
                 crop="scale"
                 :publicId="image.id"
                 :folder="folder"

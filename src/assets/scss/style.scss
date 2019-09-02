@@ -252,7 +252,7 @@ $text-muted: $gray-500;
   > .thumbnail-wrapper {
     width: 33.33333%;
     flex: 0 1 33.33333%;
-    height: 80px;
+    max-height: 130px;
     overflow: hidden;
 
     .thumbnail-spacer {

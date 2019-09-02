@@ -267,7 +267,7 @@
     display: none;
     transform: translateY(-50%);
   }
-  @media screen and (max-width: 660px) {
+  @media screen and (max-width: 992px) {
     /*header {
       position: absolute !important;
     }*/
@@ -290,6 +290,11 @@
       flex: 1 1 auto;
       justify-content: center;
       align-items: center;
+    }
+
+    /* TODO: Fix this */
+    .site-navbar-top {
+      display: none;
     }
 
     .display-menu .site-navbar-top {
@@ -364,7 +369,7 @@
     background-color: var(--cgrey);
     opacity: 0.5;
   }
-  @media screen and (max-width: 660px) {
+  @media screen and (max-width: 992px) {
     header .wrap {
       justify-content: flex-start;
       align-items: center;

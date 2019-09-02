@@ -22,7 +22,7 @@
               fill-rule="evenodd"></path>
           </svg>
         </div>
-        <div style="flex: 1">Wifi</div>
+        <div style="flex: 1">WiFi</div>
       </div>
       <div class="amenity d-flex" style="flex: 1 2 50%">
         <div style="flex: 0 0 40px">
@@ -44,7 +44,7 @@
               fill-rule="evenodd"></path>
           </svg>
         </div>
-        <div style="flex: 1">Free parking on premises</div>
+        <div style="flex: 1">Free Parking</div>
       </div>
     </div>
   </div>

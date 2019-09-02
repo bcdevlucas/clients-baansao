@@ -10,6 +10,15 @@
         </div>-->
         <div class="row mt-4 mb-4 pt-4">
           <div class="col-lg-4 col-xl-3 mb-5 mb-lg-0">
+            <div class="container d-lg-none" ref="pageHero">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-md-10 text-center mb-5">
+                  <span class="sub-text" v-if="pageData.subtitle">{{ pageData.subtitle }}</span>
+                  <h1 v-if="pageData.title">{{ pageData.title }}</h1>
+                  <!--<div class="sub-text" v-html="(pageData.summary) ? pageData.summary : ''"></div>-->
+                </div>
+              </div>
+            </div>
             <div class="container">
               <thumbnail-gallery
                 v-if="pageData && pageData.gallery"
@@ -21,8 +30,30 @@
                 :imagesPerRow="3"
               />
             </div>
-            <div class="container mt-5">
-              <amenities class="mt-5 mb-4" />
+
+            <div class="container mt-5 d-xl-none">
+              <div class="container">
+                <pricing v-if="pageData"
+                  class="mt-4 mb-4"
+                  :price="pageData.price"
+                  :link="pageData.link">
+                </pricing>
+                <div class="class-action-buttons mt-2 text-center">
+                  <button class="btn btn-secondary btn-lg ask-question" style="width: 100%"><i class="material-icons">question_answer</i>
+                    <span>Ask a Question</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="container mt-5 d-none d-xl-block">
+              <div class="container">
+                <amenities class="mt-5 mb-4" />
+              </div>
+            </div>
+
+
+            <div class="container mt-5 d-none d-xl-block">
               <div class="row">
                 <div class="col-12 text-center mt-5">
                   <h3>Reviews</h3>
@@ -30,7 +61,7 @@
               </div>
               <div class="slider row">
                 <div
-                  v-for="testimonial in getTestimonialsByIndex(0, 2)"
+                  v-for="testimonial in getTestimonialsByIndex(0, 1)"
                   class="col-xs-12"
                 >
                   <testimonial-block-layout
@@ -50,7 +81,7 @@
 
           <div class="col-lg-8 col-xl-6 ml-auto">
             <hero-layout01-col
-              class="property-hero"
+              class="property-hero d-none d-lg-block"
               :image="activeImage ? activeImage.src : ''"
               :title="pageData.title"
               :description="pageData.summary"
@@ -66,9 +97,14 @@
                 </div>
               </div>
             </div>
+            <div class="container mt-5 d-xl-none">
+              <div class="container">
+                <amenities class="mt-5 mb-4" />
+              </div>
+            </div>
           </div>
 
-          <div class="col-lg-12 col-xl-3 mb-5 mb-lg-0">
+          <div class="col-lg-12 col-xl-3 mb-5 mb-lg-0 d-none d-xl-block">
             <div class="container">
               <pricing v-if="pageData"
                 class="mt-4 mb-4"
@@ -82,8 +118,7 @@
               </div>
               <div class="row">
                 <div class="col-xs-12 mt-4">
-                  <br />
-                  <h3 class="text-center">Location</h3>
+                  <!--<h3 class="text-center">Location</h3>-->
                   <google-map-cutout class="mt-4" />
                   <!--<h3 class="mt-4">Address</h3>-->
                   <p class="mt-4">
@@ -95,27 +130,6 @@
                   </p>
                 </div>
               </div>
-              <!--<div class="row" v-if="propertiesContent instanceof Array && propertiesContent.length > 0">
-                <div class="col-xs-12">
-                  <div class="container-fluid">
-                    <div class="row" v-for="property in unselectedProperties.slice(0, 2)">
-                      <property-block-layout
-                        :key="property.id"
-                        className="col-xs-12 project-entry pr-3"
-                        :title="property.title"
-                        :description="(property.summary) ? property.summary : ''"
-                        :link="`/property/${property.id}`"
-                        linkText="View Property"
-                        :cloudinaryImage="property.imageId"
-                        cloudName="baansaowanee"
-                        :cloudFolder="property.galleryFolder"
-                        :imageAlt="property.caption"
-                        :prices="property.price"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>-->
             </div>
           </div>
         </div>
@@ -132,7 +146,7 @@
                 <property-block-layout
                   v-for="property in unselectedProperties"
                   :key="property.id"
-                  className="col-xs-12 col-lg-4 col-xl-4 project-entry"
+                  className="col-xs-12 col-md-6 col-lg-4 col-xl-4 project-entry mb-5"
                   :title="property.title"
                   :description="(property.summary) ? property.summary : ''"
                   :link="`/property/${property.id}`"

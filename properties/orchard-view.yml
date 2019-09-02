@@ -254,7 +254,7 @@ gallery:
     caption: Orchard view 30
     subCaption:
     featured: false
-    showcase: true
+    showcase: false
   - id: "30_xsoaxk"
     src: 31.jpg
     caption: Orchard view 31
