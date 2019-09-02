@@ -242,6 +242,9 @@
           address = this.$page.property.fields.address.pop() || address;
         }
 
+        console.log('dumping page property data');
+        console.log(this.$page.property);
+
         return {
           id: this.$page.property.id,
           title: this.$page.property.fields.title,
