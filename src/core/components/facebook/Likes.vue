@@ -41,15 +41,15 @@
       }
     },
     mounted() {
-      (function(d, s, id) {
+      /*(function(d, s, id) {
         let js, fjs = d.getElementsByTagName(s)[0];
 
         if (d.getElementById(id)) return;
         js = d.createElement(s);
         js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=198998956798670";
+        js.src = "";
         fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+      }(document, 'script', 'facebook-jssdk'));*/
     }
   }
 </script>
