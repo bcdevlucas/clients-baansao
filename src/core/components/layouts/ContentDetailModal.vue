@@ -1,6 +1,6 @@
 <template>
   <div ref="contentDetail" class="detailed-content-panel bg-white semi-clear">
-    <div class="panel-header">
+    <div class="panel-header py-5">
       <div class="panel-title">
         <h2 v-if="this.title" class="text-center">{{ this.title }}</h2>
       </div>
