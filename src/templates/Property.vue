@@ -238,8 +238,8 @@
           postCode: ''
         };
 
-        if (this.$page.property.fields.address instanceof Array) {
-          address = this.$page.property.fields.address.pop() || address;
+        if (this.$page.property.fields.address instanceof Array && this.$page.property.fields.address.length > 0) {
+          address = this.$page.property.fields.address[0] || address;
         }
 
         console.log('dumping page property data');
@@ -251,7 +251,7 @@
           metaKeywords: this.$page.property.fields.metaKeywords,
           metaDescription: this.$page.property.fields.metaDescription,
           address: address,
-          price: (this.$page.property.fields.price instanceof Array) ? this.$page.property.fields.price.pop() : this.$page.property.fields.price,
+          price: (this.$page.property.fields.price instanceof Array && this.$page.property.fields.price.length > 0) ? this.$page.property.fields.price[0] : this.$page.property.fields.price,
           //summary: this.$page.property.fields.summary,
           //description: this.$page.property.fields.description,
           summary: (typeof window !== 'undefined') ? marked(this.$page.property.fields.summary) : this.$page.property.fields.summary,
