@@ -18,10 +18,7 @@
     props: {
       price: {
         type: Object,
-        default: () => ({
-          amount: 0.00,
-          currency: 'USD'
-        })
+        default: null
       }
     },
     data() {
