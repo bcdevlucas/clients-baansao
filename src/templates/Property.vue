@@ -63,7 +63,7 @@
               </div>
               <div class="slider row">
                 <div
-                  v-for="testimonial in getTestimonialsByIndex(0, 2)"
+                  v-for="testimonial in getTestimonialsByIndex(0, 1)"
                   class="col-xs-12"
                 >
                   <testimonial-block-layout
