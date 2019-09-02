@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="col-lg-12 ml-auto text-center" v-if="price">
-      <span class="sub-title mb-0" style="font-family: 'Calligraffitti', sans-serif; text-transform: none; font-size: 1.5rem">Starting from</span>
+      <span class="sub-title mb-0 price-leading-text">Starting from</span>
       <span class="display-price">{{ formattedPrice }} <small>{{ currency }}<br />per night</small></span>
     </div>
 
@@ -78,5 +78,13 @@
       display: inline-block;
       line-height: 1rem;
     }
+  }
+
+  .price-leading-text {
+    position: relative;
+    top: 1.5rem;
+    font-family: 'Calligraffitti', sans-serif;
+    text-transform: none;
+    font-size: 1.5rem
   }
 </style>
