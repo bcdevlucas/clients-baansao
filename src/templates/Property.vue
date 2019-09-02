@@ -79,7 +79,7 @@
             </div>
           </div>
 
-          <div class="col-lg-8 col-xl-6 ml-auto">
+          <div class="col-lg-8 col-xl-6">
             <hero-layout01-col
               class="property-hero d-none d-lg-block"
               :image="activeImage ? activeImage.src : ''"
@@ -104,7 +104,7 @@
             </div>
           </div>
 
-          <div class="col-lg-12 col-xl-3 mb-5 mb-lg-0 d-none d-xl-block">
+          <div class="col-lg-12 col-xl-3 mb-5 mb-lg-0 d-none d-xl-block property-page-right-sidebar">
             <div class="container">
               <pricing v-if="pageData"
                 class="mt-4 mb-4"
@@ -558,4 +558,15 @@
       font-size: 4.3rem;
     }
   }
+
+  @media screen and (min-width: 1400px) {
+    .property-page-right-sidebar {
+      position: fixed;
+      right: 0;
+      top: 78px;
+      width: 25%;
+      z-index: 10;
+    }
+  }
+
 </style>
