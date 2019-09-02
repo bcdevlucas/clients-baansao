@@ -8,7 +8,7 @@
             <h2 class="font-weight-bold text-black mb-5" v-html="pageData.title"></h2>
           </div>
         </div>-->
-        <div class="row mt-4 mb-4 pt-4">
+        <div class="row mt-4 mb-4">
           <div class="col-lg-4 col-xl-3 mb-5 mb-lg-0">
             <div class="container d-lg-none" ref="pageHero">
               <div class="row align-items-center justify-content-center">
