@@ -165,4 +165,12 @@
       }
     }
   }
+
+  @media screen and (max-width: 40em) {
+    .about-hero {
+      .hero-text {
+        margin-top: 0;
+      }
+    }
+  }
 </style>
