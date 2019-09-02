@@ -121,7 +121,7 @@
                   <!--<h3 class="text-center">Location</h3>-->
                   <google-map-cutout class="mt-4" />
                   <!--<h3 class="mt-4">Address</h3>-->
-                  <p class="mt-4" :key="JSON.stringify(pageData.address)">
+                  <p class="mt-4 text-center" :key="JSON.stringify(pageData.address)">
                     <span>{{ pageData.address.line1 }}</span><br />
                     <span v-if="typeof pageData.address.line2 === 'string' && pageData.address.line2 !== ''">{{ pageData.address.line2 }}</span>
                     <br v-if="typeof pageData.address.line2 === 'string' && pageData.address.line2 !== ''" />

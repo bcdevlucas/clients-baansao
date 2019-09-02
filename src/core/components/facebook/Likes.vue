@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :key="Math.random()">
     <!-- This facebook like button only appears when you change the pen's view to 'Debug' -->
 
     <!-- Options for Facebook buttons:
