@@ -1,6 +1,6 @@
 <template>
   <button @click="triggerOpenContactForm" class="btn btn-secondary btn-lg ask-question" style="width: 100%"><i class="material-icons">question_answer</i>
-    <span>Ask a Question</span>
+    &nbsp;<span>Ask a Question</span>
   </button>
 </template>
 

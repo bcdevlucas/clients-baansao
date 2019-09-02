@@ -7,7 +7,7 @@
 
     <div class="class-action-buttons mt-3 mb-0 text-center">
       <button @click="openAirbnbPage.bind(this, link)" class="btn btn-primary btn-lg open-airbnb-page">
-        <i class="material-icons">calendar_today</i><span>Book on Airbnb.com</span>
+        <i class="material-icons">calendar_today</i>&nbsp;<span>Book on Airbnb.com</span>
       </button>
     </div>
   </div>
