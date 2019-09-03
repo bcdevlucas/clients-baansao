@@ -145,7 +145,8 @@ collections:
   - name: "properties"
     label: "Properties"
     folder: "properties"
-    extension: "yaml"
+    extension: "yml"
+    identifier_field: "id"
     create: true
     slug: "{{slug}}"
     fields:
