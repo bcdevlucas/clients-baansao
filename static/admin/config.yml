@@ -141,7 +141,53 @@ collections:
       - { label: "caption", name: "caption", widget: "string" }
       - { label: "summary", name: "summary", widget: "string" }
       - { label: "body", name: "body", widget: "markdown" }
-
+      
+  - name: "properties"
+    label: "Properties"
+    folder: "properties"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "ID", name: "id", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: false }
+      - { label: "Meta Description", name: "metaDescription", widget: "text", required: false }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Description", name: "description", widget: "markdown", required: false }
+      - { label: "Image", name: "image", widget: "string", required: false }
+      - { label: "Image ID", name: "imageId", widget: "string", required: false }
+      - { label: "Link", name: "link", widget: "string", required: false }
+      - { label: "Link Text", name: "linkText", widget: "string", required: false }
+      - { label: "Caption", name: "caption", widget: "string", required: false }
+      - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
+      - { label: "Gallery Folder", name: "galleryFolder", widget: "string", required: false }
+      - name: "gallery"
+        label: "Gallery"
+        widget: "list"
+        fields:
+          - { label: "ID", name: "id", widget: "string", required: false }
+          - { label: "Gallery Image", name: "src", widget: "image", default: "/images/" }
+          - { label: "Caption", name: "caption", widget: "string", required: false }
+          - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
+      - name: "address"
+        label: "Address"
+        widget: "list"
+        fields:
+          - { label: "Line 1", name: "line1", widget: "string", required: false }
+          - { label: "Line 2", name: "line2", widget: "string", required: false }
+          - { label: "City", name: "city", widget: "string", required: false }
+          - { label: "Zone", name: "zone", widget: "string", required: false }
+          - { label: "Country", name: "country", widget: "string", required: false }
+          - { label: "Postal Code", name: "postCode", widget: "string", required: false }
+      - name: "price"
+        label: "Price"
+        widget: "list"
+        fields:
+          - { label: "Name", name: "name", widget: "string", required: false }
+          - { label: "Amount", name: "amount", widget: "number", required: false }
+          - { label: "Currency", name: "currency", widget: "string", required: false }
+          - { label: "Start Date", name: "dateStart", widget: "date", required: false }
+          - { label: "End Date", name: "dateEnd", widget: "date", required: false }
 
   - name: "widgets"
     label: "Widgets"
