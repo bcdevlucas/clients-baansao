@@ -104,18 +104,23 @@
             </div>
           </div>
 
-          <div class="col-lg-12 col-xl-3 mb-5 mb-lg-0 d-none d-xl-block property-page-right-sidebar">
+          <div class="col-lg-12 col-xl-3 mb-5 mb-lg-0 d-none d-xl-block property-page-right-sidebar disable-scrollbars">
             <div class="container">
-              <pricing v-if="pageData.price && pageData.price.amount"
-                :key="pageData.price.amount"
-                class="mt-4 mb-3"
-                :price="pageData.price"
-                :link="pageData.link">
-              </pricing>
-              <div class="class-action-buttons mt-2 text-center">
-                <contact-form-button :subject="`Enquiry re: ${pageData.title}`" />
+              <div class="row">
+                <div class="col-sm-12">
+                  <pricing v-if="pageData.price && pageData.price.amount"
+                    :key="pageData.price.amount"
+                    class="mt-4 mb-3"
+                    :price="pageData.price"
+                    :link="pageData.link">
+                  </pricing>
+                  <div class="class-action-buttons mt-2 text-center">
+                    <contact-form-button :subject="`Enquiry re: ${pageData.title}`" />
+                  </div>
+                  <likes class="mt-3" dataShowFaces="true" />
+                </div>
               </div>
-              <likes class="mt-3" dataShowFaces="true" />
+
               <div class="row">
                 <div class="col-xs-12 mt-4">
                   <!--<h3 class="text-center">Location</h3>-->
