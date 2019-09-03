@@ -70,7 +70,7 @@
                 <page-footer />
               </div>
             </div>
-            <deal-list class="col-xl-4 right-pane" />
+            <deal-list class="col-xl-4 right-pane disable-scrollbars" />
           </div>
         </div>
       </div>
