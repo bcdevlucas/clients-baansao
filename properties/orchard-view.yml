@@ -2,6 +2,12 @@ id: orchard-view
 title: Orchard View Pool Villa
 metaKeywords:
 metaDescription:
+image: ""
+imageId: "14_lkrbt2"
+caption:
+subCaption: ""
+link: https://www.airbnb.ca/rooms/14206059
+linkText: Learn More
 address:
   - line1: 25/10 Moo 1, Maenam
     line2: ""
@@ -71,199 +77,193 @@ description: >-
 
   Your host, Saowanee, resides in the same community and will be pleased to assist in making your Ko Samui holiday a special experience.
   We can assist in making arrangements for car and motorbike rentals, tours to island attractions, and provide information regarding active relaxation choices (yoga, tennis, dancing, etc.).
-link: https://www.airbnb.ca/rooms/14206059
-linkText: Learn More
-image: ""
-imageId: "14_lkrbt2"
-caption:
-subCaption:
 galleryFolder: "orchard-view-3br"
 gallery:
   #- id: "23-new-sky_fwgesc"
   #  src: 23-new-sky.jpg
   #  caption: Orchard view 1
-  #  subCaption:
+  #  subCaption: ""
   #  featured: true
   - id: "1_bhumen"
-    src: 1.jpg
+    src: ""
     caption: Orchard view 2
-    subCaption:
+    subCaption: ""
     featured: true
     showcase: false
   - id: "2_vhasyw"
-    src: 2.jpg
+    src: ""
     caption: Orchard view 3
-    subCaption:
+    subCaption: ""
     featured: true
     showcase: false
   - id: "3_c1t7mn"
-    src: 3.jpg
+    src: ""
     caption: Orchard view 4
-    subCaption:
+    subCaption: ""
     featured: true
     showcase: true
   - id: "4_rpcrd3"
-    src: 4.jpg
+    src: ""
     caption: Orchard view 5
-    subCaption:
+    subCaption: ""
     featured: true
     showcase: true
   - id: "5_pfcraz"
-    src: 5.jpg
+    src: ""
     caption: Orchard view 6
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: false
   - id: "6_lv2rpv"
-    src: 6.jpg
+    src: ""
     caption: Orchard view 7
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: false
   - id: "7_pxtqdi"
-    src: 8.jpg
+    src: ""
     caption: Orchard view 8
-    subCaption:
+    subCaption: ""
     featured: true
     showcase: true
   - id: "8_agm9nv"
-    src: 7.jpg
+    src: ""
     caption: Orchard view 9
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: true
   - id: "9_rfbho7"
-    src: 9.jpg
+    src: ""
     caption: Orchard view 10
     featured: true
     showcase: false
   - id: "10_nwadu0"
-    src: 10.jpg
+    src: ""
     caption: Orchard view 11
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: false
   - id: "11_fwyoq1"
-    src: 11.jpg
+    src: ""
     caption: Orchard view 12
-    subCaption:
+    subCaption: ""
     featured: true
     showcase: false
   - id: "12_dawlfp"
-    src: 12.jpg
+    src: ""
     caption: Orchard view 13
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: false
   - id: "13_oskpfm"
-    src: 13.jpg
+    src: ""
     caption: Orchard view 14
-    subCaption:
+    subCaption: ""
     featured: true
     showcase: true
   - id: "14_lkrbt2"
-    src: 14.jpg
+    src: ""
     caption: Orchard view 15
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: true
   - id: "15_n4g7we"
-    src: 15.jpg
+    src: ""
     caption: Orchard view 16
-    subCaption:
+    subCaption: ""
     featured: true
     showcase: false
   - id: "16_n5wukj"
-    src: 16.jpg
+    src: ""
     caption: Orchard view 17
-    subCaption:
+    subCaption: ""
     featured: true
     showcase: false
   - id: "17_ymwbhc"
-    src: 17.jpg
+    src: ""
     caption: Orchard view 18
-    subCaption:
+    subCaption: ""
     featured: true
     showcase: false
   - id: "18_pytcq5"
-    src: 18.jpg
+    src: ""
     caption: Orchard view 19
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: false
   - id: "19_ptorsz"
-    src: 19.jpg
+    src: ""
     caption: Orchard view 20
-    subCaption:
+    subCaption: ""
     featured: true
     showcase: false
   - id: "20_pkn7w6"
-    src: 20.jpg
+    src: ""
     caption: Orchard view 21
-    subCaption:
+    subCaption: ""
     featured: true
     showcase: true
   #- id: "21"
   #  src: 21.jpg
   #  caption: Orchard view 22
-  #  subCaption:
+  #  subCaption: ""
   #  featured: true
   - id: "22_jh0okr"
-    src: 22.jpg
+    src: ""
     caption: Orchard view 23
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: true
   #- id: "23-new-sky_fwgesc"
   #  src: 24.jpg
   #  caption: Orchard view 24
-  #  subCaption:
+  #  subCaption: ""
   #  featured: true
   - id: "24_i0fo7q"
-    src: 25.jpg
+    src: ""
     caption: Orchard view 25
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: false
   - id: "25_vnouni"
-    src: 26.jpg
+    src: ""
     caption: Orchard view 26
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: false
   - id: "26_wakztc"
-    src: 27.jpg
+    src: ""
     caption: Orchard view 27
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: false
   - id: "27_gvfl6a"
-    src: 28.jpg
+    src: ""
     caption: Orchard view 28
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: true
   - id: "28_lr6cep"
-    src: 29.jpg
+    src: ""
     caption: Orchard view 29
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: false
   - id: "29_zqaxcn"
-    src: 30.jpg
+    src: ""
     caption: Orchard view 30
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: false
   - id: "30_xsoaxk"
-    src: 31.jpg
+    src: ""
     caption: Orchard view 31
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: false
   - id: "31_hjostc"
-    src: 32.jpg
+    src: ""
     caption: Orchard view 32
-    subCaption:
+    subCaption: ""
     featured: false
     showcase: false
