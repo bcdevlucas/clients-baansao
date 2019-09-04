@@ -78,6 +78,32 @@
         </div>
       </div>
     </div>
+
+    <div class="content-wrapper">
+      <div class="site-section pt-0 pb-5 angle angle-join-top homepage-section-01">
+        <div class="container pt-4">
+          <div class="row mt-4 mb-4 pt-4">
+            <div class="col-lg-12 ml-auto text-center" style="margin-top: 7vh">
+              <span class="sub-title">Book Your</span>
+              <h2 class="font-weight-bold mb-3">Private Events</h2>
+              <div style="margin-top: 5vh">
+                <h2 class="font-weight-bold mb-3"></h2>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="site-section pt-0 angle angle-join-top">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12" style="margin-top: 5vh;">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <page-footer />
   </Layout>
 </template>
