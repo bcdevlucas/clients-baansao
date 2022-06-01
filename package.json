@@ -29,7 +29,7 @@
     "postcss-loader": "^3.0.0",
     "rework-loader": "^0.1.1",
     "sass-loader": "^7.2.0",
-    "sharp": "^0.22.0",
+    "sharp": "^0.30.5",
     "style-loader": "^0.23.1",
     "v-img": "^0.2.0",
     "vue-cal": "^2.4.0",
